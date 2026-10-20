@@ -1,0 +1,2590 @@
+[
+ {
+  "id": "msu",
+  "name": "Московский государственный университет им. М. В. Ломоносова",
+  "short": "МГУ",
+  "type": "university",
+  "city": "Москва",
+  "regionId": "moscow",
+  "abroad": false,
+  "site": "https://www.msu.ru/",
+  "admissionUrl": "https://cpk.msu.ru/",
+  "eventsUrl": "https://www.msu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "intl",
+   "studlife",
+   "olymp"
+  ],
+  "ratings": {
+   "raex": 1,
+   "employers": 0.95,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 450000,
+  "priceTo": 650000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Классический университет №1: фундаментальная наука, сильнейшие мехмат, ВМК, физфак, журфак. Поступление — ЕГЭ плюс ДВИ.",
+  "howToGet": "м. «Университет» / «Ломоносовский проспект»",
+  "aliases": [
+   "мгу",
+   "ломоносова"
+  ]
+ },
+ {
+  "id": "hse",
+  "name": "НИУ «Высшая школа экономики»",
+  "short": "ВШЭ",
+  "type": "university",
+  "city": "Москва",
+  "regionId": "moscow",
+  "abroad": false,
+  "site": "https://www.hse.ru/",
+  "admissionUrl": "https://ba.hse.ru/",
+  "eventsUrl": "https://ba.hse.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "intl",
+   "studlife",
+   "online",
+   "career",
+   "olymp"
+  ],
+  "ratings": {
+   "raex": 4,
+   "employers": 0.95,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 450000,
+  "priceTo": 700000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Экономика, ИТ, данные, дизайн, медиа, право. Гибкие траектории, много проектной работы и стажировок.",
+  "howToGet": "Кампусы в центре Москвы, м. «Кузнецкий мост», «Тульская», «Парк культуры»",
+  "aliases": [
+   "вшэ",
+   "вышка",
+   "hse"
+  ]
+ },
+ {
+  "id": "ranepa",
+  "name": "Российская академия народного хозяйства и государственной службы при Президенте РФ",
+  "short": "РАНХиГС",
+  "type": "university",
+  "city": "Москва",
+  "regionId": "moscow",
+  "abroad": false,
+  "site": "https://www.ranepa.ru/",
+  "admissionUrl": "https://www.ranepa.ru/",
+  "eventsUrl": "https://www.ranepa.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "evening",
+   "studlife",
+   "career"
+  ],
+  "ratings": {
+   "raex": 15,
+   "employers": 0.8,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 350000,
+  "priceTo": 600000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Госуправление, экономика, право, менеджмент, медиа. Есть вечерние и очно-заочные формы.",
+  "howToGet": "м. «Юго-Западная», пр-т Вернадского, 82",
+  "aliases": [
+   "ранхигс",
+   "ранх"
+  ]
+ },
+ {
+  "id": "mgimo",
+  "name": "МГИМО МИД России",
+  "short": "МГИМО",
+  "type": "university",
+  "city": "Москва",
+  "regionId": "moscow",
+  "abroad": false,
+  "site": "https://mgimo.ru/",
+  "admissionUrl": "https://mgimo.ru/",
+  "eventsUrl": "https://mgimo.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "intl",
+   "internships",
+   "studlife",
+   "olymp"
+  ],
+  "ratings": {
+   "raex": 9,
+   "employers": 0.85,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 600000,
+  "priceTo": 900000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Международные отношения, право, экономика, 50+ языков. Бюджетных мест немного, конкурс высокий.",
+  "howToGet": "м. «Юго-Западная», пр-т Вернадского, 76",
+  "aliases": [
+   "мгимо"
+  ]
+ },
+ {
+  "id": "rea",
+  "name": "Российский экономический университет им. Г. В. Плеханова",
+  "short": "РЭУ им. Плеханова",
+  "type": "university",
+  "city": "Москва",
+  "regionId": "moscow",
+  "abroad": false,
+  "site": "https://www.rea.ru/",
+  "admissionUrl": "https://priem.rea.ru/",
+  "eventsUrl": "https://www.rea.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "evening",
+   "studlife",
+   "career"
+  ],
+  "ratings": {
+   "raex": 22,
+   "employers": 0.75,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 330000,
+  "priceTo": 500000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Экономика, торговля, маркетинг, бизнес-информатика, ресторанный бизнес.",
+  "howToGet": "м. «Серпуховская», Стремянный пер., 36",
+  "aliases": [
+   "рэу",
+   "плехановка",
+   "плеханова"
+  ]
+ },
+ {
+  "id": "rnimu",
+  "name": "Российский национальный исследовательский медицинский университет им. Н. И. Пирогова (Пироговский университет)",
+  "short": "РНИМУ им. Пирогова",
+  "type": "university",
+  "city": "Москва",
+  "regionId": "moscow",
+  "abroad": false,
+  "site": "https://rsmu.ru/",
+  "admissionUrl": "https://rsmu.ru/",
+  "eventsUrl": "https://rsmu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "target",
+   "internships",
+   "olymp"
+  ],
+  "ratings": {
+   "raex": 25,
+   "employers": 0.85,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 450000,
+  "priceTo": 650000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Крупнейший медвуз: лечебное дело, педиатрия, фармация, биоинформатика. В 2025 — 810 бюджетных мест на «Лечебное дело» плюс 485 целевых.",
+  "howToGet": "м. «Беляево» / «Юго-Западная», ул. Островитянова, 1",
+  "aliases": [
+   "пирогова",
+   "рниму",
+   "пироговский",
+   "второй мед"
+  ]
+ },
+ {
+  "id": "mipt",
+  "name": "Московский физико-технический институт",
+  "short": "МФТИ",
+  "type": "university",
+  "city": "Долгопрудный",
+  "regionId": "moscow_obl",
+  "abroad": false,
+  "site": "https://mipt.ru/",
+  "admissionUrl": "https://pk.mipt.ru/",
+  "eventsUrl": "https://mipt.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "olymp",
+   "studlife",
+   "career"
+  ],
+  "ratings": {
+   "raex": 2,
+   "employers": 0.95,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 450000,
+  "priceTo": 600000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Физтех: математика, физика, ИИ, программирование. Базовые кафедры в Яндексе, Сбере, ABBYY, институтах РАН. Средний балл поступивших в 2025 — 96,8.",
+  "howToGet": "Электричка с Савёловского вокзала до ст. «Новодачная», 25 мин",
+  "aliases": [
+   "мфти",
+   "физтех"
+  ]
+ },
+ {
+  "id": "sechenov",
+  "name": "Первый МГМУ им. И. М. Сеченова",
+  "short": "Сеченовский университет",
+  "type": "university",
+  "city": "Москва",
+  "regionId": "moscow",
+  "abroad": false,
+  "site": "https://www.sechenov.ru/",
+  "admissionUrl": "https://www.sechenov.ru/",
+  "eventsUrl": "https://www.sechenov.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "target",
+   "internships",
+   "intl",
+   "olymp"
+  ],
+  "ratings": {
+   "raex": 12,
+   "employers": 0.85,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 500000,
+  "priceTo": 700000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Медицина, фармация, биотехнологии, медицинская информатика. Свои клиники и предуниверсарий.",
+  "howToGet": "м. «Фрунзенская», ул. Трубецкая, 8",
+  "aliases": [
+   "сеченова",
+   "первый мед",
+   "сеченовский"
+  ]
+ },
+ {
+  "id": "bmstu",
+  "name": "Московский государственный технический университет им. Н. Э. Баумана",
+  "short": "МГТУ им. Баумана",
+  "type": "university",
+  "city": "Москва",
+  "regionId": "moscow",
+  "abroad": false,
+  "site": "https://bmstu.ru/",
+  "admissionUrl": "https://bmstu.ru/abiturient",
+  "eventsUrl": "https://bmstu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "target",
+   "olymp",
+   "career"
+  ],
+  "ratings": {
+   "raex": 5,
+   "employers": 0.9,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 350000,
+  "priceTo": 500000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Инженерия №1: робототехника, ракетостроение, ИТ, электроника. Средний балл бюджета 2025 — 85,7, проходные на ряд направлений выше 270.",
+  "howToGet": "м. «Бауманская», 2-я Бауманская ул., 5",
+  "aliases": [
+   "бауманка",
+   "мгту",
+   "баумана"
+  ]
+ },
+ {
+  "id": "msal",
+  "name": "Московский государственный юридический университет им. О. Е. Кутафина (МГЮА)",
+  "short": "МГЮА",
+  "type": "university",
+  "city": "Москва",
+  "regionId": "moscow",
+  "abroad": false,
+  "site": "https://msal.ru/",
+  "admissionUrl": "https://msal.ru/",
+  "eventsUrl": "https://msal.ru/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "internships",
+   "evening",
+   "studlife"
+  ],
+  "ratings": {
+   "raex": 40,
+   "employers": 0.8,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 330000,
+  "priceTo": 480000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Ведущий юридический вуз: гражданское, уголовное, корпоративное, IT-право.",
+  "howToGet": "м. «Баррикадная», Садовая-Кудринская, 9",
+  "aliases": [
+   "кутафина",
+   "мгюа"
+  ]
+ },
+ {
+  "id": "kosygin",
+  "name": "Российский государственный университет им. А. Н. Косыгина (Технологии. Дизайн. Искусство)",
+  "short": "РГУ им. Косыгина",
+  "type": "university",
+  "city": "Москва",
+  "regionId": "moscow",
+  "abroad": false,
+  "site": "https://kosygin-rgu.ru/",
+  "admissionUrl": "https://kosygin-rgu.ru/",
+  "eventsUrl": "https://kosygin-rgu.ru/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "studlife",
+   "internships"
+  ],
+  "ratings": {
+   "raex": 100,
+   "employers": 0.6,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 250000,
+  "priceTo": 400000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Дизайн одежды и графики, текстиль, химические технологии, искусство. Творческие ДВИ.",
+  "howToGet": "м. «Шаболовская», Малая Калужская, 1",
+  "aliases": [
+   "косыгина",
+   "ргу косыгина"
+  ]
+ },
+ {
+  "id": "gubkin",
+  "name": "Российский государственный университет нефти и газа (НИУ) им. И. М. Губкина",
+  "short": "РГУ нефти и газа им. Губкина",
+  "type": "university",
+  "city": "Москва",
+  "regionId": "moscow",
+  "abroad": false,
+  "site": "https://www.gubkin.ru/",
+  "admissionUrl": "https://www.gubkin.ru/",
+  "eventsUrl": "https://www.gubkin.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "target",
+   "internships",
+   "career"
+  ],
+  "ratings": {
+   "raex": 21,
+   "employers": 0.85,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 300000,
+  "priceTo": 450000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Нефтегаз, геология, химтехнологии, энергетика. Тесные связи с Газпромом, Роснефтью, Лукойлом.",
+  "howToGet": "м. «Октябрьская» / «Ленинский проспект», Ленинский пр-т, 65",
+  "aliases": [
+   "губкина",
+   "губка"
+  ]
+ },
+ {
+  "id": "rudn",
+  "name": "Российский университет дружбы народов им. Патриса Лумумбы",
+  "short": "РУДН",
+  "type": "university",
+  "city": "Москва",
+  "regionId": "moscow",
+  "abroad": false,
+  "site": "https://www.rudn.ru/",
+  "admissionUrl": "https://admission.rudn.ru/",
+  "eventsUrl": "https://www.rudn.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "intl",
+   "studlife",
+   "internships"
+  ],
+  "ratings": {
+   "raex": 18,
+   "employers": 0.75,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 350000,
+  "priceTo": 600000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Студенты из 150+ стран: медицина, языки, международные отношения, инженерия, агро.",
+  "howToGet": "м. «Беляево», ул. Миклухо-Маклая, 6",
+  "aliases": [
+   "рудн"
+  ]
+ },
+ {
+  "id": "fa",
+  "name": "Финансовый университет при Правительстве РФ",
+  "short": "Финансовый университет",
+  "type": "university",
+  "city": "Москва",
+  "regionId": "moscow",
+  "abroad": false,
+  "site": "https://www.fa.ru/",
+  "admissionUrl": "https://www.fa.ru/",
+  "eventsUrl": "https://www.fa.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "evening",
+   "career"
+  ],
+  "ratings": {
+   "raex": 20,
+   "employers": 0.8,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 320000,
+  "priceTo": 480000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Финансы, экономика, ИТ в финансах, налоги, госаудит.",
+  "howToGet": "м. «Аэропорт» / «Динамо», Ленинградский пр-т, 49",
+  "aliases": [
+   "финашка",
+   "финансовый"
+  ]
+ },
+ {
+  "id": "mephi",
+  "name": "НИЯУ «МИФИ»",
+  "short": "МИФИ",
+  "type": "university",
+  "city": "Москва",
+  "regionId": "moscow",
+  "abroad": false,
+  "site": "https://mephi.ru/",
+  "admissionUrl": "https://admission.mephi.ru/",
+  "eventsUrl": "https://mephi.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "target",
+   "internships",
+   "olymp",
+   "career"
+  ],
+  "ratings": {
+   "raex": 3,
+   "employers": 0.9,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 350000,
+  "priceTo": 480000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Ядерная физика, кибербезопасность, ИТ, лазеры. Опорный вуз Росатома, много целевых мест.",
+  "howToGet": "м. «Каширская», Каширское ш., 31",
+  "aliases": [
+   "мифи",
+   "ниияу"
+  ]
+ },
+ {
+  "id": "mospolytech",
+  "name": "Московский политехнический университет",
+  "short": "Московский Политех",
+  "type": "university",
+  "city": "Москва",
+  "regionId": "moscow",
+  "abroad": false,
+  "site": "https://mospolytech.ru/",
+  "admissionUrl": "https://mospolytech.ru/",
+  "eventsUrl": "https://mospolytech.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "evening",
+   "studlife",
+   "career"
+  ],
+  "ratings": {
+   "raex": 70,
+   "employers": 0.7,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 250000,
+  "priceTo": 400000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Практико-ориентированный вуз: дизайн, издательское дело и полиграфия (бывший МГУП им. Фёдорова), медиа, транспорт, ИТ.",
+  "howToGet": "м. «Электрозаводская», ул. Б. Семёновская, 38",
+  "aliases": [
+   "мосполитех",
+   "политех москва",
+   "мгуп"
+  ]
+ },
+ {
+  "id": "itmo",
+  "name": "Университет ИТМО",
+  "short": "ИТМО",
+  "type": "university",
+  "city": "Санкт-Петербург",
+  "regionId": "spb",
+  "abroad": false,
+  "site": "https://itmo.ru/",
+  "admissionUrl": "https://abit.itmo.ru/",
+  "eventsUrl": "https://itmo.events/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "olymp",
+   "studlife",
+   "career",
+   "online"
+  ],
+  "ratings": {
+   "raex": 8,
+   "employers": 0.9,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 350000,
+  "priceTo": 500000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Программирование, ИИ, фотоника, робототехника. Чемпионы ICPC, много онлайн-курсов.",
+  "howToGet": "м. «Горьковская», Кронверкский пр-т, 49",
+  "aliases": [
+   "итмо"
+  ]
+ },
+ {
+  "id": "spbu",
+  "name": "Санкт-Петербургский государственный университет",
+  "short": "СПбГУ",
+  "type": "university",
+  "city": "Санкт-Петербург",
+  "regionId": "spb",
+  "abroad": false,
+  "site": "https://spbu.ru/",
+  "admissionUrl": "https://abiturient.spbu.ru/",
+  "eventsUrl": "https://spbu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "intl",
+   "internships",
+   "studlife",
+   "olymp"
+  ],
+  "ratings": {
+   "raex": 6,
+   "employers": 0.9,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 350000,
+  "priceTo": 550000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Классический университет: математика, ИТ, медицина, право, международные отношения.",
+  "howToGet": "Васильевский остров, м. «Василеостровская»",
+  "aliases": [
+   "спбгу"
+  ]
+ },
+ {
+  "id": "spbpu",
+  "name": "Санкт-Петербургский политехнический университет Петра Великого",
+  "short": "СПбПУ",
+  "type": "university",
+  "city": "Санкт-Петербург",
+  "regionId": "spb",
+  "abroad": false,
+  "site": "https://www.spbstu.ru/",
+  "admissionUrl": "https://www.spbstu.ru/",
+  "eventsUrl": "https://www.spbstu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "target",
+   "career",
+   "studlife"
+  ],
+  "ratings": {
+   "raex": 7,
+   "employers": 0.85,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 280000,
+  "priceTo": 420000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Политех: энергетика, машиностроение, ИТ, строительство, цифровые двойники.",
+  "howToGet": "м. «Политехническая», ул. Политехническая, 29",
+  "aliases": [
+   "политех",
+   "спбпу"
+  ]
+ },
+ {
+  "id": "kfu",
+  "name": "Казанский (Приволжский) федеральный университет",
+  "short": "КФУ",
+  "type": "university",
+  "city": "Казань",
+  "regionId": "tatarstan",
+  "abroad": false,
+  "site": "https://kpfu.ru/",
+  "admissionUrl": "https://admissions.kpfu.ru/",
+  "eventsUrl": "https://kpfu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "intl",
+   "internships",
+   "studlife",
+   "olymp"
+  ],
+  "ratings": {
+   "raex": 16,
+   "employers": 0.8,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 180000,
+  "priceTo": 320000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Один из старейших вузов: медицина, ИТ (ИВМиИТ), геология, педагогика, филология.",
+  "howToGet": "Центр Казани, ул. Кремлёвская, 18, м. «Кремлёвская»",
+  "aliases": [
+   "кфу",
+   "казанский федеральный"
+  ]
+ },
+ {
+  "id": "innopolis",
+  "name": "Университет Иннополис",
+  "short": "Иннополис",
+  "type": "university",
+  "city": "Иннополис",
+  "regionId": "tatarstan",
+  "abroad": false,
+  "site": "https://innopolis.university/",
+  "admissionUrl": "https://apply.innopolis.university/",
+  "eventsUrl": "https://innopolis.university/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "internships",
+   "olymp",
+   "career",
+   "intl"
+  ],
+  "ratings": {
+   "raex": null,
+   "employers": 0.85,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 400000,
+  "priceTo": 600000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "ИТ-университет с обучением на английском, грантами и кампусом в городе-технопарке.",
+  "howToGet": "Автобус/такси из Казани, ~40 мин",
+  "aliases": [
+   "иннополис"
+  ]
+ },
+ {
+  "id": "kai",
+  "name": "Казанский национальный исследовательский технический университет им. А. Н. Туполева",
+  "short": "КНИТУ-КАИ",
+  "type": "university",
+  "city": "Казань",
+  "regionId": "tatarstan",
+  "abroad": false,
+  "site": "https://kai.ru/",
+  "admissionUrl": "https://abiturientu.kai.ru/",
+  "eventsUrl": "https://kai.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "target",
+   "internships",
+   "dual"
+  ],
+  "ratings": {
+   "raex": 45,
+   "employers": 0.75,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 170000,
+  "priceTo": 260000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Авиастроение, БПЛА, радиоэлектроника, двигатели. Партнёр Казанского вертолётного завода.",
+  "howToGet": "м. «Площадь Тукая», ул. Карла Маркса, 10",
+  "aliases": [
+   "каи",
+   "книиту каи",
+   "туполева"
+  ]
+ },
+ {
+  "id": "kazangmu",
+  "name": "Казанский государственный медицинский университет",
+  "short": "Казанский ГМУ",
+  "type": "university",
+  "city": "Казань",
+  "regionId": "tatarstan",
+  "abroad": false,
+  "site": "https://kazangmu.ru/",
+  "admissionUrl": "https://kazangmu.ru/",
+  "eventsUrl": "https://kazangmu.ru/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "target",
+   "internships"
+  ],
+  "ratings": {
+   "raex": 60,
+   "employers": 0.75,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 250000,
+  "priceTo": 380000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Лечебное дело, педиатрия, стоматология, фармация.",
+  "howToGet": "ул. Бутлерова, 49",
+  "aliases": [
+   "кгму казань"
+  ]
+ },
+ {
+  "id": "alabuga",
+  "name": "Алабуга Политех (колледж ОЭЗ «Алабуга»)",
+  "short": "Алабуга Политех",
+  "type": "college",
+  "city": "Елабуга",
+  "regionId": "tatarstan",
+  "abroad": false,
+  "site": "https://alabuga.ru/",
+  "admissionUrl": "https://alabuga.ru/",
+  "eventsUrl": "https://alabuga.ru/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "dual",
+   "career",
+   "target"
+  ],
+  "ratings": {
+   "raex": null,
+   "employers": 0.7,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": null,
+  "priceTo": null,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Колледж при особой экономической зоне: БПЛА, химия, автоматизация. Обучение за счёт работодателя, стипендия и практика на заводах.",
+  "howToGet": "Елабуга, ОЭЗ «Алабуга» (≈200 км от Казани)",
+  "aliases": [
+   "алабуга"
+  ]
+ },
+ {
+  "id": "urfu",
+  "name": "Уральский федеральный университет им. Б. Н. Ельцина",
+  "short": "УрФУ",
+  "type": "university",
+  "city": "Екатеринбург",
+  "regionId": "sverdlovsk",
+  "abroad": false,
+  "site": "https://urfu.ru/",
+  "admissionUrl": "https://priem.urfu.ru/",
+  "eventsUrl": "https://urfu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "studlife",
+   "career",
+   "intl"
+  ],
+  "ratings": {
+   "raex": 14,
+   "employers": 0.8,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 190000,
+  "priceTo": 320000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Инженерия, ИТ, атомная энергетика, металлургия, гуманитарные науки.",
+  "howToGet": "м. «Площадь 1905 года» / ул. Мира, 19",
+  "aliases": [
+   "урфу"
+  ]
+ },
+ {
+  "id": "nsu",
+  "name": "Новосибирский государственный университет",
+  "short": "НГУ",
+  "type": "university",
+  "city": "Новосибирск",
+  "regionId": "novosibirsk",
+  "abroad": false,
+  "site": "https://www.nsu.ru/",
+  "admissionUrl": "https://www.nsu.ru/",
+  "eventsUrl": "https://www.nsu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "olymp",
+   "career"
+  ],
+  "ratings": {
+   "raex": 11,
+   "employers": 0.9,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 220000,
+  "priceTo": 350000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Академгородок: математика, ИТ, физика, биология. Обучение в связке с институтами СО РАН.",
+  "howToGet": "Академгородок, ул. Пирогова, 1 (автобусы от м. «Речной вокзал»)",
+  "aliases": [
+   "нгу"
+  ]
+ },
+ {
+  "id": "nstu",
+  "name": "Новосибирский государственный технический университет",
+  "short": "НГТУ НЭТИ",
+  "type": "university",
+  "city": "Новосибирск",
+  "regionId": "novosibirsk",
+  "abroad": false,
+  "site": "https://www.nstu.ru/",
+  "admissionUrl": "https://www.nstu.ru/",
+  "eventsUrl": "https://www.nstu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "evening",
+   "dual",
+   "career"
+  ],
+  "ratings": {
+   "raex": 50,
+   "employers": 0.75,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 150000,
+  "priceTo": 250000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Инженерия, ИТ, электроника, энергетика, авиастроение. Есть вечерние формы.",
+  "howToGet": "м. «Студенческая», пр-т К. Маркса, 20",
+  "aliases": [
+   "нгту",
+   "нэти"
+  ]
+ },
+ {
+  "id": "ngmu",
+  "name": "Новосибирский государственный медицинский университет",
+  "short": "НГМУ",
+  "type": "university",
+  "city": "Новосибирск",
+  "regionId": "novosibirsk",
+  "abroad": false,
+  "site": "https://ngmu.ru/",
+  "admissionUrl": "https://ngmu.ru/",
+  "eventsUrl": "https://ngmu.ru/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "target",
+   "internships"
+  ],
+  "ratings": {
+   "raex": 70,
+   "employers": 0.7,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 200000,
+  "priceTo": 320000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Лечебное дело, педиатрия, стоматология, фармация.",
+  "howToGet": "м. «Красный проспект», Красный пр-т, 52",
+  "aliases": [
+   "нгму"
+  ]
+ },
+ {
+  "id": "nsk_avt_college",
+  "name": "Новосибирский авиационный технический колледж им. Б. С. Галущака",
+  "short": "НАТК им. Галущака",
+  "type": "college",
+  "city": "Новосибирск",
+  "regionId": "novosibirsk",
+  "abroad": false,
+  "site": "https://www.natk.ru/",
+  "admissionUrl": "https://www.natk.ru/",
+  "eventsUrl": "https://www.natk.ru/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "dual",
+   "career"
+  ],
+  "ratings": {
+   "raex": null,
+   "employers": 0.6,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 90000,
+  "priceTo": 150000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "СПО: авиастроение, программирование, станки с ЧПУ; практика на авиазаводе им. Чкалова.",
+  "howToGet": "м. «Берёзовая роща», ул. Кошурникова",
+  "aliases": [
+   "натк"
+  ]
+ },
+ {
+  "id": "tpu",
+  "name": "Национальный исследовательский Томский политехнический университет",
+  "short": "ТПУ",
+  "type": "university",
+  "city": "Томск",
+  "regionId": "tomsk",
+  "abroad": false,
+  "site": "https://tpu.ru/",
+  "admissionUrl": "https://abiturient.tpu.ru/",
+  "eventsUrl": "https://news.tpu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "target",
+   "intl",
+   "career"
+  ],
+  "ratings": {
+   "raex": 10,
+   "employers": 0.85,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 180000,
+  "priceTo": 290000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Ядерные технологии, нефтегаз, энергетика, ИТ. Тесная связь с Росатомом и Газпромом.",
+  "howToGet": "Центр Томска, пр-т Ленина, 30",
+  "aliases": [
+   "тпу",
+   "томский политех"
+  ]
+ },
+ {
+  "id": "tsu",
+  "name": "Национальный исследовательский Томский государственный университет",
+  "short": "ТГУ",
+  "type": "university",
+  "city": "Томск",
+  "regionId": "tomsk",
+  "abroad": false,
+  "site": "https://www.tsu.ru/",
+  "admissionUrl": "https://abiturient.tsu.ru/",
+  "eventsUrl": "https://news.tsu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "intl",
+   "studlife",
+   "internships"
+  ],
+  "ratings": {
+   "raex": 13,
+   "employers": 0.8,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 170000,
+  "priceTo": 280000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Классический университет: ИТ, биология, физика, журналистика, психология.",
+  "howToGet": "Центр Томска, пр-т Ленина, 36",
+  "aliases": [
+   "тгу",
+   "томский государственный"
+  ]
+ },
+ {
+  "id": "tusur",
+  "name": "Томский государственный университет систем управления и радиоэлектроники",
+  "short": "ТУСУР",
+  "type": "university",
+  "city": "Томск",
+  "regionId": "tomsk",
+  "abroad": false,
+  "site": "https://tusur.ru/",
+  "admissionUrl": "https://abiturient.tusur.ru/",
+  "eventsUrl": "https://tusur.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "online",
+   "internships",
+   "career"
+  ],
+  "ratings": {
+   "raex": 45,
+   "employers": 0.75,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 150000,
+  "priceTo": 230000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Радиоэлектроника, кибербезопасность, ИТ. Факультет дистанционного обучения (ФДО) — можно учиться из любого города.",
+  "howToGet": "Центр Томска, пр-т Ленина, 40",
+  "aliases": [
+   "тусур"
+  ]
+ },
+ {
+  "id": "sfedu",
+  "name": "Южный федеральный университет",
+  "short": "ЮФУ",
+  "type": "university",
+  "city": "Ростов-на-Дону",
+  "regionId": "rostov",
+  "abroad": false,
+  "site": "https://sfedu.ru/",
+  "admissionUrl": "https://sfedu.ru/",
+  "eventsUrl": "https://sfedu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "studlife",
+   "career"
+  ],
+  "ratings": {
+   "raex": 27,
+   "employers": 0.75,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 170000,
+  "priceTo": 280000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "ИТ, радиотехника (Таганрог), экономика, психология, архитектура.",
+  "howToGet": "Ростов-на-Дону, Б. Садовая, 105/42",
+  "aliases": [
+   "юфу"
+  ]
+ },
+ {
+  "id": "rostgmu",
+  "name": "Ростовский государственный медицинский университет",
+  "short": "РостГМУ",
+  "type": "university",
+  "city": "Ростов-на-Дону",
+  "regionId": "rostov",
+  "abroad": false,
+  "site": "https://rostgmu.ru/",
+  "admissionUrl": "https://rostgmu.ru/",
+  "eventsUrl": "https://rostgmu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "target",
+   "internships"
+  ],
+  "ratings": {
+   "raex": 65,
+   "employers": 0.7,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 200000,
+  "priceTo": 320000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Лечебное дело, педиатрия, стоматология, фармация. Есть военный учебный центр.",
+  "howToGet": "пер. Нахичеванский, 29",
+  "aliases": [
+   "ростгму"
+  ]
+ },
+ {
+  "id": "kubgmu",
+  "name": "Кубанский государственный медицинский университет",
+  "short": "КубГМУ",
+  "type": "university",
+  "city": "Краснодар",
+  "regionId": "krasnodar",
+  "abroad": false,
+  "site": "https://www.ksma.ru/",
+  "admissionUrl": "https://www.ksma.ru/",
+  "eventsUrl": "https://www.ksma.ru/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "target",
+   "internships"
+  ],
+  "ratings": {
+   "raex": 75,
+   "employers": 0.7,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 210000,
+  "priceTo": 330000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Медицинский вуз Кубани: лечебное дело, стоматология, фармация.",
+  "howToGet": "ул. Митрофана Седина, 4",
+  "aliases": [
+   "кубгму"
+  ]
+ },
+ {
+  "id": "kubsu",
+  "name": "Кубанский государственный университет",
+  "short": "КубГУ",
+  "type": "university",
+  "city": "Краснодар",
+  "regionId": "krasnodar",
+  "abroad": false,
+  "site": "https://www.kubsu.ru/",
+  "admissionUrl": "https://www.kubsu.ru/",
+  "eventsUrl": "https://www.kubsu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "studlife",
+   "internships"
+  ],
+  "ratings": {
+   "raex": 80,
+   "employers": 0.65,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 150000,
+  "priceTo": 250000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Классический университет юга: право, экономика, журналистика, ИТ, биология.",
+  "howToGet": "ул. Ставропольская, 149",
+  "aliases": [
+   "кубгу"
+  ]
+ },
+ {
+  "id": "sirius",
+  "name": "Научно-технологический университет «Сириус»",
+  "short": "Университет «Сириус»",
+  "type": "university",
+  "city": "Сириус",
+  "regionId": "krasnodar",
+  "abroad": false,
+  "site": "https://siriusuniversity.ru/",
+  "admissionUrl": "https://siriusuniversity.ru/",
+  "eventsUrl": "https://siriusuniversity.ru/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "olymp",
+   "internships",
+   "intl"
+  ],
+  "ratings": {
+   "raex": null,
+   "employers": 0.8,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": null,
+  "priceTo": null,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Небольшой исследовательский университет: биомедицина, генетика, ИИ, математика. Сильный отбор, кампус у моря.",
+  "howToGet": "Федеральная территория «Сириус», Олимпийский пр-т",
+  "aliases": [
+   "сириус"
+  ]
+ },
+ {
+  "id": "ssau",
+  "name": "Самарский национальный исследовательский университет им. С. П. Королёва",
+  "short": "Самарский университет",
+  "type": "university",
+  "city": "Самара",
+  "regionId": "samara",
+  "abroad": false,
+  "site": "https://ssau.ru/",
+  "admissionUrl": "https://ssau.ru/",
+  "eventsUrl": "https://ssau.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "target",
+   "career",
+   "olymp"
+  ],
+  "ratings": {
+   "raex": 24,
+   "employers": 0.85,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 170000,
+  "priceTo": 270000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Авиация и космос, двигатели, БПЛА, ИТ, электроника. Партнёры — РКЦ «Прогресс», ОДК-Кузнецов.",
+  "howToGet": "Московское ш., 34, м. «Спортивная»/автобус",
+  "aliases": [
+   "самарский университет",
+   "королёва",
+   "сгау"
+  ]
+ },
+ {
+  "id": "samgtu",
+  "name": "Самарский государственный технический университет",
+  "short": "СамГТУ",
+  "type": "university",
+  "city": "Самара",
+  "regionId": "samara",
+  "abroad": false,
+  "site": "https://samgtu.ru/",
+  "admissionUrl": "https://samgtu.ru/",
+  "eventsUrl": "https://samgtu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "target",
+   "evening",
+   "dual"
+  ],
+  "ratings": {
+   "raex": 55,
+   "employers": 0.75,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 130000,
+  "priceTo": 220000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Нефтегаз, химтехнологии, энергетика, машиностроение, ИТ. Есть вечерняя и очно-заочная формы.",
+  "howToGet": "ул. Молодогвардейская, 244",
+  "aliases": [
+   "самгту",
+   "политех самара"
+  ]
+ },
+ {
+  "id": "samsmu",
+  "name": "Самарский государственный медицинский университет",
+  "short": "СамГМУ",
+  "type": "university",
+  "city": "Самара",
+  "regionId": "samara",
+  "abroad": false,
+  "site": "https://samsmu.ru/",
+  "admissionUrl": "https://samsmu.ru/",
+  "eventsUrl": "https://samsmu.ru/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "target",
+   "internships"
+  ],
+  "ratings": {
+   "raex": 50,
+   "employers": 0.75,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 200000,
+  "priceTo": 320000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Медицина, фармация, IT в медицине (свой IT-парк).",
+  "howToGet": "ул. Чапаевская, 89",
+  "aliases": [
+   "самгму"
+  ]
+ },
+ {
+  "id": "tltsu",
+  "name": "Тольяттинский государственный университет",
+  "short": "ТГУ (Тольятти)",
+  "type": "university",
+  "city": "Тольятти",
+  "regionId": "samara",
+  "abroad": false,
+  "site": "https://www.tltsu.ru/",
+  "admissionUrl": "https://www.tltsu.ru/",
+  "eventsUrl": "https://www.tltsu.ru/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "evening",
+   "online",
+   "dual",
+   "internships"
+  ],
+  "ratings": {
+   "raex": 90,
+   "employers": 0.65,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 120000,
+  "priceTo": 200000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Автомобилестроение, машиностроение, ИТ, педагогика. Сильная онлайн-платформа «Росдистант» — учиться можно из любого города региона.",
+  "howToGet": "ул. Белорусская, 14",
+  "aliases": [
+   "тгу тольятти",
+   "росдистант"
+  ]
+ },
+ {
+  "id": "samgtu_syzran",
+  "name": "Филиал Самарского государственного технического университета в г. Сызрани",
+  "short": "Филиал СамГТУ в Сызрани",
+  "type": "university",
+  "city": "Сызрань",
+  "regionId": "samara",
+  "abroad": false,
+  "site": "https://samgtu.ru/",
+  "admissionUrl": "https://samgtu.ru/",
+  "eventsUrl": "https://samgtu.ru/",
+  "dorm": false,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "evening",
+   "dual",
+   "target"
+  ],
+  "ratings": {
+   "raex": null,
+   "employers": 0.55,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 90000,
+  "priceTo": 150000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Нефтепереработка, энергетика, машиностроение для заводов Сызрани; вечерняя и очно-заочная формы позволяют работать.",
+  "howToGet": "Сызрань, центр города",
+  "aliases": [
+   "сызрань сгту"
+  ]
+ },
+ {
+  "id": "syzran_college",
+  "name": "ГБПОУ «Сызранский политехнический колледж»",
+  "short": "Сызранский политехнический колледж",
+  "type": "college",
+  "city": "Сызрань",
+  "regionId": "samara",
+  "abroad": false,
+  "site": "https://spk-syzran.ru/",
+  "admissionUrl": "https://spk-syzran.ru/",
+  "eventsUrl": "https://spk-syzran.ru/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "dual",
+   "career",
+   "target"
+  ],
+  "ratings": {
+   "raex": null,
+   "employers": 0.5,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 60000,
+  "priceTo": 110000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "СПО: машиностроение, электроснабжение, программирование, автомобили. Практика на заводах города.",
+  "howToGet": "Сызрань",
+  "aliases": [
+   "спк сызрань"
+  ]
+ },
+ {
+  "id": "samara_med_college",
+  "name": "ГБПОУ «Самарский медицинский колледж им. Н. Ляпиной»",
+  "short": "Самарский медколледж им. Ляпиной",
+  "type": "college",
+  "city": "Самара",
+  "regionId": "samara",
+  "abroad": false,
+  "site": "https://medcollege-samara.ru/",
+  "admissionUrl": "https://medcollege-samara.ru/",
+  "eventsUrl": "https://medcollege-samara.ru/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "career"
+  ],
+  "ratings": {
+   "raex": null,
+   "employers": 0.5,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 80000,
+  "priceTo": 130000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "СПО: сестринское дело, фельдшер. Работа сразу после выпуска.",
+  "howToGet": "Самара",
+  "aliases": [
+   "ляпиной"
+  ]
+ },
+ {
+  "id": "unn",
+  "name": "Нижегородский государственный университет им. Н. И. Лобачевского",
+  "short": "ННГУ",
+  "type": "university",
+  "city": "Нижний Новгород",
+  "regionId": "nn",
+  "abroad": false,
+  "site": "https://www.unn.ru/",
+  "admissionUrl": "https://abiturient.unn.ru/",
+  "eventsUrl": "https://www.unn.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "olymp",
+   "career"
+  ],
+  "ratings": {
+   "raex": 28,
+   "employers": 0.8,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 160000,
+  "priceTo": 270000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "ИТ (ИИТММ), физика, радиофизика, биология, экономика.",
+  "howToGet": "пр-т Гагарина, 23",
+  "aliases": [
+   "ннгу",
+   "лобачевского"
+  ]
+ },
+ {
+  "id": "bashgmu",
+  "name": "Башкирский государственный медицинский университет",
+  "short": "БГМУ",
+  "type": "university",
+  "city": "Уфа",
+  "regionId": "bashkortostan",
+  "abroad": false,
+  "site": "https://bashgmu.ru/",
+  "admissionUrl": "https://bashgmu.ru/",
+  "eventsUrl": "https://bashgmu.ru/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "target"
+  ],
+  "ratings": {
+   "raex": 85,
+   "employers": 0.65,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 190000,
+  "priceTo": 300000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Лечебное дело, стоматология, фармация.",
+  "howToGet": "ул. Ленина, 3",
+  "aliases": [
+   "бгму"
+  ]
+ },
+ {
+  "id": "uust",
+  "name": "Уфимский университет науки и технологий",
+  "short": "УУНиТ",
+  "type": "university",
+  "city": "Уфа",
+  "regionId": "bashkortostan",
+  "abroad": false,
+  "site": "https://uust.ru/",
+  "admissionUrl": "https://uust.ru/",
+  "eventsUrl": "https://uust.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "target"
+  ],
+  "ratings": {
+   "raex": 48,
+   "employers": 0.7,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 140000,
+  "priceTo": 240000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Авиадвигатели, нефтехимия, ИТ, экономика. Партнёр ОДК-УМПО.",
+  "howToGet": "ул. Заки Валиди, 32",
+  "aliases": [
+   "уунит",
+   "угату",
+   "башгу"
+  ]
+ },
+ {
+  "id": "pstu",
+  "name": "Пермский национальный исследовательский политехнический университет",
+  "short": "ПНИПУ",
+  "type": "university",
+  "city": "Пермь",
+  "regionId": "perm",
+  "abroad": false,
+  "site": "https://pstu.ru/",
+  "admissionUrl": "https://pstu.ru/",
+  "eventsUrl": "https://pstu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "dual",
+   "target",
+   "internships"
+  ],
+  "ratings": {
+   "raex": 35,
+   "employers": 0.75,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 140000,
+  "priceTo": 230000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Авиадвигатели, нефтегаз, химтехнологии, ИТ. Сильная дуальная модель с заводами.",
+  "howToGet": "Комсомольский пр-т, 29",
+  "aliases": [
+   "пнипу",
+   "пермский политех"
+  ]
+ },
+ {
+  "id": "sfu",
+  "name": "Сибирский федеральный университет",
+  "short": "СФУ",
+  "type": "university",
+  "city": "Красноярск",
+  "regionId": "krasnoyarsk",
+  "abroad": false,
+  "site": "https://www.sfu-kras.ru/",
+  "admissionUrl": "https://admissions.sfu-kras.ru/",
+  "eventsUrl": "https://news.sfu-kras.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "target",
+   "studlife"
+  ],
+  "ratings": {
+   "raex": 30,
+   "employers": 0.75,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 150000,
+  "priceTo": 250000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Металлургия, горное дело, энергетика, космос, ИТ.",
+  "howToGet": "пр-т Свободный, 79",
+  "aliases": [
+   "сфу"
+  ]
+ },
+ {
+  "id": "istu",
+  "name": "Иркутский национальный исследовательский технический университет",
+  "short": "ИРНИТУ",
+  "type": "university",
+  "city": "Иркутск",
+  "regionId": "irkutsk",
+  "abroad": false,
+  "site": "https://www.istu.edu/",
+  "admissionUrl": "https://www.istu.edu/",
+  "eventsUrl": "https://www.istu.edu/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "target"
+  ],
+  "ratings": {
+   "raex": 52,
+   "employers": 0.7,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 130000,
+  "priceTo": 220000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Энергетика, авиастроение, горное дело, ИТ.",
+  "howToGet": "ул. Лермонтова, 83",
+  "aliases": [
+   "ирниту"
+  ]
+ },
+ {
+  "id": "susu",
+  "name": "Южно-Уральский государственный университет",
+  "short": "ЮУрГУ",
+  "type": "university",
+  "city": "Челябинск",
+  "regionId": "chelyabinsk",
+  "abroad": false,
+  "site": "https://www.susu.ru/",
+  "admissionUrl": "https://abit.susu.ru/",
+  "eventsUrl": "https://www.susu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "target",
+   "studlife"
+  ],
+  "ratings": {
+   "raex": 38,
+   "employers": 0.7,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 140000,
+  "priceTo": 230000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Машиностроение, металлургия, ИТ, энергетика, архитектура.",
+  "howToGet": "пр-т Ленина, 76",
+  "aliases": [
+   "юургу"
+  ]
+ },
+ {
+  "id": "utmn",
+  "name": "Тюменский государственный университет",
+  "short": "ТюмГУ",
+  "type": "university",
+  "city": "Тюмень",
+  "regionId": "tyumen",
+  "abroad": false,
+  "site": "https://www.utmn.ru/",
+  "admissionUrl": "https://www.utmn.ru/",
+  "eventsUrl": "https://news.utmn.ru/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "studlife",
+   "internships",
+   "online"
+  ],
+  "ratings": {
+   "raex": 42,
+   "employers": 0.7,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 150000,
+  "priceTo": 250000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "ИТ, биология, экология, право, экономика. Индивидуальные образовательные траектории.",
+  "howToGet": "ул. Володарского, 6",
+  "aliases": [
+   "тюмгу"
+  ]
+ },
+ {
+  "id": "tiu",
+  "name": "Тюменский индустриальный университет",
+  "short": "ТИУ",
+  "type": "university",
+  "city": "Тюмень",
+  "regionId": "tyumen",
+  "abroad": false,
+  "site": "https://www.tyuiu.ru/",
+  "admissionUrl": "https://www.tyuiu.ru/",
+  "eventsUrl": "https://www.tyuiu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "target",
+   "internships",
+   "dual"
+  ],
+  "ratings": {
+   "raex": 60,
+   "employers": 0.75,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 140000,
+  "priceTo": 230000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Нефтегаз, строительство, геология. Целевое обучение от нефтяных компаний.",
+  "howToGet": "ул. Володарского, 38",
+  "aliases": [
+   "тиу",
+   "нефтегазовый тюмень"
+  ]
+ },
+ {
+  "id": "vsu",
+  "name": "Воронежский государственный университет",
+  "short": "ВГУ",
+  "type": "university",
+  "city": "Воронеж",
+  "regionId": "voronezh",
+  "abroad": false,
+  "site": "https://www.vsu.ru/",
+  "admissionUrl": "https://www.abitur.vsu.ru/",
+  "eventsUrl": "https://www.vsu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "studlife",
+   "internships"
+  ],
+  "ratings": {
+   "raex": 33,
+   "employers": 0.7,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 140000,
+  "priceTo": 230000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Классический университет: ИТ, физика, право, фармация, журналистика.",
+  "howToGet": "Университетская пл., 1",
+  "aliases": [
+   "вгу"
+  ]
+ },
+ {
+  "id": "dvfu",
+  "name": "Дальневосточный федеральный университет",
+  "short": "ДВФУ",
+  "type": "university",
+  "city": "Владивосток",
+  "regionId": "primorye",
+  "abroad": false,
+  "site": "https://www.dvfu.ru/",
+  "admissionUrl": "https://www.dvfu.ru/",
+  "eventsUrl": "https://www.dvfu.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "intl",
+   "internships",
+   "studlife"
+  ],
+  "ratings": {
+   "raex": 30,
+   "employers": 0.75,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 190000,
+  "priceTo": 320000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Кампус на о. Русский: медицина, ИТ, востоковедение, судостроение, биотехнологии.",
+  "howToGet": "о. Русский, кампус ДВФУ",
+  "aliases": [
+   "двфу"
+  ]
+ },
+ {
+  "id": "kantiana",
+  "name": "Балтийский федеральный университет им. И. Канта",
+  "short": "БФУ им. Канта",
+  "type": "university",
+  "city": "Калининград",
+  "regionId": "kaliningrad",
+  "abroad": false,
+  "site": "https://kantiana.ru/",
+  "admissionUrl": "https://kantiana.ru/",
+  "eventsUrl": "https://kantiana.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "intl",
+   "internships",
+   "studlife"
+  ],
+  "ratings": {
+   "raex": 32,
+   "employers": 0.7,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 170000,
+  "priceTo": 280000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Медицина, ИТ, физика, филология, экономика.",
+  "howToGet": "ул. А. Невского, 14",
+  "aliases": [
+   "бфу",
+   "канта"
+  ]
+ },
+ {
+  "id": "dgmu",
+  "name": "Дагестанский государственный медицинский университет",
+  "short": "ДГМУ",
+  "type": "university",
+  "city": "Махачкала",
+  "regionId": "dagestan",
+  "abroad": false,
+  "site": "https://dgmu.ru/",
+  "admissionUrl": "https://dgmu.ru/",
+  "eventsUrl": "https://dgmu.ru/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "target"
+  ],
+  "ratings": {
+   "raex": 95,
+   "employers": 0.6,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 150000,
+  "priceTo": 250000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Лечебное дело, стоматология, педиатрия, фармация.",
+  "howToGet": "пл. Ленина, 1",
+  "aliases": [
+   "дгму"
+  ]
+ },
+ {
+  "id": "dgu",
+  "name": "Дагестанский государственный университет",
+  "short": "ДГУ",
+  "type": "university",
+  "city": "Махачкала",
+  "regionId": "dagestan",
+  "abroad": false,
+  "site": "https://dgu.ru/",
+  "admissionUrl": "https://dgu.ru/",
+  "eventsUrl": "https://dgu.ru/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "studlife"
+  ],
+  "ratings": {
+   "raex": 110,
+   "employers": 0.55,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 110000,
+  "priceTo": 200000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Право, экономика, биология, ИТ, филология.",
+  "howToGet": "ул. Гаджиева, 43а",
+  "aliases": [
+   "дгу"
+  ]
+ },
+ {
+  "id": "dag_med_college",
+  "name": "ГБПОУ РД «Дагестанский базовый медицинский колледж им. Р. П. Аскерханова»",
+  "short": "Дагестанский базовый медколледж",
+  "type": "college",
+  "city": "Махачкала",
+  "regionId": "dagestan",
+  "abroad": false,
+  "site": "https://dbmk.ru/",
+  "admissionUrl": "https://dbmk.ru/",
+  "eventsUrl": "https://dbmk.ru/",
+  "dorm": true,
+  "vuc": false,
+  "budget": true,
+  "features": [
+   "career"
+  ],
+  "ratings": {
+   "raex": null,
+   "employers": 0.5,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 60000,
+  "priceTo": 100000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "СПО: сестринское дело, фельдшер, фармация.",
+  "howToGet": "Махачкала",
+  "aliases": [
+   "медколледж махачкала"
+  ]
+ },
+ {
+  "id": "kubsau",
+  "name": "Кубанский государственный аграрный университет им. И. Т. Трубилина",
+  "short": "КубГАУ",
+  "type": "university",
+  "city": "Краснодар",
+  "regionId": "krasnodar",
+  "abroad": false,
+  "site": "https://kubsau.ru/",
+  "admissionUrl": "https://kubsau.ru/",
+  "eventsUrl": "https://kubsau.ru/",
+  "dorm": true,
+  "vuc": true,
+  "budget": true,
+  "features": [
+   "internships",
+   "target",
+   "dual"
+  ],
+  "ratings": {
+   "raex": 90,
+   "employers": 0.65,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 120000,
+  "priceTo": 200000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Крупнейший аграрный вуз: агрономия, ветеринария, агроинженерия, экология. Практика в агрохолдингах Кубани.",
+  "howToGet": "ул. Калинина, 13",
+  "aliases": [
+   "кубгау",
+   "аграрный краснодар"
+  ]
+ },
+ {
+  "id": "rub",
+  "name": "Ruhr-Universität Bochum",
+  "short": "Рурский университет (RUB)",
+  "type": "university",
+  "city": "Бохум (Германия)",
+  "regionId": "abroad",
+  "abroad": true,
+  "site": "https://www.ruhr-uni-bochum.de/",
+  "admissionUrl": "https://www.ruhr-uni-bochum.de/en/international-applicants",
+  "eventsUrl": "https://news.rub.de/english",
+  "dorm": true,
+  "vuc": false,
+  "budget": false,
+  "features": [
+   "intl",
+   "internships"
+  ],
+  "ratings": {
+   "raex": null,
+   "employers": 0.6,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 0,
+  "priceTo": 0,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Государственный университет Германии: инженерия, ИТ-безопасность (HGI), медицина. Обучение почти бесплатное (семестровый взнос), нужен немецкий/английский и признание аттестата.",
+  "howToGet": "За рубежом: виза, языковой сертификат, финансовое подтверждение",
+  "aliases": [
+   "rub",
+   "бохум",
+   "рурский"
+  ],
+  "country": "Германия"
+ },
+ {
+  "id": "umich",
+  "name": "University of Michigan",
+  "short": "Мичиганский университет",
+  "type": "university",
+  "city": "Энн-Арбор (США)",
+  "regionId": "abroad",
+  "abroad": true,
+  "site": "https://umich.edu/",
+  "admissionUrl": "https://admissions.umich.edu/",
+  "eventsUrl": "https://events.umich.edu/",
+  "dorm": true,
+  "vuc": false,
+  "budget": false,
+  "features": [
+   "intl",
+   "internships",
+   "studlife"
+  ],
+  "ratings": {
+   "raex": null,
+   "employers": 0.7,
+   "meta": {
+    "source": "RAEX-100 (2025) — позиция приблизительная; рейтинг у работодателей — оценка по мониторингу ВШЭ/hh",
+    "updatedAt": "2025-07",
+    "confidence": "estimate"
+   }
+  },
+  "priceFrom": 5000000,
+  "priceTo": 7000000,
+  "priceMeta": {
+   "source": "Сайты вузов, приказы о стоимости 2025/26; средняя цена года ≈224 тыс. ₽ (hh.ru Карьера) — оценка",
+   "updatedAt": "2025-07",
+   "confidence": "estimate"
+  },
+  "description": "Один из сильнейших публичных университетов США: инженерия, CS, бизнес. Для иностранцев — высокая стоимость (~$60–70 тыс./год).",
+  "howToGet": "За рубежом: SAT/TOEFL, виза F-1",
+  "aliases": [
+   "michigan",
+   "мичиган"
+  ],
+  "country": "США"
+ }
+]

@@ -1,0 +1,1270 @@
+[
+ {
+  "id": "moscow",
+  "name": "Москва",
+  "capital": "Москва",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Москва",
+    "salaryCoef": 1,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 1.55,
+  "medianSalary": 114500,
+  "rent": 55000,
+  "studentBudget": 45000,
+  "vacancyShare": 0.26,
+  "industries": [
+   "it",
+   "finance",
+   "media",
+   "gov",
+   "science",
+   "medicine",
+   "retail",
+   "law",
+   "design"
+  ],
+  "employers": [
+   "Сбер",
+   "Яндекс",
+   "VK",
+   "Т-Банк",
+   "Ростех",
+   "Росатом",
+   "Правительство Москвы",
+   "МТС"
+  ],
+  "neighbors": [
+   "moscow_obl"
+  ],
+  "hhAreaId": 1,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона; аренда — Циан/Авито",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "moscow_obl",
+  "name": "Московская область",
+  "capital": "Красногорск",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Красногорск",
+    "salaryCoef": 1,
+    "hub": false
+   },
+   {
+    "name": "Долгопрудный",
+    "salaryCoef": 1,
+    "hub": false
+   },
+   {
+    "name": "Подольск",
+    "salaryCoef": 0.95,
+    "hub": false
+   },
+   {
+    "name": "Дубна",
+    "salaryCoef": 0.95,
+    "hub": false
+   },
+   {
+    "name": "Коломна",
+    "salaryCoef": 0.85,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 1.2,
+  "medianSalary": 88600,
+  "rent": 35000,
+  "studentBudget": 35000,
+  "vacancyShare": 0.06,
+  "industries": [
+   "manufacturing",
+   "logistics",
+   "science",
+   "retail",
+   "aviation"
+  ],
+  "employers": [
+   "ОДК",
+   "Тактическое ракетное вооружение",
+   "Wildberries",
+   "Ozon",
+   "ОИЯИ (Дубна)"
+  ],
+  "neighbors": [
+   "moscow"
+  ],
+  "hhAreaId": 2019,
+  "meta": {
+   "source": "Росстат (оценка по коэффициенту региона)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "spb",
+  "name": "Санкт-Петербург",
+  "capital": "Санкт-Петербург",
+  "federalDistrict": "СЗФО",
+  "cities": [
+   {
+    "name": "Санкт-Петербург",
+    "salaryCoef": 1,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 1.3,
+  "medianSalary": 96000,
+  "rent": 40000,
+  "studentBudget": 38000,
+  "vacancyShare": 0.1,
+  "industries": [
+   "it",
+   "shipbuilding",
+   "manufacturing",
+   "media",
+   "science",
+   "tourism",
+   "oil_gas",
+   "medicine"
+  ],
+  "employers": [
+   "Газпром нефть",
+   "ОСК",
+   "Адмиралтейские верфи",
+   "Яндекс",
+   "VK",
+   "Силовые машины",
+   "Росатом"
+  ],
+  "neighbors": [
+   "len_obl",
+   "kaliningrad"
+  ],
+  "hhAreaId": 2,
+  "meta": {
+   "source": "Росстат (оценка по коэффициенту региона)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "len_obl",
+  "name": "Ленинградская область",
+  "capital": "Гатчина",
+  "federalDistrict": "СЗФО",
+  "cities": [
+   {
+    "name": "Гатчина",
+    "salaryCoef": 1,
+    "hub": false
+   },
+   {
+    "name": "Выборг",
+    "salaryCoef": 0.95,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 1.05,
+  "medianSalary": 77500,
+  "rent": 25000,
+  "studentBudget": 28000,
+  "vacancyShare": 0.012,
+  "industries": [
+   "manufacturing",
+   "logistics",
+   "energy",
+   "agro"
+  ],
+  "employers": [
+   "Ленинградская АЭС",
+   "Усть-Луга",
+   "Киришинефтеоргсинтез"
+  ],
+  "neighbors": [
+   "spb"
+  ],
+  "hhAreaId": 145,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "tatarstan",
+  "name": "Республика Татарстан",
+  "capital": "Казань",
+  "federalDistrict": "ПФО",
+  "cities": [
+   {
+    "name": "Казань",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Иннополис",
+    "salaryCoef": 1.4,
+    "hub": false
+   },
+   {
+    "name": "Набережные Челны",
+    "salaryCoef": 0.95,
+    "hub": false
+   },
+   {
+    "name": "Елабуга",
+    "salaryCoef": 0.95,
+    "hub": false
+   },
+   {
+    "name": "Альметьевск",
+    "salaryCoef": 1.1,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.95,
+  "medianSalary": 70200,
+  "rent": 28000,
+  "studentBudget": 27000,
+  "vacancyShare": 0.035,
+  "industries": [
+   "oil_gas",
+   "it",
+   "manufacturing",
+   "chemistry",
+   "auto",
+   "aviation",
+   "drones"
+  ],
+  "employers": [
+   "Татнефть",
+   "КАМАЗ",
+   "ТАИФ",
+   "Казанский вертолётный завод",
+   "ОЭЗ «Алабуга»",
+   "Иннополис"
+  ],
+  "neighbors": [
+   "samara",
+   "bashkortostan",
+   "nn"
+  ],
+  "hhAreaId": 1624,
+  "meta": {
+   "source": "Росстат (оценка по коэффициенту региона)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "sverdlovsk",
+  "name": "Свердловская область",
+  "capital": "Екатеринбург",
+  "federalDistrict": "УрФО",
+  "cities": [
+   {
+    "name": "Екатеринбург",
+    "salaryCoef": 1.08,
+    "hub": true
+   },
+   {
+    "name": "Нижний Тагил",
+    "salaryCoef": 0.85,
+    "hub": false
+   },
+   {
+    "name": "Каменск-Уральский",
+    "salaryCoef": 0.85,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.98,
+  "medianSalary": 72400,
+  "rent": 27000,
+  "studentBudget": 27000,
+  "vacancyShare": 0.035,
+  "industries": [
+   "metallurgy",
+   "manufacturing",
+   "it",
+   "energy",
+   "machine"
+  ],
+  "employers": [
+   "УГМК",
+   "Уралвагонзавод",
+   "ТМК",
+   "Росатом",
+   "СКБ Контур",
+   "Уралмаш"
+  ],
+  "neighbors": [
+   "chelyabinsk",
+   "perm",
+   "tyumen",
+   "bashkortostan"
+  ],
+  "hhAreaId": 1261,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "novosibirsk",
+  "name": "Новосибирская область",
+  "capital": "Новосибирск",
+  "federalDistrict": "СФО",
+  "cities": [
+   {
+    "name": "Новосибирск",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Бердск",
+    "salaryCoef": 0.9,
+    "hub": false
+   },
+   {
+    "name": "Кольцово",
+    "salaryCoef": 1,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.92,
+  "medianSalary": 68000,
+  "rent": 26000,
+  "studentBudget": 26000,
+  "vacancyShare": 0.027,
+  "industries": [
+   "it",
+   "science",
+   "biotech",
+   "logistics",
+   "manufacturing"
+  ],
+  "employers": [
+   "Академгородок (СО РАН)",
+   "2ГИС",
+   "Центр «Вектор»",
+   "Новосибирский авиазавод им. Чкалова",
+   "ЦФТ",
+   "Экспасофт"
+  ],
+  "neighbors": [
+   "tomsk"
+  ],
+  "hhAreaId": 1202,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "tomsk",
+  "name": "Томская область",
+  "capital": "Томск",
+  "federalDistrict": "СФО",
+  "cities": [
+   {
+    "name": "Томск",
+    "salaryCoef": 1.02,
+    "hub": true
+   },
+   {
+    "name": "Северск",
+    "salaryCoef": 1,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.95,
+  "medianSalary": 70200,
+  "rent": 20000,
+  "studentBudget": 23000,
+  "vacancyShare": 0.006,
+  "industries": [
+   "science",
+   "oil_gas",
+   "it",
+   "nuclear",
+   "electronics"
+  ],
+  "employers": [
+   "Сибирский химический комбинат (Росатом)",
+   "Микран",
+   "Газпром трансгаз Томск",
+   "Элекард"
+  ],
+  "neighbors": [
+   "novosibirsk",
+   "krasnoyarsk"
+  ],
+  "hhAreaId": 1255,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "krasnodar",
+  "name": "Краснодарский край",
+  "capital": "Краснодар",
+  "federalDistrict": "ЮФО",
+  "cities": [
+   {
+    "name": "Краснодар",
+    "salaryCoef": 1.08,
+    "hub": true
+   },
+   {
+    "name": "Сочи",
+    "salaryCoef": 1.1,
+    "hub": false
+   },
+   {
+    "name": "Новороссийск",
+    "salaryCoef": 1.05,
+    "hub": false
+   },
+   {
+    "name": "Сириус",
+    "salaryCoef": 1.15,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.85,
+  "medianSalary": 62800,
+  "rent": 30000,
+  "studentBudget": 28000,
+  "vacancyShare": 0.04,
+  "industries": [
+   "agro",
+   "tourism",
+   "logistics",
+   "food",
+   "construction"
+  ],
+  "employers": [
+   "Магнит",
+   "Агрокомплекс им. Ткачёва",
+   "Новороссийский морской порт",
+   "Роза Хутор"
+  ],
+  "neighbors": [
+   "rostov",
+   "stavropol"
+  ],
+  "hhAreaId": 1438,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "rostov",
+  "name": "Ростовская область",
+  "capital": "Ростов-на-Дону",
+  "federalDistrict": "ЮФО",
+  "cities": [
+   {
+    "name": "Ростов-на-Дону",
+    "salaryCoef": 1.08,
+    "hub": true
+   },
+   {
+    "name": "Таганрог",
+    "salaryCoef": 0.9,
+    "hub": false
+   },
+   {
+    "name": "Новочеркасск",
+    "salaryCoef": 0.88,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.8,
+  "medianSalary": 59100,
+  "rent": 25000,
+  "studentBudget": 25000,
+  "vacancyShare": 0.028,
+  "industries": [
+   "agro",
+   "machine",
+   "aviation",
+   "energy",
+   "logistics"
+  ],
+  "employers": [
+   "Ростсельмаш",
+   "Роствертол",
+   "Таганрогский авиазавод (ТАНТК)",
+   "Атоммаш",
+   "Новочеркасская ГРЭС"
+  ],
+  "neighbors": [
+   "krasnodar",
+   "voronezh",
+   "stavropol"
+  ],
+  "hhAreaId": 1530,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "nn",
+  "name": "Нижегородская область",
+  "capital": "Нижний Новгород",
+  "federalDistrict": "ПФО",
+  "cities": [
+   {
+    "name": "Нижний Новгород",
+    "salaryCoef": 1.07,
+    "hub": true
+   },
+   {
+    "name": "Дзержинск",
+    "salaryCoef": 0.9,
+    "hub": false
+   },
+   {
+    "name": "Саров",
+    "salaryCoef": 1.25,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.88,
+  "medianSalary": 65000,
+  "rent": 25000,
+  "studentBudget": 25000,
+  "vacancyShare": 0.026,
+  "industries": [
+   "auto",
+   "it",
+   "machine",
+   "nuclear",
+   "chemistry"
+  ],
+  "employers": [
+   "ГАЗ",
+   "РФЯЦ-ВНИИЭФ (Саров)",
+   "Intel/Мера-подобные ИТ-центры",
+   "Сибур",
+   "ОКБМ Африкантов"
+  ],
+  "neighbors": [
+   "tatarstan",
+   "moscow_obl"
+  ],
+  "hhAreaId": 1679,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "samara",
+  "name": "Самарская область",
+  "capital": "Самара",
+  "federalDistrict": "ПФО",
+  "cities": [
+   {
+    "name": "Самара",
+    "salaryCoef": 1.07,
+    "hub": true
+   },
+   {
+    "name": "Тольятти",
+    "salaryCoef": 1.02,
+    "hub": false
+   },
+   {
+    "name": "Сызрань",
+    "salaryCoef": 0.78,
+    "hub": false
+   },
+   {
+    "name": "Новокуйбышевск",
+    "salaryCoef": 0.9,
+    "hub": false
+   },
+   {
+    "name": "Чапаевск",
+    "salaryCoef": 0.75,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.85,
+  "medianSalary": 62800,
+  "rent": 24000,
+  "studentBudget": 24000,
+  "vacancyShare": 0.025,
+  "industries": [
+   "aviation",
+   "space",
+   "auto",
+   "oil_gas",
+   "chemistry",
+   "energy",
+   "drones"
+  ],
+  "employers": [
+   "РКЦ «Прогресс» (Роскосмос)",
+   "АвтоВАЗ",
+   "ОДК-Кузнецов",
+   "Роснефть (Сызранский и Новокуйбышевский НПЗ)",
+   "Тяжмаш (Сызрань)",
+   "Тольяттиазот"
+  ],
+  "neighbors": [
+   "tatarstan"
+  ],
+  "hhAreaId": 1586,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "bashkortostan",
+  "name": "Республика Башкортостан",
+  "capital": "Уфа",
+  "federalDistrict": "ПФО",
+  "cities": [
+   {
+    "name": "Уфа",
+    "salaryCoef": 1.08,
+    "hub": true
+   },
+   {
+    "name": "Стерлитамак",
+    "salaryCoef": 0.9,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.86,
+  "medianSalary": 63500,
+  "rent": 24000,
+  "studentBudget": 24000,
+  "vacancyShare": 0.022,
+  "industries": [
+   "oil_gas",
+   "chemistry",
+   "machine",
+   "aviation",
+   "agro"
+  ],
+  "employers": [
+   "Башнефть",
+   "ОДК-УМПО",
+   "Газпром нефтехим Салават",
+   "Сода"
+  ],
+  "neighbors": [
+   "tatarstan",
+   "sverdlovsk",
+   "chelyabinsk",
+   "perm"
+  ],
+  "hhAreaId": 1347,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "krasnoyarsk",
+  "name": "Красноярский край",
+  "capital": "Красноярск",
+  "federalDistrict": "СФО",
+  "cities": [
+   {
+    "name": "Красноярск",
+    "salaryCoef": 1,
+    "hub": true
+   },
+   {
+    "name": "Норильск",
+    "salaryCoef": 1.8,
+    "hub": false
+   },
+   {
+    "name": "Железногорск",
+    "salaryCoef": 1.05,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 1.08,
+  "medianSalary": 79800,
+  "rent": 25000,
+  "studentBudget": 26000,
+  "vacancyShare": 0.02,
+  "industries": [
+   "metallurgy",
+   "energy",
+   "space",
+   "mining",
+   "oil_gas"
+  ],
+  "employers": [
+   "Норникель",
+   "РУСАЛ",
+   "ИСС им. Решетнёва",
+   "Ванкорнефть (Роснефть)",
+   "Красноярская ГЭС"
+  ],
+  "neighbors": [
+   "tomsk",
+   "irkutsk"
+  ],
+  "hhAreaId": 1146,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "primorye",
+  "name": "Приморский край",
+  "capital": "Владивосток",
+  "federalDistrict": "ДФО",
+  "cities": [
+   {
+    "name": "Владивосток",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Находка",
+    "salaryCoef": 1,
+    "hub": false
+   },
+   {
+    "name": "Большой Камень",
+    "salaryCoef": 1.1,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 1.1,
+  "medianSalary": 81300,
+  "rent": 32000,
+  "studentBudget": 30000,
+  "vacancyShare": 0.015,
+  "industries": [
+   "logistics",
+   "shipbuilding",
+   "fishery",
+   "tourism",
+   "bio"
+  ],
+  "employers": [
+   "Звезда (судостроение)",
+   "FESCO",
+   "Восточный порт",
+   "Дальзавод"
+  ],
+  "neighbors": [
+   "sakhalin"
+  ],
+  "hhAreaId": 1948,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "tyumen",
+  "name": "Тюменская область и ХМАО",
+  "capital": "Тюмень",
+  "federalDistrict": "УрФО",
+  "cities": [
+   {
+    "name": "Тюмень",
+    "salaryCoef": 0.95,
+    "hub": true
+   },
+   {
+    "name": "Сургут",
+    "salaryCoef": 1.35,
+    "hub": false
+   },
+   {
+    "name": "Ханты-Мансийск",
+    "salaryCoef": 1.3,
+    "hub": false
+   },
+   {
+    "name": "Тобольск",
+    "salaryCoef": 1.05,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 1.25,
+  "medianSalary": 92300,
+  "rent": 24000,
+  "studentBudget": 26000,
+  "vacancyShare": 0.022,
+  "industries": [
+   "oil_gas",
+   "chemistry",
+   "energy",
+   "it"
+  ],
+  "employers": [
+   "Сургутнефтегаз",
+   "Газпром нефть",
+   "Сибур (Тобольск)",
+   "Лукойл-Западная Сибирь"
+  ],
+  "neighbors": [
+   "sverdlovsk",
+   "tomsk",
+   "krasnoyarsk"
+  ],
+  "hhAreaId": 1844,
+  "meta": {
+   "source": "Росстат (оценка; ХМАО заметно выше Тюмени)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "perm",
+  "name": "Пермский край",
+  "capital": "Пермь",
+  "federalDistrict": "ПФО",
+  "cities": [
+   {
+    "name": "Пермь",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Березники",
+    "salaryCoef": 0.95,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.88,
+  "medianSalary": 65000,
+  "rent": 22000,
+  "studentBudget": 23000,
+  "vacancyShare": 0.016,
+  "industries": [
+   "oil_gas",
+   "chemistry",
+   "aviation",
+   "machine"
+  ],
+  "employers": [
+   "ОДК-Пермские моторы",
+   "Лукойл-Пермь",
+   "Уралкалий",
+   "ПНППК"
+  ],
+  "neighbors": [
+   "sverdlovsk",
+   "bashkortostan"
+  ],
+  "hhAreaId": 1317,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "voronezh",
+  "name": "Воронежская область",
+  "capital": "Воронеж",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Воронеж",
+    "salaryCoef": 1.07,
+    "hub": true
+   },
+   {
+    "name": "Нововоронеж",
+    "salaryCoef": 1.1,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.8,
+  "medianSalary": 59100,
+  "rent": 20000,
+  "studentBudget": 22000,
+  "vacancyShare": 0.018,
+  "industries": [
+   "agro",
+   "machine",
+   "electronics",
+   "aviation",
+   "energy"
+  ],
+  "employers": [
+   "ВАСО",
+   "Концерн «Созвездие»",
+   "Нововоронежская АЭС",
+   "Минудобрения"
+  ],
+  "neighbors": [
+   "rostov",
+   "moscow_obl"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "irkutsk",
+  "name": "Иркутская область",
+  "capital": "Иркутск",
+  "federalDistrict": "СФО",
+  "cities": [
+   {
+    "name": "Иркутск",
+    "salaryCoef": 1,
+    "hub": true
+   },
+   {
+    "name": "Ангарск",
+    "salaryCoef": 0.98,
+    "hub": false
+   },
+   {
+    "name": "Братск",
+    "salaryCoef": 1.05,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.98,
+  "medianSalary": 72400,
+  "rent": 22000,
+  "studentBudget": 24000,
+  "vacancyShare": 0.014,
+  "industries": [
+   "energy",
+   "aviation",
+   "metallurgy",
+   "mining",
+   "tourism"
+  ],
+  "employers": [
+   "Иркутский авиазавод (ОАК)",
+   "Эн+",
+   "РУСАЛ Братск",
+   "Ангарская нефтехимическая компания"
+  ],
+  "neighbors": [
+   "krasnoyarsk"
+  ],
+  "hhAreaId": 1124,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "chelyabinsk",
+  "name": "Челябинская область",
+  "capital": "Челябинск",
+  "federalDistrict": "УрФО",
+  "cities": [
+   {
+    "name": "Челябинск",
+    "salaryCoef": 1.03,
+    "hub": true
+   },
+   {
+    "name": "Магнитогорск",
+    "salaryCoef": 1.05,
+    "hub": false
+   },
+   {
+    "name": "Снежинск",
+    "salaryCoef": 1.2,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.86,
+  "medianSalary": 63500,
+  "rent": 20000,
+  "studentBudget": 22000,
+  "vacancyShare": 0.02,
+  "industries": [
+   "metallurgy",
+   "machine",
+   "nuclear",
+   "energy"
+  ],
+  "employers": [
+   "ММК",
+   "ЧТПЗ",
+   "РФЯЦ-ВНИИТФ (Снежинск)",
+   "ЧТЗ-Уралтрак"
+  ],
+  "neighbors": [
+   "sverdlovsk",
+   "bashkortostan"
+  ],
+  "hhAreaId": 1384,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "kaliningrad",
+  "name": "Калининградская область",
+  "capital": "Калининград",
+  "federalDistrict": "СЗФО",
+  "cities": [
+   {
+    "name": "Калининград",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Советск",
+    "salaryCoef": 0.85,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.9,
+  "medianSalary": 66500,
+  "rent": 28000,
+  "studentBudget": 26000,
+  "vacancyShare": 0.008,
+  "industries": [
+   "shipbuilding",
+   "tourism",
+   "electronics",
+   "logistics",
+   "food"
+  ],
+  "employers": [
+   "Янтарный судостроительный завод",
+   "Автотор",
+   "Телебалт",
+   "Калининградский морской порт"
+  ],
+  "neighbors": [
+   "spb"
+  ],
+  "hhAreaId": 1041,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "dagestan",
+  "name": "Республика Дагестан",
+  "capital": "Махачкала",
+  "federalDistrict": "СКФО",
+  "cities": [
+   {
+    "name": "Махачкала",
+    "salaryCoef": 1.08,
+    "hub": true
+   },
+   {
+    "name": "Дербент",
+    "salaryCoef": 0.9,
+    "hub": false
+   },
+   {
+    "name": "Каспийск",
+    "salaryCoef": 0.95,
+    "hub": false
+   },
+   {
+    "name": "Хасавюрт",
+    "salaryCoef": 0.85,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.65,
+  "medianSalary": 48000,
+  "rent": 20000,
+  "studentBudget": 20000,
+  "vacancyShare": 0.006,
+  "industries": [
+   "agro",
+   "tourism",
+   "medicine",
+   "construction",
+   "energy"
+  ],
+  "employers": [
+   "Махачкалинский морской порт",
+   "Завод «Дагдизель»",
+   "Республиканская клиническая больница",
+   "Русгидро (Дагестанский филиал)"
+  ],
+  "neighbors": [
+   "stavropol",
+   "krasnodar"
+  ],
+  "hhAreaId": 1424,
+  "meta": {
+   "source": "Росстат (оценка): регион с одной из самых низких медиан",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "sakhalin",
+  "name": "Сахалинская область",
+  "capital": "Южно-Сахалинск",
+  "federalDistrict": "ДФО",
+  "cities": [
+   {
+    "name": "Южно-Сахалинск",
+    "salaryCoef": 1,
+    "hub": true
+   },
+   {
+    "name": "Корсаков",
+    "salaryCoef": 0.95,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 1.55,
+  "medianSalary": 114500,
+  "rent": 35000,
+  "studentBudget": 35000,
+  "vacancyShare": 0.005,
+  "industries": [
+   "oil_gas",
+   "fishery",
+   "energy",
+   "construction"
+  ],
+  "employers": [
+   "Сахалин Энерджи",
+   "Эксон Нефтегаз (ранее)",
+   "Сахалинская энергия",
+   "Рыбокомбинаты Курил"
+  ],
+  "neighbors": [
+   "primorye"
+  ],
+  "hhAreaId": 1932,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "stavropol",
+  "name": "Ставропольский край",
+  "capital": "Ставрополь",
+  "federalDistrict": "СКФО",
+  "cities": [
+   {
+    "name": "Ставрополь",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Пятигорск",
+    "salaryCoef": 0.95,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.75,
+  "medianSalary": 55400,
+  "rent": 20000,
+  "studentBudget": 22000,
+  "vacancyShare": 0.014,
+  "industries": [
+   "agro",
+   "chemistry",
+   "tourism",
+   "medicine"
+  ],
+  "employers": [
+   "Невинномысский Азот (ЕвроХим)",
+   "Ставролен",
+   "Курорты Кавминвод"
+  ],
+  "neighbors": [
+   "krasnodar",
+   "rostov",
+   "dagestan"
+  ],
+  "hhAreaId": 1556,
+  "meta": {
+   "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "abroad",
+  "name": "Зарубежье",
+  "capital": "—",
+  "federalDistrict": "—",
+  "cities": [
+   {
+    "name": "Бохум (Германия)",
+    "salaryCoef": 1,
+    "hub": true
+   },
+   {
+    "name": "Энн-Арбор (США)",
+    "salaryCoef": 1,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 1.6,
+  "medianSalary": 118000,
+  "rent": 70000,
+  "studentBudget": 90000,
+  "vacancyShare": 0.01,
+  "industries": [
+   "it",
+   "science",
+   "engineering"
+  ],
+  "employers": [
+   "—"
+  ],
+  "neighbors": [],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Оценка: зарплата при возвращении/удалённой работе на российский рынок, без учёта зарубежного рынка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ }
+]
