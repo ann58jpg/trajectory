@@ -6,7 +6,7 @@ import * as schema from "../lib/db/schema";
 import { loadRawJson } from "../lib/data/load-json";
 import { validateCatalog } from "../lib/data/validate";
 
-const db = openDbForSetup();
+const { db, sqlite } = openDbForSetup();
 migrate(db, { migrationsFolder: "./drizzle" });
 
 const { catalog, errors, warnings } = validateCatalog(loadRawJson());
@@ -42,3 +42,4 @@ console.log(
     `вузов ${count(schema.universities)}, программ ${count(schema.programs)}, событий ${count(schema.events)}, ` +
     `приоритетов ${count(schema.priorities)}, предметов ЕГЭ ${count(schema.egeSubjects)}`,
 );
+sqlite.close();

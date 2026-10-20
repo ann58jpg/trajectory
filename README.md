@@ -29,6 +29,18 @@ npm install && npm run setup && npm run dev
 
 Для e2e нужен Chromium для Playwright (`npx playwright install chromium`) или путь к браузеру в `PW_CHROMIUM_PATH`.
 
+## Деплой на Vercel
+
+Ничего настраивать не нужно: импортируйте репозиторий в Vercel (**Add New → Project → Import**) и нажмите **Deploy**.
+
+- Сборка запускает `npm run vercel-build` = `npm run setup && next build`: миграция, проверка справочников и seed SQLite выполняются при каждом деплое (см. `vercel.json`).
+- Файл `data/trajectory.db` включается в серверные функции (`outputFileTracingIncludes` в `next.config.ts`) вместе с нативным модулем `better-sqlite3`. Node.js — 22.x (поле `engines`).
+- На Vercel файлы функции только для чтения, поэтому при первом запросе база копируется в `/tmp`: там работает кэш hh.ru и ответов ИИ. Кэш живёт, пока жив инстанс функции, и не общий для инстансов — для прототипа этого достаточно. Если копирование не удастся, база откроется только для чтения, а кэш уйдёт в память.
+- Справочники меняются через `data/*.json` и новый деплой.
+- Переменные окружения необязательны (без них — демо-режим): `ANTHROPIC_API_KEY`, `ANTHROPIC_MODEL`, `HH_USER_AGENT` — задаются в **Settings → Environment Variables**.
+
+Локально сборку под Vercel можно проверить командой `npx vercel build`.
+
 ## Как подключить ИИ
 
 Скопируйте `.env.example` в `.env` и задайте ключ:

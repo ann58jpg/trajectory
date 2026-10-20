@@ -12,7 +12,8 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "typecheck": "tsc --noEmit",
-    "check-links": "bash scripts/check-links.sh"
+    "check-links": "bash scripts/check-links.sh",
+    "vercel-build": "npm run setup && next build"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.135.0",
@@ -47,6 +48,6 @@
     "vitest": "^3.2.4"
   },
   "engines": {
-    "node": ">=20.9"
+    "node": "22.x"
   }
 }
