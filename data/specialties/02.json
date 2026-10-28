@@ -1,0 +1,150 @@
+[
+ {
+  "code": "02.03.01",
+  "name": "Математика и компьютерные науки",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "02.00.00",
+  "tags": [
+   "it",
+   "math",
+   "data",
+   "science"
+  ],
+  "klimov": [
+   "S"
+  ],
+  "disciplines": [
+   "Дискретная математика",
+   "Алгоритмы",
+   "Теория сложности",
+   "Машинное обучение"
+  ],
+  "employment": {
+   "rate": 0.82,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Математика плюс программирование. Готовят к разработке алгоритмов, ИИ и науке.",
+  "autoDescription": true,
+  "professions": [
+   "data_scientist",
+   "backend",
+   "mathematician"
+  ]
+ },
+ {
+  "code": "02.03.02",
+  "name": "Фундаментальная информатика и информационные технологии",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "02.00.00",
+  "tags": [
+   "it",
+   "math",
+   "data"
+  ],
+  "klimov": [
+   "S"
+  ],
+  "disciplines": [
+   "Теория алгоритмов",
+   "Компиляторы",
+   "Базы данных",
+   "Распределённые системы"
+  ],
+  "employment": {
+   "rate": 0.82,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как устроены языки программирования, компиляторы и сложные системы.",
+  "autoDescription": true,
+  "professions": [
+   "backend",
+   "data_engineer",
+   "devops",
+   "gamedev"
+  ]
+ },
+ {
+  "code": "02.03.03",
+  "name": "Математическое обеспечение и администрирование информационных систем",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "02.00.00",
+  "tags": [
+   "it",
+   "math",
+   "data",
+   "engineering"
+  ],
+  "klimov": [
+   "S"
+  ],
+  "disciplines": [
+   "Базы данных",
+   "Администрирование",
+   "Программирование",
+   "Сети"
+  ],
+  "employment": {
+   "rate": 0.82,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Разработка и поддержка больших информационных систем: от базы данных до серверов.",
+  "autoDescription": true,
+  "professions": [
+   "backend",
+   "sysadmin",
+   "devops",
+   "qa"
+  ]
+ }
+]

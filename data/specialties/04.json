@@ -1,0 +1,150 @@
+[
+ {
+  "code": "04.03.01",
+  "name": "Химия",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "chem"
+   ],
+   "oneOf": [
+    "math",
+    "bio",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "04.00.00",
+  "tags": [
+   "chemistry",
+   "science"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Неорганическая химия",
+   "Органическая химия",
+   "Аналитическая химия",
+   "Физхимия"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Учатся получать и анализировать вещества. Работа в лабораториях, на заводах, в фарме и экспертизе.",
+  "autoDescription": true,
+  "professions": [
+   "chemist_analyst",
+   "process_engineer",
+   "pharmacist"
+  ]
+ },
+ {
+  "code": "04.03.02",
+  "name": "Химия, физика и механика материалов",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "chem"
+   ],
+   "oneOf": [
+    "math",
+    "bio",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "04.00.00",
+  "tags": [
+   "chemistry",
+   "science",
+   "physics"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Материаловедение",
+   "Физика твёрдого тела",
+   "Химия полимеров",
+   "Механика материалов"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Создание новых материалов: полимеров, композитов, покрытий.",
+  "autoDescription": true,
+  "professions": [
+   "materials_engineer",
+   "chemist_analyst",
+   "nanotech_engineer"
+  ]
+ },
+ {
+  "code": "04.05.01",
+  "name": "Фундаментальная и прикладная химия",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "chem"
+   ],
+   "oneOf": [
+    "math",
+    "bio",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "04.00.00",
+  "tags": [
+   "chemistry",
+   "science"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Органический синтез",
+   "Квантовая химия",
+   "Катализ",
+   "Аналитическая химия"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Пять лет глубокой химии: синтез, катализ, анализ. Для науки и сложных производств.",
+  "autoDescription": true,
+  "professions": [
+   "chemist_analyst",
+   "process_engineer",
+   "biotechnologist"
+  ]
+ }
+]

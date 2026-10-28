@@ -1,5 +1,5 @@
 import regions from "@/data/regions.json";
-import specialties from "@/data/specialties.json";
+import { specialtiesStatic as specialties } from "./specialties-index";
 import professions from "@/data/professions.json";
 import universities from "@/data/universities.json";
 import programs from "@/data/programs.json";

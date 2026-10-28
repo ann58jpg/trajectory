@@ -77,6 +77,21 @@
     "name": "Коломна",
     "salaryCoef": 0.85,
     "hub": false
+   },
+   {
+    "name": "Черкизово (Пушкинский г. о.)",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Мытищи",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Химки",
+    "salaryCoef": 1.0,
+    "hub": false
    }
   ],
   "salaryCoef": 1.2,
@@ -170,6 +185,11 @@
     "name": "Выборг",
     "salaryCoef": 0.95,
     "hub": false
+   },
+   {
+    "name": "Пушкин",
+    "salaryCoef": 1.0,
+    "hub": false
    }
   ],
   "salaryCoef": 1.05,
@@ -227,6 +247,11 @@
    {
     "name": "Альметьевск",
     "salaryCoef": 1.1,
+    "hub": false
+   },
+   {
+    "name": "Нижнекамск",
+    "salaryCoef": 1.0,
     "hub": false
    }
   ],
@@ -1225,6 +1250,2190 @@
   "hhAreaId": 1556,
   "meta": {
    "source": "Росстат (оценка)",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "yaroslavl",
+  "name": "Ярославская область",
+  "capital": "Ярославль",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Ярославль",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Рыбинск",
+    "salaryCoef": 0.9,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.85,
+  "medianSalary": 62800,
+  "rent": 20000,
+  "studentBudget": 23000,
+  "vacancyShare": 0.009,
+  "industries": [
+   "machine",
+   "chemistry",
+   "energy",
+   "culture"
+  ],
+  "employers": [
+   "ОДК-Сатурн (Рыбинск)",
+   "Ярославский моторный завод",
+   "Славнефть-ЯНОС",
+   "Ярославский шинный завод"
+  ],
+  "neighbors": [
+   "moscow_obl",
+   "vladimir",
+   "ivanovo",
+   "kostroma",
+   "tver",
+   "vologda"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "vladimir",
+  "name": "Владимирская область",
+  "capital": "Владимир",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Владимир",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Ковров",
+    "salaryCoef": 0.95,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.78,
+  "medianSalary": 57600,
+  "rent": 18000,
+  "studentBudget": 22000,
+  "vacancyShare": 0.007,
+  "industries": [
+   "machine",
+   "manufacturing",
+   "chemistry"
+  ],
+  "employers": [
+   "Ковровский электромеханический завод",
+   "Завод им. Дегтярёва",
+   "Владимирский моторо-тракторный завод"
+  ],
+  "neighbors": [
+   "moscow_obl",
+   "yaroslavl",
+   "ivanovo",
+   "nn",
+   "ryazan"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "tver",
+  "name": "Тверская область",
+  "capital": "Тверь",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Тверь",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.82,
+  "medianSalary": 60600,
+  "rent": 18000,
+  "studentBudget": 22000,
+  "vacancyShare": 0.007,
+  "industries": [
+   "machine",
+   "energy",
+   "logistics"
+  ],
+  "employers": [
+   "Тверской вагоностроительный завод",
+   "Калининская АЭС"
+  ],
+  "neighbors": [
+   "moscow_obl",
+   "yaroslavl",
+   "smolensk",
+   "novgorod",
+   "pskov"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "kaluga",
+  "name": "Калужская область",
+  "capital": "Калуга",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Калуга",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Обнинск",
+    "salaryCoef": 1.1,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.9,
+  "medianSalary": 66500,
+  "rent": 20000,
+  "studentBudget": 23000,
+  "vacancyShare": 0.007,
+  "industries": [
+   "auto",
+   "manufacturing",
+   "nuclear",
+   "pharma",
+   "science"
+  ],
+  "employers": [
+   "Обнинский физико-энергетический институт",
+   "Калужский турбинный завод",
+   "фармкластер Калуги"
+  ],
+  "neighbors": [
+   "moscow_obl",
+   "tula",
+   "bryansk",
+   "smolensk",
+   "orel"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "tula",
+  "name": "Тульская область",
+  "capital": "Тула",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Тула",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Новомосковск",
+    "salaryCoef": 0.95,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.85,
+  "medianSalary": 62800,
+  "rent": 18000,
+  "studentBudget": 22000,
+  "vacancyShare": 0.009,
+  "industries": [
+   "machine",
+   "chemistry",
+   "metallurgy"
+  ],
+  "employers": [
+   "КБП им. Шипунова",
+   "Тульский оружейный завод",
+   "Новомосковский Азот"
+  ],
+  "neighbors": [
+   "moscow_obl",
+   "kaluga",
+   "ryazan",
+   "orel",
+   "lipetsk"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "ryazan",
+  "name": "Рязанская область",
+  "capital": "Рязань",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Рязань",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.78,
+  "medianSalary": 57600,
+  "rent": 17000,
+  "studentBudget": 21000,
+  "vacancyShare": 0.006,
+  "industries": [
+   "oil_gas",
+   "electronics",
+   "machine"
+  ],
+  "employers": [
+   "Рязанская НПК",
+   "Рязанский радиозавод"
+  ],
+  "neighbors": [
+   "moscow_obl",
+   "vladimir",
+   "tula",
+   "lipetsk",
+   "tambov"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "belgorod",
+  "name": "Белгородская область",
+  "capital": "Белгород",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Белгород",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Старый Оскол",
+    "salaryCoef": 1.05,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.82,
+  "medianSalary": 60600,
+  "rent": 18000,
+  "studentBudget": 21000,
+  "vacancyShare": 0.008,
+  "industries": [
+   "agro",
+   "metallurgy",
+   "mining",
+   "food"
+  ],
+  "employers": [
+   "Металлоинвест",
+   "Агрохолдинги региона",
+   "Лебединский ГОК"
+  ],
+  "neighbors": [
+   "voronezh",
+   "kursk"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "kursk",
+  "name": "Курская область",
+  "capital": "Курск",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Курск",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Курчатов",
+    "salaryCoef": 1.1,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.78,
+  "medianSalary": 57600,
+  "rent": 16000,
+  "studentBudget": 20000,
+  "vacancyShare": 0.005,
+  "industries": [
+   "agro",
+   "nuclear",
+   "food"
+  ],
+  "employers": [
+   "Курская АЭС",
+   "Михайловский ГОК"
+  ],
+  "neighbors": [
+   "belgorod",
+   "orel",
+   "bryansk",
+   "voronezh",
+   "lipetsk"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "lipetsk",
+  "name": "Липецкая область",
+  "capital": "Липецк",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Липецк",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.8,
+  "medianSalary": 59100,
+  "rent": 16000,
+  "studentBudget": 20000,
+  "vacancyShare": 0.006,
+  "industries": [
+   "metallurgy",
+   "agro",
+   "machine"
+  ],
+  "employers": [
+   "НЛМК",
+   "ОЭЗ «Липецк»"
+  ],
+  "neighbors": [
+   "voronezh",
+   "tula",
+   "ryazan",
+   "tambov",
+   "kursk",
+   "orel"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "tambov",
+  "name": "Тамбовская область",
+  "capital": "Тамбов",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Тамбов",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.7,
+  "medianSalary": 51700,
+  "rent": 14000,
+  "studentBudget": 18000,
+  "vacancyShare": 0.004,
+  "industries": [
+   "agro",
+   "food",
+   "machine"
+  ],
+  "employers": [
+   "Тамбовский пороховой завод",
+   "Агрохолдинги"
+  ],
+  "neighbors": [
+   "voronezh",
+   "lipetsk",
+   "ryazan",
+   "penza",
+   "saratov"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "smolensk",
+  "name": "Смоленская область",
+  "capital": "Смоленск",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Смоленск",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.75,
+  "medianSalary": 55400,
+  "rent": 15000,
+  "studentBudget": 19000,
+  "vacancyShare": 0.005,
+  "industries": [
+   "manufacturing",
+   "aviation",
+   "energy"
+  ],
+  "employers": [
+   "Смоленский авиационный завод",
+   "Смоленская АЭС"
+  ],
+  "neighbors": [
+   "moscow_obl",
+   "tver",
+   "kaluga",
+   "bryansk",
+   "pskov"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "bryansk",
+  "name": "Брянская область",
+  "capital": "Брянск",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Брянск",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.72,
+  "medianSalary": 53200,
+  "rent": 14000,
+  "studentBudget": 18000,
+  "vacancyShare": 0.005,
+  "industries": [
+   "machine",
+   "transport"
+  ],
+  "employers": [
+   "Брянский машиностроительный завод",
+   "Брянский автомобильный завод"
+  ],
+  "neighbors": [
+   "kaluga",
+   "smolensk",
+   "orel",
+   "kursk"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "ivanovo",
+  "name": "Ивановская область",
+  "capital": "Иваново",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Иваново",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.7,
+  "medianSalary": 51700,
+  "rent": 14000,
+  "studentBudget": 18000,
+  "vacancyShare": 0.005,
+  "industries": [
+   "fashion",
+   "manufacturing",
+   "energy"
+  ],
+  "employers": [
+   "Текстильные фабрики",
+   "Ивановская ТЭЦ"
+  ],
+  "neighbors": [
+   "yaroslavl",
+   "vladimir",
+   "kostroma",
+   "nn"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "kostroma",
+  "name": "Костромская область",
+  "capital": "Кострома",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Кострома",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.72,
+  "medianSalary": 53200,
+  "rent": 13000,
+  "studentBudget": 17000,
+  "vacancyShare": 0.003,
+  "industries": [
+   "manufacturing",
+   "energy"
+  ],
+  "employers": [
+   "Костромская ГРЭС",
+   "Ювелирные заводы Красного-на-Волге"
+  ],
+  "neighbors": [
+   "yaroslavl",
+   "ivanovo",
+   "vologda",
+   "nn",
+   "kirov"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "orel",
+  "name": "Орловская область",
+  "capital": "Орёл",
+  "federalDistrict": "ЦФО",
+  "cities": [
+   {
+    "name": "Орёл",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.7,
+  "medianSalary": 51700,
+  "rent": 14000,
+  "studentBudget": 18000,
+  "vacancyShare": 0.004,
+  "industries": [
+   "agro",
+   "machine",
+   "food"
+  ],
+  "employers": [
+   "Агрохолдинги",
+   "Орловский сталепрокатный завод"
+  ],
+  "neighbors": [
+   "tula",
+   "kaluga",
+   "bryansk",
+   "kursk",
+   "lipetsk"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "arkhangelsk",
+  "name": "Архангельская область",
+  "capital": "Архангельск",
+  "federalDistrict": "СЗФО",
+  "cities": [
+   {
+    "name": "Архангельск",
+    "salaryCoef": 1.0,
+    "hub": true
+   },
+   {
+    "name": "Северодвинск",
+    "salaryCoef": 1.15,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 1.05,
+  "medianSalary": 77600,
+  "rent": 20000,
+  "studentBudget": 25000,
+  "vacancyShare": 0.007,
+  "industries": [
+   "shipbuilding",
+   "wood",
+   "sea"
+  ],
+  "employers": [
+   "Севмаш",
+   "Звёздочка",
+   "Целлюлозно-бумажные комбинаты"
+  ],
+  "neighbors": [
+   "karelia",
+   "vologda",
+   "komi"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "murmansk",
+  "name": "Мурманская область",
+  "capital": "Мурманск",
+  "federalDistrict": "СЗФО",
+  "cities": [
+   {
+    "name": "Мурманск",
+    "salaryCoef": 1.0,
+    "hub": true
+   },
+   {
+    "name": "Апатиты",
+    "salaryCoef": 0.95,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 1.35,
+  "medianSalary": 99700,
+  "rent": 22000,
+  "studentBudget": 28000,
+  "vacancyShare": 0.006,
+  "industries": [
+   "sea",
+   "mining",
+   "fishery",
+   "shipbuilding"
+  ],
+  "employers": [
+   "Мурманский морской порт",
+   "ФосАгро-Апатит",
+   "Росатомфлот"
+  ],
+  "neighbors": [
+   "karelia"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "karelia",
+  "name": "Республика Карелия",
+  "capital": "Петрозаводск",
+  "federalDistrict": "СЗФО",
+  "cities": [
+   {
+    "name": "Петрозаводск",
+    "salaryCoef": 1.0,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.95,
+  "medianSalary": 70200,
+  "rent": 16000,
+  "studentBudget": 21000,
+  "vacancyShare": 0.004,
+  "industries": [
+   "wood",
+   "tourism",
+   "mining"
+  ],
+  "employers": [
+   "Карельский окатыш",
+   "Лесопромышленные компании"
+  ],
+  "neighbors": [
+   "murmansk",
+   "arkhangelsk",
+   "vologda",
+   "len_obl"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "vologda",
+  "name": "Вологодская область",
+  "capital": "Вологда",
+  "federalDistrict": "СЗФО",
+  "cities": [
+   {
+    "name": "Вологда",
+    "salaryCoef": 0.95,
+    "hub": true
+   },
+   {
+    "name": "Череповец",
+    "salaryCoef": 1.1,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.85,
+  "medianSalary": 62800,
+  "rent": 16000,
+  "studentBudget": 20000,
+  "vacancyShare": 0.006,
+  "industries": [
+   "metallurgy",
+   "chemistry",
+   "agro",
+   "wood"
+  ],
+  "employers": [
+   "Северсталь",
+   "ФосАгро",
+   "Молочные заводы"
+  ],
+  "neighbors": [
+   "yaroslavl",
+   "kostroma",
+   "arkhangelsk",
+   "karelia",
+   "len_obl"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "pskov",
+  "name": "Псковская область",
+  "capital": "Псков",
+  "federalDistrict": "СЗФО",
+  "cities": [
+   {
+    "name": "Псков",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Великие Луки",
+    "salaryCoef": 0.9,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.72,
+  "medianSalary": 53200,
+  "rent": 14000,
+  "studentBudget": 18000,
+  "vacancyShare": 0.003,
+  "industries": [
+   "manufacturing",
+   "tourism",
+   "agro"
+  ],
+  "employers": [
+   "Псковский электромашиностроительный завод"
+  ],
+  "neighbors": [
+   "len_obl",
+   "novgorod",
+   "tver",
+   "smolensk"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "novgorod",
+  "name": "Новгородская область",
+  "capital": "Великий Новгород",
+  "federalDistrict": "СЗФО",
+  "cities": [
+   {
+    "name": "Великий Новгород",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.8,
+  "medianSalary": 59100,
+  "rent": 15000,
+  "studentBudget": 19000,
+  "vacancyShare": 0.003,
+  "industries": [
+   "chemistry",
+   "manufacturing",
+   "tourism"
+  ],
+  "employers": [
+   "Акрон",
+   "Новгородские заводы электроники"
+  ],
+  "neighbors": [
+   "len_obl",
+   "pskov",
+   "tver",
+   "vologda"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "komi",
+  "name": "Республика Коми",
+  "capital": "Сыктывкар",
+  "federalDistrict": "СЗФО",
+  "cities": [
+   {
+    "name": "Сыктывкар",
+    "salaryCoef": 0.95,
+    "hub": true
+   },
+   {
+    "name": "Ухта",
+    "salaryCoef": 1.15,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 1.05,
+  "medianSalary": 77600,
+  "rent": 17000,
+  "studentBudget": 22000,
+  "vacancyShare": 0.004,
+  "industries": [
+   "oil_gas",
+   "wood",
+   "mining"
+  ],
+  "employers": [
+   "Лукойл-Коми",
+   "Монди СЛПК",
+   "Воркутауголь"
+  ],
+  "neighbors": [
+   "arkhangelsk",
+   "kirov",
+   "perm",
+   "yanao"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "volgograd",
+  "name": "Волгоградская область",
+  "capital": "Волгоград",
+  "federalDistrict": "ЮФО",
+  "cities": [
+   {
+    "name": "Волгоград",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Волжский",
+    "salaryCoef": 0.95,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.75,
+  "medianSalary": 55400,
+  "rent": 16000,
+  "studentBudget": 20000,
+  "vacancyShare": 0.012,
+  "industries": [
+   "oil_gas",
+   "chemistry",
+   "metallurgy",
+   "agro"
+  ],
+  "employers": [
+   "Лукойл-Волгограднефтепереработка",
+   "Красный Октябрь",
+   "Волжский трубный завод"
+  ],
+  "neighbors": [
+   "rostov",
+   "saratov",
+   "astrakhan",
+   "kalmykia"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "astrakhan",
+  "name": "Астраханская область",
+  "capital": "Астрахань",
+  "federalDistrict": "ЮФО",
+  "cities": [
+   {
+    "name": "Астрахань",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.78,
+  "medianSalary": 57600,
+  "rent": 16000,
+  "studentBudget": 20000,
+  "vacancyShare": 0.005,
+  "industries": [
+   "oil_gas",
+   "sea",
+   "fishery",
+   "shipbuilding"
+  ],
+  "employers": [
+   "Газпром добыча Астрахань",
+   "Астраханский морской порт",
+   "Судостроительные заводы"
+  ],
+  "neighbors": [
+   "volgograd",
+   "kalmykia"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "adygea",
+  "name": "Республика Адыгея",
+  "capital": "Майкоп",
+  "federalDistrict": "ЮФО",
+  "cities": [
+   {
+    "name": "Майкоп",
+    "salaryCoef": 1.0,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.7,
+  "medianSalary": 51700,
+  "rent": 14000,
+  "studentBudget": 18000,
+  "vacancyShare": 0.002,
+  "industries": [
+   "agro",
+   "tourism",
+   "food"
+  ],
+  "employers": [
+   "Агрохолдинги",
+   "Турбазы Лаго-Наки"
+  ],
+  "neighbors": [
+   "krasnodar"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "crimea",
+  "name": "Республика Крым",
+  "capital": "Симферополь",
+  "federalDistrict": "ЮФО",
+  "cities": [
+   {
+    "name": "Симферополь",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Ялта",
+    "salaryCoef": 1.05,
+    "hub": false
+   },
+   {
+    "name": "Керчь",
+    "salaryCoef": 0.9,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.7,
+  "medianSalary": 51700,
+  "rent": 20000,
+  "studentBudget": 22000,
+  "vacancyShare": 0.008,
+  "industries": [
+   "tourism",
+   "agro",
+   "shipbuilding"
+  ],
+  "employers": [
+   "Курорты Южного берега",
+   "Залив (Керчь)",
+   "Винодельни"
+  ],
+  "neighbors": [
+   "sevastopol",
+   "krasnodar"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "sevastopol",
+  "name": "Севастополь",
+  "capital": "Севастополь",
+  "federalDistrict": "ЮФО",
+  "cities": [
+   {
+    "name": "Севастополь",
+    "salaryCoef": 1.0,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.8,
+  "medianSalary": 59100,
+  "rent": 25000,
+  "studentBudget": 25000,
+  "vacancyShare": 0.003,
+  "industries": [
+   "sea",
+   "shipbuilding",
+   "tourism"
+  ],
+  "employers": [
+   "Севастопольский морской завод",
+   "Порт Севастополь"
+  ],
+  "neighbors": [
+   "crimea"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "kalmykia",
+  "name": "Республика Калмыкия",
+  "capital": "Элиста",
+  "federalDistrict": "ЮФО",
+  "cities": [
+   {
+    "name": "Элиста",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.6,
+  "medianSalary": 44300,
+  "rent": 12000,
+  "studentBudget": 16000,
+  "vacancyShare": 0.001,
+  "industries": [
+   "agro"
+  ],
+  "employers": [
+   "Агрохолдинги"
+  ],
+  "neighbors": [
+   "volgograd",
+   "astrakhan",
+   "stavropol",
+   "dagestan",
+   "rostov"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "chechnya",
+  "name": "Чеченская Республика",
+  "capital": "Грозный",
+  "federalDistrict": "СКФО",
+  "cities": [
+   {
+    "name": "Грозный",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.65,
+  "medianSalary": 48000,
+  "rent": 18000,
+  "studentBudget": 20000,
+  "vacancyShare": 0.003,
+  "industries": [
+   "construction",
+   "agro",
+   "oil_gas"
+  ],
+  "employers": [
+   "Грознефтегаз",
+   "Строительные компании"
+  ],
+  "neighbors": [
+   "dagestan",
+   "north_ossetia",
+   "stavropol"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "kbr",
+  "name": "Кабардино-Балкарская Республика",
+  "capital": "Нальчик",
+  "federalDistrict": "СКФО",
+  "cities": [
+   {
+    "name": "Нальчик",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.62,
+  "medianSalary": 45800,
+  "rent": 14000,
+  "studentBudget": 18000,
+  "vacancyShare": 0.002,
+  "industries": [
+   "agro",
+   "tourism"
+  ],
+  "employers": [
+   "Курорты Приэльбрусья",
+   "Агрохолдинги"
+  ],
+  "neighbors": [
+   "stavropol",
+   "north_ossetia"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "north_ossetia",
+  "name": "Республика Северная Осетия — Алания",
+  "capital": "Владикавказ",
+  "federalDistrict": "СКФО",
+  "cities": [
+   {
+    "name": "Владикавказ",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.65,
+  "medianSalary": 48000,
+  "rent": 15000,
+  "studentBudget": 18000,
+  "vacancyShare": 0.002,
+  "industries": [
+   "metallurgy",
+   "agro",
+   "tourism"
+  ],
+  "employers": [
+   "Электроцинк",
+   "Курорты"
+  ],
+  "neighbors": [
+   "kbr",
+   "chechnya",
+   "stavropol"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "udmurtia",
+  "name": "Удмуртская Республика",
+  "capital": "Ижевск",
+  "federalDistrict": "ПФО",
+  "cities": [
+   {
+    "name": "Ижевск",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Воткинск",
+    "salaryCoef": 0.95,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.8,
+  "medianSalary": 59100,
+  "rent": 17000,
+  "studentBudget": 21000,
+  "vacancyShare": 0.008,
+  "industries": [
+   "machine",
+   "oil_gas",
+   "metallurgy"
+  ],
+  "employers": [
+   "Концерн «Калашников»",
+   "Воткинский завод",
+   "Ижсталь"
+  ],
+  "neighbors": [
+   "tatarstan",
+   "perm",
+   "bashkortostan",
+   "kirov"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "ulyanovsk",
+  "name": "Ульяновская область",
+  "capital": "Ульяновск",
+  "federalDistrict": "ПФО",
+  "cities": [
+   {
+    "name": "Ульяновск",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Димитровград",
+    "salaryCoef": 0.95,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.75,
+  "medianSalary": 55400,
+  "rent": 16000,
+  "studentBudget": 20000,
+  "vacancyShare": 0.006,
+  "industries": [
+   "aviation",
+   "auto",
+   "nuclear"
+  ],
+  "employers": [
+   "Авиастар-СП",
+   "УАЗ",
+   "НИИАР (Димитровград)"
+  ],
+  "neighbors": [
+   "tatarstan",
+   "samara",
+   "penza",
+   "mordovia",
+   "chuvashia"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "penza",
+  "name": "Пензенская область",
+  "capital": "Пенза",
+  "federalDistrict": "ПФО",
+  "cities": [
+   {
+    "name": "Пенза",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.72,
+  "medianSalary": 53200,
+  "rent": 15000,
+  "studentBudget": 19000,
+  "vacancyShare": 0.005,
+  "industries": [
+   "electronics",
+   "machine",
+   "agro"
+  ],
+  "employers": [
+   "Радиозавод",
+   "Пензенские приборостроительные заводы"
+  ],
+  "neighbors": [
+   "ulyanovsk",
+   "saratov",
+   "mordovia",
+   "tambov",
+   "ryazan"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "saratov",
+  "name": "Саратовская область",
+  "capital": "Саратов",
+  "federalDistrict": "ПФО",
+  "cities": [
+   {
+    "name": "Саратов",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Энгельс",
+    "salaryCoef": 0.95,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.75,
+  "medianSalary": 55400,
+  "rent": 16000,
+  "studentBudget": 20000,
+  "vacancyShare": 0.009,
+  "industries": [
+   "agro",
+   "energy",
+   "machine",
+   "electronics"
+  ],
+  "employers": [
+   "Балаковская АЭС",
+   "Саратовский НПЗ",
+   "Тантал"
+  ],
+  "neighbors": [
+   "samara",
+   "volgograd",
+   "penza",
+   "tambov",
+   "orenburg"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "orenburg",
+  "name": "Оренбургская область",
+  "capital": "Оренбург",
+  "federalDistrict": "ПФО",
+  "cities": [
+   {
+    "name": "Оренбург",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Орск",
+    "salaryCoef": 0.9,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.8,
+  "medianSalary": 59100,
+  "rent": 16000,
+  "studentBudget": 20000,
+  "vacancyShare": 0.006,
+  "industries": [
+   "oil_gas",
+   "metallurgy",
+   "agro"
+  ],
+  "employers": [
+   "Газпром добыча Оренбург",
+   "Уральская сталь",
+   "Оренбургнефть"
+  ],
+  "neighbors": [
+   "samara",
+   "bashkortostan",
+   "chelyabinsk",
+   "saratov"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "kirov",
+  "name": "Кировская область",
+  "capital": "Киров",
+  "federalDistrict": "ПФО",
+  "cities": [
+   {
+    "name": "Киров",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.72,
+  "medianSalary": 53200,
+  "rent": 15000,
+  "studentBudget": 19000,
+  "vacancyShare": 0.005,
+  "industries": [
+   "chemistry",
+   "manufacturing",
+   "wood"
+  ],
+  "employers": [
+   "Кирово-Чепецкий химкомбинат",
+   "Шинный завод"
+  ],
+  "neighbors": [
+   "udmurtia",
+   "perm",
+   "komi",
+   "kostroma",
+   "mari_el",
+   "nn",
+   "tatarstan"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "chuvashia",
+  "name": "Чувашская Республика",
+  "capital": "Чебоксары",
+  "federalDistrict": "ПФО",
+  "cities": [
+   {
+    "name": "Чебоксары",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.7,
+  "medianSalary": 51700,
+  "rent": 15000,
+  "studentBudget": 19000,
+  "vacancyShare": 0.005,
+  "industries": [
+   "electronics",
+   "machine",
+   "chemistry"
+  ],
+  "employers": [
+   "ЭЛАРА",
+   "ЧЭАЗ",
+   "Химпром"
+  ],
+  "neighbors": [
+   "tatarstan",
+   "ulyanovsk",
+   "mordovia",
+   "mari_el",
+   "nn"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "mordovia",
+  "name": "Республика Мордовия",
+  "capital": "Саранск",
+  "federalDistrict": "ПФО",
+  "cities": [
+   {
+    "name": "Саранск",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.7,
+  "medianSalary": 51700,
+  "rent": 14000,
+  "studentBudget": 18000,
+  "vacancyShare": 0.004,
+  "industries": [
+   "electronics",
+   "manufacturing",
+   "agro"
+  ],
+  "employers": [
+   "Оптиковолоконные заводы",
+   "Лисма"
+  ],
+  "neighbors": [
+   "penza",
+   "ulyanovsk",
+   "chuvashia",
+   "nn",
+   "ryazan"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "mari_el",
+  "name": "Республика Марий Эл",
+  "capital": "Йошкар-Ола",
+  "federalDistrict": "ПФО",
+  "cities": [
+   {
+    "name": "Йошкар-Ола",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.68,
+  "medianSalary": 50200,
+  "rent": 14000,
+  "studentBudget": 18000,
+  "vacancyShare": 0.003,
+  "industries": [
+   "electronics",
+   "agro",
+   "manufacturing"
+  ],
+  "employers": [
+   "Марийский машиностроительный завод"
+  ],
+  "neighbors": [
+   "tatarstan",
+   "chuvashia",
+   "nn",
+   "kirov"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "kurgan",
+  "name": "Курганская область",
+  "capital": "Курган",
+  "federalDistrict": "УрФО",
+  "cities": [
+   {
+    "name": "Курган",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.7,
+  "medianSalary": 51700,
+  "rent": 14000,
+  "studentBudget": 18000,
+  "vacancyShare": 0.004,
+  "industries": [
+   "machine",
+   "agro"
+  ],
+  "employers": [
+   "Курганмашзавод",
+   "Курганский автобусный завод"
+  ],
+  "neighbors": [
+   "chelyabinsk",
+   "tyumen",
+   "sverdlovsk"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "yanao",
+  "name": "Ямало-Ненецкий автономный округ",
+  "capital": "Салехард",
+  "federalDistrict": "УрФО",
+  "cities": [
+   {
+    "name": "Салехард",
+    "salaryCoef": 1.0,
+    "hub": true
+   },
+   {
+    "name": "Новый Уренгой",
+    "salaryCoef": 1.1,
+    "hub": false
+   },
+   {
+    "name": "Ноябрьск",
+    "salaryCoef": 1.0,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 2.0,
+  "medianSalary": 147700,
+  "rent": 30000,
+  "studentBudget": 35000,
+  "vacancyShare": 0.005,
+  "industries": [
+   "oil_gas",
+   "energy"
+  ],
+  "employers": [
+   "Газпром добыча Уренгой",
+   "Новатэк",
+   "Газпром нефть"
+  ],
+  "neighbors": [
+   "tyumen",
+   "komi",
+   "krasnoyarsk"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "omsk",
+  "name": "Омская область",
+  "capital": "Омск",
+  "federalDistrict": "СФО",
+  "cities": [
+   {
+    "name": "Омск",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.82,
+  "medianSalary": 60600,
+  "rent": 17000,
+  "studentBudget": 21000,
+  "vacancyShare": 0.01,
+  "industries": [
+   "oil_gas",
+   "machine",
+   "aviation",
+   "agro"
+  ],
+  "employers": [
+   "Газпромнефть-ОНПЗ",
+   "Омсктрансмаш",
+   "ПО «Полёт»"
+  ],
+  "neighbors": [
+   "novosibirsk",
+   "tyumen"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "kemerovo",
+  "name": "Кемеровская область — Кузбасс",
+  "capital": "Кемерово",
+  "federalDistrict": "СФО",
+  "cities": [
+   {
+    "name": "Кемерово",
+    "salaryCoef": 1.0,
+    "hub": true
+   },
+   {
+    "name": "Новокузнецк",
+    "salaryCoef": 1.0,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.95,
+  "medianSalary": 70200,
+  "rent": 16000,
+  "studentBudget": 21000,
+  "vacancyShare": 0.009,
+  "industries": [
+   "mining",
+   "metallurgy",
+   "energy",
+   "chemistry"
+  ],
+  "employers": [
+   "СУЭК-Кузбасс",
+   "ЕВРАЗ ЗСМК",
+   "Кузбассразрезуголь"
+  ],
+  "neighbors": [
+   "novosibirsk",
+   "tomsk",
+   "krasnoyarsk",
+   "altai_krai",
+   "khakassia"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "altai_krai",
+  "name": "Алтайский край",
+  "capital": "Барнаул",
+  "federalDistrict": "СФО",
+  "cities": [
+   {
+    "name": "Барнаул",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Бийск",
+    "salaryCoef": 0.9,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.7,
+  "medianSalary": 51700,
+  "rent": 15000,
+  "studentBudget": 19000,
+  "vacancyShare": 0.008,
+  "industries": [
+   "agro",
+   "machine",
+   "chemistry",
+   "tourism"
+  ],
+  "employers": [
+   "Алтайвагон",
+   "Бийский олеумный завод",
+   "Агрохолдинги"
+  ],
+  "neighbors": [
+   "novosibirsk",
+   "kemerovo"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "buryatia",
+  "name": "Республика Бурятия",
+  "capital": "Улан-Удэ",
+  "federalDistrict": "СФО",
+  "cities": [
+   {
+    "name": "Улан-Удэ",
+    "salaryCoef": 1.05,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.85,
+  "medianSalary": 62800,
+  "rent": 16000,
+  "studentBudget": 20000,
+  "vacancyShare": 0.004,
+  "industries": [
+   "aviation",
+   "tourism",
+   "mining"
+  ],
+  "employers": [
+   "Улан-Удэнский авиационный завод",
+   "Туризм на Байкале"
+  ],
+  "neighbors": [
+   "irkutsk",
+   "zabaykalsky"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "khakassia",
+  "name": "Республика Хакасия",
+  "capital": "Абакан",
+  "federalDistrict": "СФО",
+  "cities": [
+   {
+    "name": "Абакан",
+    "salaryCoef": 1.05,
+    "hub": true
+   },
+   {
+    "name": "Саяногорск",
+    "salaryCoef": 1.0,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 0.85,
+  "medianSalary": 62800,
+  "rent": 15000,
+  "studentBudget": 19000,
+  "vacancyShare": 0.003,
+  "industries": [
+   "energy",
+   "metallurgy",
+   "mining"
+  ],
+  "employers": [
+   "Саяно-Шушенская ГЭС",
+   "РУСАЛ Саяногорск"
+  ],
+  "neighbors": [
+   "krasnoyarsk",
+   "kemerovo"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "khabarovsk",
+  "name": "Хабаровский край",
+  "capital": "Хабаровск",
+  "federalDistrict": "ДФО",
+  "cities": [
+   {
+    "name": "Хабаровск",
+    "salaryCoef": 1.0,
+    "hub": true
+   },
+   {
+    "name": "Комсомольск-на-Амуре",
+    "salaryCoef": 1.0,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 1.15,
+  "medianSalary": 85000,
+  "rent": 25000,
+  "studentBudget": 27000,
+  "vacancyShare": 0.008,
+  "industries": [
+   "aviation",
+   "shipbuilding",
+   "logistics",
+   "oil_gas"
+  ],
+  "employers": [
+   "КнААЗ им. Гагарина",
+   "Амурский судостроительный завод",
+   "Хабаровский НПЗ"
+  ],
+  "neighbors": [
+   "primorye",
+   "amur",
+   "sakhalin",
+   "yakutia"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "yakutia",
+  "name": "Республика Саха (Якутия)",
+  "capital": "Якутск",
+  "federalDistrict": "ДФО",
+  "cities": [
+   {
+    "name": "Якутск",
+    "salaryCoef": 1.0,
+    "hub": true
+   },
+   {
+    "name": "Мирный",
+    "salaryCoef": 1.3,
+    "hub": false
+   },
+   {
+    "name": "Нерюнгри",
+    "salaryCoef": 1.1,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 1.45,
+  "medianSalary": 107100,
+  "rent": 25000,
+  "studentBudget": 32000,
+  "vacancyShare": 0.005,
+  "industries": [
+   "mining",
+   "oil_gas",
+   "energy"
+  ],
+  "employers": [
+   "АЛРОСА",
+   "Сургутнефтегаз (Талакан)",
+   "Якутскэнерго"
+  ],
+  "neighbors": [
+   "khabarovsk",
+   "amur",
+   "zabaykalsky",
+   "irkutsk",
+   "krasnoyarsk"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "amur",
+  "name": "Амурская область",
+  "capital": "Благовещенск",
+  "federalDistrict": "ДФО",
+  "cities": [
+   {
+    "name": "Благовещенск",
+    "salaryCoef": 1.0,
+    "hub": true
+   },
+   {
+    "name": "Свободный",
+    "salaryCoef": 1.1,
+    "hub": false
+   }
+  ],
+  "salaryCoef": 1.1,
+  "medianSalary": 81300,
+  "rent": 20000,
+  "studentBudget": 23000,
+  "vacancyShare": 0.004,
+  "industries": [
+   "oil_gas",
+   "space",
+   "agro",
+   "mining"
+  ],
+  "employers": [
+   "Амурский ГПЗ",
+   "Космодром Восточный",
+   "Агрохолдинги"
+  ],
+  "neighbors": [
+   "khabarovsk",
+   "yakutia",
+   "zabaykalsky"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "kamchatka",
+  "name": "Камчатский край",
+  "capital": "Петропавловск-Камчатский",
+  "federalDistrict": "ДФО",
+  "cities": [
+   {
+    "name": "Петропавловск-Камчатский",
+    "salaryCoef": 1.0,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 1.6,
+  "medianSalary": 118200,
+  "rent": 28000,
+  "studentBudget": 33000,
+  "vacancyShare": 0.002,
+  "industries": [
+   "fishery",
+   "sea",
+   "tourism"
+  ],
+  "employers": [
+   "Рыбодобывающие компании",
+   "Порт Петропавловск"
+  ],
+  "neighbors": [
+   "sakhalin"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
+   "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "zabaykalsky",
+  "name": "Забайкальский край",
+  "capital": "Чита",
+  "federalDistrict": "ДФО",
+  "cities": [
+   {
+    "name": "Чита",
+    "salaryCoef": 1.0,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 1.0,
+  "medianSalary": 73900,
+  "rent": 18000,
+  "studentBudget": 22000,
+  "vacancyShare": 0.004,
+  "industries": [
+   "mining",
+   "energy",
+   "transport"
+  ],
+  "employers": [
+   "Норникель (Быстринский ГОК)",
+   "ЗабЖД"
+  ],
+  "neighbors": [
+   "buryatia",
+   "amur",
+   "yakutia",
+   "irkutsk"
+  ],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
    "updatedAt": "2025-09",
    "confidence": "estimate"
   }

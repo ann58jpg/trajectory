@@ -1,0 +1,262 @@
+[
+ {
+  "code": "45.03.01",
+  "name": "Филология",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": [
+    "foreign",
+    "hist",
+    "soc"
+   ]
+  },
+  "dvi": null,
+  "group": "45.00.00",
+  "tags": [
+   "languages",
+   "writing",
+   "intl",
+   "media"
+  ],
+  "klimov": [
+   "S",
+   "A"
+  ],
+  "disciplines": [
+   "Языкознание",
+   "История литературы",
+   "Анализ текста",
+   "Редактирование"
+  ],
+  "employment": {
+   "rate": 0.64,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Язык и литература: как устроены тексты и как их понимать, писать и редактировать.",
+  "autoDescription": true,
+  "professions": [
+   "editor",
+   "teacher",
+   "copywriter"
+  ]
+ },
+ {
+  "code": "45.03.02",
+  "name": "Лингвистика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "foreign"
+   ],
+   "oneOf": [
+    "lit",
+    "hist",
+    "soc"
+   ]
+  },
+  "dvi": null,
+  "group": "45.00.00",
+  "tags": [
+   "languages",
+   "writing",
+   "intl"
+  ],
+  "klimov": [
+   "S",
+   "P"
+  ],
+  "disciplines": [
+   "Практика языка",
+   "Перевод",
+   "Теория языка",
+   "Компьютерная лингвистика"
+  ],
+  "employment": {
+   "rate": 0.64,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Языки, перевод и работа с текстом, включая NLP.",
+  "autoDescription": true,
+  "professions": [
+   "translator",
+   "computational_linguist",
+   "teacher"
+  ]
+ },
+ {
+  "code": "45.03.03",
+  "name": "Фундаментальная и прикладная лингвистика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "foreign",
+    "inf",
+    "soc"
+   ]
+  },
+  "dvi": null,
+  "group": "45.00.00",
+  "tags": [
+   "languages",
+   "writing",
+   "intl",
+   "it",
+   "data",
+   "math",
+   "business",
+   "finance"
+  ],
+  "klimov": [
+   "S",
+   "A"
+  ],
+  "disciplines": [
+   "Лингвистика",
+   "Программирование",
+   "Корпусная лингвистика",
+   "Статистика"
+  ],
+  "employment": {
+   "rate": 0.64,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как устроен язык и как научить компьютер его понимать.",
+  "autoDescription": true,
+  "professions": [
+   "computational_linguist",
+   "data_analyst"
+  ]
+ },
+ {
+  "code": "45.03.04",
+  "name": "Интеллектуальные системы в гуманитарной сфере",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "foreign",
+    "soc"
+   ]
+  },
+  "dvi": null,
+  "group": "45.00.00",
+  "tags": [
+   "languages",
+   "writing",
+   "intl",
+   "it",
+   "data",
+   "math",
+   "business",
+   "finance"
+  ],
+  "klimov": [
+   "S",
+   "A"
+  ],
+  "disciplines": [
+   "Программирование",
+   "Обработка текстов",
+   "Базы знаний",
+   "Лингвистика"
+  ],
+  "employment": {
+   "rate": 0.64,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "ИТ для гуманитариев: голосовые помощники, поиск, анализ текстов.",
+  "autoDescription": true,
+  "professions": [
+   "computational_linguist",
+   "data_analyst"
+  ]
+ },
+ {
+  "code": "45.05.01",
+  "name": "Перевод и переводоведение",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "foreign"
+   ],
+   "oneOf": [
+    "lit",
+    "hist",
+    "soc"
+   ]
+  },
+  "dvi": null,
+  "group": "45.00.00",
+  "tags": [
+   "languages",
+   "writing",
+   "intl",
+   "politics",
+   "history"
+  ],
+  "klimov": [
+   "S",
+   "A"
+  ],
+  "disciplines": [
+   "Теория перевода",
+   "Синхронный перевод",
+   "Два иностранных языка",
+   "Редактирование"
+  ],
+  "employment": {
+   "rate": 0.64,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Профессиональные переводчики: письменный и устный перевод, два языка.",
+  "autoDescription": true,
+  "professions": [
+   "translator",
+   "diplomat"
+  ]
+ }
+]

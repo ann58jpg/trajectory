@@ -1,0 +1,502 @@
+[
+ {
+  "code": "23.03.01",
+  "name": "Технология транспортных процессов",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "23.00.00",
+  "tags": [
+   "transport",
+   "auto",
+   "engineering",
+   "logistics",
+   "business",
+   "management",
+   "data"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Транспортная логистика",
+   "Организация перевозок",
+   "Безопасность движения",
+   "Склад"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как организовать перевозки: маршруты, расписания, склады, безопасность.",
+  "autoDescription": true,
+  "professions": [
+   "logistics_manager",
+   "transport_planner"
+  ]
+ },
+ {
+  "code": "23.03.02",
+  "name": "Наземные транспортно-технологические комплексы",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "23.00.00",
+  "tags": [
+   "transport",
+   "auto",
+   "engineering",
+   "logistics",
+   "machine",
+   "manufacturing"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Конструкция машин",
+   "Гидропривод",
+   "Надёжность",
+   "Эксплуатация"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Тяжёлая техника: краны, экскаваторы, дорожные машины.",
+  "autoDescription": true,
+  "professions": [
+   "mechanical_engineer",
+   "maintenance_engineer"
+  ]
+ },
+ {
+  "code": "23.03.03",
+  "name": "Эксплуатация транспортно-технологических машин и комплексов",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "23.00.00",
+  "tags": [
+   "auto",
+   "transport",
+   "engineering",
+   "logistics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Конструкция автомобиля",
+   "Диагностика",
+   "Сервис",
+   "Электромобили"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Автомобили и спецтехника: обслуживание и сервис.",
+  "autoDescription": true,
+  "professions": [
+   "auto_mechanic",
+   "maintenance_engineer",
+   "logistics_manager"
+  ]
+ },
+ {
+  "code": "23.05.01",
+  "name": "Наземные транспортно-технологические средства",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "23.00.00",
+  "tags": [
+   "transport",
+   "auto",
+   "engineering",
+   "logistics",
+   "machine",
+   "manufacturing"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Конструирование автомобиля",
+   "Двигатели",
+   "Трансмиссии",
+   "Испытания"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Проектируют автомобили, тракторы и вездеходы.",
+  "autoDescription": true,
+  "professions": [
+   "mechanical_engineer",
+   "auto_mechanic"
+  ]
+ },
+ {
+  "code": "23.05.02",
+  "name": "Транспортные средства специального назначения",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "23.00.00",
+  "tags": [
+   "transport",
+   "auto",
+   "engineering",
+   "logistics",
+   "machine",
+   "manufacturing",
+   "safety"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Конструирование спецмашин",
+   "Двигатели",
+   "Испытания",
+   "Надёжность"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Машины для армии, МЧС и Арктики.",
+  "autoDescription": true,
+  "professions": [
+   "mechanical_engineer",
+   "weapons_engineer"
+  ]
+ },
+ {
+  "code": "23.05.03",
+  "name": "Подвижной состав железных дорог",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "23.00.00",
+  "tags": [
+   "transport",
+   "auto",
+   "engineering",
+   "logistics",
+   "machine",
+   "manufacturing"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Локомотивы",
+   "Вагоны",
+   "Электрический транспорт",
+   "Ремонт"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Локомотивы, вагоны и электрички: проектирование и ремонт.",
+  "autoDescription": true,
+  "professions": [
+   "railway_engineer",
+   "maintenance_engineer"
+  ]
+ },
+ {
+  "code": "23.05.04",
+  "name": "Эксплуатация железных дорог",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "23.00.00",
+  "tags": [
+   "transport",
+   "auto",
+   "engineering",
+   "logistics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Организация движения",
+   "Станции и узлы",
+   "Грузовые перевозки",
+   "Безопасность"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как организовать движение поездов, чтобы всё ехало вовремя и безопасно.",
+  "autoDescription": true,
+  "professions": [
+   "railway_engineer",
+   "transport_planner",
+   "logistics_manager"
+  ]
+ },
+ {
+  "code": "23.05.05",
+  "name": "Системы обеспечения движения поездов",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "23.00.00",
+  "tags": [
+   "transport",
+   "auto",
+   "engineering",
+   "logistics",
+   "electronics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Автоматика и телемеханика",
+   "Связь",
+   "Электроснабжение ЖД",
+   "Безопасность"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Светофоры, автоматика и связь на железной дороге.",
+  "autoDescription": true,
+  "professions": [
+   "railway_engineer",
+   "automation_engineer",
+   "telecom_engineer"
+  ]
+ },
+ {
+  "code": "23.05.06",
+  "name": "Строительство железных дорог, мостов и транспортных тоннелей",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "23.00.00",
+  "tags": [
+   "transport",
+   "auto",
+   "engineering",
+   "logistics",
+   "construction"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Изыскания",
+   "Мосты",
+   "Тоннели",
+   "Путь и путевое хозяйство"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Строят железные дороги, мосты и метро.",
+  "autoDescription": true,
+  "professions": [
+   "road_engineer",
+   "railway_engineer",
+   "construction_engineer"
+  ]
+ },
+ {
+  "code": "23.02.07",
+  "name": "Ремонт двигателей и систем автомобилей (колледж)",
+  "level": "spo",
+  "years": 2.83,
+  "ege": {
+   "mandatory": [],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "23.00.00",
+  "tags": [
+   "auto",
+   "transport",
+   "engineering",
+   "logistics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Устройство автомобиля",
+   "Диагностика",
+   "Электрооборудование",
+   "Сервис"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Колледж: автомеханик/диагност, подработка возможна с 1–2 курса.",
+  "autoDescription": true,
+  "professions": [
+   "auto_mechanic"
+  ]
+ }
+]

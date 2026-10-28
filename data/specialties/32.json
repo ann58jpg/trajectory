@@ -1,0 +1,51 @@
+[
+ {
+  "code": "32.05.01",
+  "name": "Медико-профилактическое дело",
+  "level": "specialist",
+  "years": 6,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "chem",
+    "bio"
+   ],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "32.00.00",
+  "tags": [
+   "medicine",
+   "ecology",
+   "people",
+   "safety",
+   "biology",
+   "chemistry"
+  ],
+  "klimov": [
+   "N",
+   "P"
+  ],
+  "disciplines": [
+   "Эпидемиология",
+   "Гигиена",
+   "Микробиология",
+   "Санитарный надзор"
+  ],
+  "employment": {
+   "rate": 0.88,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Санитарные врачи и эпидемиологи: следят, чтобы не было вспышек болезней и отравлений.",
+  "autoDescription": true,
+  "professions": [
+   "sanitary_doctor",
+   "doctor"
+  ]
+ }
+]

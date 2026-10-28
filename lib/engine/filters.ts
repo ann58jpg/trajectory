@@ -1,5 +1,5 @@
 import { DVI_TEXT, EXCLUDE } from "@/lib/copy";
-import { effectiveDvi, egeCheck } from "./exams";
+import { effectiveDvi, egeCheck, hasBudget } from "./exams";
 import type { ExclusionReason, Program, Region, Specialty, StudentProfile, University } from "@/lib/schemas";
 import type { UserModel } from "./profile";
 
@@ -49,9 +49,9 @@ export function hardFilter(
   }
 
   // Финансы
-  if (p.finance === "budget" && pr.budgetPlaces <= 0) {
+  if (p.finance === "budget" && !hasBudget(pr)) {
     reasons.push({ type: "finance", text: pr.price ? EXCLUDE.noBudgetPaid(fmtRub(pr.price)) : EXCLUDE.noBudget });
-  } else if (p.finance === "budget_or_paid" && pr.budgetPlaces <= 0 && (pr.price ?? 0) > p.paidLimit) {
+  } else if (p.finance === "budget_or_paid" && !hasBudget(pr) && (pr.price ?? 0) > p.paidLimit) {
     reasons.push({ type: "finance", text: EXCLUDE.overLimit(fmtRub(pr.price ?? 0)) });
   }
 

@@ -175,8 +175,9 @@ export const Program = z.object({
     /** Найденные официальные баллы (сначала 2026, потом 2025). */
     official: z.array(OfficialScore).default([]),
   }),
-  budgetPlaces: z.number().int(),
-  targetPlaces: z.number().int(),
+  /** null — число мест не проверено (бюджет в вузе есть, если university.budget). */
+  budgetPlaces: z.number().int().nullable(),
+  targetPlaces: z.number().int().nullable(),
   price: z.number().nullable(),
   forms: z.array(StudyForm).min(1),
   keySubjects: z.array(z.string()),
@@ -317,7 +318,7 @@ export const ProgramMatch = z.object({
   userSum: z.number().nullable(),
   chance: Chance,
   price: z.number().nullable(),
-  budgetPlaces: z.number(),
+  budgetPlaces: z.number().nullable(),
   score: z.number(),
   criteriaHits: z.array(z.string()),
   online: z.boolean(),

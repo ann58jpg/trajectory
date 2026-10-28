@@ -1,0 +1,52 @@
+[
+ {
+  "code": "33.05.01",
+  "name": "Фармация",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "chem"
+   ],
+   "oneOf": [
+    "bio",
+    "math",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "33.00.00",
+  "tags": [
+   "medicine",
+   "chemistry",
+   "bio",
+   "science"
+  ],
+  "klimov": [
+   "N",
+   "S"
+  ],
+  "disciplines": [
+   "Фармацевтическая химия",
+   "Фармакогнозия",
+   "Технология лекарств",
+   "Фармакология"
+  ],
+  "employment": {
+   "rate": 0.86,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Создание, контроль качества и продвижение лекарств.",
+  "autoDescription": true,
+  "professions": [
+   "pharmacist",
+   "chemist_analyst"
+  ]
+ }
+]

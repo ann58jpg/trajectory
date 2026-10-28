@@ -1,0 +1,205 @@
+[
+ {
+  "code": "06.03.01",
+  "name": "Биология",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "chem",
+    "math"
+   ]
+  },
+  "dvi": null,
+  "group": "06.00.00",
+  "tags": [
+   "biology",
+   "nature",
+   "science",
+   "bio"
+  ],
+  "klimov": [
+   "N"
+  ],
+  "disciplines": [
+   "Ботаника",
+   "Зоология",
+   "Генетика",
+   "Молекулярная биология"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Живые системы от клетки до экосистемы.",
+  "autoDescription": true,
+  "professions": [
+   "biologist",
+   "biotechnologist",
+   "bioinformatician",
+   "teacher"
+  ]
+ },
+ {
+  "code": "06.03.02",
+  "name": "Почвоведение",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "chem",
+    "math"
+   ]
+  },
+  "dvi": null,
+  "group": "06.00.00",
+  "tags": [
+   "biology",
+   "nature",
+   "science",
+   "bio",
+   "agro"
+  ],
+  "klimov": [
+   "N"
+  ],
+  "disciplines": [
+   "Почвоведение",
+   "Агрохимия",
+   "Мелиорация",
+   "Экология почв"
+  ],
+  "employment": {
+   "rate": 0.62,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Почва — живая система. Изучают, как сохранить урожай и восстановить землю после стройки или добычи.",
+  "autoDescription": true,
+  "professions": [
+   "soil_scientist",
+   "agronomist",
+   "ecologist"
+  ]
+ },
+ {
+  "code": "06.05.01",
+  "name": "Биоинженерия и биоинформатика",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "math",
+    "chem",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "06.00.00",
+  "tags": [
+   "biology",
+   "nature",
+   "science",
+   "bio",
+   "data",
+   "it"
+  ],
+  "klimov": [
+   "N"
+  ],
+  "disciplines": [
+   "Молекулярная биология",
+   "Программирование",
+   "Биохимия",
+   "Анализ геномов"
+  ],
+  "employment": {
+   "rate": 0.62,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Стык биологии и программирования: геномы, белки, лекарства на компьютере.",
+  "autoDescription": true,
+  "professions": [
+   "bioinformatician",
+   "biotechnologist",
+   "data_scientist"
+  ]
+ },
+ {
+  "code": "06.05.02",
+  "name": "Фундаментальная и прикладная биология",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "chem",
+    "math"
+   ]
+  },
+  "dvi": null,
+  "group": "06.00.00",
+  "tags": [
+   "biology",
+   "nature",
+   "science",
+   "bio",
+   "chemistry",
+   "medicine"
+  ],
+  "klimov": [
+   "N"
+  ],
+  "disciplines": [
+   "Генетика",
+   "Клеточная биология",
+   "Физиология",
+   "Биохимия"
+  ],
+  "employment": {
+   "rate": 0.62,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Пять лет биологии с упором на исследования: генетика, физиология, клеточные технологии.",
+  "autoDescription": true,
+  "professions": [
+   "biologist",
+   "biotechnologist",
+   "medical_biochemist"
+  ]
+ }
+]

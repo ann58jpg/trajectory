@@ -1,0 +1,393 @@
+[
+ {
+  "code": "15.03.01",
+  "name": "Машиностроение",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "15.00.00",
+  "tags": [
+   "machine",
+   "engineering",
+   "manufacturing"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Технология машиностроения",
+   "Станки с ЧПУ",
+   "Материаловедение",
+   "CAD/CAM"
+  ],
+  "employment": {
+   "rate": 0.83,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как проектируют и делают машины и станки.",
+  "autoDescription": true,
+  "professions": [
+   "mechanical_engineer",
+   "cnc_technologist",
+   "quality_engineer"
+  ]
+ },
+ {
+  "code": "15.03.02",
+  "name": "Технологические машины и оборудование",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "15.00.00",
+  "tags": [
+   "machine",
+   "engineering",
+   "manufacturing"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Детали машин",
+   "Гидравлика",
+   "Монтаж оборудования",
+   "Надёжность"
+  ],
+  "employment": {
+   "rate": 0.83,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Оборудование для заводов: прессы, линии, насосы. Как его проектировать и ремонтировать.",
+  "autoDescription": true,
+  "professions": [
+   "mechanical_engineer",
+   "maintenance_engineer"
+  ]
+ },
+ {
+  "code": "15.03.03",
+  "name": "Прикладная механика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "15.00.00",
+  "tags": [
+   "machine",
+   "engineering",
+   "manufacturing",
+   "physics",
+   "math"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Сопромат",
+   "Теория упругости",
+   "Вибрации",
+   "Компьютерный расчёт"
+  ],
+  "employment": {
+   "rate": 0.83,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Расчёты прочности и вибрации: почему детали ломаются и как этого избежать.",
+  "autoDescription": true,
+  "professions": [
+   "calc_engineer",
+   "mechanical_engineer"
+  ]
+ },
+ {
+  "code": "15.03.04",
+  "name": "Автоматизация технологических процессов и производств",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "15.00.00",
+  "tags": [
+   "machine",
+   "engineering",
+   "manufacturing",
+   "electronics",
+   "oil_gas",
+   "robotics",
+   "it"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "ТАУ",
+   "ПЛК",
+   "SCADA",
+   "Датчики"
+  ],
+  "employment": {
+   "rate": 0.83,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Делают так, чтобы завод работал сам: датчики, контроллеры, программы.",
+  "autoDescription": true,
+  "professions": [
+   "automation_engineer",
+   "robotics_engineer"
+  ]
+ },
+ {
+  "code": "15.03.05",
+  "name": "Конструкторско-технологическое обеспечение машиностроительных производств",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "15.00.00",
+  "tags": [
+   "machine",
+   "engineering",
+   "manufacturing"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Технология изготовления",
+   "ЧПУ",
+   "Оснастка",
+   "Метрология"
+  ],
+  "employment": {
+   "rate": 0.83,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как сделать деталь на станке быстро, точно и недорого.",
+  "autoDescription": true,
+  "professions": [
+   "cnc_technologist",
+   "mechanical_engineer",
+   "quality_engineer"
+  ]
+ },
+ {
+  "code": "15.03.06",
+  "name": "Мехатроника и робототехника",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "15.00.00",
+  "tags": [
+   "robotics",
+   "engineering",
+   "it",
+   "electronics",
+   "machine",
+   "manufacturing"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Механика",
+   "Электропривод",
+   "Управление роботами",
+   "Встраиваемые системы"
+  ],
+  "employment": {
+   "rate": 0.82,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Роботы, автоматические линии и умные механизмы.",
+  "autoDescription": true,
+  "professions": [
+   "robotics_engineer",
+   "automation_engineer",
+   "electronics_engineer"
+  ]
+ },
+ {
+  "code": "15.05.01",
+  "name": "Проектирование технологических машин и комплексов",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "15.00.00",
+  "tags": [
+   "machine",
+   "engineering",
+   "manufacturing",
+   "physics",
+   "math"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Проектирование машин",
+   "Расчёт конструкций",
+   "Автоматизация",
+   "Надёжность"
+  ],
+  "employment": {
+   "rate": 0.83,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Пять лет на то, чтобы научиться проектировать сложные производственные линии целиком.",
+  "autoDescription": true,
+  "professions": [
+   "mechanical_engineer",
+   "calc_engineer"
+  ]
+ },
+ {
+  "code": "15.02.16",
+  "name": "Технология машиностроения (колледж)",
+  "level": "spo",
+  "years": 2.83,
+  "ege": {
+   "mandatory": [],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "15.00.00",
+  "tags": [
+   "machine",
+   "manufacturing",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Станки с ЧПУ",
+   "Чертёж",
+   "Технологические процессы",
+   "Метрология"
+  ],
+  "employment": {
+   "rate": 0.82,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Колледж: техник-технолог, часто с дуальным обучением на заводе.",
+  "autoDescription": true,
+  "professions": [
+   "cnc_technologist",
+   "mechanical_engineer"
+  ]
+ }
+]

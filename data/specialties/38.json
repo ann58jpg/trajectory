@@ -1,0 +1,574 @@
+[
+ {
+  "code": "38.03.01",
+  "name": "Экономика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "soc",
+    "inf",
+    "foreign",
+    "hist",
+    "geo"
+   ]
+  },
+  "dvi": null,
+  "group": "38.00.00",
+  "tags": [
+   "finance",
+   "business",
+   "math",
+   "data",
+   "management"
+  ],
+  "klimov": [
+   "S",
+   "P"
+  ],
+  "disciplines": [
+   "Микро- и макроэкономика",
+   "Эконометрика",
+   "Финансы",
+   "Налоги"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как работают деньги, рынки и компании.",
+  "autoDescription": true,
+  "professions": [
+   "economist",
+   "banker",
+   "accountant"
+  ]
+ },
+ {
+  "code": "38.03.02",
+  "name": "Менеджмент",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "soc",
+    "inf",
+    "foreign",
+    "hist",
+    "geo"
+   ]
+  },
+  "dvi": null,
+  "group": "38.00.00",
+  "tags": [
+   "management",
+   "business",
+   "people",
+   "finance",
+   "data"
+  ],
+  "klimov": [
+   "P",
+   "S"
+  ],
+  "disciplines": [
+   "Маркетинг",
+   "Управление персоналом",
+   "Стратегия",
+   "Финансовый менеджмент"
+  ],
+  "employment": {
+   "rate": 0.68,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Управление командами, проектами и бизнесом.",
+  "autoDescription": true,
+  "professions": [
+   "manager",
+   "marketer",
+   "product_manager"
+  ]
+ },
+ {
+  "code": "38.03.03",
+  "name": "Управление персоналом",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "math",
+    "hist",
+    "foreign",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "38.00.00",
+  "tags": [
+   "finance",
+   "business",
+   "management",
+   "people",
+   "psychology"
+  ],
+  "klimov": [
+   "S",
+   "P"
+  ],
+  "disciplines": [
+   "Подбор персонала",
+   "Трудовое право",
+   "Оплата труда",
+   "Психология"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Ищут людей в компанию, обучают их и делают так, чтобы им хотелось работать.",
+  "autoDescription": true,
+  "professions": [
+   "hr",
+   "manager"
+  ]
+ },
+ {
+  "code": "38.03.04",
+  "name": "Государственное и муниципальное управление",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "math",
+    "hist",
+    "foreign",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "38.00.00",
+  "tags": [
+   "finance",
+   "business",
+   "management",
+   "gov",
+   "social",
+   "people"
+  ],
+  "klimov": [
+   "S",
+   "P"
+  ],
+  "disciplines": [
+   "Государственное управление",
+   "Муниципальное управление",
+   "Бюджет",
+   "Право"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как работают министерства, мэрии и госпрограммы и как сделать их полезнее для людей.",
+  "autoDescription": true,
+  "professions": [
+   "civil_servant",
+   "municipal_manager",
+   "manager"
+  ]
+ },
+ {
+  "code": "38.03.05",
+  "name": "Бизнес-информатика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "soc",
+    "foreign"
+   ]
+  },
+  "dvi": null,
+  "group": "38.00.00",
+  "tags": [
+   "it",
+   "business",
+   "data",
+   "management",
+   "finance"
+  ],
+  "klimov": [
+   "S",
+   "P"
+  ],
+  "disciplines": [
+   "Анализ данных",
+   "Моделирование процессов",
+   "ИТ-менеджмент",
+   "Экономика фирмы"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "На стыке ИТ и бизнеса: аналитика, цифровизация, продукт.",
+  "autoDescription": true,
+  "professions": [
+   "business_analyst",
+   "product_manager",
+   "data_analyst"
+  ]
+ },
+ {
+  "code": "38.03.06",
+  "name": "Торговое дело",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "soc",
+    "inf",
+    "foreign",
+    "hist",
+    "geo"
+   ]
+  },
+  "dvi": null,
+  "group": "38.00.00",
+  "tags": [
+   "finance",
+   "business",
+   "management",
+   "people",
+   "logistics"
+  ],
+  "klimov": [
+   "S",
+   "P"
+  ],
+  "disciplines": [
+   "Коммерция",
+   "Маркетинг",
+   "Логистика",
+   "Электронная торговля"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Магазины, маркетплейсы и оптовые продажи: ассортимент, цены, закупки.",
+  "autoDescription": true,
+  "professions": [
+   "trade_manager",
+   "marketer",
+   "logistics_manager"
+  ]
+ },
+ {
+  "code": "38.03.07",
+  "name": "Товароведение",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "soc",
+    "inf",
+    "foreign",
+    "hist",
+    "geo"
+   ]
+  },
+  "dvi": null,
+  "group": "38.00.00",
+  "tags": [
+   "finance",
+   "business",
+   "management"
+  ],
+  "klimov": [
+   "S",
+   "P"
+  ],
+  "disciplines": [
+   "Товароведение",
+   "Экспертиза товаров",
+   "Стандартизация",
+   "Логистика"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Разбираются в товарах: качество, хранение, экспертиза подделок.",
+  "autoDescription": true,
+  "professions": [
+   "commodity_expert",
+   "trade_manager",
+   "quality_engineer"
+  ]
+ },
+ {
+  "code": "38.03.10",
+  "name": "Жилищное хозяйство и коммунальная инфраструктура",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "soc",
+    "inf",
+    "foreign",
+    "hist",
+    "geo"
+   ]
+  },
+  "dvi": null,
+  "group": "38.00.00",
+  "tags": [
+   "finance",
+   "business",
+   "management",
+   "gov",
+   "people",
+   "construction",
+   "social"
+  ],
+  "klimov": [
+   "S",
+   "P"
+  ],
+  "disciplines": [
+   "Управление ЖКХ",
+   "Инженерные системы зданий",
+   "Экономика ЖКХ",
+   "Право"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Управляют домами и коммунальными сетями: чтобы было тепло, светло и чисто.",
+  "autoDescription": true,
+  "professions": [
+   "housing_manager",
+   "municipal_manager"
+  ]
+ },
+ {
+  "code": "38.05.01",
+  "name": "Экономическая безопасность",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "soc",
+    "inf",
+    "foreign",
+    "hist",
+    "geo"
+   ]
+  },
+  "dvi": null,
+  "group": "38.00.00",
+  "tags": [
+   "finance",
+   "business",
+   "management"
+  ],
+  "klimov": [
+   "S",
+   "P"
+  ],
+  "disciplines": [
+   "Финансовый анализ",
+   "Аудит",
+   "Право",
+   "Расследования"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Ищут мошенничество и финансовые нарушения в компаниях и госорганах.",
+  "autoDescription": true,
+  "professions": [
+   "econ_security",
+   "accountant",
+   "economist"
+  ]
+ },
+ {
+  "code": "38.05.02",
+  "name": "Таможенное дело",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "math",
+    "hist",
+    "foreign",
+    "geo"
+   ]
+  },
+  "dvi": "physical",
+  "group": "38.00.00",
+  "tags": [
+   "finance",
+   "business",
+   "management",
+   "law",
+   "logistics",
+   "intl"
+  ],
+  "klimov": [
+   "S",
+   "P"
+  ],
+  "disciplines": [
+   "Таможенное право",
+   "ВЭД",
+   "Товароведение",
+   "Логистика"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Таможенники: оформление грузов, проверки на границе, борьба с контрабандой.",
+  "autoDescription": true,
+  "professions": [
+   "customs_officer",
+   "logistics_manager"
+  ]
+ },
+ {
+  "code": "38.02.01",
+  "name": "Экономика и бухгалтерский учёт (колледж)",
+  "level": "spo",
+  "years": 1.83,
+  "ege": {
+   "mandatory": [],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "38.00.00",
+  "tags": [
+   "finance",
+   "business",
+   "management"
+  ],
+  "klimov": [
+   "S"
+  ],
+  "disciplines": [
+   "Бухучёт",
+   "Налоги",
+   "1С",
+   "Аудит"
+  ],
+  "employment": {
+   "rate": 0.7,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Колледж: бухгалтер — короткий путь к первой работе.",
+  "autoDescription": true,
+  "professions": [
+   "accountant"
+  ]
+ }
+]

@@ -1,0 +1,300 @@
+[
+ {
+  "code": "26.03.01",
+  "name": "Управление водным транспортом и гидрографическое обеспечение судоходства",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "26.00.00",
+  "tags": [
+   "sea",
+   "transport",
+   "engineering",
+   "logistics",
+   "business",
+   "management"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Морские перевозки",
+   "Порты",
+   "Гидрография",
+   "Морское право"
+  ],
+  "employment": {
+   "rate": 0.86,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Порты, флот и морские перевозки: как управлять ими на берегу.",
+  "autoDescription": true,
+  "professions": [
+   "port_manager",
+   "logistics_manager"
+  ]
+ },
+ {
+  "code": "26.03.02",
+  "name": "Кораблестроение, океанотехника и системотехника объектов морской инфраструктуры",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "26.00.00",
+  "tags": [
+   "sea",
+   "transport",
+   "engineering",
+   "physics",
+   "math"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Теория корабля",
+   "Конструкция корпуса",
+   "Прочность",
+   "САПР"
+  ],
+  "employment": {
+   "rate": 0.86,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Проектируют суда, платформы и подводные аппараты.",
+  "autoDescription": true,
+  "professions": [
+   "shipbuilder",
+   "calc_engineer"
+  ]
+ },
+ {
+  "code": "26.05.01",
+  "name": "Проектирование и постройка кораблей, судов и объектов океанотехники",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "26.00.00",
+  "tags": [
+   "sea",
+   "transport",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Теория корабля",
+   "Проектирование",
+   "Технология постройки",
+   "Прочность"
+  ],
+  "employment": {
+   "rate": 0.86,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Пять с половиной лет кораблестроения: от расчётов до спуска на воду.",
+  "autoDescription": true,
+  "professions": [
+   "shipbuilder"
+  ]
+ },
+ {
+  "code": "26.05.05",
+  "name": "Судовождение",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "foreign"
+   ]
+  },
+  "dvi": "physical",
+  "group": "26.00.00",
+  "tags": [
+   "sea",
+   "transport",
+   "engineering",
+   "travel",
+   "logistics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Навигация",
+   "Морская лоция",
+   "Управление судном",
+   "Морской английский"
+  ],
+  "employment": {
+   "rate": 0.86,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Капитаны и штурманы: ведут судно через моря, порты и непогоду.",
+  "autoDescription": true,
+  "professions": [
+   "ship_navigator",
+   "port_manager"
+  ]
+ },
+ {
+  "code": "26.05.06",
+  "name": "Эксплуатация судовых энергетических установок",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "26.00.00",
+  "tags": [
+   "sea",
+   "transport",
+   "engineering",
+   "machine",
+   "manufacturing"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Судовые двигатели",
+   "Теплотехника",
+   "Ремонт",
+   "Морской английский"
+  ],
+  "employment": {
+   "rate": 0.86,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Судовые механики: двигатели, котлы и вся техника корабля.",
+  "autoDescription": true,
+  "professions": [
+   "ship_engineer",
+   "maintenance_engineer"
+  ]
+ },
+ {
+  "code": "26.05.07",
+  "name": "Эксплуатация судового электрооборудования и средств автоматики",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "26.00.00",
+  "tags": [
+   "sea",
+   "transport",
+   "engineering",
+   "machine",
+   "energy"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Судовая электротехника",
+   "Автоматика",
+   "Электроприводы",
+   "Морской английский"
+  ],
+  "employment": {
+   "rate": 0.86,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Электромеханики судов: электричество и автоматика на борту.",
+  "autoDescription": true,
+  "professions": [
+   "ship_engineer",
+   "electrician"
+  ]
+ }
+]

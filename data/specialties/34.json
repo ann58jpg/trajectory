@@ -1,0 +1,89 @@
+[
+ {
+  "code": "34.03.01",
+  "name": "Сестринское дело",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "34.00.00",
+  "tags": [
+   "medicine",
+   "people",
+   "management"
+  ],
+  "klimov": [
+   "P",
+   "N"
+  ],
+  "disciplines": [
+   "Сестринский процесс",
+   "Управление в здравоохранении",
+   "Педагогика",
+   "Клиника"
+  ],
+  "employment": {
+   "rate": 0.9,
+   "monthsToJob": 1,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Высшее образование для медсестёр: руководство отделением, уход, обучение персонала.",
+  "autoDescription": true,
+  "professions": [
+   "head_nurse",
+   "nurse"
+  ]
+ },
+ {
+  "code": "34.02.01",
+  "name": "Сестринское дело (колледж)",
+  "level": "spo",
+  "years": 1.83,
+  "ege": {
+   "mandatory": [],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "34.00.00",
+  "tags": [
+   "medicine",
+   "people"
+  ],
+  "klimov": [
+   "P",
+   "N"
+  ],
+  "disciplines": [
+   "Основы сестринского дела",
+   "Анатомия",
+   "Фармакология",
+   "Уход"
+  ],
+  "employment": {
+   "rate": 0.92,
+   "monthsToJob": 1,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Колледж: медсестра/медбрат, очень высокий спрос.",
+  "autoDescription": true,
+  "professions": [
+   "nurse"
+  ]
+ }
+]

@@ -1,0 +1,151 @@
+[
+ {
+  "code": "30.05.01",
+  "name": "Медицинская биохимия",
+  "level": "specialist",
+  "years": 6,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "chem",
+    "bio"
+   ],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "30.00.00",
+  "tags": [
+   "medicine",
+   "biology",
+   "science",
+   "chemistry",
+   "bio"
+  ],
+  "klimov": [
+   "N",
+   "S"
+  ],
+  "disciplines": [
+   "Биохимия",
+   "Клиническая лабораторная диагностика",
+   "Физиология",
+   "Генетика"
+  ],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Врачи-лаборанты и исследователи: анализы, диагностика по крови, разработка тестов.",
+  "autoDescription": true,
+  "professions": [
+   "medical_biochemist",
+   "biotechnologist"
+  ]
+ },
+ {
+  "code": "30.05.02",
+  "name": "Медицинская биофизика",
+  "level": "specialist",
+  "years": 6,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "chem",
+    "bio"
+   ],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "30.00.00",
+  "tags": [
+   "medicine",
+   "biology",
+   "science",
+   "chemistry",
+   "electronics",
+   "engineering"
+  ],
+  "klimov": [
+   "N",
+   "S"
+  ],
+  "disciplines": [
+   "Биофизика",
+   "Медицинская физика",
+   "Лучевая диагностика",
+   "Физиология"
+  ],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Физика в медицине: томография, УЗИ, лучевая диагностика.",
+  "autoDescription": true,
+  "professions": [
+   "medical_biochemist",
+   "medtech_engineer"
+  ]
+ },
+ {
+  "code": "30.05.03",
+  "name": "Медицинская кибернетика",
+  "level": "specialist",
+  "years": 6,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "chem",
+    "math",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "30.00.00",
+  "tags": [
+   "medicine",
+   "biology",
+   "science",
+   "data",
+   "it"
+  ],
+  "klimov": [
+   "N",
+   "S"
+  ],
+  "disciplines": [
+   "Медицинская информатика",
+   "Анализ данных",
+   "Физиология",
+   "Программирование"
+  ],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Медицина плюс ИТ: медицинские системы, анализ данных пациентов, ИИ в диагностике.",
+  "autoDescription": true,
+  "professions": [
+   "medical_biochemist",
+   "data_scientist",
+   "bioinformatician"
+  ]
+ }
+]

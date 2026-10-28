@@ -1,0 +1,193 @@
+[
+ {
+  "code": "13.03.01",
+  "name": "Теплоэнергетика и теплотехника",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "13.00.00",
+  "tags": [
+   "energy",
+   "engineering",
+   "physics",
+   "electronics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Термодинамика",
+   "Котельные установки",
+   "Тепловые сети",
+   "Турбины"
+  ],
+  "employment": {
+   "rate": 0.84,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как получить тепло и электричество из топлива и доставить тепло в дома.",
+  "autoDescription": true,
+  "professions": [
+   "heat_engineer",
+   "power_engineer"
+  ]
+ },
+ {
+  "code": "13.03.02",
+  "name": "Электроэнергетика и электротехника",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "13.00.00",
+  "tags": [
+   "energy",
+   "engineering",
+   "physics",
+   "electronics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Электротехника",
+   "Электрические машины",
+   "Релейная защита",
+   "Электроснабжение"
+  ],
+  "employment": {
+   "rate": 0.84,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как производится и доставляется электричество.",
+  "autoDescription": true,
+  "professions": [
+   "power_engineer",
+   "electrician",
+   "automation_engineer"
+  ]
+ },
+ {
+  "code": "13.03.03",
+  "name": "Энергетическое машиностроение",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "13.00.00",
+  "tags": [
+   "energy",
+   "engineering",
+   "physics",
+   "machine",
+   "manufacturing"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Турбомашины",
+   "Термодинамика",
+   "Прочность",
+   "Конструирование"
+  ],
+  "employment": {
+   "rate": 0.84,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Проектируют турбины, котлы, двигатели и насосы.",
+  "autoDescription": true,
+  "professions": [
+   "heat_engineer",
+   "mechanical_engineer"
+  ]
+ },
+ {
+  "code": "13.02.07",
+  "name": "Электроснабжение (колледж)",
+  "level": "spo",
+  "years": 2.83,
+  "ege": {
+   "mandatory": [],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "13.00.00",
+  "tags": [
+   "energy",
+   "engineering",
+   "electronics",
+   "physics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Электротехника",
+   "Электроснабжение",
+   "Релейная защита",
+   "Охрана труда"
+  ],
+  "employment": {
+   "rate": 0.83,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Колледж: электрик/техник-энергетик — работа с первого года после выпуска.",
+  "autoDescription": true,
+  "professions": [
+   "electrician",
+   "power_engineer"
+  ]
+ }
+]

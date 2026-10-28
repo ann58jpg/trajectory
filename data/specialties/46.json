@@ -1,0 +1,156 @@
+[
+ {
+  "code": "46.03.01",
+  "name": "История",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "hist"
+   ],
+   "oneOf": [
+    "soc",
+    "foreign",
+    "lit"
+   ]
+  },
+  "dvi": null,
+  "group": "46.00.00",
+  "tags": [
+   "history",
+   "culture",
+   "science",
+   "people"
+  ],
+  "klimov": [
+   "S"
+  ],
+  "disciplines": [
+   "История России",
+   "Всеобщая история",
+   "Источниковедение",
+   "Архивоведение"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Изучают прошлое по документам и находкам. Работа в музеях, архивах, школе и медиа.",
+  "autoDescription": true,
+  "professions": [
+   "historian",
+   "teacher",
+   "museum_specialist"
+  ]
+ },
+ {
+  "code": "46.03.02",
+  "name": "Документоведение и архивоведение",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "hist"
+   ],
+   "oneOf": [
+    "soc",
+    "inf",
+    "foreign"
+   ]
+  },
+  "dvi": null,
+  "group": "46.00.00",
+  "tags": [
+   "history",
+   "culture",
+   "science",
+   "gov",
+   "writing",
+   "social",
+   "law",
+   "management",
+   "people"
+  ],
+  "klimov": [
+   "S"
+  ],
+  "disciplines": [
+   "Документоведение",
+   "Архивоведение",
+   "Электронный документооборот",
+   "Право"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Документы компаний и государства: как их вести, хранить и находить.",
+  "autoDescription": true,
+  "professions": [
+   "archivist",
+   "civil_servant"
+  ]
+ },
+ {
+  "code": "46.03.03",
+  "name": "Антропология и этнология",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "hist"
+   ],
+   "oneOf": [
+    "soc",
+    "foreign",
+    "lit"
+   ]
+  },
+  "dvi": null,
+  "group": "46.00.00",
+  "tags": [
+   "history",
+   "culture",
+   "science",
+   "people"
+  ],
+  "klimov": [
+   "S"
+  ],
+  "disciplines": [
+   "Этнография",
+   "Антропология",
+   "Полевые исследования",
+   "Культурология"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Изучают народы и культуры: обычаи, язык, как живут люди в разных местах.",
+  "autoDescription": true,
+  "professions": [
+   "ethnologist",
+   "museum_specialist",
+   "historian"
+  ]
+ }
+]

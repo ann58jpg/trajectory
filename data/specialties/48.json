@@ -1,0 +1,51 @@
+[
+ {
+  "code": "48.03.01",
+  "name": "Теология",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "hist"
+   ],
+   "oneOf": [
+    "soc",
+    "foreign"
+   ]
+  },
+  "dvi": null,
+  "group": "48.00.00",
+  "tags": [
+   "religion",
+   "history",
+   "culture",
+   "social"
+  ],
+  "klimov": [
+   "P",
+   "S"
+  ],
+  "disciplines": [
+   "Священные тексты",
+   "История религии",
+   "Древние языки",
+   "Философия"
+  ],
+  "employment": {
+   "rate": 0.55,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Изучают религиозную традицию изнутри: тексты, история, язык.",
+  "autoDescription": true,
+  "professions": [
+   "theologian",
+   "religion_scholar"
+  ]
+ }
+]

@@ -1,0 +1,258 @@
+[
+ {
+  "code": "29.03.01",
+  "name": "Технология изделий лёгкой промышленности",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "29.00.00",
+  "tags": [
+   "fashion",
+   "manufacturing",
+   "design",
+   "art",
+   "business"
+  ],
+  "klimov": [
+   "T",
+   "A"
+  ],
+  "disciplines": [
+   "Материаловедение",
+   "Технология швейного производства",
+   "Оборудование",
+   "Контроль качества"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Одежда, обувь и сумки: как их производят на фабрике.",
+  "autoDescription": true,
+  "professions": [
+   "garment_technologist",
+   "fashion_designer"
+  ]
+ },
+ {
+  "code": "29.03.02",
+  "name": "Технологии и проектирование текстильных изделий",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "29.00.00",
+  "tags": [
+   "fashion",
+   "manufacturing",
+   "design",
+   "art",
+   "business"
+  ],
+  "klimov": [
+   "T",
+   "A"
+  ],
+  "disciplines": [
+   "Текстильное материаловедение",
+   "Ткачество",
+   "Отделка тканей",
+   "Дизайн текстиля"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Ткани и трикотаж: от нити до готового полотна.",
+  "autoDescription": true,
+  "professions": [
+   "garment_technologist",
+   "fashion_designer"
+  ]
+ },
+ {
+  "code": "29.03.03",
+  "name": "Технология полиграфического и упаковочного производства",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "29.00.00",
+  "tags": [
+   "fashion",
+   "manufacturing",
+   "design",
+   "media",
+   "writing",
+   "art"
+  ],
+  "klimov": [
+   "T",
+   "A"
+  ],
+  "disciplines": [
+   "Печатные процессы",
+   "Допечатная подготовка",
+   "Упаковка",
+   "Оборудование"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Книги, журналы, упаковка: как их печатают и делают.",
+  "autoDescription": true,
+  "professions": [
+   "print_technologist",
+   "editor"
+  ]
+ },
+ {
+  "code": "29.03.04",
+  "name": "Технология художественной обработки материалов",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": "art",
+  "group": "29.00.00",
+  "tags": [
+   "fashion",
+   "manufacturing",
+   "design",
+   "art",
+   "culture"
+  ],
+  "klimov": [
+   "T",
+   "A"
+  ],
+  "disciplines": [
+   "Обработка металлов",
+   "Ювелирное дело",
+   "Рисунок",
+   "Композиция"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Ювелирка, художественное литьё, гравировка. Ремесло плюс технология.",
+  "autoDescription": true,
+  "professions": [
+   "crafts_artist",
+   "jeweler"
+  ]
+ },
+ {
+  "code": "29.03.05",
+  "name": "Конструирование изделий лёгкой промышленности",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "29.00.00",
+  "tags": [
+   "fashion",
+   "manufacturing",
+   "design",
+   "art",
+   "business"
+  ],
+  "klimov": [
+   "T",
+   "A"
+  ],
+  "disciplines": [
+   "Конструирование одежды",
+   "Моделирование",
+   "САПР одежды",
+   "Материаловедение"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Конструкторы одежды: превращают эскиз дизайнера в лекала для фабрики.",
+  "autoDescription": true,
+  "professions": [
+   "fashion_designer",
+   "garment_technologist"
+  ]
+ }
+]

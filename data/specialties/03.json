@@ -1,0 +1,150 @@
+[
+ {
+  "code": "03.03.01",
+  "name": "Прикладные математика и физика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math",
+    "phys"
+   ],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "03.00.00",
+  "tags": [
+   "physics",
+   "science",
+   "math",
+   "space",
+   "it"
+  ],
+  "klimov": [
+   "S",
+   "T"
+  ],
+  "disciplines": [
+   "Общая физика",
+   "Матанализ",
+   "Квантовая механика",
+   "Программирование"
+  ],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Физтех-подход: сильная математика и физика плюс работа в лабораториях и компаниях с 3 курса.",
+  "autoDescription": true,
+  "professions": [
+   "physicist",
+   "data_scientist",
+   "chip_designer"
+  ]
+ },
+ {
+  "code": "03.03.02",
+  "name": "Физика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math",
+    "phys"
+   ],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "03.00.00",
+  "tags": [
+   "physics",
+   "science",
+   "math",
+   "space",
+   "engineering"
+  ],
+  "klimov": [
+   "S",
+   "T"
+  ],
+  "disciplines": [
+   "Общая физика",
+   "Теоретическая физика",
+   "Электродинамика",
+   "Физпрактикум"
+  ],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Изучают законы природы от атомов до звёзд. Работают в науке, на производстве, в ИТ и школе.",
+  "autoDescription": true,
+  "professions": [
+   "physicist",
+   "teacher",
+   "optics_engineer"
+  ]
+ },
+ {
+  "code": "03.03.03",
+  "name": "Радиофизика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math",
+    "phys"
+   ],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "03.00.00",
+  "tags": [
+   "physics",
+   "science",
+   "math",
+   "space",
+   "electronics",
+   "engineering"
+  ],
+  "klimov": [
+   "S",
+   "T"
+  ],
+  "disciplines": [
+   "Электродинамика",
+   "Теория колебаний",
+   "Радиотехника",
+   "Цифровая обработка сигналов"
+  ],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Физика волн и сигналов: связь, радары, антенны, приборы.",
+  "autoDescription": true,
+  "professions": [
+   "radio_engineer",
+   "physicist",
+   "telecom_engineer"
+  ]
+ }
+]

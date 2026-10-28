@@ -1,0 +1,153 @@
+[
+ {
+  "code": "47.03.01",
+  "name": "Философия",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "hist",
+    "foreign"
+   ]
+  },
+  "dvi": null,
+  "group": "47.00.00",
+  "tags": [
+   "social",
+   "history",
+   "religion"
+  ],
+  "klimov": [
+   "S"
+  ],
+  "disciplines": [
+   "Логика",
+   "История философии",
+   "Этика",
+   "Философия науки"
+  ],
+  "employment": {
+   "rate": 0.55,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Учат думать точно и спорить по делу: логика, этика, теория познания.",
+  "autoDescription": true,
+  "professions": [
+   "philosopher",
+   "teacher",
+   "political_analyst"
+  ]
+ },
+ {
+  "code": "47.03.02",
+  "name": "Прикладная этика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "hist",
+    "foreign"
+   ]
+  },
+  "dvi": null,
+  "group": "47.00.00",
+  "tags": [
+   "social",
+   "history",
+   "religion",
+   "science",
+   "writing",
+   "people",
+   "psychology",
+   "management",
+   "business"
+  ],
+  "klimov": [
+   "S"
+  ],
+  "disciplines": [
+   "Этика",
+   "Биоэтика",
+   "Корпоративная этика",
+   "Право"
+  ],
+  "employment": {
+   "rate": 0.55,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Этика в бизнесе, медицине и ИИ: как принимать честные решения.",
+  "autoDescription": true,
+  "professions": [
+   "philosopher",
+   "hr"
+  ]
+ },
+ {
+  "code": "47.03.03",
+  "name": "Религиоведение",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "hist",
+    "foreign"
+   ]
+  },
+  "dvi": null,
+  "group": "47.00.00",
+  "tags": [
+   "social",
+   "history",
+   "religion",
+   "culture",
+   "science",
+   "writing"
+  ],
+  "klimov": [
+   "S"
+  ],
+  "disciplines": [
+   "История религий",
+   "Социология религии",
+   "Источники",
+   "Право"
+  ],
+  "employment": {
+   "rate": 0.55,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Изучают религии мира со стороны: история, тексты, роль в обществе.",
+  "autoDescription": true,
+  "professions": [
+   "religion_scholar",
+   "historian"
+  ]
+ }
+]

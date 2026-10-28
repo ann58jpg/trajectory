@@ -13,7 +13,9 @@
     "test:e2e": "playwright test",
     "typecheck": "tsc --noEmit",
     "check-links": "bash scripts/check-links.sh",
-    "vercel-build": "npm run setup && next build"
+    "vercel-build": "npm run setup && next build",
+    "import:tabiturient": "tsx scripts/import-tabiturient.ts",
+    "gen:catalog": "python3 scripts/gen-catalog.py"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.135.0",

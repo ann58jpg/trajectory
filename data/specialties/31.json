@@ -1,0 +1,233 @@
+[
+ {
+  "code": "31.05.01",
+  "name": "Лечебное дело",
+  "level": "specialist",
+  "years": 6,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "chem",
+    "bio"
+   ],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "31.00.00",
+  "tags": [
+   "medicine",
+   "biology",
+   "people",
+   "chemistry"
+  ],
+  "klimov": [
+   "P",
+   "N"
+  ],
+  "disciplines": [
+   "Анатомия",
+   "Физиология",
+   "Фармакология",
+   "Терапия",
+   "Хирургия"
+  ],
+  "employment": {
+   "rate": 0.93,
+   "monthsToJob": 1,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Врач общей практики; дальше — ординатура и специализация.",
+  "autoDescription": true,
+  "professions": [
+   "doctor",
+   "paramedic"
+  ]
+ },
+ {
+  "code": "31.05.02",
+  "name": "Педиатрия",
+  "level": "specialist",
+  "years": 6,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "chem",
+    "bio"
+   ],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "31.00.00",
+  "tags": [
+   "medicine",
+   "biology",
+   "people",
+   "education",
+   "chemistry"
+  ],
+  "klimov": [
+   "P",
+   "N"
+  ],
+  "disciplines": [
+   "Анатомия",
+   "Детские болезни",
+   "Неонатология",
+   "Фармакология"
+  ],
+  "employment": {
+   "rate": 0.93,
+   "monthsToJob": 1,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Врач для детей и подростков.",
+  "autoDescription": true,
+  "professions": [
+   "pediatrician",
+   "doctor"
+  ]
+ },
+ {
+  "code": "31.05.03",
+  "name": "Стоматология",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "chem",
+    "bio"
+   ],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "31.00.00",
+  "tags": [
+   "medicine",
+   "biology",
+   "people"
+  ],
+  "klimov": [
+   "P",
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Анатомия",
+   "Терапевтическая стоматология",
+   "Ортопедия",
+   "Хирургия"
+  ],
+  "employment": {
+   "rate": 0.9,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Лечение и протезирование зубов: медицина плюс точная ручная работа.",
+  "autoDescription": true,
+  "professions": [
+   "dentist"
+  ]
+ },
+ {
+  "code": "31.05.04",
+  "name": "Остеопатия",
+  "level": "specialist",
+  "years": 6,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "chem",
+    "bio"
+   ],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "31.00.00",
+  "tags": [
+   "medicine",
+   "biology",
+   "people",
+   "sport"
+  ],
+  "klimov": [
+   "P",
+   "N"
+  ],
+  "disciplines": [
+   "Анатомия",
+   "Неврология",
+   "Остеопатические техники",
+   "Реабилитация"
+  ],
+  "employment": {
+   "rate": 0.93,
+   "monthsToJob": 1,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Врачи, которые лечат руками: работают с позвоночником, мышцами и суставами.",
+  "autoDescription": true,
+  "professions": [
+   "osteopath",
+   "rehab_specialist"
+  ]
+ },
+ {
+  "code": "31.02.01",
+  "name": "Лечебное дело (колледж, фельдшер)",
+  "level": "spo",
+  "years": 2.83,
+  "ege": {
+   "mandatory": [],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "31.00.00",
+  "tags": [
+   "medicine",
+   "people",
+   "biology"
+  ],
+  "klimov": [
+   "P",
+   "N"
+  ],
+  "disciplines": [
+   "Анатомия",
+   "Неотложная помощь",
+   "Диагностика",
+   "Пропедевтика"
+  ],
+  "employment": {
+   "rate": 0.9,
+   "monthsToJob": 1,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Колледж: фельдшер скорой и ФАП — работа сразу, возможен вуз потом.",
+  "autoDescription": true,
+  "professions": [
+   "paramedic",
+   "nurse"
+  ]
+ }
+]

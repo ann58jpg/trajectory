@@ -1,0 +1,471 @@
+[
+ {
+  "code": "52.03.01",
+  "name": "Хореографическое искусство",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "52.00.00",
+  "tags": [
+   "theatre",
+   "art",
+   "people",
+   "sport",
+   "education"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Классический танец",
+   "Народный танец",
+   "Композиция танца",
+   "Педагогика"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Педагоги и постановщики танца.",
+  "autoDescription": true,
+  "professions": [
+   "choreographer",
+   "dancer"
+  ]
+ },
+ {
+  "code": "52.03.02",
+  "name": "Хореографическое исполнительство",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "52.00.00",
+  "tags": [
+   "theatre",
+   "art",
+   "people",
+   "sport",
+   "education"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Классический танец",
+   "Дуэтный танец",
+   "Репертуар",
+   "Актёрское мастерство"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Профессиональные танцовщики балета и ансамблей.",
+  "autoDescription": true,
+  "professions": [
+   "dancer",
+   "choreographer"
+  ]
+ },
+ {
+  "code": "52.03.03",
+  "name": "Цирковое искусство",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "52.00.00",
+  "tags": [
+   "theatre",
+   "art",
+   "people",
+   "sport"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Цирковые жанры",
+   "Акробатика",
+   "Актёрское мастерство",
+   "Режиссура номера"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Цирковые артисты и постановщики номеров.",
+  "autoDescription": true,
+  "professions": [
+   "circus_artist"
+  ]
+ },
+ {
+  "code": "52.03.04",
+  "name": "Технология художественного оформления спектакля",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "art",
+  "group": "52.00.00",
+  "tags": [
+   "theatre",
+   "art",
+   "people",
+   "music",
+   "engineering",
+   "design",
+   "film"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Сценический свет",
+   "Звук",
+   "Технология декораций",
+   "Костюм"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Свет, звук, костюмы и декорации — всё, что зритель видит на сцене кроме актёров.",
+  "autoDescription": true,
+  "professions": [
+   "stage_tech",
+   "set_designer"
+  ]
+ },
+ {
+  "code": "52.03.05",
+  "name": "Театроведение",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": [
+    "hist",
+    "soc"
+   ]
+  },
+  "dvi": "contest",
+  "group": "52.00.00",
+  "tags": [
+   "theatre",
+   "art",
+   "people",
+   "writing",
+   "media",
+   "culture",
+   "business"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "История театра",
+   "Театральная критика",
+   "Драматургия",
+   "Менеджмент театра"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Театральные критики и исследователи: пишут о спектаклях и работают в театрах.",
+  "autoDescription": true,
+  "professions": [
+   "theatre_critic",
+   "culture_manager"
+  ]
+ },
+ {
+  "code": "52.03.06",
+  "name": "Драматургия",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "contest",
+  "group": "52.00.00",
+  "tags": [
+   "theatre",
+   "art",
+   "people",
+   "writing",
+   "film",
+   "media"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Драматургия",
+   "Сценарное мастерство",
+   "История театра",
+   "Литература"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Пишут пьесы и сценарии.",
+  "autoDescription": true,
+  "professions": [
+   "playwright",
+   "writer"
+  ]
+ },
+ {
+  "code": "52.05.01",
+  "name": "Актёрское искусство",
+  "level": "specialist",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "52.00.00",
+  "tags": [
+   "theatre",
+   "art",
+   "people",
+   "film",
+   "culture"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Мастерство актёра",
+   "Сценическая речь",
+   "Сценическое движение",
+   "Вокал"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Актёры театра и кино. Поступают через прослушивания в несколько туров.",
+  "autoDescription": true,
+  "professions": [
+   "actor",
+   "event_director"
+  ]
+ },
+ {
+  "code": "52.05.02",
+  "name": "Режиссура театра",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "52.00.00",
+  "tags": [
+   "theatre",
+   "art",
+   "people",
+   "management",
+   "culture"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Режиссура",
+   "Мастерство актёра",
+   "Сценография",
+   "Драматургия"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Режиссёры спектаклей: от идеи до премьеры.",
+  "autoDescription": true,
+  "professions": [
+   "theatre_director",
+   "event_director"
+  ]
+ },
+ {
+  "code": "52.05.03",
+  "name": "Сценография",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "art",
+  "group": "52.00.00",
+  "tags": [
+   "theatre",
+   "art",
+   "people",
+   "design",
+   "film",
+   "music",
+   "engineering"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Сценография",
+   "Рисунок",
+   "Живопись",
+   "Технология сцены"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Художники театра: придумывают пространство спектакля, декорации и костюмы.",
+  "autoDescription": true,
+  "professions": [
+   "set_designer",
+   "stage_tech"
+  ]
+ },
+ {
+  "code": "52.05.04",
+  "name": "Литературное творчество",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "contest",
+  "group": "52.00.00",
+  "tags": [
+   "theatre",
+   "art",
+   "people",
+   "writing",
+   "media"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Литературное мастерство",
+   "История литературы",
+   "Редактирование",
+   "Критика"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Писатели, поэты и литературные редакторы.",
+  "autoDescription": true,
+  "professions": [
+   "writer",
+   "editor",
+   "copywriter"
+  ]
+ }
+]

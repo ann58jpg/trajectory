@@ -1,0 +1,564 @@
+[
+ {
+  "code": "35.03.01",
+  "name": "Лесное дело",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "math",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "35.00.00",
+  "tags": [
+   "agro",
+   "nature",
+   "biology",
+   "ecology"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Лесоведение",
+   "Лесоустройство",
+   "Защита леса",
+   "ГИС"
+  ],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Лесничие: выращивают лес, защищают от пожаров и вредителей, планируют вырубку.",
+  "autoDescription": true,
+  "professions": [
+   "forester",
+   "ecologist"
+  ]
+ },
+ {
+  "code": "35.03.02",
+  "name": "Технология лесозаготовительных и деревоперерабатывающих производств",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "math",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "35.00.00",
+  "tags": [
+   "agro",
+   "nature",
+   "biology",
+   "manufacturing",
+   "ecology"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Древесиноведение",
+   "Лесозаготовка",
+   "Деревообработка",
+   "Оборудование"
+  ],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "От дерева до мебели и домов: заготовка и переработка древесины.",
+  "autoDescription": true,
+  "professions": [
+   "wood_technologist",
+   "forester"
+  ]
+ },
+ {
+  "code": "35.03.03",
+  "name": "Агрохимия и агропочвоведение",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "math",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "35.00.00",
+  "tags": [
+   "agro",
+   "nature",
+   "biology",
+   "chemistry",
+   "drones"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Агрохимия",
+   "Почвоведение",
+   "Удобрения",
+   "Агроэкология"
+  ],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Подбирают удобрения и следят за плодородием полей.",
+  "autoDescription": true,
+  "professions": [
+   "soil_scientist",
+   "agronomist"
+  ]
+ },
+ {
+  "code": "35.03.04",
+  "name": "Агрономия",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "math",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "35.00.00",
+  "tags": [
+   "agro",
+   "nature",
+   "biology",
+   "drones",
+   "aviation",
+   "engineering"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Растениеводство",
+   "Земледелие",
+   "Защита растений",
+   "Селекция"
+  ],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как вырастить хороший урожай: сорта, севооборот, защита растений.",
+  "autoDescription": true,
+  "professions": [
+   "agronomist",
+   "drone_operator"
+  ]
+ },
+ {
+  "code": "35.03.05",
+  "name": "Садоводство",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "math",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "35.00.00",
+  "tags": [
+   "agro",
+   "nature",
+   "biology",
+   "drones",
+   "design",
+   "architecture"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Плодоводство",
+   "Овощеводство",
+   "Защищённый грунт",
+   "Декоративное садоводство"
+  ],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Сады, теплицы, питомники, овощи и цветы.",
+  "autoDescription": true,
+  "professions": [
+   "agronomist",
+   "landscape_architect"
+  ]
+ },
+ {
+  "code": "35.03.06",
+  "name": "Агроинженерия",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "35.00.00",
+  "tags": [
+   "agro",
+   "nature",
+   "biology",
+   "machine",
+   "engineering",
+   "auto",
+   "transport"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Тракторы и автомобили",
+   "Сельхозмашины",
+   "Электрификация",
+   "Точное земледелие"
+  ],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Сельхозтехника: тракторы, комбайны, автопилоты для полей.",
+  "autoDescription": true,
+  "professions": [
+   "agro_engineer",
+   "auto_mechanic"
+  ]
+ },
+ {
+  "code": "35.03.07",
+  "name": "Технология производства и переработки сельскохозяйственной продукции",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "math",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "35.00.00",
+  "tags": [
+   "agro",
+   "nature",
+   "biology",
+   "food",
+   "chemistry",
+   "manufacturing",
+   "drones"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Хранение продукции",
+   "Переработка",
+   "Контроль качества",
+   "Стандартизация"
+  ],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как зерно, молоко и мясо становятся продуктами на полке.",
+  "autoDescription": true,
+  "professions": [
+   "food_technologist",
+   "agronomist"
+  ]
+ },
+ {
+  "code": "35.03.08",
+  "name": "Водные биоресурсы и аквакультура",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "math",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "35.00.00",
+  "tags": [
+   "agro",
+   "nature",
+   "biology",
+   "animals",
+   "sea",
+   "ecology"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Ихтиология",
+   "Аквакультура",
+   "Гидробиология",
+   "Рыбоводство"
+  ],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Рыбные фермы и охрана рыбных запасов в реках и морях.",
+  "autoDescription": true,
+  "professions": [
+   "aquaculture_specialist",
+   "ecologist"
+  ]
+ },
+ {
+  "code": "35.03.09",
+  "name": "Промышленное рыболовство",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "math",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "35.00.00",
+  "tags": [
+   "agro",
+   "nature",
+   "biology",
+   "sea",
+   "transport",
+   "travel"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Орудия лова",
+   "Промысловая разведка",
+   "Судовождение",
+   "Право"
+  ],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Морской промысел: суда, орудия лова и правила рыболовства.",
+  "autoDescription": true,
+  "professions": [
+   "fishery_specialist",
+   "ship_navigator"
+  ]
+ },
+ {
+  "code": "35.03.10",
+  "name": "Ландшафтная архитектура",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "math",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "35.00.00",
+  "tags": [
+   "agro",
+   "nature",
+   "biology",
+   "design",
+   "architecture",
+   "art"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Ландшафтное проектирование",
+   "Дендрология",
+   "Рисунок",
+   "Озеленение"
+  ],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Парки, скверы и сады: как сделать зелёное место красивым и живым.",
+  "autoDescription": true,
+  "professions": [
+   "landscape_architect",
+   "environment_designer"
+  ]
+ },
+ {
+  "code": "35.03.11",
+  "name": "Гидромелиорация",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "bio"
+   ]
+  },
+  "dvi": null,
+  "group": "35.00.00",
+  "tags": [
+   "agro",
+   "nature",
+   "biology",
+   "ecology",
+   "engineering",
+   "construction",
+   "machine"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Гидравлика",
+   "Мелиорация",
+   "Водоснабжение",
+   "Агрономия"
+  ],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Орошение и осушение полей, водохозяйственные системы.",
+  "autoDescription": true,
+  "professions": [
+   "water_engineer",
+   "agro_engineer"
+  ]
+ }
+]

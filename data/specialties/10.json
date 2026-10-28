@@ -1,0 +1,298 @@
+[
+ {
+  "code": "10.03.01",
+  "name": "Информационная безопасность",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "10.00.00",
+  "tags": [
+   "security",
+   "it",
+   "math"
+  ],
+  "klimov": [
+   "S",
+   "T"
+  ],
+  "disciplines": [
+   "Криптография",
+   "Защита сетей",
+   "Право в ИБ",
+   "Безопасность ОС"
+  ],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Защищают данные компаний и людей: настраивают защиту, ищут уязвимости, расследуют атаки.",
+  "autoDescription": true,
+  "professions": [
+   "security",
+   "pentester",
+   "devops"
+  ]
+ },
+ {
+  "code": "10.05.01",
+  "name": "Компьютерная безопасность",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "10.00.00",
+  "tags": [
+   "it",
+   "security",
+   "math"
+  ],
+  "klimov": [
+   "S",
+   "T"
+  ],
+  "disciplines": [
+   "Криптография",
+   "Реверс-инжиниринг",
+   "Безопасность ОС",
+   "Теория чисел"
+  ],
+  "employment": {
+   "rate": 0.86,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Защита информации и систем от атак.",
+  "autoDescription": true,
+  "professions": [
+   "security",
+   "pentester",
+   "crypto_analyst"
+  ]
+ },
+ {
+  "code": "10.05.02",
+  "name": "Информационная безопасность телекоммуникационных систем",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "10.00.00",
+  "tags": [
+   "security",
+   "it",
+   "math",
+   "electronics",
+   "engineering"
+  ],
+  "klimov": [
+   "S",
+   "T"
+  ],
+  "disciplines": [
+   "Системы связи",
+   "Криптография",
+   "Защита каналов",
+   "Радиотехника"
+  ],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Защита связи: сотовые сети, спутники, магистральные каналы.",
+  "autoDescription": true,
+  "professions": [
+   "security",
+   "telecom_engineer"
+  ]
+ },
+ {
+  "code": "10.05.03",
+  "name": "Информационная безопасность автоматизированных систем",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "10.00.00",
+  "tags": [
+   "security",
+   "it",
+   "math"
+  ],
+  "klimov": [
+   "S",
+   "T"
+  ],
+  "disciplines": [
+   "Защита АСУ",
+   "Сети",
+   "Аудит безопасности",
+   "Право"
+  ],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Защита промышленных и банковских систем от взломов и сбоев.",
+  "autoDescription": true,
+  "professions": [
+   "security",
+   "pentester",
+   "automation_engineer"
+  ]
+ },
+ {
+  "code": "10.05.04",
+  "name": "Информационно-аналитические системы безопасности",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "10.00.00",
+  "tags": [
+   "security",
+   "it",
+   "math"
+  ],
+  "klimov": [
+   "S",
+   "T"
+  ],
+  "disciplines": [
+   "Анализ данных",
+   "Криптография",
+   "Финансовый мониторинг",
+   "Программирование"
+  ],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Ищут угрозы в больших данных: мошенничество, утечки, атаки.",
+  "autoDescription": true,
+  "professions": [
+   "security",
+   "crypto_analyst",
+   "data_analyst"
+  ]
+ },
+ {
+  "code": "10.05.05",
+  "name": "Безопасность информационных технологий в правоохранительной сфере",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys"
+   ]
+  },
+  "dvi": "physical",
+  "group": "10.00.00",
+  "tags": [
+   "security",
+   "it",
+   "math",
+   "law"
+  ],
+  "klimov": [
+   "S",
+   "T"
+  ],
+  "disciplines": [
+   "Компьютерная криминалистика",
+   "Право",
+   "Сети",
+   "Расследования"
+  ],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Киберкриминалистика: как найти следы преступления в компьютере и телефоне.",
+  "autoDescription": true,
+  "professions": [
+   "cyber_forensic",
+   "security",
+   "investigator"
+  ]
+ }
+]

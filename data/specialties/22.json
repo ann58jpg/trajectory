@@ -1,0 +1,102 @@
+[
+ {
+  "code": "22.03.01",
+  "name": "Материаловедение и технологии материалов",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "22.00.00",
+  "tags": [
+   "manufacturing",
+   "chemistry",
+   "physics",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Материаловедение",
+   "Физика металлов",
+   "Композиты",
+   "Испытания"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Создают металлы, керамику и композиты с нужными свойствами.",
+  "autoDescription": true,
+  "professions": [
+   "materials_engineer",
+   "metallurgist",
+   "quality_engineer"
+  ]
+ },
+ {
+  "code": "22.03.02",
+  "name": "Металлургия",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "22.00.00",
+  "tags": [
+   "manufacturing",
+   "chemistry",
+   "physics",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Металлургия стали",
+   "Цветная металлургия",
+   "Обработка давлением",
+   "Теплотехника"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как из руды получить сталь, алюминий и медь и сделать из них прокат.",
+  "autoDescription": true,
+  "professions": [
+   "metallurgist",
+   "materials_engineer",
+   "process_engineer"
+  ]
+ }
+]

@@ -1,0 +1,260 @@
+[
+ {
+  "code": "42.03.01",
+  "name": "Реклама и связи с общественностью",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "hist",
+    "foreign",
+    "lit",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "42.00.00",
+  "tags": [
+   "media",
+   "writing",
+   "business",
+   "people",
+   "design"
+  ],
+  "klimov": [
+   "P",
+   "A"
+  ],
+  "disciplines": [
+   "Копирайтинг",
+   "Медиапланирование",
+   "SMM",
+   "Брендинг"
+  ],
+  "employment": {
+   "rate": 0.66,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как рассказать о продукте или идее так, чтобы услышали.",
+  "autoDescription": true,
+  "professions": [
+   "pr_specialist",
+   "marketer",
+   "smm"
+  ]
+ },
+ {
+  "code": "42.03.02",
+  "name": "Журналистика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": [
+    "soc",
+    "hist",
+    "foreign"
+   ]
+  },
+  "dvi": "contest",
+  "group": "42.00.00",
+  "tags": [
+   "media",
+   "writing",
+   "social",
+   "people"
+  ],
+  "klimov": [
+   "P",
+   "A"
+  ],
+  "disciplines": [
+   "Основы журналистики",
+   "Мультимедиа",
+   "Редактирование",
+   "Медиаправо"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Тексты, видео и подкасты о том, что важно людям.",
+  "autoDescription": true,
+  "professions": [
+   "journalist",
+   "editor",
+   "smm"
+  ]
+ },
+ {
+  "code": "42.03.03",
+  "name": "Издательское дело",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": [
+    "soc",
+    "hist",
+    "foreign"
+   ]
+  },
+  "dvi": null,
+  "group": "42.00.00",
+  "tags": [
+   "writing",
+   "media",
+   "design",
+   "art",
+   "people"
+  ],
+  "klimov": [
+   "A",
+   "S"
+  ],
+  "disciplines": [
+   "Редактирование",
+   "Допечатная подготовка",
+   "Книжный маркетинг",
+   "Типографика"
+  ],
+  "employment": {
+   "rate": 0.63,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Книги, журналы и цифровые медиа: от рукописи до читателя.",
+  "autoDescription": true,
+  "professions": [
+   "editor",
+   "print_technologist",
+   "copywriter"
+  ]
+ },
+ {
+  "code": "42.03.04",
+  "name": "Телевидение",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": [
+    "soc",
+    "hist",
+    "foreign"
+   ]
+  },
+  "dvi": "contest",
+  "group": "42.00.00",
+  "tags": [
+   "media",
+   "writing",
+   "people"
+  ],
+  "klimov": [
+   "P",
+   "A"
+  ],
+  "disciplines": [
+   "Тележурналистика",
+   "Режиссура ТВ",
+   "Монтаж",
+   "Продюсирование"
+  ],
+  "employment": {
+   "rate": 0.62,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как снимают новости, шоу и документалки: продюсер, редактор, ведущий.",
+  "autoDescription": true,
+  "professions": [
+   "tv_producer",
+   "journalist",
+   "video_editor"
+  ]
+ },
+ {
+  "code": "42.03.05",
+  "name": "Медиакоммуникации",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "lit",
+    "hist",
+    "foreign",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "42.00.00",
+  "tags": [
+   "media",
+   "writing",
+   "people",
+   "business"
+  ],
+  "klimov": [
+   "P",
+   "A"
+  ],
+  "disciplines": [
+   "Медиаменеджмент",
+   "Контент",
+   "Аналитика аудитории",
+   "Цифровые медиа"
+  ],
+  "employment": {
+   "rate": 0.62,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Медиа в интернете: контент, продвижение, аналитика аудитории.",
+  "autoDescription": true,
+  "professions": [
+   "smm",
+   "pr_specialist",
+   "editor"
+  ]
+ }
+]

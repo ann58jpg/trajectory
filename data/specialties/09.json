@@ -1,0 +1,254 @@
+[
+ {
+  "code": "09.03.01",
+  "name": "Информатика и вычислительная техника",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "09.00.00",
+  "tags": [
+   "it",
+   "engineering",
+   "math",
+   "electronics",
+   "data"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "disciplines": [
+   "Алгоритмы",
+   "Архитектура ЭВМ",
+   "Операционные системы",
+   "Сети"
+  ],
+  "employment": {
+   "rate": 0.83,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как устроены компьютеры и программы: от железа до сервисов.",
+  "autoDescription": true,
+  "professions": [
+   "backend",
+   "devops",
+   "electronics_engineer",
+   "sysadmin"
+  ]
+ },
+ {
+  "code": "09.03.02",
+  "name": "Информационные системы и технологии",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "09.00.00",
+  "tags": [
+   "it",
+   "engineering",
+   "data",
+   "business"
+  ],
+  "klimov": [
+   "S",
+   "T"
+  ],
+  "disciplines": [
+   "Базы данных",
+   "Проектирование ИС",
+   "Сети",
+   "Веб-разработка"
+  ],
+  "employment": {
+   "rate": 0.82,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Проектируют и внедряют ИТ-системы для бизнеса, медицины, транспорта.",
+  "autoDescription": true,
+  "professions": [
+   "business_analyst",
+   "backend",
+   "sysadmin",
+   "onec_dev"
+  ]
+ },
+ {
+  "code": "09.03.03",
+  "name": "Прикладная информатика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "soc",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "09.00.00",
+  "tags": [
+   "it",
+   "business",
+   "data",
+   "engineering",
+   "management"
+  ],
+  "klimov": [
+   "S",
+   "P"
+  ],
+  "disciplines": [
+   "Информационные системы",
+   "1С и ERP",
+   "Базы данных",
+   "Бизнес-процессы"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "ИТ-системы для бизнеса и госуслуг.",
+  "autoDescription": true,
+  "professions": [
+   "onec_dev",
+   "business_analyst",
+   "product_manager"
+  ]
+ },
+ {
+  "code": "09.03.04",
+  "name": "Программная инженерия",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "09.00.00",
+  "tags": [
+   "it",
+   "math",
+   "games",
+   "data",
+   "engineering",
+   "design"
+  ],
+  "klimov": [
+   "S",
+   "T"
+  ],
+  "disciplines": [
+   "Программирование",
+   "Проектирование ПО",
+   "Тестирование",
+   "Управление проектами"
+  ],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Промышленная разработка программ: код, архитектура, командная работа.",
+  "autoDescription": true,
+  "professions": [
+   "backend",
+   "frontend",
+   "mobile_dev",
+   "gamedev"
+  ]
+ },
+ {
+  "code": "09.02.07",
+  "name": "Информационные системы и программирование (колледж)",
+  "level": "spo",
+  "years": 2.83,
+  "ege": {
+   "mandatory": [],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "09.00.00",
+  "tags": [
+   "it",
+   "games",
+   "data",
+   "engineering"
+  ],
+  "klimov": [
+   "S",
+   "T"
+  ],
+  "disciplines": [
+   "Алгоритмизация",
+   "Веб-разработка",
+   "Базы данных",
+   "Мобильная разработка"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Колледж: программист/веб-разработчик за 2 г. 10 мес. после 11 класса, можно продолжить в вузе.",
+  "autoDescription": true,
+  "professions": [
+   "frontend",
+   "qa",
+   "sysadmin"
+  ]
+ }
+]

@@ -1,0 +1,262 @@
+[
+ {
+  "code": "27.03.01",
+  "name": "Стандартизация и метрология",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "27.00.00",
+  "tags": [
+   "engineering",
+   "management",
+   "data",
+   "physics",
+   "manufacturing"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "disciplines": [
+   "Метрология",
+   "Стандартизация",
+   "Сертификация",
+   "Измерения"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Следят, чтобы измерения были точными, а продукция — по стандартам.",
+  "autoDescription": true,
+  "professions": [
+   "metrologist",
+   "quality_engineer"
+  ]
+ },
+ {
+  "code": "27.03.02",
+  "name": "Управление качеством",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "27.00.00",
+  "tags": [
+   "engineering",
+   "management",
+   "data",
+   "manufacturing",
+   "business",
+   "people"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "disciplines": [
+   "Системы качества",
+   "Статистические методы",
+   "Аудит",
+   "Бережливое производство"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как сделать так, чтобы на заводе было меньше брака, а у клиентов — меньше жалоб.",
+  "autoDescription": true,
+  "professions": [
+   "quality_engineer",
+   "manager"
+  ]
+ },
+ {
+  "code": "27.03.03",
+  "name": "Системный анализ и управление",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "27.00.00",
+  "tags": [
+   "engineering",
+   "management",
+   "data",
+   "business"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "disciplines": [
+   "Системный анализ",
+   "Моделирование",
+   "Теория управления",
+   "Анализ данных"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Учат видеть сложную систему целиком и управлять ею: от завода до города.",
+  "autoDescription": true,
+  "professions": [
+   "business_analyst",
+   "data_analyst",
+   "manager"
+  ]
+ },
+ {
+  "code": "27.03.04",
+  "name": "Управление в технических системах",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "27.00.00",
+  "tags": [
+   "engineering",
+   "management",
+   "data",
+   "electronics",
+   "manufacturing",
+   "oil_gas",
+   "robotics",
+   "it"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "disciplines": [
+   "ТАУ",
+   "Микроконтроллеры",
+   "Электроника",
+   "Программирование"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Автоматика и системы управления: от лифта до энергосистемы.",
+  "autoDescription": true,
+  "professions": [
+   "automation_engineer",
+   "robotics_engineer"
+  ]
+ },
+ {
+  "code": "27.03.05",
+  "name": "Инноватика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "27.00.00",
+  "tags": [
+   "engineering",
+   "management",
+   "data",
+   "business",
+   "people"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "disciplines": [
+   "Управление проектами",
+   "Интеллектуальная собственность",
+   "Экономика",
+   "Маркетинг"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как превратить изобретение в продукт: патенты, стартапы, вывод на рынок.",
+  "autoDescription": true,
+  "professions": [
+   "product_manager",
+   "manager",
+   "tech_entrepreneur"
+  ]
+ }
+]

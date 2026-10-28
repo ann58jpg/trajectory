@@ -1,0 +1,147 @@
+[
+ {
+  "code": "49.03.01",
+  "name": "Физическая культура",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "soc"
+   ]
+  },
+  "dvi": "physical",
+  "group": "49.00.00",
+  "tags": [
+   "sport",
+   "people",
+   "education"
+  ],
+  "klimov": [
+   "P",
+   "T"
+  ],
+  "disciplines": [
+   "Теория спорта",
+   "Физиология",
+   "Методика тренировки",
+   "Педагогика"
+  ],
+  "employment": {
+   "rate": 0.74,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Тренеры и учителя физкультуры. Нужен экзамен по физподготовке.",
+  "autoDescription": true,
+  "professions": [
+   "sports_coach",
+   "teacher",
+   "fitness_trainer"
+  ]
+ },
+ {
+  "code": "49.03.02",
+  "name": "Физическая культура для лиц с отклонениями в состоянии здоровья (адаптивная физическая культура)",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "soc"
+   ]
+  },
+  "dvi": "physical",
+  "group": "49.00.00",
+  "tags": [
+   "sport",
+   "people",
+   "education",
+   "medicine"
+  ],
+  "klimov": [
+   "P",
+   "T"
+  ],
+  "disciplines": [
+   "Адаптивная физкультура",
+   "Реабилитация",
+   "Физиология",
+   "Психология"
+  ],
+  "employment": {
+   "rate": 0.74,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Спорт и реабилитация для людей с инвалидностью и после травм.",
+  "autoDescription": true,
+  "professions": [
+   "rehab_specialist",
+   "sports_coach"
+  ]
+ },
+ {
+  "code": "49.03.03",
+  "name": "Рекреация и спортивно-оздоровительный туризм",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "soc"
+   ]
+  },
+  "dvi": "physical",
+  "group": "49.00.00",
+  "tags": [
+   "sport",
+   "people",
+   "education",
+   "tourism"
+  ],
+  "klimov": [
+   "P",
+   "T"
+  ],
+  "disciplines": [
+   "Спортивный туризм",
+   "Безопасность в походах",
+   "Анимация",
+   "Фитнес"
+  ],
+  "employment": {
+   "rate": 0.74,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Походы, сплавы, фитнес-туры и активный отдых.",
+  "autoDescription": true,
+  "professions": [
+   "tour_guide",
+   "fitness_trainer",
+   "tourism_manager"
+  ]
+ }
+]

@@ -1,0 +1,453 @@
+[
+ {
+  "code": "54.03.01",
+  "name": "Дизайн",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "art",
+  "group": "54.00.00",
+  "tags": [
+   "design",
+   "art",
+   "media",
+   "games"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Композиция",
+   "Рисунок",
+   "Графический дизайн",
+   "UX/UI"
+  ],
+  "employment": {
+   "rate": 0.65,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Графика, интерфейсы, среда и мода — профессиональный визуальный язык.",
+  "autoDescription": true,
+  "professions": [
+   "graphic_designer",
+   "uxui",
+   "designer_3d",
+   "game_designer"
+  ]
+ },
+ {
+  "code": "54.03.02",
+  "name": "Декоративно-прикладное искусство и народные промыслы",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "art",
+  "group": "54.00.00",
+  "tags": [
+   "design",
+   "art",
+   "culture",
+   "fashion"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Композиция",
+   "Технология материалов",
+   "Рисунок",
+   "История промыслов"
+  ],
+  "employment": {
+   "rate": 0.62,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Керамика, роспись, резьба, ювелирное дело — искусство, которым пользуются.",
+  "autoDescription": true,
+  "professions": [
+   "crafts_artist",
+   "jeweler"
+  ]
+ },
+ {
+  "code": "54.03.03",
+  "name": "Искусство костюма и текстиля",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "art",
+  "group": "54.00.00",
+  "tags": [
+   "design",
+   "art",
+   "fashion",
+   "business",
+   "theatre",
+   "film"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Костюм",
+   "Текстиль",
+   "Рисунок",
+   "Технология швейных изделий"
+  ],
+  "employment": {
+   "rate": 0.62,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Дизайн одежды и тканей для моды, театра и кино.",
+  "autoDescription": true,
+  "professions": [
+   "fashion_designer",
+   "set_designer"
+  ]
+ },
+ {
+  "code": "54.03.04",
+  "name": "Реставрация",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "art",
+  "group": "54.00.00",
+  "tags": [
+   "design",
+   "art",
+   "history",
+   "chemistry",
+   "culture",
+   "people"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Реставрация",
+   "Химия материалов",
+   "Рисунок",
+   "История искусства"
+  ],
+  "employment": {
+   "rate": 0.62,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Возвращают к жизни картины, иконы, мебель и книги.",
+  "autoDescription": true,
+  "professions": [
+   "restorer",
+   "museum_specialist"
+  ]
+ },
+ {
+  "code": "54.05.01",
+  "name": "Монументально-декоративное искусство",
+  "level": "specialist",
+  "years": 6,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "art",
+  "group": "54.00.00",
+  "tags": [
+   "design",
+   "art",
+   "culture"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Монументальная живопись",
+   "Мозаика",
+   "Рисунок",
+   "Композиция"
+  ],
+  "employment": {
+   "rate": 0.62,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Мозаики, фрески и росписи для зданий и городов.",
+  "autoDescription": true,
+  "professions": [
+   "painter",
+   "crafts_artist"
+  ]
+ },
+ {
+  "code": "54.05.02",
+  "name": "Живопись",
+  "level": "specialist",
+  "years": 6,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "art",
+  "group": "54.00.00",
+  "tags": [
+   "design",
+   "art",
+   "writing"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Живопись",
+   "Рисунок",
+   "Композиция",
+   "Анатомия"
+  ],
+  "employment": {
+   "rate": 0.62,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Профессиональные художники-живописцы.",
+  "autoDescription": true,
+  "professions": [
+   "painter",
+   "illustrator"
+  ]
+ },
+ {
+  "code": "54.05.03",
+  "name": "Графика",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "art",
+  "group": "54.00.00",
+  "tags": [
+   "design",
+   "art",
+   "writing",
+   "media"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Графика",
+   "Рисунок",
+   "Печатная графика",
+   "Иллюстрация"
+  ],
+  "employment": {
+   "rate": 0.62,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Иллюстрация, гравюра, книжная и плакатная графика.",
+  "autoDescription": true,
+  "professions": [
+   "illustrator",
+   "graphic_designer"
+  ]
+ },
+ {
+  "code": "54.05.04",
+  "name": "Скульптура",
+  "level": "specialist",
+  "years": 6,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "art",
+  "group": "54.00.00",
+  "tags": [
+   "design",
+   "art",
+   "games"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Скульптура",
+   "Рисунок",
+   "Анатомия",
+   "Материалы"
+  ],
+  "employment": {
+   "rate": 0.62,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Скульпторы: от памятников до малых форм и 3D-моделей.",
+  "autoDescription": true,
+  "professions": [
+   "sculptor",
+   "designer_3d"
+  ]
+ },
+ {
+  "code": "54.05.05",
+  "name": "Живопись и изящные искусства",
+  "level": "specialist",
+  "years": 6,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "art",
+  "group": "54.00.00",
+  "tags": [
+   "design",
+   "art",
+   "history",
+   "chemistry",
+   "culture"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Живопись",
+   "Рисунок",
+   "Композиция",
+   "Технология живописи"
+  ],
+  "employment": {
+   "rate": 0.62,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Живопись с упором на станковую картину и реставрацию.",
+  "autoDescription": true,
+  "professions": [
+   "painter",
+   "restorer"
+  ]
+ },
+ {
+  "code": "54.02.01",
+  "name": "Дизайн по отраслям (колледж)",
+  "level": "spo",
+  "years": 2.83,
+  "ege": {
+   "mandatory": [],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "54.00.00",
+  "tags": [
+   "design",
+   "art",
+   "media",
+   "games"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Композиция",
+   "Рисунок",
+   "Компьютерная графика",
+   "Проектирование"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Колледж: графический дизайнер, портфолио с первого курса.",
+  "autoDescription": true,
+  "professions": [
+   "graphic_designer",
+   "designer_3d"
+  ]
+ }
+]

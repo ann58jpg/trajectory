@@ -2,9 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import type { RawData } from "./validate";
 
-const FILES: Record<keyof RawData, string> = {
+const FILES: Record<Exclude<keyof RawData, "specialties">, string> = {
   regions: "regions.json",
-  specialties: "specialties.json",
   professions: "professions.json",
   universities: "universities.json",
   programs: "programs.json",
@@ -18,5 +17,9 @@ export function loadRawJson(dir = path.resolve(process.cwd(), "data")): RawData 
   for (const [k, f] of Object.entries(FILES)) {
     out[k as keyof RawData] = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
   }
+  // Направления разложены по группам: data/specialties/NN.json
+  const specDir = path.join(dir, "specialties");
+  out.specialties = fs.readdirSync(specDir).filter((f) => f.endsWith(".json")).sort()
+    .flatMap((f) => JSON.parse(fs.readFileSync(path.join(specDir, f), "utf8")) as unknown[]);
   return out as RawData;
 }

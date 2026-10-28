@@ -1,0 +1,157 @@
+[
+ {
+  "code": "28.03.01",
+  "name": "Нанотехнологии и микросистемная техника",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "28.00.00",
+  "tags": [
+   "electronics",
+   "chemistry",
+   "physics",
+   "science",
+   "it",
+   "math"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "disciplines": [
+   "Микросистемы",
+   "Физика наноструктур",
+   "Технология МЭМС",
+   "Электроника"
+  ],
+  "employment": {
+   "rate": 0.74,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Крошечные датчики и микромеханизмы для смартфонов, медицины и авто.",
+  "autoDescription": true,
+  "professions": [
+   "nanotech_engineer",
+   "chip_designer"
+  ]
+ },
+ {
+  "code": "28.03.02",
+  "name": "Наноинженерия",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "28.00.00",
+  "tags": [
+   "electronics",
+   "chemistry",
+   "physics",
+   "science",
+   "manufacturing",
+   "engineering"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "disciplines": [
+   "Нанотехнологии",
+   "Материаловедение",
+   "Методы исследования",
+   "Химия"
+  ],
+  "employment": {
+   "rate": 0.74,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Инженерия на уровне атомов: покрытия, мембраны, новые материалы.",
+  "autoDescription": true,
+  "professions": [
+   "nanotech_engineer",
+   "materials_engineer"
+  ]
+ },
+ {
+  "code": "28.03.03",
+  "name": "Наноматериалы",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "28.00.00",
+  "tags": [
+   "electronics",
+   "chemistry",
+   "physics",
+   "science"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "disciplines": [
+   "Наноматериалы",
+   "Физика твёрдого тела",
+   "Химия",
+   "Методы анализа"
+  ],
+  "employment": {
+   "rate": 0.74,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Материалы с особыми свойствами за счёт наноструктуры.",
+  "autoDescription": true,
+  "professions": [
+   "nanotech_engineer",
+   "materials_engineer",
+   "chemist_analyst"
+  ]
+ }
+]

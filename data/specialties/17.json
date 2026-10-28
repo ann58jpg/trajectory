@@ -1,0 +1,151 @@
+[
+ {
+  "code": "17.05.01",
+  "name": "Боеприпасы и взрыватели",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "17.00.00",
+  "tags": [
+   "engineering",
+   "machine",
+   "safety",
+   "chemistry",
+   "manufacturing",
+   "oil_gas"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Баллистика",
+   "Взрывчатые вещества",
+   "Конструирование",
+   "Испытания"
+  ],
+  "employment": {
+   "rate": 0.88,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Проектирование и испытания боеприпасов. Работа на оборонных заводах и в КБ.",
+  "autoDescription": true,
+  "professions": [
+   "weapons_engineer",
+   "process_engineer"
+  ]
+ },
+ {
+  "code": "17.05.02",
+  "name": "Стрелково-пушечное, артиллерийское и ракетное оружие",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "17.00.00",
+  "tags": [
+   "engineering",
+   "machine",
+   "safety",
+   "manufacturing"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Баллистика",
+   "Конструирование оружия",
+   "Прочность",
+   "Испытания"
+  ],
+  "employment": {
+   "rate": 0.88,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Конструкторы оружия: расчёты, испытания, производство.",
+  "autoDescription": true,
+  "professions": [
+   "weapons_engineer",
+   "mechanical_engineer"
+  ]
+ },
+ {
+  "code": "17.05.03",
+  "name": "Проектирование, производство и испытание корабельного вооружения и информационно-управляющих систем",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "17.00.00",
+  "tags": [
+   "engineering",
+   "machine",
+   "safety"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Корабельные системы",
+   "Управление огнём",
+   "Электроника",
+   "Испытания"
+  ],
+  "employment": {
+   "rate": 0.88,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Вооружение и электроника для кораблей ВМФ.",
+  "autoDescription": true,
+  "professions": [
+   "weapons_engineer",
+   "electronics_engineer",
+   "shipbuilder"
+  ]
+ }
+]

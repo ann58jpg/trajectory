@@ -57,7 +57,12 @@ describe("тексты интерфейса", () => {
         if (hit.length) problems.push(`${file} ${where} → ${hit.join(", ")}: ${v.slice(0, 100)}`);
       } else if (Array.isArray(v)) v.forEach((x, i) => visit(file, x, `${where}[${i}]`));
       else if (v && typeof v === "object")
-        for (const [k, x] of Object.entries(v)) if (!["id", "code", "source", "url", "site", "admissionUrl", "eventsUrl", "hhQuery", "meta"].includes(k)) visit(file, x, `${where}.${k}`);
+        for (const [k, x] of Object.entries(v)) {
+          if (["id", "code", "source", "url", "site", "admissionUrl", "eventsUrl", "hhQuery", "meta", "sourceUrl"].includes(k)) continue;
+          // Официальные названия направлений из перечня Минобрнауки не переписываем («Строительство уникальных зданий…»)
+          if (k === "name" && /specialties|programs/.test(file)) continue;
+          visit(file, x, `${where}.${k}`);
+        }
     };
     for (const f of walk(path.join(ROOT, "data"), /\.json$/)) visit(path.relative(ROOT, f), JSON.parse(fs.readFileSync(f, "utf8")), "");
     expect(problems.slice(0, 30)).toEqual([]);

@@ -1,0 +1,202 @@
+[
+ {
+  "code": "16.03.01",
+  "name": "Техническая физика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "16.00.00",
+  "tags": [
+   "physics",
+   "engineering",
+   "science"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Физика",
+   "Тепломассообмен",
+   "Вакуумная техника",
+   "Электроника"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Физика для техники: лазеры, вакуум, плазма, тепло.",
+  "autoDescription": true,
+  "professions": [
+   "physicist",
+   "optics_engineer",
+   "calc_engineer"
+  ]
+ },
+ {
+  "code": "16.03.02",
+  "name": "Высокотехнологические плазменные и энергетические установки",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "16.00.00",
+  "tags": [
+   "physics",
+   "engineering",
+   "science",
+   "nuclear",
+   "energy"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Физика плазмы",
+   "Электрофизика",
+   "Энергоустановки",
+   "Вакуумная техника"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Плазма и мощные энергоустановки: от термоядерного синтеза до плазменной резки.",
+  "autoDescription": true,
+  "professions": [
+   "physicist",
+   "nuclear_engineer"
+  ]
+ },
+ {
+  "code": "16.03.03",
+  "name": "Холодильная, криогенная техника и системы жизнеобеспечения",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "16.00.00",
+  "tags": [
+   "physics",
+   "engineering",
+   "science",
+   "energy"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Термодинамика",
+   "Холодильные машины",
+   "Криогеника",
+   "Системы вентиляции"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Холодильники, кондиционеры, криогенные установки и системы для подлодок и космоса.",
+  "autoDescription": true,
+  "professions": [
+   "refrigeration_engineer",
+   "heat_engineer"
+  ]
+ },
+ {
+  "code": "16.05.01",
+  "name": "Специальные системы жизнеобеспечения",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "16.00.00",
+  "tags": [
+   "physics",
+   "engineering",
+   "science",
+   "energy",
+   "space",
+   "aviation",
+   "electronics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Системы жизнеобеспечения",
+   "Теплофизика",
+   "Гидравлика",
+   "Автоматика"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Системы воздуха и воды для кораблей, самолётов и космических станций.",
+  "autoDescription": true,
+  "professions": [
+   "refrigeration_engineer",
+   "space_engineer"
+  ]
+ }
+]

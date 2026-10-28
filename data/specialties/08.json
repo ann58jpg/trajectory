@@ -1,0 +1,147 @@
+[
+ {
+  "code": "08.03.01",
+  "name": "Строительство",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "08.00.00",
+  "tags": [
+   "construction",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Строительная механика",
+   "Конструкции",
+   "BIM",
+   "Технология строительства"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Здания, мосты и инфраструктура.",
+  "autoDescription": true,
+  "professions": [
+   "construction_engineer",
+   "road_engineer",
+   "geodesist"
+  ]
+ },
+ {
+  "code": "08.05.01",
+  "name": "Строительство уникальных зданий и сооружений",
+  "level": "specialist",
+  "years": 6,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "08.00.00",
+  "tags": [
+   "construction",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Строительная механика",
+   "Высотные здания",
+   "Динамика сооружений",
+   "BIM"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Сложные объекты: небоскрёбы, стадионы, большие мосты. Шесть лет глубокой инженерии.",
+  "autoDescription": true,
+  "professions": [
+   "construction_engineer",
+   "calc_engineer",
+   "road_engineer"
+  ]
+ },
+ {
+  "code": "08.05.02",
+  "name": "Строительство, эксплуатация, восстановление и техническое прикрытие автомобильных дорог, мостов и тоннелей",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "08.00.00",
+  "tags": [
+   "construction",
+   "engineering",
+   "transport",
+   "design"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Изыскания",
+   "Мосты",
+   "Тоннели",
+   "Дорожные материалы"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Дороги, мосты и тоннели, которые выдерживают нагрузку и погоду.",
+  "autoDescription": true,
+  "professions": [
+   "road_engineer",
+   "construction_engineer"
+  ]
+ }
+]

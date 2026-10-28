@@ -4,7 +4,7 @@ import type {
 import type { Catalog } from "@/lib/data/validate";
 import { ENGINE, WEIGHT_ANCHORS, weightsAt, type Weights } from "./config";
 import { egeCheck, hardFilter, isOnline, reachableRegionIds, fmtRub } from "./filters";
-import { examSetText } from "./exams";
+import { examSetText, hasBudget } from "./exams";
 import type { UserModel } from "./profile";
 import { HOBBIES } from "./vocab";
 import { REASONS } from "@/lib/copy";
@@ -130,7 +130,7 @@ export function chanceFor(pr: Program, spec: Specialty, p: StudentProfile, m: Us
   const withDvi = official ? official.includesDvi : pr.passScore.includesDvi;
   const { sum } = userSumFor(spec, m, withDvi);
   if (sum === null) return { chance: "unknown", userSum: null };
-  if (pr.budgetPlaces <= 0) return { chance: sum >= 150 ? "high" : "medium", userSum: sum }; // только платные/онлайн — по минимальным баллам
+  if (!hasBudget(pr)) return { chance: sum >= 150 ? "high" : "medium", userSum: sum }; // только платные/онлайн — по минимальным баллам
   if (official && official.basis === "budget") {
     const t = official.total;
     const chance: Chance = sum >= t + 10 ? "high" : sum >= t ? "medium" : sum >= t - 10 ? "low" : "risky";
@@ -159,8 +159,8 @@ function criterionScore(
     case "prestige": return uni.ratings.raex === null ? 0.5 : uni.ratings.raex <= 20 ? 1 : uni.ratings.raex <= 50 ? 0.7 : 0.4;
     case "employer_rating": return uni.ratings.employers;
     case "price": return ctx.cost;
-    case "benefits": return pr.targetPlaces > 0 ? 1 : 0.3;
-    case "budget_places": return clamp(pr.budgetPlaces / 200);
+    case "benefits": return (pr.targetPlaces ?? 0) > 0 ? 1 : 0.3;
+    case "budget_places": return pr.budgetPlaces === null ? 0.5 : clamp(pr.budgetPlaces / 200);
     case "credit": return pr.price !== null && pr.price > 0 && !uni.abroad ? 0.8 : 0.3;
     case "ege_subjects": return ctx.egeOk ? 1 : 0;
     case "pass_score": return CHANCE_SCORE[ctx.chance];
@@ -187,7 +187,7 @@ export function scoreProgram(
   const local = Boolean(m.city) && uni.city === m.city;
   const { chance, userSum } = chanceFor(pr, spec, p, m, uni);
   const egeOk = uni.abroad || egeCheck(spec, m.ege).ok || !m.egeChosen;
-  const cost = pr.budgetPlaces > 0 && (p.finance === "budget" || p.finance === null || chance === "high" || chance === "medium")
+  const cost = hasBudget(pr) && (p.finance === "budget" || p.finance === null || chance === "high" || chance === "medium")
     ? 1
     : pr.price === null ? 0.8 : clamp(1 - pr.price / 800000);
   const tagFit = tagScore(spec.tags, m).score;

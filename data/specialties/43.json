@@ -1,0 +1,154 @@
+[
+ {
+  "code": "43.03.01",
+  "name": "Сервис",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "hist",
+    "geo",
+    "foreign",
+    "math"
+   ]
+  },
+  "dvi": null,
+  "group": "43.00.00",
+  "tags": [
+   "tourism",
+   "people",
+   "business",
+   "management"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [
+   "Сервисная деятельность",
+   "Управление качеством",
+   "Маркетинг",
+   "Психология клиента"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как сделать обслуживание удобным: от автосервиса до салона и доставки.",
+  "autoDescription": true,
+  "professions": [
+   "service_manager",
+   "manager"
+  ]
+ },
+ {
+  "code": "43.03.02",
+  "name": "Туризм",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "hist",
+    "geo",
+    "foreign",
+    "math"
+   ]
+  },
+  "dvi": null,
+  "group": "43.00.00",
+  "tags": [
+   "tourism",
+   "people",
+   "business",
+   "languages",
+   "sport",
+   "nature"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [
+   "Туроперейтинг",
+   "Гостеприимство",
+   "Маркетинг территорий",
+   "Экскурсоведение"
+  ],
+  "employment": {
+   "rate": 0.58,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Путешествия как индустрия: маршруты, сервис, продвижение регионов.",
+  "autoDescription": true,
+  "professions": [
+   "tourism_manager",
+   "tour_guide"
+  ]
+ },
+ {
+  "code": "43.03.03",
+  "name": "Гостиничное дело",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "hist",
+    "geo",
+    "foreign",
+    "math"
+   ]
+  },
+  "dvi": null,
+  "group": "43.00.00",
+  "tags": [
+   "tourism",
+   "people",
+   "business"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [
+   "Гостиничный менеджмент",
+   "Сервис",
+   "Ресторанное дело",
+   "Иностранный язык"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как работает отель: от ресепшена до управления целым курортом.",
+  "autoDescription": true,
+  "professions": [
+   "hotel_manager",
+   "event_manager",
+   "tourism_manager"
+  ]
+ }
+]

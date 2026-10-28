@@ -1,0 +1,296 @@
+[
+ {
+  "code": "25.03.01",
+  "name": "Техническая эксплуатация летательных аппаратов и двигателей",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "25.00.00",
+  "tags": [
+   "aviation",
+   "transport",
+   "engineering",
+   "machine"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Конструкция ЛА",
+   "Техобслуживание",
+   "Двигатели",
+   "Авиационные правила"
+  ],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Авиатехники: проверяют и чинят самолёты между рейсами, чтобы они летали безопасно.",
+  "autoDescription": true,
+  "professions": [
+   "aircraft_tech",
+   "engine_engineer"
+  ]
+ },
+ {
+  "code": "25.03.02",
+  "name": "Техническая эксплуатация авиационных электросистем и пилотажно-навигационных комплексов",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "25.00.00",
+  "tags": [
+   "aviation",
+   "transport",
+   "engineering",
+   "electronics",
+   "physics",
+   "it",
+   "robotics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Авионика",
+   "Электросистемы ЛА",
+   "Навигация",
+   "Техобслуживание"
+  ],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Обслуживают электронику самолёта: приборы, навигацию, автопилот.",
+  "autoDescription": true,
+  "professions": [
+   "aircraft_tech",
+   "electronics_engineer"
+  ]
+ },
+ {
+  "code": "25.03.03",
+  "name": "Аэронавигация",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "foreign"
+   ]
+  },
+  "dvi": null,
+  "group": "25.00.00",
+  "tags": [
+   "aviation",
+   "transport",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Организация воздушного движения",
+   "Навигация",
+   "Метеорология",
+   "Английский для авиации"
+  ],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Управляют воздушным движением и прокладывают маршруты самолётов.",
+  "autoDescription": true,
+  "professions": [
+   "air_traffic_controller",
+   "pilot"
+  ]
+ },
+ {
+  "code": "25.03.04",
+  "name": "Эксплуатация аэропортов и обеспечение полётов воздушных судов",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "25.00.00",
+  "tags": [
+   "aviation",
+   "transport",
+   "engineering",
+   "logistics",
+   "people",
+   "business",
+   "management"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Аэропорты",
+   "Обслуживание рейсов",
+   "Авиационная безопасность",
+   "Логистика"
+  ],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как работает аэропорт: перрон, заправка, багаж, безопасность.",
+  "autoDescription": true,
+  "professions": [
+   "airport_manager",
+   "logistics_manager"
+  ]
+ },
+ {
+  "code": "25.05.05",
+  "name": "Эксплуатация воздушных судов и организация воздушного движения",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "foreign"
+   ]
+  },
+  "dvi": "physical",
+  "group": "25.00.00",
+  "tags": [
+   "aviation",
+   "transport",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Пилотирование",
+   "Аэродинамика",
+   "Навигация",
+   "Авиационный английский"
+  ],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Готовят пилотов гражданской авиации. Нужны медкомиссия и проверка лётной пригодности.",
+  "autoDescription": true,
+  "professions": [
+   "pilot",
+   "air_traffic_controller"
+  ]
+ },
+ {
+  "code": "25.02.08",
+  "name": "Эксплуатация беспилотных авиационных систем (колледж)",
+  "level": "spo",
+  "years": 2.83,
+  "ege": {
+   "mandatory": [],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "25.00.00",
+  "tags": [
+   "drones",
+   "aviation",
+   "engineering",
+   "robotics",
+   "transport",
+   "nature",
+   "physics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Конструкция беспилотников",
+   "Пилотирование",
+   "Электроника",
+   "Аэрофотосъёмка"
+  ],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Колледж: оператор и техник беспилотников — новая быстрорастущая специальность.",
+  "autoDescription": true,
+  "professions": [
+   "drone_operator",
+   "drone_engineer"
+  ]
+ }
+]

@@ -1,0 +1,267 @@
+[
+ {
+  "code": "41.03.01",
+  "name": "Зарубежное регионоведение",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "hist"
+   ],
+   "oneOf": [
+    "foreign",
+    "soc",
+    "geo"
+   ]
+  },
+  "dvi": null,
+  "group": "41.00.00",
+  "tags": [
+   "politics",
+   "intl",
+   "history",
+   "languages"
+  ],
+  "klimov": [
+   "P",
+   "S"
+  ],
+  "disciplines": [
+   "Страноведение",
+   "Иностранные языки",
+   "Международная экономика",
+   "История региона"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Специалисты по одной стране или региону мира: язык, экономика, культура.",
+  "autoDescription": true,
+  "professions": [
+   "regional_analyst",
+   "diplomat",
+   "translator"
+  ]
+ },
+ {
+  "code": "41.03.02",
+  "name": "Регионоведение России",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "hist"
+   ],
+   "oneOf": [
+    "foreign",
+    "soc",
+    "geo"
+   ]
+  },
+  "dvi": null,
+  "group": "41.00.00",
+  "tags": [
+   "politics",
+   "intl",
+   "history",
+   "languages",
+   "social",
+   "people"
+  ],
+  "klimov": [
+   "P",
+   "S"
+  ],
+  "disciplines": [
+   "Экономика регионов",
+   "Этнография",
+   "Региональная политика",
+   "ГИС"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как живут и развиваются регионы России: экономика, туризм, культура.",
+  "autoDescription": true,
+  "professions": [
+   "regional_analyst",
+   "civil_servant",
+   "tourism_manager"
+  ]
+ },
+ {
+  "code": "41.03.04",
+  "name": "Политология",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "hist",
+    "foreign",
+    "math"
+   ]
+  },
+  "dvi": null,
+  "group": "41.00.00",
+  "tags": [
+   "politics",
+   "intl",
+   "history",
+   "languages",
+   "social",
+   "media",
+   "people"
+  ],
+  "klimov": [
+   "P",
+   "S"
+  ],
+  "disciplines": [
+   "Теория политики",
+   "Политический анализ",
+   "Социология",
+   "Международные отношения"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как устроена власть, выборы и политические решения.",
+  "autoDescription": true,
+  "professions": [
+   "political_analyst",
+   "civil_servant",
+   "pr_specialist"
+  ]
+ },
+ {
+  "code": "41.03.05",
+  "name": "Международные отношения",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "hist"
+   ],
+   "oneOf": [
+    "foreign",
+    "soc",
+    "geo"
+   ]
+  },
+  "dvi": null,
+  "group": "41.00.00",
+  "tags": [
+   "politics",
+   "languages",
+   "history",
+   "intl"
+  ],
+  "klimov": [
+   "P",
+   "S"
+  ],
+  "disciplines": [
+   "История международных отношений",
+   "Дипломатия",
+   "Иностранные языки",
+   "Мировая экономика"
+  ],
+  "employment": {
+   "rate": 0.62,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Дипломатия, международные организации, внешнеэкономическая деятельность.",
+  "autoDescription": true,
+  "professions": [
+   "diplomat",
+   "regional_analyst",
+   "translator"
+  ]
+ },
+ {
+  "code": "41.03.06",
+  "name": "Публичная политика и социальные науки",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "hist",
+    "math",
+    "foreign"
+   ]
+  },
+  "dvi": null,
+  "group": "41.00.00",
+  "tags": [
+   "politics",
+   "intl",
+   "history",
+   "languages",
+   "social",
+   "media",
+   "gov",
+   "law",
+   "management",
+   "people"
+  ],
+  "klimov": [
+   "P",
+   "S"
+  ],
+  "disciplines": [
+   "Публичная политика",
+   "Анализ данных",
+   "Социология",
+   "Право"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как готовят законы и госпрограммы и как проверить, работают ли они.",
+  "autoDescription": true,
+  "professions": [
+   "political_analyst",
+   "civil_servant"
+  ]
+ }
+]

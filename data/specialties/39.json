@@ -1,0 +1,156 @@
+[
+ {
+  "code": "39.03.01",
+  "name": "Социология",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "hist",
+    "math",
+    "foreign",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "39.00.00",
+  "tags": [
+   "social",
+   "people",
+   "psychology",
+   "data",
+   "business"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [
+   "Методы исследований",
+   "Статистика",
+   "Социальная теория",
+   "Анализ данных"
+  ],
+  "employment": {
+   "rate": 0.64,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Изучают общество через опросы и данные: что люди думают и почему.",
+  "autoDescription": true,
+  "professions": [
+   "sociologist",
+   "data_analyst",
+   "marketer"
+  ]
+ },
+ {
+  "code": "39.03.02",
+  "name": "Социальная работа",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "hist",
+    "math",
+    "foreign",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "39.00.00",
+  "tags": [
+   "social",
+   "people",
+   "psychology",
+   "medicine",
+   "education"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [
+   "Социальная работа",
+   "Психология",
+   "Право",
+   "Социальная политика"
+  ],
+  "employment": {
+   "rate": 0.64,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Помогают тем, кому трудно: пожилым, людям с инвалидностью, семьям в беде.",
+  "autoDescription": true,
+  "professions": [
+   "social_worker",
+   "psychologist"
+  ]
+ },
+ {
+  "code": "39.03.03",
+  "name": "Организация работы с молодёжью",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "hist",
+    "math",
+    "foreign",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "39.00.00",
+  "tags": [
+   "social",
+   "people",
+   "psychology",
+   "culture",
+   "business"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [
+   "Молодёжная политика",
+   "Проектный менеджмент",
+   "Психология",
+   "Медиа"
+  ],
+  "employment": {
+   "rate": 0.64,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Молодёжные проекты, центры, фестивали и гранты.",
+  "autoDescription": true,
+  "professions": [
+   "youth_worker",
+   "culture_manager"
+  ]
+ }
+]

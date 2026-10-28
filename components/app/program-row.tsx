@@ -47,7 +47,7 @@ export function ProgramRow({ pm, showExcluded = false }: { pm: ProgramMatch; sho
         )}
       </div>
       <p className="mt-1 text-xs text-muted-foreground">
-        {pm.budgetPlaces > 0 ? PROGRAM.budget(pm.budgetPlaces) : PROGRAM.noBudget}
+        {pm.budgetPlaces === null ? PROGRAM.budgetUnknown : pm.budgetPlaces > 0 ? PROGRAM.budget(pm.budgetPlaces) : PROGRAM.noBudget}
         {pm.price !== null && pm.price > 0 && <> · {PROGRAM.paid(rubK(pm.price))}</>}
         {pm.price === null && <> · {PROGRAM.sponsored}</>}
         {pm.criteriaHits.length > 0 && <> · {PROGRAM.hits(pm.criteriaHits.slice(0, 3).map((c) => UNI_CRITERIA.find((x) => x.id === c)?.label.toLowerCase()).join(", "))}</>}

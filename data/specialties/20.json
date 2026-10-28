@@ -1,0 +1,153 @@
+[
+ {
+  "code": "20.03.01",
+  "name": "Техносферная безопасность",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "20.00.00",
+  "tags": [
+   "safety",
+   "ecology",
+   "engineering"
+  ],
+  "klimov": [
+   "T",
+   "N"
+  ],
+  "disciplines": [
+   "Охрана труда",
+   "Промышленная безопасность",
+   "Экология",
+   "Пожарная безопасность"
+  ],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Делают работу на заводах и стройках безопасной: охрана труда, экология, защита от аварий.",
+  "autoDescription": true,
+  "professions": [
+   "hse_engineer",
+   "ecologist",
+   "fire_engineer"
+  ]
+ },
+ {
+  "code": "20.03.02",
+  "name": "Природообустройство и водопользование",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "20.00.00",
+  "tags": [
+   "safety",
+   "ecology",
+   "engineering",
+   "construction",
+   "nature",
+   "biology"
+  ],
+  "klimov": [
+   "T",
+   "N"
+  ],
+  "disciplines": [
+   "Гидравлика",
+   "Мелиорация",
+   "Водоснабжение",
+   "Экология"
+  ],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Каналы, дамбы, водопроводы и очистка воды.",
+  "autoDescription": true,
+  "professions": [
+   "water_engineer",
+   "ecologist"
+  ]
+ },
+ {
+  "code": "20.05.01",
+  "name": "Пожарная безопасность",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": "physical",
+  "group": "20.00.00",
+  "tags": [
+   "safety",
+   "ecology",
+   "engineering"
+  ],
+  "klimov": [
+   "T",
+   "N"
+  ],
+  "disciplines": [
+   "Пожарная техника",
+   "Пожарная профилактика",
+   "Тактика тушения",
+   "Право"
+  ],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Предотвращают пожары и учат, как их тушить: проверки, расчёты, системы тушения.",
+  "autoDescription": true,
+  "professions": [
+   "fire_engineer",
+   "hse_engineer"
+  ]
+ }
+]

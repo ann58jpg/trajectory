@@ -9,7 +9,7 @@ import { SourceMark } from "@/components/app/source-mark";
 import { ProfilePrograms } from "@/components/app/profile-programs";
 import { pct, rubK } from "@/lib/utils";
 import { SUBJECT_NOM, yearsWord } from "@/lib/engine/ru";
-import { CARD, COMMON, NOT_FOUND, SPECIALTY } from "@/lib/copy";
+import { CARD, COMMON, DVI_TEXT, EXAMS, NOT_FOUND, SPECIALTY } from "@/lib/copy";
 import { Term } from "@/components/app/term";
 
 export async function generateMetadata({ params }: { params: Promise<{ code: string }> }) {
@@ -39,6 +39,7 @@ export default async function SpecialtyPage({ params }: { params: Promise<{ code
           <Badge variant="outline">{SPECIALTY.employment(pct(spec.employment.rate))} <SourceMark source={spec.employment.meta.source} confidence={spec.employment.meta.confidence} /></Badge>
         </div>
         <p className="mt-3 max-w-3xl text-muted-foreground">{spec.description}</p>
+        {spec.autoDescription && <p className="mt-1 text-xs text-muted-foreground" data-testid="auto-description">{SPECIALTY.autoDescription}</p>}
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
@@ -51,6 +52,7 @@ export default async function SpecialtyPage({ params }: { params: Promise<{ code
               <ul className="list-inside list-disc space-y-1">
                 {spec.ege.mandatory.map((s) => <li key={s}>{SUBJECT_NOM[s] ?? s}</li>)}
                 {spec.ege.oneOf.length > 0 && <li>{SPECIALTY.choice(spec.ege.oneOf.map((s) => SUBJECT_NOM[s] ?? s).join(" / "))}</li>}
+                <li data-testid="spec-dvi">{spec.dvi ? EXAMS.dvi(DVI_TEXT[spec.dvi].label) : EXAMS.dviNone}</li>
               </ul>
             )}
             <p className="mt-2 text-xs text-muted-foreground">{SPECIALTY.examsNote}</p>
@@ -71,6 +73,7 @@ export default async function SpecialtyPage({ params }: { params: Promise<{ code
                 <span className="font-medium">{p.name}</span>
                 <OutlookBadge status={p.outlook.status} />
               </div>
+              <p className="mt-1 text-sm">{SPECIALTY.example(p.tasks[0])}</p>
               <p className="mt-1 text-xs text-muted-foreground">{CARD.salary5}: ~{rubK(p.salary.middle)} {p.earlyEntryCourse !== null && p.earlyEntryCourse <= 2 && `· ${CARD.earlyWork(p.earlyEntryCourse)}`}</p>
             </Link>
           ))}

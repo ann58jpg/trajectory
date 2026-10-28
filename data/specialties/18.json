@@ -1,0 +1,252 @@
+[
+ {
+  "code": "18.03.01",
+  "name": "Химическая технология",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "18.00.00",
+  "tags": [
+   "chemistry",
+   "manufacturing",
+   "oil_gas",
+   "engineering"
+  ],
+  "klimov": [
+   "T",
+   "N"
+  ],
+  "disciplines": [
+   "Органическая химия",
+   "Процессы и аппараты",
+   "Нефтехимия",
+   "Контроль качества"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Химические производства: от нефтехимии до фармы.",
+  "autoDescription": true,
+  "professions": [
+   "process_engineer",
+   "chemist_analyst",
+   "quality_engineer"
+  ]
+ },
+ {
+  "code": "18.03.02",
+  "name": "Энерго- и ресурсосберегающие процессы в химической технологии, нефтехимии и биотехнологии",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "18.00.00",
+  "tags": [
+   "chemistry",
+   "manufacturing",
+   "engineering",
+   "oil_gas",
+   "safety",
+   "ecology"
+  ],
+  "klimov": [
+   "T",
+   "N"
+  ],
+  "disciplines": [
+   "Процессы и аппараты",
+   "Энергосбережение",
+   "Экология производства",
+   "Моделирование"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как сделать химический завод экономным: меньше энергии, отходов и выбросов.",
+  "autoDescription": true,
+  "professions": [
+   "process_engineer",
+   "hse_engineer"
+  ]
+ },
+ {
+  "code": "18.05.01",
+  "name": "Химическая технология энергонасыщенных материалов и изделий",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "18.00.00",
+  "tags": [
+   "chemistry",
+   "manufacturing",
+   "engineering",
+   "oil_gas",
+   "machine",
+   "safety"
+  ],
+  "klimov": [
+   "T",
+   "N"
+  ],
+  "disciplines": [
+   "Химия энергонасыщенных веществ",
+   "Технология",
+   "Безопасность",
+   "Испытания"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Порох, топливо для ракет, пиротехника. Работа на оборонных и космических заводах.",
+  "autoDescription": true,
+  "professions": [
+   "process_engineer",
+   "weapons_engineer"
+  ]
+ },
+ {
+  "code": "18.05.02",
+  "name": "Химическая технология материалов современной энергетики",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "18.00.00",
+  "tags": [
+   "chemistry",
+   "manufacturing",
+   "engineering",
+   "physics"
+  ],
+  "klimov": [
+   "T",
+   "N"
+  ],
+  "disciplines": [
+   "Радиохимия",
+   "Материалы энергетики",
+   "Аккумуляторы",
+   "Технология"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Материалы для атомной и водородной энергетики, аккумуляторов.",
+  "autoDescription": true,
+  "professions": [
+   "process_engineer",
+   "nuclear_engineer",
+   "materials_engineer"
+  ]
+ },
+ {
+  "code": "18.02.09",
+  "name": "Переработка нефти и газа (колледж)",
+  "level": "spo",
+  "years": 2.83,
+  "ege": {
+   "mandatory": [],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "18.00.00",
+  "tags": [
+   "oil_gas",
+   "chemistry",
+   "manufacturing",
+   "engineering",
+   "electronics"
+  ],
+  "klimov": [
+   "T",
+   "N"
+  ],
+  "disciplines": [
+   "Химия",
+   "Технология переработки",
+   "КИПиА",
+   "Промбезопасность"
+  ],
+  "employment": {
+   "rate": 0.84,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Колледж: оператор/техник НПЗ, частое целевое обучение.",
+  "autoDescription": true,
+  "professions": [
+   "process_engineer",
+   "automation_engineer"
+  ]
+ }
+]

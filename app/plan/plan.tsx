@@ -16,7 +16,7 @@ import { rubK, cn } from "@/lib/utils";
 type Props = {
   professions: { id: string; name: string; specialties: string[]; outlook: Outlook; outlookReason: string; tasks: string[] }[];
   universities: { id: string; short: string; city: string; admissionUrl: string; eventsUrl: string }[];
-  programs: { id: string; universityId: string; specialtyCode: string; name: string; passMin: number | null; passMax: number | null; budget: number; price: number | null }[];
+  programs: { id: string; universityId: string; specialtyCode: string; name: string; passMin: number | null; passMax: number | null; budget: number | null; price: number | null }[];
   specialties: { code: string; name: string; level: string; mandatory: string[]; oneOf: string[] }[];
   subjects: Record<string, string>;
 };

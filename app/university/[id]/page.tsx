@@ -111,8 +111,8 @@ export default async function UniversityPage({ params }: { params: Promise<{ id:
                 <p className="text-xs">{UNIVERSITY.keySubjects}: {p.keySubjects.join(", ")}</p>
                 <PassScore program={p} />
                 <p className="text-xs text-muted-foreground">
-                  {p.budgetPlaces > 0 ? PROGRAM.budget(p.budgetPlaces) : PROGRAM.noBudget}
-                  {p.targetPlaces > 0 && <> · <Term k="target">+{p.targetPlaces}</Term></>} · {p.price === null ? PROGRAM.sponsored : PROGRAM.paid(rubK(p.price))}{" "}
+                  {p.budgetPlaces === null ? PROGRAM.budgetUnknown : p.budgetPlaces > 0 ? PROGRAM.budget(p.budgetPlaces) : PROGRAM.noBudget}
+                  {(p.targetPlaces ?? 0) > 0 && <> · <Term k="target">+{p.targetPlaces}</Term></>} · {p.price === null ? PROGRAM.sponsored : PROGRAM.paid(rubK(p.price))}{" "}
                   <SourceMark source={p.meta.source} confidence={p.meta.confidence} />
                 </p>
                 {p.partners.length > 0 && <p className="text-xs">{UNIVERSITY.partners}: {p.partners.join(", ")}{p.dual && <> · <Term k="dual" /></>}</p>}

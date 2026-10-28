@@ -1,0 +1,315 @@
+[
+ {
+  "code": "14.03.01",
+  "name": "Ядерная энергетика и теплофизика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "14.00.00",
+  "tags": [
+   "nuclear",
+   "physics",
+   "energy",
+   "engineering",
+   "science"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "disciplines": [
+   "Ядерная физика",
+   "Теплофизика",
+   "Реакторы",
+   "Безопасность АЭС"
+  ],
+  "employment": {
+   "rate": 0.87,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как работают атомные станции и как отводить тепло из реактора.",
+  "autoDescription": true,
+  "professions": [
+   "nuclear_engineer",
+   "heat_engineer"
+  ]
+ },
+ {
+  "code": "14.03.02",
+  "name": "Ядерные физика и технологии",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "14.00.00",
+  "tags": [
+   "nuclear",
+   "physics",
+   "energy",
+   "engineering",
+   "science"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "disciplines": [
+   "Ядерная физика",
+   "Детекторы",
+   "Радиационная безопасность",
+   "Ускорители"
+  ],
+  "employment": {
+   "rate": 0.87,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Ядерная физика для энергетики, медицины и науки.",
+  "autoDescription": true,
+  "professions": [
+   "nuclear_engineer",
+   "physicist"
+  ]
+ },
+ {
+  "code": "14.05.01",
+  "name": "Ядерные реакторы и материалы",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "14.00.00",
+  "tags": [
+   "nuclear",
+   "physics",
+   "engineering",
+   "energy",
+   "science",
+   "chemistry",
+   "manufacturing"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "disciplines": [
+   "Ядерная физика",
+   "Теплофизика",
+   "Материаловедение",
+   "Безопасность АЭС"
+  ],
+  "employment": {
+   "rate": 0.88,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Атомная энергетика и материалы для неё.",
+  "autoDescription": true,
+  "professions": [
+   "nuclear_engineer",
+   "materials_engineer"
+  ]
+ },
+ {
+  "code": "14.05.02",
+  "name": "Атомные станции: проектирование, эксплуатация и инжиниринг",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "14.00.00",
+  "tags": [
+   "nuclear",
+   "physics",
+   "energy",
+   "engineering",
+   "science",
+   "electronics"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "disciplines": [
+   "Реакторные установки",
+   "Теплофизика",
+   "Автоматика АЭС",
+   "Безопасность"
+  ],
+  "employment": {
+   "rate": 0.87,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Готовят тех, кто управляет атомной станцией и строит новые.",
+  "autoDescription": true,
+  "professions": [
+   "nuclear_engineer",
+   "power_engineer"
+  ]
+ },
+ {
+  "code": "14.05.03",
+  "name": "Технологии разделения изотопов и ядерное топливо",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "14.00.00",
+  "tags": [
+   "nuclear",
+   "physics",
+   "energy",
+   "engineering",
+   "science",
+   "chemistry",
+   "manufacturing",
+   "oil_gas"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "disciplines": [
+   "Физика изотопов",
+   "Химия урана",
+   "Технология топлива",
+   "Радиационная безопасность"
+  ],
+  "employment": {
+   "rate": 0.87,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как делают топливо для реакторов и изотопы для медицины.",
+  "autoDescription": true,
+  "professions": [
+   "nuclear_engineer",
+   "process_engineer"
+  ]
+ },
+ {
+  "code": "14.05.04",
+  "name": "Электроника и автоматика физических установок",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "14.00.00",
+  "tags": [
+   "nuclear",
+   "physics",
+   "energy",
+   "engineering",
+   "electronics"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "disciplines": [
+   "Электроника",
+   "Автоматика",
+   "Ядерная физика",
+   "Программирование"
+  ],
+  "employment": {
+   "rate": 0.87,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Электроника и автоматика для реакторов, ускорителей и научных установок.",
+  "autoDescription": true,
+  "professions": [
+   "nuclear_engineer",
+   "electronics_engineer",
+   "automation_engineer"
+  ]
+ }
+]

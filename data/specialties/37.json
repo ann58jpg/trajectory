@@ -1,0 +1,196 @@
+[
+ {
+  "code": "37.03.01",
+  "name": "Психология",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "math",
+    "soc"
+   ]
+  },
+  "dvi": null,
+  "group": "37.00.00",
+  "tags": [
+   "psychology",
+   "people",
+   "medicine"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [
+   "Общая психология",
+   "Возрастная психология",
+   "Психодиагностика",
+   "Статистика"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как устроены мышление, эмоции и поведение.",
+  "autoDescription": true,
+  "professions": [
+   "psychologist",
+   "hr",
+   "ux_researcher"
+  ]
+ },
+ {
+  "code": "37.03.02",
+  "name": "Конфликтология",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "hist",
+    "bio",
+    "math"
+   ]
+  },
+  "dvi": null,
+  "group": "37.00.00",
+  "tags": [
+   "psychology",
+   "people"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [
+   "Конфликтология",
+   "Медиация",
+   "Переговоры",
+   "Психология"
+  ],
+  "employment": {
+   "rate": 0.62,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Помогают людям договориться: на работе, в семье, в споре с компанией.",
+  "autoDescription": true,
+  "professions": [
+   "mediator",
+   "hr",
+   "psychologist"
+  ]
+ },
+ {
+  "code": "37.05.01",
+  "name": "Клиническая психология",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "math",
+    "soc"
+   ]
+  },
+  "dvi": null,
+  "group": "37.00.00",
+  "tags": [
+   "psychology",
+   "people",
+   "medicine",
+   "education"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [
+   "Патопсихология",
+   "Нейропсихология",
+   "Психотерапия",
+   "Медицина"
+  ],
+  "employment": {
+   "rate": 0.62,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Психологи в больницах и центрах: диагностика, реабилитация, помощь пациентам.",
+  "autoDescription": true,
+  "professions": [
+   "clinical_psychologist",
+   "psychologist"
+  ]
+ },
+ {
+  "code": "37.05.02",
+  "name": "Психология служебной деятельности",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "math",
+    "soc"
+   ]
+  },
+  "dvi": "physical",
+  "group": "37.00.00",
+  "tags": [
+   "psychology",
+   "people",
+   "medicine",
+   "education",
+   "management",
+   "business"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [
+   "Психология экстремальных ситуаций",
+   "Отбор кадров",
+   "Психодиагностика",
+   "Право"
+  ],
+  "employment": {
+   "rate": 0.62,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Психологи в армии, полиции, МЧС: отбор, поддержка после стресса.",
+  "autoDescription": true,
+  "professions": [
+   "psychologist",
+   "hr"
+  ]
+ }
+]

@@ -1,0 +1,348 @@
+[
+ {
+  "code": "44.03.01",
+  "name": "Педагогическое образование",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "math",
+    "hist",
+    "bio",
+    "lit",
+    "foreign",
+    "inf",
+    "phys",
+    "chem",
+    "geo"
+   ]
+  },
+  "dvi": null,
+  "group": "44.00.00",
+  "tags": [
+   "education",
+   "people",
+   "social",
+   "writing",
+   "it"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [
+   "Педагогика",
+   "Психология развития",
+   "Методика преподавания",
+   "Цифровая дидактика"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Учить и вдохновлять: школа, допобразование, EdTech.",
+  "autoDescription": true,
+  "professions": [
+   "teacher",
+   "tutor_edtech"
+  ]
+ },
+ {
+  "code": "44.03.02",
+  "name": "Психолого-педагогическое образование",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "soc",
+    "math"
+   ]
+  },
+  "dvi": null,
+  "group": "44.00.00",
+  "tags": [
+   "education",
+   "people",
+   "psychology"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [
+   "Детская психология",
+   "Педагогика",
+   "Диагностика",
+   "Консультирование"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Педагоги-психологи: помогают детям учиться, дружить и справляться с трудностями.",
+  "autoDescription": true,
+  "professions": [
+   "school_psychologist",
+   "teacher",
+   "psychologist"
+  ]
+ },
+ {
+  "code": "44.03.03",
+  "name": "Специальное (дефектологическое) образование",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "soc",
+    "math"
+   ]
+  },
+  "dvi": null,
+  "group": "44.00.00",
+  "tags": [
+   "education",
+   "people",
+   "medicine",
+   "psychology",
+   "social"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [
+   "Логопедия",
+   "Дефектология",
+   "Нейропсихология",
+   "Методики коррекции"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Логопеды и дефектологи: учат детей с особенностями развития говорить, читать и жить самостоятельно.",
+  "autoDescription": true,
+  "professions": [
+   "speech_therapist",
+   "teacher"
+  ]
+ },
+ {
+  "code": "44.03.04",
+  "name": "Профессиональное обучение (по отраслям)",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "soc",
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "44.00.00",
+  "tags": [
+   "education",
+   "people",
+   "manufacturing",
+   "social"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [
+   "Педагогика",
+   "Отраслевые технологии",
+   "Методика обучения",
+   "Охрана труда"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Мастера в колледжах: учат профессии руками — сварке, ремонту, поварскому делу.",
+  "autoDescription": true,
+  "professions": [
+   "vocational_trainer",
+   "teacher"
+  ]
+ },
+ {
+  "code": "44.03.05",
+  "name": "Педагогическое образование (с двумя профилями подготовки)",
+  "level": "bachelor",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "math",
+    "hist",
+    "bio",
+    "lit",
+    "foreign",
+    "inf",
+    "phys",
+    "chem",
+    "geo"
+   ]
+  },
+  "dvi": null,
+  "group": "44.00.00",
+  "tags": [
+   "education",
+   "people",
+   "social",
+   "writing",
+   "it"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [
+   "Педагогика",
+   "Два предмета",
+   "Методика",
+   "Психология"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Учитель сразу двух предметов, например истории и обществознания.",
+  "autoDescription": true,
+  "professions": [
+   "teacher",
+   "tutor_edtech"
+  ]
+ },
+ {
+  "code": "44.05.01",
+  "name": "Педагогика и психология девиантного поведения",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "soc",
+    "math"
+   ]
+  },
+  "dvi": null,
+  "group": "44.00.00",
+  "tags": [
+   "education",
+   "people",
+   "psychology",
+   "social"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [
+   "Девиантология",
+   "Психология подростков",
+   "Право",
+   "Профилактика"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Работают с подростками, которые попали в трудную ситуацию или конфликт с законом.",
+  "autoDescription": true,
+  "professions": [
+   "school_psychologist",
+   "social_worker"
+  ]
+ },
+ {
+  "code": "44.02.02",
+  "name": "Преподавание в начальных классах (колледж)",
+  "level": "spo",
+  "years": 3.83,
+  "ege": {
+   "mandatory": [],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "44.00.00",
+  "tags": [
+   "education",
+   "people",
+   "social"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [
+   "Педагогика",
+   "Методика начальной школы",
+   "Психология",
+   "Детская литература"
+  ],
+  "employment": {
+   "rate": 0.8300000000000001,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Колледж: учитель начальной школы. Работа сразу после выпуска.",
+  "autoDescription": true,
+  "professions": [
+   "teacher"
+  ]
+ }
+]

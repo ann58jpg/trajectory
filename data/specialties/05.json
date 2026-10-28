@@ -1,0 +1,314 @@
+[
+ {
+  "code": "05.03.01",
+  "name": "Геология",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "geo",
+    "phys",
+    "chem",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "05.00.00",
+  "tags": [
+   "geology",
+   "nature",
+   "ecology",
+   "science",
+   "oil_gas"
+  ],
+  "klimov": [
+   "N"
+  ],
+  "disciplines": [
+   "Минералогия",
+   "Петрография",
+   "Палеонтология",
+   "Полевая геология"
+  ],
+  "employment": {
+   "rate": 0.66,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Ищут полезные ископаемые и изучают, из чего состоит Земля. Много полевой практики.",
+  "autoDescription": true,
+  "professions": [
+   "geologist",
+   "oil_engineer",
+   "ecologist"
+  ]
+ },
+ {
+  "code": "05.03.02",
+  "name": "География",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "geo"
+   ],
+   "oneOf": [
+    "math",
+    "bio",
+    "soc",
+    "foreign"
+   ]
+  },
+  "dvi": null,
+  "group": "05.00.00",
+  "tags": [
+   "geology",
+   "nature",
+   "ecology",
+   "science",
+   "social",
+   "people"
+  ],
+  "klimov": [
+   "N"
+  ],
+  "disciplines": [
+   "Физическая география",
+   "Экономическая география",
+   "ГИС",
+   "Картография"
+  ],
+  "employment": {
+   "rate": 0.66,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как устроены территории, города и природа. Работа в планировании городов, туризме, ГИС и школе.",
+  "autoDescription": true,
+  "professions": [
+   "gis_specialist",
+   "urban_planner",
+   "teacher",
+   "tourism_manager"
+  ]
+ },
+ {
+  "code": "05.03.03",
+  "name": "Картография и геоинформатика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "geo",
+    "phys",
+    "chem",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "05.00.00",
+  "tags": [
+   "geology",
+   "nature",
+   "ecology",
+   "science",
+   "data"
+  ],
+  "klimov": [
+   "N"
+  ],
+  "disciplines": [
+   "Картография",
+   "ГИС",
+   "Дистанционное зондирование",
+   "Программирование"
+  ],
+  "employment": {
+   "rate": 0.66,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Делают цифровые карты и анализируют данные со спутников и дронов.",
+  "autoDescription": true,
+  "professions": [
+   "gis_specialist",
+   "geodesist",
+   "data_analyst"
+  ]
+ },
+ {
+  "code": "05.03.04",
+  "name": "Гидрометеорология",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "geo",
+    "phys",
+    "chem",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "05.00.00",
+  "tags": [
+   "geology",
+   "nature",
+   "ecology",
+   "science"
+  ],
+  "klimov": [
+   "N"
+  ],
+  "disciplines": [
+   "Метеорология",
+   "Климатология",
+   "Гидрология",
+   "Численные модели"
+  ],
+  "employment": {
+   "rate": 0.66,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Погода, климат, реки и моря. Прогнозы для авиации, флота и сельского хозяйства.",
+  "autoDescription": true,
+  "professions": [
+   "meteorologist",
+   "ecologist",
+   "gis_specialist"
+  ]
+ },
+ {
+  "code": "05.03.05",
+  "name": "Прикладная гидрометеорология",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "geo",
+    "phys",
+    "chem",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "05.00.00",
+  "tags": [
+   "geology",
+   "nature",
+   "ecology",
+   "science",
+   "physics",
+   "biology"
+  ],
+  "klimov": [
+   "N"
+  ],
+  "disciplines": [
+   "Синоптика",
+   "Гидрология суши",
+   "Океанология",
+   "Метеоприборы"
+  ],
+  "employment": {
+   "rate": 0.66,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Прогнозы погоды и состояния воды для конкретных задач: аэропортов, портов, ГЭС.",
+  "autoDescription": true,
+  "professions": [
+   "meteorologist",
+   "ecologist"
+  ]
+ },
+ {
+  "code": "05.03.06",
+  "name": "Экология и природопользование",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "geo",
+    "math",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "05.00.00",
+  "tags": [
+   "ecology",
+   "nature",
+   "biology",
+   "geology",
+   "science"
+  ],
+  "klimov": [
+   "N"
+  ],
+  "disciplines": [
+   "Экология",
+   "Мониторинг среды",
+   "ГИС",
+   "Природоохранное право"
+  ],
+  "employment": {
+   "rate": 0.58,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как сохранить природу при работающей экономике.",
+  "autoDescription": true,
+  "professions": [
+   "ecologist",
+   "hse_engineer",
+   "gis_specialist"
+  ]
+ }
+]

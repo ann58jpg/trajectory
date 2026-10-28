@@ -1,0 +1,52 @@
+[
+ {
+  "code": "58.03.01",
+  "name": "Востоковедение и африканистика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "hist"
+   ],
+   "oneOf": [
+    "foreign",
+    "soc",
+    "geo"
+   ]
+  },
+  "dvi": null,
+  "group": "58.00.00",
+  "tags": [
+   "languages",
+   "intl",
+   "history"
+  ],
+  "klimov": [
+   "P",
+   "S"
+  ],
+  "disciplines": [
+   "Восточный язык",
+   "История региона",
+   "Экономика Азии",
+   "Перевод"
+  ],
+  "employment": {
+   "rate": 0.64,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Языки и культура Китая, Японии, Кореи, арабского мира, Африки. Работа в бизнесе, дипломатии, переводе.",
+  "autoDescription": true,
+  "professions": [
+   "orientalist",
+   "translator",
+   "diplomat"
+  ]
+ }
+]

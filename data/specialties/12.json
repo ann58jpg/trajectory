@@ -1,0 +1,299 @@
+[
+ {
+  "code": "12.03.01",
+  "name": "Приборостроение",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "12.00.00",
+  "tags": [
+   "electronics",
+   "physics",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Измерительная техника",
+   "Электроника",
+   "Механика приборов",
+   "Метрология"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Создают измерительные приборы: от датчиков давления до медицинских аппаратов.",
+  "autoDescription": true,
+  "professions": [
+   "electronics_engineer",
+   "metrologist",
+   "medtech_engineer"
+  ]
+ },
+ {
+  "code": "12.03.02",
+  "name": "Оптотехника",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "12.00.00",
+  "tags": [
+   "electronics",
+   "physics",
+   "engineering",
+   "manufacturing"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Прикладная оптика",
+   "Оптические системы",
+   "Расчёт оптики",
+   "Технология оптики"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Линзы, объективы, прицелы, микроскопы. Как управлять светом.",
+  "autoDescription": true,
+  "professions": [
+   "optics_engineer",
+   "laser_engineer"
+  ]
+ },
+ {
+  "code": "12.03.03",
+  "name": "Фотоника и оптоинформатика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "12.00.00",
+  "tags": [
+   "electronics",
+   "physics",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Фотоника",
+   "Волоконная оптика",
+   "Лазеры",
+   "Оптоинформатика"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Передача и обработка информации светом: оптоволокно, лазеры, оптические компьютеры.",
+  "autoDescription": true,
+  "professions": [
+   "optics_engineer",
+   "telecom_engineer",
+   "laser_engineer"
+  ]
+ },
+ {
+  "code": "12.03.04",
+  "name": "Биотехнические системы и технологии",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "12.00.00",
+  "tags": [
+   "electronics",
+   "physics",
+   "engineering",
+   "medicine",
+   "it",
+   "robotics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Медицинская электроника",
+   "Биофизика",
+   "Медицинские приборы",
+   "Обработка сигналов"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Техника для медицины: томографы, кардиографы, протезы.",
+  "autoDescription": true,
+  "professions": [
+   "medtech_engineer",
+   "electronics_engineer"
+  ]
+ },
+ {
+  "code": "12.03.05",
+  "name": "Лазерная техника и лазерные технологии",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "12.00.00",
+  "tags": [
+   "electronics",
+   "physics",
+   "engineering",
+   "manufacturing"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Физика лазеров",
+   "Лазерные технологии",
+   "Оптика",
+   "Электроника"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Лазеры для резки металла, медицины, связи и науки.",
+  "autoDescription": true,
+  "professions": [
+   "laser_engineer",
+   "optics_engineer"
+  ]
+ },
+ {
+  "code": "12.05.01",
+  "name": "Электронные и оптико-электронные приборы и системы специального назначения",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "12.00.00",
+  "tags": [
+   "electronics",
+   "physics",
+   "engineering",
+   "it",
+   "robotics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Оптико-электронные системы",
+   "Электроника",
+   "Тепловидение",
+   "Расчёт оптики"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Приборы ночного видения, тепловизоры, системы наведения.",
+  "autoDescription": true,
+  "professions": [
+   "optics_engineer",
+   "electronics_engineer"
+  ]
+ }
+]

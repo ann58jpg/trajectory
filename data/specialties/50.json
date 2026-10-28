@@ -1,0 +1,202 @@
+[
+ {
+  "code": "50.03.01",
+  "name": "Искусства и гуманитарные науки",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": [
+    "hist",
+    "soc",
+    "foreign"
+   ]
+  },
+  "dvi": null,
+  "group": "50.00.00",
+  "tags": [
+   "art",
+   "culture",
+   "history"
+  ],
+  "klimov": [
+   "A",
+   "S"
+  ],
+  "disciplines": [
+   "История искусств",
+   "Кураторство",
+   "Арт-менеджмент",
+   "Культурология"
+  ],
+  "employment": {
+   "rate": 0.56,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Широкое образование в искусстве: история, кураторство, арт-менеджмент.",
+  "autoDescription": true,
+  "professions": [
+   "curator",
+   "art_historian",
+   "culture_manager"
+  ]
+ },
+ {
+  "code": "50.03.02",
+  "name": "Изящные искусства",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": [
+    "hist",
+    "soc",
+    "foreign"
+   ]
+  },
+  "dvi": "art",
+  "group": "50.00.00",
+  "tags": [
+   "art",
+   "culture",
+   "history",
+   "design"
+  ],
+  "klimov": [
+   "A",
+   "S"
+  ],
+  "disciplines": [
+   "Рисунок",
+   "Живопись",
+   "История искусства",
+   "Современное искусство"
+  ],
+  "employment": {
+   "rate": 0.56,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Художественная практика плюс теория: для будущих художников и арт-кураторов.",
+  "autoDescription": true,
+  "professions": [
+   "painter",
+   "curator"
+  ]
+ },
+ {
+  "code": "50.03.03",
+  "name": "История искусств",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": [
+    "hist",
+    "soc",
+    "foreign"
+   ]
+  },
+  "dvi": null,
+  "group": "50.00.00",
+  "tags": [
+   "art",
+   "culture",
+   "history"
+  ],
+  "klimov": [
+   "A",
+   "S"
+  ],
+  "disciplines": [
+   "История искусства",
+   "Атрибуция",
+   "Музееведение",
+   "Иконография"
+  ],
+  "employment": {
+   "rate": 0.56,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как развивалось искусство и как работать с ним в музее, на аукционе, в галерее.",
+  "autoDescription": true,
+  "professions": [
+   "art_historian",
+   "curator",
+   "museum_specialist"
+  ]
+ },
+ {
+  "code": "50.03.04",
+  "name": "Теория и история искусств",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": [
+    "hist",
+    "soc",
+    "foreign"
+   ]
+  },
+  "dvi": null,
+  "group": "50.00.00",
+  "tags": [
+   "art",
+   "culture",
+   "history"
+  ],
+  "klimov": [
+   "A",
+   "S"
+  ],
+  "disciplines": [
+   "Теория искусства",
+   "История",
+   "Критика",
+   "Эстетика"
+  ],
+  "employment": {
+   "rate": 0.56,
+   "monthsToJob": 6,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Анализ искусства: живопись, музыка, кино, театр.",
+  "autoDescription": true,
+  "professions": [
+   "art_historian",
+   "curator",
+   "theatre_critic"
+  ]
+ }
+]

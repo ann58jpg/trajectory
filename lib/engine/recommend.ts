@@ -4,6 +4,7 @@ import { buildPortrait, buildUserModel } from "./profile";
 import { computeAllPrograms, computeRecs, rankRecs } from "./scoring";
 import { computeTradeoffs } from "./tradeoffs";
 import { egeCheck } from "./filters";
+import { hasBudget } from "./exams";
 import { yearsWord } from "./ru";
 
 const START_T = { interest: 0, money: 1, balance: 0.5, unknown: 0.5 } as const;
@@ -37,7 +38,7 @@ function sideFor(rec: Rec | undefined, p: StudentProfile, catalog: Catalog, sacr
   if (!rec) return null;
   const prof = catalog.professions.find((x) => x.id === rec.professionId)!;
   const best = rec.programs[0];
-  const tuition = best && best.budgetPlaces > 0 && best.chance !== "risky" && best.chance !== "low" ? 0 : best?.price ?? 0;
+  const tuition = best && hasBudget(best) && best.chance !== "risky" && best.chance !== "low" ? 0 : best?.price ?? 0;
   const risks: string[] = [];
   if (prof.aiRisk >= 0.5) risks.push(`высокий риск автоматизации ИИ (${Math.round(prof.aiRisk * 100)}%)`);
   if (rec.outlook !== "green") risks.push(rec.outlookReason.split(";")[0]);

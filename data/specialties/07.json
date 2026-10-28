@@ -1,0 +1,204 @@
+[
+ {
+  "code": "07.03.01",
+  "name": "Архитектура",
+  "level": "bachelor",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": "art",
+  "group": "07.00.00",
+  "tags": [
+   "architecture",
+   "design",
+   "art",
+   "construction"
+  ],
+  "klimov": [
+   "A",
+   "T"
+  ],
+  "disciplines": [
+   "Архитектурное проектирование",
+   "Рисунок",
+   "Конструкции",
+   "История архитектуры"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Проектируют здания: от идеи и эскиза до рабочих чертежей. Нужен творческий экзамен по рисунку.",
+  "autoDescription": true,
+  "professions": [
+   "architect",
+   "urban_planner",
+   "designer_3d"
+  ]
+ },
+ {
+  "code": "07.03.02",
+  "name": "Реконструкция и реставрация архитектурного наследия",
+  "level": "bachelor",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": "art",
+  "group": "07.00.00",
+  "tags": [
+   "architecture",
+   "design",
+   "art",
+   "construction",
+   "history",
+   "culture"
+  ],
+  "klimov": [
+   "A",
+   "T"
+  ],
+  "disciplines": [
+   "История архитектуры",
+   "Обмеры",
+   "Реставрационные технологии",
+   "Рисунок"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Возвращают жизнь старым зданиям: изучают, как их строили, и бережно восстанавливают.",
+  "autoDescription": true,
+  "professions": [
+   "restoration_architect",
+   "architect",
+   "restorer"
+  ]
+ },
+ {
+  "code": "07.03.03",
+  "name": "Дизайн архитектурной среды",
+  "level": "bachelor",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": "art",
+  "group": "07.00.00",
+  "tags": [
+   "architecture",
+   "design",
+   "art",
+   "construction"
+  ],
+  "klimov": [
+   "A",
+   "T"
+  ],
+  "disciplines": [
+   "Проектирование среды",
+   "Ландшафт",
+   "Рисунок",
+   "Эргономика"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Улицы, парки, интерьеры общественных мест. Как сделать пространство удобным и красивым.",
+  "autoDescription": true,
+  "professions": [
+   "environment_designer",
+   "architect",
+   "landscape_architect"
+  ]
+ },
+ {
+  "code": "07.03.04",
+  "name": "Градостроительство",
+  "level": "bachelor",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": "art",
+  "group": "07.00.00",
+  "tags": [
+   "architecture",
+   "design",
+   "art",
+   "construction"
+  ],
+  "klimov": [
+   "A",
+   "T"
+  ],
+  "disciplines": [
+   "Градостроительное проектирование",
+   "Транспорт города",
+   "ГИС",
+   "Право"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Планируют города: где жильё, дороги, школы и парки.",
+  "autoDescription": true,
+  "professions": [
+   "urban_planner",
+   "architect",
+   "gis_specialist"
+  ]
+ }
+]

@@ -1,0 +1,310 @@
+[
+ {
+  "code": "51.03.06",
+  "name": "Библиотечно-информационная деятельность",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": [
+    "hist",
+    "soc",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "51.00.00",
+  "tags": [
+   "culture",
+   "people",
+   "art",
+   "writing",
+   "education",
+   "history",
+   "gov"
+  ],
+  "klimov": [
+   "P",
+   "A"
+  ],
+  "disciplines": [
+   "Библиотековедение",
+   "Информационный поиск",
+   "Цифровые библиотеки",
+   "Культура чтения"
+  ],
+  "employment": {
+   "rate": 0.58,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Библиотеки и цифровые архивы: как найти и сохранить знание.",
+  "autoDescription": true,
+  "professions": [
+   "librarian",
+   "archivist"
+  ]
+ },
+ {
+  "code": "51.03.01",
+  "name": "Культурология",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "hist"
+   ],
+   "oneOf": [
+    "soc",
+    "lit",
+    "foreign"
+   ]
+  },
+  "dvi": null,
+  "group": "51.00.00",
+  "tags": [
+   "culture",
+   "people",
+   "art",
+   "history"
+  ],
+  "klimov": [
+   "P",
+   "A"
+  ],
+  "disciplines": [
+   "Теория культуры",
+   "История культуры",
+   "Культурная политика",
+   "Проекты"
+  ],
+  "employment": {
+   "rate": 0.58,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как культура влияет на жизнь людей. Работа в музеях, проектах, медиа.",
+  "autoDescription": true,
+  "professions": [
+   "culture_manager",
+   "museum_specialist",
+   "curator"
+  ]
+ },
+ {
+  "code": "51.03.02",
+  "name": "Народная художественная культура",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "hist"
+   ],
+   "oneOf": [
+    "soc",
+    "lit",
+    "foreign"
+   ]
+  },
+  "dvi": "stage",
+  "group": "51.00.00",
+  "tags": [
+   "culture",
+   "people",
+   "art",
+   "music",
+   "theatre",
+   "business"
+  ],
+  "klimov": [
+   "P",
+   "A"
+  ],
+  "disciplines": [
+   "Народное творчество",
+   "Режиссура",
+   "Хореография",
+   "Методика"
+  ],
+  "employment": {
+   "rate": 0.58,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Руководители хоров, ансамблей и студий народного творчества.",
+  "autoDescription": true,
+  "professions": [
+   "folk_leader",
+   "culture_manager"
+  ]
+ },
+ {
+  "code": "51.03.03",
+  "name": "Социально-культурная деятельность",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "hist"
+   ],
+   "oneOf": [
+    "soc",
+    "lit",
+    "foreign"
+   ]
+  },
+  "dvi": null,
+  "group": "51.00.00",
+  "tags": [
+   "culture",
+   "people",
+   "art",
+   "business"
+  ],
+  "klimov": [
+   "P",
+   "A"
+  ],
+  "disciplines": [
+   "Культурно-досуговая работа",
+   "Менеджмент",
+   "Режиссура праздников",
+   "Маркетинг"
+  ],
+  "employment": {
+   "rate": 0.58,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Организация досуга и культурных событий в городах и сёлах.",
+  "autoDescription": true,
+  "professions": [
+   "culture_manager",
+   "event_manager"
+  ]
+ },
+ {
+  "code": "51.03.04",
+  "name": "Музеология и охрана объектов культурного и природного наследия",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "hist"
+   ],
+   "oneOf": [
+    "soc",
+    "lit",
+    "foreign"
+   ]
+  },
+  "dvi": null,
+  "group": "51.00.00",
+  "tags": [
+   "culture",
+   "people",
+   "art",
+   "history"
+  ],
+  "klimov": [
+   "P",
+   "A"
+  ],
+  "disciplines": [
+   "Музееведение",
+   "Экспозиция",
+   "Охрана наследия",
+   "Реставрация"
+  ],
+  "employment": {
+   "rate": 0.58,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Музейщики: хранят коллекции, делают выставки, водят экскурсии.",
+  "autoDescription": true,
+  "professions": [
+   "museum_specialist",
+   "curator",
+   "tour_guide"
+  ]
+ },
+ {
+  "code": "51.03.05",
+  "name": "Режиссура театрализованных представлений и праздников",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "hist"
+   ],
+   "oneOf": [
+    "soc",
+    "lit",
+    "foreign"
+   ]
+  },
+  "dvi": "stage",
+  "group": "51.00.00",
+  "tags": [
+   "culture",
+   "people",
+   "art",
+   "theatre",
+   "business"
+  ],
+  "klimov": [
+   "P",
+   "A"
+  ],
+  "disciplines": [
+   "Режиссура",
+   "Сценарное мастерство",
+   "Сценография",
+   "Звук и свет"
+  ],
+  "employment": {
+   "rate": 0.58,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Режиссёры праздников, фестивалей, концертов и церемоний.",
+  "autoDescription": true,
+  "professions": [
+   "event_director",
+   "event_manager"
+  ]
+ }
+]

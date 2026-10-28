@@ -1,0 +1,622 @@
+[
+ {
+  "code": "24.03.01",
+  "name": "Ракетные комплексы и космонавтика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "24.00.00",
+  "tags": [
+   "aviation",
+   "space",
+   "engineering",
+   "drones",
+   "physics",
+   "electronics",
+   "math"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Механика полёта",
+   "Конструкция ракет",
+   "Двигатели",
+   "Системы управления"
+  ],
+  "employment": {
+   "rate": 0.84,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Ракеты и космические аппараты: как их проектируют и запускают.",
+  "autoDescription": true,
+  "professions": [
+   "space_engineer",
+   "calc_engineer"
+  ]
+ },
+ {
+  "code": "24.03.02",
+  "name": "Системы управления движением и навигация",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "24.00.00",
+  "tags": [
+   "aviation",
+   "space",
+   "engineering",
+   "drones",
+   "physics",
+   "electronics",
+   "robotics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Навигация",
+   "Гироскопы",
+   "Системы управления",
+   "Программирование"
+  ],
+  "employment": {
+   "rate": 0.84,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как ракета, самолёт или дрон узнаёт, где он, и держит курс.",
+  "autoDescription": true,
+  "professions": [
+   "space_engineer",
+   "drone_engineer",
+   "electronics_engineer"
+  ]
+ },
+ {
+  "code": "24.03.03",
+  "name": "Баллистика и гидроаэродинамика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "24.00.00",
+  "tags": [
+   "aviation",
+   "space",
+   "engineering",
+   "drones",
+   "physics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Аэродинамика",
+   "Баллистика",
+   "Вычислительная гидродинамика",
+   "Испытания"
+  ],
+  "employment": {
+   "rate": 0.84,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как летят ракеты и снаряды, как обтекает воздух крыло и вода корпус.",
+  "autoDescription": true,
+  "professions": [
+   "calc_engineer",
+   "aircraft_engineer",
+   "space_engineer"
+  ]
+ },
+ {
+  "code": "24.03.04",
+  "name": "Авиастроение",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "24.00.00",
+  "tags": [
+   "aviation",
+   "engineering",
+   "drones",
+   "physics",
+   "space"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Аэродинамика",
+   "Конструкция ЛА",
+   "CAD/CAE",
+   "Прочность"
+  ],
+  "employment": {
+   "rate": 0.84,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Проектирование самолётов, вертолётов и беспилотников.",
+  "autoDescription": true,
+  "professions": [
+   "aircraft_engineer",
+   "drone_engineer",
+   "calc_engineer"
+  ]
+ },
+ {
+  "code": "24.03.05",
+  "name": "Двигатели летательных аппаратов",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "24.00.00",
+  "tags": [
+   "aviation",
+   "space",
+   "engineering",
+   "drones",
+   "machine",
+   "physics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Теория двигателей",
+   "Термодинамика",
+   "Прочность",
+   "Испытания"
+  ],
+  "employment": {
+   "rate": 0.84,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Авиационные и ракетные двигатели: проектирование, производство, испытания.",
+  "autoDescription": true,
+  "professions": [
+   "engine_engineer",
+   "aircraft_engineer"
+  ]
+ },
+ {
+  "code": "24.05.01",
+  "name": "Проектирование, производство и эксплуатация ракет и ракетно-космических комплексов",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "24.00.00",
+  "tags": [
+   "aviation",
+   "space",
+   "engineering",
+   "drones",
+   "physics",
+   "electronics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Конструкция ракет",
+   "Производство",
+   "Наземные комплексы",
+   "Испытания"
+  ],
+  "employment": {
+   "rate": 0.84,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Полный цикл ракетной техники: от проекта до запуска с космодрома.",
+  "autoDescription": true,
+  "professions": [
+   "space_engineer"
+  ]
+ },
+ {
+  "code": "24.05.02",
+  "name": "Проектирование авиационных и ракетных двигателей",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "24.00.00",
+  "tags": [
+   "aviation",
+   "space",
+   "engineering",
+   "drones",
+   "machine",
+   "physics",
+   "electronics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Теория двигателей",
+   "Газовая динамика",
+   "Прочность",
+   "Испытания"
+  ],
+  "employment": {
+   "rate": 0.84,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Пять с половиной лет про двигатели: камеры сгорания, турбины, сопла.",
+  "autoDescription": true,
+  "professions": [
+   "engine_engineer",
+   "space_engineer"
+  ]
+ },
+ {
+  "code": "24.05.03",
+  "name": "Испытание летательных аппаратов",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "24.00.00",
+  "tags": [
+   "aviation",
+   "space",
+   "engineering",
+   "drones",
+   "physics",
+   "electronics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Лётные испытания",
+   "Измерения",
+   "Обработка данных",
+   "Аэродинамика"
+  ],
+  "employment": {
+   "rate": 0.84,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Проверяют новые самолёты и ракеты: стенды, полёты, анализ данных.",
+  "autoDescription": true,
+  "professions": [
+   "aircraft_engineer",
+   "space_engineer"
+  ]
+ },
+ {
+  "code": "24.05.04",
+  "name": "Навигационно-баллистическое обеспечение применения космической техники",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "24.00.00",
+  "tags": [
+   "aviation",
+   "space",
+   "engineering",
+   "drones",
+   "physics",
+   "electronics",
+   "math"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Небесная механика",
+   "Баллистика",
+   "Навигация ГЛОНАСС",
+   "Программирование"
+  ],
+  "employment": {
+   "rate": 0.84,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Рассчитывают орбиты спутников и управляют ими с Земли.",
+  "autoDescription": true,
+  "professions": [
+   "space_engineer",
+   "calc_engineer"
+  ]
+ },
+ {
+  "code": "24.05.05",
+  "name": "Интегрированные системы летательных аппаратов",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "24.00.00",
+  "tags": [
+   "aviation",
+   "space",
+   "engineering",
+   "drones",
+   "physics",
+   "electronics",
+   "it",
+   "robotics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Авионика",
+   "Бортовые сети",
+   "Системы управления",
+   "Надёжность"
+  ],
+  "employment": {
+   "rate": 0.84,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Бортовая электроника самолёта: всё, что связывает приборы, двигатели и пилота.",
+  "autoDescription": true,
+  "professions": [
+   "aircraft_engineer",
+   "electronics_engineer"
+  ]
+ },
+ {
+  "code": "24.05.06",
+  "name": "Системы управления летательными аппаратами",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "24.00.00",
+  "tags": [
+   "aviation",
+   "space",
+   "engineering",
+   "drones",
+   "robotics",
+   "physics",
+   "electronics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Теория управления",
+   "Автопилоты",
+   "Моделирование",
+   "Встраиваемые системы"
+  ],
+  "employment": {
+   "rate": 0.84,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Автопилоты и системы управления для самолётов, ракет и дронов.",
+  "autoDescription": true,
+  "professions": [
+   "drone_engineer",
+   "space_engineer",
+   "electronics_engineer"
+  ]
+ },
+ {
+  "code": "24.05.07",
+  "name": "Самолёто- и вертолётостроение",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "24.00.00",
+  "tags": [
+   "aviation",
+   "engineering",
+   "drones",
+   "physics",
+   "space",
+   "robotics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [
+   "Аэродинамика",
+   "Конструкция планера",
+   "Силовые установки",
+   "Испытания"
+  ],
+  "employment": {
+   "rate": 0.86,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Инженер полного цикла создания летательных аппаратов.",
+  "autoDescription": true,
+  "professions": [
+   "aircraft_engineer",
+   "drone_engineer"
+  ]
+ }
+]

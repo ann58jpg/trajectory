@@ -1,0 +1,262 @@
+[
+ {
+  "code": "40.03.01",
+  "name": "Юриспруденция",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "hist",
+    "foreign",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "40.00.00",
+  "tags": [
+   "law",
+   "social",
+   "people",
+   "gov"
+  ],
+  "klimov": [
+   "P",
+   "S"
+  ],
+  "disciplines": [
+   "Теория государства и права",
+   "Гражданское право",
+   "Уголовное право",
+   "Процесс"
+  ],
+  "employment": {
+   "rate": 0.7,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Право, споры, договоры, защита интересов.",
+  "autoDescription": true,
+  "professions": [
+   "lawyer",
+   "investigator",
+   "civil_servant"
+  ]
+ },
+ {
+  "code": "40.05.01",
+  "name": "Правовое обеспечение национальной безопасности",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "hist",
+    "foreign",
+    "inf"
+   ]
+  },
+  "dvi": "physical",
+  "group": "40.00.00",
+  "tags": [
+   "law",
+   "social",
+   "gov",
+   "people",
+   "writing",
+   "safety"
+  ],
+  "klimov": [
+   "P",
+   "S"
+  ],
+  "disciplines": [
+   "Конституционное право",
+   "Уголовное право",
+   "Национальная безопасность",
+   "Процесс"
+  ],
+  "employment": {
+   "rate": 0.7,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Юристы для силовых ведомств и госбезопасности.",
+  "autoDescription": true,
+  "professions": [
+   "lawyer",
+   "investigator"
+  ]
+ },
+ {
+  "code": "40.05.02",
+  "name": "Правоохранительная деятельность",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "hist",
+    "foreign",
+    "inf"
+   ]
+  },
+  "dvi": "physical",
+  "group": "40.00.00",
+  "tags": [
+   "law",
+   "social",
+   "gov",
+   "safety",
+   "people",
+   "writing"
+  ],
+  "klimov": [
+   "P",
+   "S"
+  ],
+  "disciplines": [
+   "Уголовный процесс",
+   "Криминалистика",
+   "Оперативная работа",
+   "Право"
+  ],
+  "employment": {
+   "rate": 0.7,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Будущие сотрудники полиции и следствия.",
+  "autoDescription": true,
+  "professions": [
+   "investigator",
+   "lawyer"
+  ]
+ },
+ {
+  "code": "40.05.03",
+  "name": "Судебная экспертиза",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "bio",
+    "chem",
+    "math",
+    "hist"
+   ]
+  },
+  "dvi": null,
+  "group": "40.00.00",
+  "tags": [
+   "law",
+   "social",
+   "gov",
+   "science",
+   "safety",
+   "security",
+   "it"
+  ],
+  "klimov": [
+   "P",
+   "S"
+  ],
+  "disciplines": [
+   "Криминалистика",
+   "Экспертиза документов",
+   "Трасология",
+   "Право"
+  ],
+  "employment": {
+   "rate": 0.7,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Эксперты-криминалисты: почерк, следы, документы, компьютеры.",
+  "autoDescription": true,
+  "professions": [
+   "forensic_expert",
+   "cyber_forensic"
+  ]
+ },
+ {
+  "code": "40.05.04",
+  "name": "Судебная и прокурорская деятельность",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "hist",
+    "foreign",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "40.00.00",
+  "tags": [
+   "law",
+   "social",
+   "gov",
+   "people",
+   "writing"
+  ],
+  "klimov": [
+   "P",
+   "S"
+  ],
+  "disciplines": [
+   "Уголовный процесс",
+   "Гражданский процесс",
+   "Прокурорский надзор",
+   "Судоустройство"
+  ],
+  "employment": {
+   "rate": 0.7,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Будущие судьи, прокуроры и помощники судей.",
+  "autoDescription": true,
+  "professions": [
+   "lawyer",
+   "prosecutor"
+  ]
+ }
+]

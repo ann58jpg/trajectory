@@ -2,6 +2,11 @@ import type { DviType, Program, Specialty } from "@/lib/schemas";
 import { DVI_TEXT, EXAMS } from "@/lib/copy";
 import { SUBJECT_SHORT } from "./ru";
 
+/** Есть ли бюджетные места. null — число не проверено, но бюджет в вузе есть (иначе в данных стоит 0). */
+export function hasBudget(pr: { budgetPlaces: number | null }): boolean {
+  return pr.budgetPlaces === null || pr.budgetPlaces > 0;
+}
+
 /** Доп. экзамен программы: свой у программы или как у направления. */
 export function effectiveDvi(spec: Specialty, program?: Pick<Program, "dvi"> | null): DviType | null {
   if (program && program.dvi !== undefined) return program.dvi;

@@ -1,0 +1,264 @@
+[
+ {
+  "code": "19.03.01",
+  "name": "Биотехнология",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "bio",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "19.00.00",
+  "tags": [
+   "bio",
+   "biology",
+   "chemistry",
+   "science",
+   "medicine",
+   "food",
+   "manufacturing"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Микробиология",
+   "Генная инженерия",
+   "Биохимия",
+   "Процессы и аппараты"
+  ],
+  "employment": {
+   "rate": 0.72,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Использование живых систем в медицине, пищевой индустрии и агро.",
+  "autoDescription": true,
+  "professions": [
+   "biotechnologist",
+   "food_technologist",
+   "pharmacist"
+  ]
+ },
+ {
+  "code": "19.03.02",
+  "name": "Продукты питания из растительного сырья",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "bio",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "19.00.00",
+  "tags": [
+   "bio",
+   "food",
+   "chemistry",
+   "manufacturing",
+   "engineering",
+   "management"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Технология хлеба",
+   "Пищевая химия",
+   "Контроль качества",
+   "Оборудование"
+  ],
+  "employment": {
+   "rate": 0.74,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Хлеб, крупы, масло, напитки: как их делают на заводе вкусными и безопасными.",
+  "autoDescription": true,
+  "professions": [
+   "food_technologist",
+   "quality_engineer"
+  ]
+ },
+ {
+  "code": "19.03.03",
+  "name": "Продукты питания животного происхождения",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "bio",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "19.00.00",
+  "tags": [
+   "bio",
+   "food",
+   "chemistry",
+   "manufacturing"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Технология молока и мяса",
+   "Микробиология",
+   "Контроль качества",
+   "Оборудование"
+  ],
+  "employment": {
+   "rate": 0.74,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Мясо, молоко, сыры: технологии переработки и контроль качества.",
+  "autoDescription": true,
+  "professions": [
+   "food_technologist",
+   "quality_engineer",
+   "vet_inspector"
+  ]
+ },
+ {
+  "code": "19.03.04",
+  "name": "Технология продукции и организация общественного питания",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "bio",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "19.00.00",
+  "tags": [
+   "bio",
+   "food",
+   "chemistry",
+   "manufacturing",
+   "business"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Технология блюд",
+   "Организация производства",
+   "Санитария",
+   "Калькуляция"
+  ],
+  "employment": {
+   "rate": 0.74,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Кафе, рестораны, столовые: меню, технология блюд, организация кухни.",
+  "autoDescription": true,
+  "professions": [
+   "chef",
+   "food_technologist",
+   "restaurant_manager"
+  ]
+ },
+ {
+  "code": "19.03.05",
+  "name": "Высокотехнологичные производства пищевых продуктов функционального и специализированного назначения",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "bio",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "19.00.00",
+  "tags": [
+   "bio",
+   "food",
+   "chemistry",
+   "manufacturing",
+   "biology",
+   "science",
+   "medicine"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Нутрициология",
+   "Пищевая биотехнология",
+   "Контроль качества",
+   "Разработка рецептур"
+  ],
+  "employment": {
+   "rate": 0.74,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Продукты для спортсменов, детей и людей с особыми диетами.",
+  "autoDescription": true,
+  "professions": [
+   "food_technologist",
+   "biotechnologist"
+  ]
+ }
+]

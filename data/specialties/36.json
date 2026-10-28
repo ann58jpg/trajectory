@@ -1,0 +1,151 @@
+[
+ {
+  "code": "36.03.01",
+  "name": "Ветеринарно-санитарная экспертиза",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "36.00.00",
+  "tags": [
+   "animals",
+   "biology",
+   "agro",
+   "medicine",
+   "food",
+   "safety",
+   "chemistry",
+   "manufacturing"
+  ],
+  "klimov": [
+   "N"
+  ],
+  "disciplines": [
+   "Ветсанэкспертиза",
+   "Микробиология",
+   "Паразитология",
+   "Стандарты"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Проверяют мясо, молоко и рыбу на безопасность — на рынках, заводах и границе.",
+  "autoDescription": true,
+  "professions": [
+   "vet_inspector",
+   "food_technologist"
+  ]
+ },
+ {
+  "code": "36.03.02",
+  "name": "Зоотехния",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "36.00.00",
+  "tags": [
+   "animals",
+   "biology",
+   "agro",
+   "medicine",
+   "nature"
+  ],
+  "klimov": [
+   "N"
+  ],
+  "disciplines": [
+   "Разведение животных",
+   "Кормление",
+   "Зоогигиена",
+   "Генетика"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как разводить и кормить животных на фермах, чтобы они были здоровы и продуктивны.",
+  "autoDescription": true,
+  "professions": [
+   "zootechnician",
+   "vet"
+  ]
+ },
+ {
+  "code": "36.05.01",
+  "name": "Ветеринария",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio"
+   ],
+   "oneOf": [
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "36.00.00",
+  "tags": [
+   "animals",
+   "biology",
+   "medicine",
+   "nature",
+   "agro",
+   "food",
+   "safety"
+  ],
+  "klimov": [
+   "N"
+  ],
+  "disciplines": [
+   "Анатомия животных",
+   "Фармакология",
+   "Хирургия",
+   "Эпизоотология"
+  ],
+  "employment": {
+   "rate": 0.82,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Лечение и профилактика болезней животных.",
+  "autoDescription": true,
+  "professions": [
+   "vet",
+   "vet_inspector"
+  ]
+ }
+]

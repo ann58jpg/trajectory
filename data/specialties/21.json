@@ -1,0 +1,474 @@
+[
+ {
+  "code": "21.03.01",
+  "name": "Нефтегазовое дело",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "21.00.00",
+  "tags": [
+   "oil_gas",
+   "engineering",
+   "physics",
+   "chemistry",
+   "mining",
+   "geology",
+   "nature"
+  ],
+  "klimov": [
+   "T",
+   "N"
+  ],
+  "disciplines": [
+   "Бурение",
+   "Разработка месторождений",
+   "Трубопроводный транспорт",
+   "Геология"
+  ],
+  "employment": {
+   "rate": 0.86,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Добыча, транспорт и переработка нефти и газа.",
+  "autoDescription": true,
+  "professions": [
+   "oil_engineer",
+   "geologist",
+   "automation_engineer"
+  ]
+ },
+ {
+  "code": "21.03.02",
+  "name": "Землеустройство и кадастры",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "21.00.00",
+  "tags": [
+   "mining",
+   "oil_gas",
+   "geology",
+   "engineering",
+   "construction",
+   "nature"
+  ],
+  "klimov": [
+   "T",
+   "N"
+  ],
+  "disciplines": [
+   "Земельное право",
+   "Геодезия",
+   "Кадастр",
+   "ГИС"
+  ],
+  "employment": {
+   "rate": 0.82,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Границы участков, оценка земли, кадастровые карты.",
+  "autoDescription": true,
+  "professions": [
+   "cadastral_engineer",
+   "geodesist",
+   "gis_specialist"
+  ]
+ },
+ {
+  "code": "21.03.03",
+  "name": "Геодезия и дистанционное зондирование",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "21.00.00",
+  "tags": [
+   "mining",
+   "oil_gas",
+   "geology",
+   "engineering",
+   "nature",
+   "drones"
+  ],
+  "klimov": [
+   "T",
+   "N"
+  ],
+  "disciplines": [
+   "Геодезия",
+   "Спутниковое позиционирование",
+   "Фотограмметрия",
+   "ГИС"
+  ],
+  "employment": {
+   "rate": 0.82,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Точно измеряют Землю: от разметки стройки до спутниковых снимков.",
+  "autoDescription": true,
+  "professions": [
+   "geodesist",
+   "gis_specialist",
+   "drone_operator"
+  ]
+ },
+ {
+  "code": "21.05.01",
+  "name": "Прикладная геодезия",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "21.00.00",
+  "tags": [
+   "mining",
+   "oil_gas",
+   "geology",
+   "engineering",
+   "construction",
+   "nature",
+   "drones"
+  ],
+  "klimov": [
+   "T",
+   "N"
+  ],
+  "disciplines": [
+   "Инженерная геодезия",
+   "Спутниковые системы",
+   "Маркшейдерия",
+   "Фотограмметрия"
+  ],
+  "employment": {
+   "rate": 0.82,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Геодезия для больших строек, шахт, железных дорог и мостов.",
+  "autoDescription": true,
+  "professions": [
+   "geodesist",
+   "mine_surveyor"
+  ]
+ },
+ {
+  "code": "21.05.02",
+  "name": "Прикладная геология",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "21.00.00",
+  "tags": [
+   "geology",
+   "nature",
+   "oil_gas",
+   "science",
+   "mining",
+   "engineering"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "disciplines": [
+   "Общая геология",
+   "Минералогия",
+   "Геофизика",
+   "Поиск месторождений"
+  ],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Поиск и разведка полезных ископаемых.",
+  "autoDescription": true,
+  "professions": [
+   "geologist",
+   "oil_engineer"
+  ]
+ },
+ {
+  "code": "21.05.03",
+  "name": "Технология геологической разведки",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "21.00.00",
+  "tags": [
+   "mining",
+   "oil_gas",
+   "geology",
+   "engineering",
+   "nature",
+   "science"
+  ],
+  "klimov": [
+   "T",
+   "N"
+  ],
+  "disciplines": [
+   "Геофизика",
+   "Бурение скважин",
+   "Сейсморазведка",
+   "Обработка данных"
+  ],
+  "employment": {
+   "rate": 0.82,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Бурение и геофизика: как «заглянуть» на километры под землю.",
+  "autoDescription": true,
+  "professions": [
+   "geologist",
+   "oil_engineer"
+  ]
+ },
+ {
+  "code": "21.05.04",
+  "name": "Горное дело",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "21.00.00",
+  "tags": [
+   "mining",
+   "oil_gas",
+   "geology",
+   "engineering"
+  ],
+  "klimov": [
+   "T",
+   "N"
+  ],
+  "disciplines": [
+   "Горные машины",
+   "Взрывное дело",
+   "Безопасность в шахте",
+   "Маркшейдерия"
+  ],
+  "employment": {
+   "rate": 0.82,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как безопасно добывать уголь, руду и золото в шахтах и карьерах.",
+  "autoDescription": true,
+  "professions": [
+   "mining_engineer",
+   "mine_surveyor",
+   "hse_engineer"
+  ]
+ },
+ {
+  "code": "21.05.05",
+  "name": "Физические процессы горного или нефтегазового производства",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "21.00.00",
+  "tags": [
+   "mining",
+   "oil_gas",
+   "geology",
+   "engineering",
+   "nature"
+  ],
+  "klimov": [
+   "T",
+   "N"
+  ],
+  "disciplines": [
+   "Физика пород",
+   "Геомеханика",
+   "Моделирование",
+   "Разработка месторождений"
+  ],
+  "employment": {
+   "rate": 0.82,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Физика горных пород и пластов: как повысить добычу и не допустить обрушений.",
+  "autoDescription": true,
+  "professions": [
+   "mining_engineer",
+   "oil_engineer"
+  ]
+ },
+ {
+  "code": "21.05.06",
+  "name": "Нефтегазовые техника и технологии",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf",
+    "chem"
+   ]
+  },
+  "dvi": null,
+  "group": "21.00.00",
+  "tags": [
+   "mining",
+   "oil_gas",
+   "geology",
+   "engineering",
+   "nature",
+   "machine",
+   "manufacturing"
+  ],
+  "klimov": [
+   "T",
+   "N"
+  ],
+  "disciplines": [
+   "Буровые машины",
+   "Нефтепромысловое оборудование",
+   "Трубопроводы",
+   "Надёжность"
+  ],
+  "employment": {
+   "rate": 0.82,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Техника для добычи нефти и газа: буровые установки, насосы, трубопроводы.",
+  "autoDescription": true,
+  "professions": [
+   "oil_engineer",
+   "maintenance_engineer"
+  ]
+ }
+]

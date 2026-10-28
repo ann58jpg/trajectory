@@ -1,0 +1,305 @@
+[
+ {
+  "code": "01.03.01",
+  "name": "Математика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "01.00.00",
+  "tags": [
+   "math",
+   "science",
+   "data",
+   "it"
+  ],
+  "klimov": [
+   "S"
+  ],
+  "disciplines": [
+   "Матанализ",
+   "Алгебра",
+   "Топология",
+   "Теория вероятностей"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Чистая математика: доказательства, структуры, модели. Отсюда идут в науку, анализ данных, финансы и преподавание.",
+  "autoDescription": true,
+  "professions": [
+   "mathematician",
+   "data_scientist",
+   "teacher",
+   "data_analyst"
+  ]
+ },
+ {
+  "code": "01.03.02",
+  "name": "Прикладная математика и информатика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "01.00.00",
+  "tags": [
+   "math",
+   "it",
+   "data",
+   "finance",
+   "science"
+  ],
+  "klimov": [
+   "S"
+  ],
+  "disciplines": [
+   "Матанализ",
+   "Алгоритмы",
+   "Машинное обучение",
+   "Численные методы"
+  ],
+  "employment": {
+   "rate": 0.82,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (trudvsem/graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Математика как инструмент: модели, данные, алгоритмы, ИИ.",
+  "autoDescription": true,
+  "professions": [
+   "data_scientist",
+   "backend",
+   "quant_analyst",
+   "data_engineer"
+  ]
+ },
+ {
+  "code": "01.03.03",
+  "name": "Механика и математическое моделирование",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "01.00.00",
+  "tags": [
+   "math",
+   "science",
+   "data",
+   "it",
+   "engineering",
+   "physics"
+  ],
+  "klimov": [
+   "S"
+  ],
+  "disciplines": [
+   "Теоретическая механика",
+   "Гидродинамика",
+   "Численные методы",
+   "Прочность"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как ведут себя материалы, жидкости и конструкции. Строят компьютерные модели вместо дорогих испытаний.",
+  "autoDescription": true,
+  "professions": [
+   "calc_engineer",
+   "mathematician",
+   "aircraft_engineer"
+  ]
+ },
+ {
+  "code": "01.03.04",
+  "name": "Прикладная математика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "01.00.00",
+  "tags": [
+   "math",
+   "science",
+   "data",
+   "it",
+   "finance"
+  ],
+  "klimov": [
+   "S"
+  ],
+  "disciplines": [
+   "Оптимизация",
+   "Моделирование",
+   "Статистика",
+   "Программирование"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Математика для техники и экономики: оптимизация, моделирование процессов, расчёты.",
+  "autoDescription": true,
+  "professions": [
+   "data_analyst",
+   "quant_analyst",
+   "calc_engineer"
+  ]
+ },
+ {
+  "code": "01.03.05",
+  "name": "Статистика",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "soc",
+    "foreign"
+   ]
+  },
+  "dvi": null,
+  "group": "01.00.00",
+  "tags": [
+   "math",
+   "science",
+   "data",
+   "it",
+   "business",
+   "finance"
+  ],
+  "klimov": [
+   "S"
+  ],
+  "disciplines": [
+   "Математическая статистика",
+   "Эконометрика",
+   "Выборочные исследования",
+   "R и Python"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Как собирать данные и делать из них честные выводы. Работа в аналитике, банках, Росстате и исследованиях.",
+  "autoDescription": true,
+  "professions": [
+   "data_analyst",
+   "statistician",
+   "banker"
+  ]
+ },
+ {
+  "code": "01.05.01",
+  "name": "Фундаментальные математика и механика",
+  "level": "specialist",
+  "years": 5.5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "inf",
+    "phys"
+   ]
+  },
+  "dvi": null,
+  "group": "01.00.00",
+  "tags": [
+   "math",
+   "science",
+   "data",
+   "it"
+  ],
+  "klimov": [
+   "S"
+  ],
+  "disciplines": [
+   "Матанализ",
+   "Дифференциальные уравнения",
+   "Механика сплошных сред",
+   "Функциональный анализ"
+  ],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Глубокая математика на 5,5 лет для тех, кто хочет в науку или сложную аналитику.",
+  "autoDescription": true,
+  "professions": [
+   "mathematician",
+   "quant_analyst",
+   "calc_engineer"
+  ]
+ }
+]

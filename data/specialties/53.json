@@ -1,0 +1,455 @@
+[
+ {
+  "code": "53.03.01",
+  "name": "Музыкальное искусство эстрады",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "53.00.00",
+  "tags": [
+   "music",
+   "art",
+   "media",
+   "theatre"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Эстрадный вокал",
+   "Инструмент",
+   "Ансамбль",
+   "Звукозапись"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Эстрадные исполнители, инструменталисты и вокалисты.",
+  "autoDescription": true,
+  "professions": [
+   "pop_musician",
+   "singer"
+  ]
+ },
+ {
+  "code": "53.03.02",
+  "name": "Музыкально-инструментальное искусство",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "53.00.00",
+  "tags": [
+   "music",
+   "art",
+   "education",
+   "people"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Специальный инструмент",
+   "Ансамбль",
+   "Оркестр",
+   "Педагогика"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Музыканты: фортепиано, скрипка, духовые, народные инструменты.",
+  "autoDescription": true,
+  "professions": [
+   "instrumental_musician",
+   "music_teacher"
+  ]
+ },
+ {
+  "code": "53.03.03",
+  "name": "Вокальное искусство",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "53.00.00",
+  "tags": [
+   "music",
+   "art",
+   "theatre",
+   "education",
+   "people"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Сольное пение",
+   "Сценическое мастерство",
+   "Ансамбль",
+   "Языки"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Певцы оперы, хора и камерной музыки.",
+  "autoDescription": true,
+  "professions": [
+   "singer",
+   "music_teacher"
+  ]
+ },
+ {
+  "code": "53.03.04",
+  "name": "Искусство народного пения",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "53.00.00",
+  "tags": [
+   "music",
+   "art",
+   "culture",
+   "theatre",
+   "people"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Народное пение",
+   "Фольклор",
+   "Ансамбль",
+   "Сценическое мастерство"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Народные певцы и руководители ансамблей.",
+  "autoDescription": true,
+  "professions": [
+   "folk_singer",
+   "folk_leader"
+  ]
+ },
+ {
+  "code": "53.03.05",
+  "name": "Дирижирование",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "53.00.00",
+  "tags": [
+   "music",
+   "art",
+   "management",
+   "education",
+   "people"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Дирижирование",
+   "Чтение партитур",
+   "Оркестровка",
+   "Анализ музыки"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Дирижёры оркестров и хоров.",
+  "autoDescription": true,
+  "professions": [
+   "conductor",
+   "music_teacher"
+  ]
+ },
+ {
+  "code": "53.03.06",
+  "name": "Музыкознание и музыкально-прикладное искусство",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "53.00.00",
+  "tags": [
+   "music",
+   "art"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Теория музыки",
+   "Звукорежиссура",
+   "Музыкальная критика",
+   "Продюсирование"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Музыка за пределами сцены: звук для игр и кино, музыкальная журналистика, продюсирование.",
+  "autoDescription": true,
+  "professions": [
+   "sound_producer",
+   "musicologist",
+   "music_teacher"
+  ]
+ },
+ {
+  "code": "53.05.01",
+  "name": "Искусство концертного исполнительства",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "53.00.00",
+  "tags": [
+   "music",
+   "art"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Специальный инструмент",
+   "Камерный ансамбль",
+   "Концертная практика",
+   "Педагогика"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Солисты-инструменталисты высокого уровня.",
+  "autoDescription": true,
+  "professions": [
+   "instrumental_musician"
+  ]
+ },
+ {
+  "code": "53.05.04",
+  "name": "Музыкально-театральное искусство",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "53.00.00",
+  "tags": [
+   "music",
+   "art",
+   "theatre",
+   "people",
+   "film"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Вокал",
+   "Актёрское мастерство",
+   "Сценическое движение",
+   "Ансамбль"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Артисты оперы и мюзикла: поют и играют на сцене.",
+  "autoDescription": true,
+  "professions": [
+   "singer",
+   "actor"
+  ]
+ },
+ {
+  "code": "53.05.05",
+  "name": "Музыковедение",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "53.00.00",
+  "tags": [
+   "music",
+   "art",
+   "writing",
+   "culture",
+   "education",
+   "people"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "История музыки",
+   "Теория музыки",
+   "Музыкальная критика",
+   "Источниковедение"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Исследователи музыки: история, теория, критика.",
+  "autoDescription": true,
+  "professions": [
+   "musicologist",
+   "music_teacher"
+  ]
+ },
+ {
+  "code": "53.05.06",
+  "name": "Композиция",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "53.00.00",
+  "tags": [
+   "music",
+   "art",
+   "games",
+   "film",
+   "media"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Композиция",
+   "Оркестровка",
+   "Гармония",
+   "Электронная музыка"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Композиторы: от симфоний до музыки для игр и кино.",
+  "autoDescription": true,
+  "professions": [
+   "composer",
+   "sound_producer"
+  ]
+ }
+]

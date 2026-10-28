@@ -1,0 +1,235 @@
+[
+ {
+  "code": "55.05.01",
+  "name": "Режиссура кино и телевидения",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "contest",
+  "group": "55.00.00",
+  "tags": [
+   "film",
+   "media",
+   "art",
+   "people"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Режиссура",
+   "Драматургия",
+   "Монтаж",
+   "Работа с актёром"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Режиссёры фильмов, сериалов и телепередач.",
+  "autoDescription": true,
+  "professions": [
+   "film_director",
+   "tv_producer",
+   "game_designer"
+  ]
+ },
+ {
+  "code": "55.05.02",
+  "name": "Звукорежиссура аудиовизуальных искусств",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "contest",
+  "group": "55.00.00",
+  "tags": [
+   "film",
+   "media",
+   "art",
+   "music",
+   "engineering",
+   "games"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Звукорежиссура",
+   "Акустика",
+   "Запись",
+   "Сведение"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Звук для кино, игр и сцены: запись, сведение, озвучка.",
+  "autoDescription": true,
+  "professions": [
+   "sound_engineer",
+   "sound_producer"
+  ]
+ },
+ {
+  "code": "55.05.03",
+  "name": "Кинооператорство",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "contest",
+  "group": "55.00.00",
+  "tags": [
+   "film",
+   "media",
+   "art",
+   "engineering",
+   "design"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Операторское мастерство",
+   "Свет",
+   "Композиция кадра",
+   "Техника съёмки"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Операторы: свет, камера, кадр.",
+  "autoDescription": true,
+  "professions": [
+   "cinematographer",
+   "video_editor"
+  ]
+ },
+ {
+  "code": "55.05.04",
+  "name": "Продюсерство",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "contest",
+  "group": "55.00.00",
+  "tags": [
+   "film",
+   "media",
+   "art",
+   "business",
+   "management",
+   "people"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "Продюсирование",
+   "Экономика кино",
+   "Право",
+   "Маркетинг фильмов"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Продюсеры кино и сериалов: деньги, команда, график съёмок, прокат.",
+  "autoDescription": true,
+  "professions": [
+   "film_producer",
+   "tv_producer"
+  ]
+ },
+ {
+  "code": "55.05.05",
+  "name": "Киноведение",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "contest",
+  "group": "55.00.00",
+  "tags": [
+   "film",
+   "media",
+   "art",
+   "writing",
+   "culture",
+   "history"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [
+   "История кино",
+   "Кинокритика",
+   "Теория кино",
+   "Фестивали"
+  ],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников Минобрнауки (graduate.edu.ru), оценка по группе направлений",
+    "updatedAt": "2025-06",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Кинокритики и исследователи кино, кураторы фестивалей.",
+  "autoDescription": true,
+  "professions": [
+   "film_critic",
+   "curator"
+  ]
+ }
+]
