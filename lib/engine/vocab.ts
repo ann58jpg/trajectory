@@ -118,9 +118,9 @@ export const UNI_CRITERIA: { id: string; label: string }[] = [
   { id: "work_study", label: "Совмещение работы и учёбы" },
   { id: "schedule", label: "Расписание" },
   { id: "career_help", label: "Помощь с трудоустройством" },
-  { id: "studlife", label: "Студактив" },
+  { id: "studlife", label: "Студенческая жизнь" },
   { id: "dorm", label: "Общежитие" },
-  { id: "vuc", label: "Военный учебный центр" },
+  { id: "vuc", label: "Военная кафедра" },
   { id: "exchange", label: "Международные обмены" },
 ];
 
@@ -187,19 +187,3 @@ export const DREAM_FEARS: [RegExp, string][] = [
   [/родител/i, "давление родителей"],
 ];
 
-export const OUTLOOK_LABEL = { green: "Растёт", yellow: "Меняется", red: "Под риском" } as const;
-export const CHANCE_LABEL = {
-  high: "высокий",
-  medium: "средний",
-  low: "низкий",
-  risky: "рискованно",
-  unknown: "нет данных",
-} as const;
-export const FORM_LABEL = { full: "очная", evening: "очно-заочная", distance: "заочная", online: "онлайн" } as const;
-export const RELOCATION_LABEL = {
-  no: "Нет",
-  region: "Только в пределах своего региона",
-  nearest: "В ближайший крупный город",
-  russia: "В любой город России",
-  abroad: "Рассматриваю и зарубеж",
-} as const;

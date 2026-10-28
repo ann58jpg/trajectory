@@ -10,5 +10,5 @@
  {"id":"lit","name":"Литература","short":"Лит","tags":["writing","media","art","education"],"klimov":["A","P"],"minScore":40},
  {"id":"eng","name":"Иностранный язык (англ.)","short":"Англ","tags":["languages","intl","tourism"],"klimov":["P","S"],"minScore":30},
  {"id":"geo","name":"География","short":"Гео","tags":["nature","ecology","tourism","logistics","oil_gas"],"klimov":["N","S"],"minScore":40},
- {"id":"creative","name":"Творческое испытание (ДВИ)","short":"Творч","tags":["design","art"],"klimov":["A"],"minScore":40}
+ {"id":"creative","name":"Творческий экзамен в вузе","short":"Творч","tags":["design","art"],"klimov":["A"],"minScore":40}
 ]

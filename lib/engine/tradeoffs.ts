@@ -33,7 +33,7 @@ function changesFor(pm: ProgramMatch, p: StudentProfile, m: UserModel, catalog: 
       }
       case "finance":
         if (program.targetPlaces > 0)
-          changes.push({ type: "target", text: "рассмотри целевое обучение (учёбу оплачивает работодатель)", cost: 1 });
+          changes.push({ type: "target", text: "рассмотри вариант, где учёбу оплачивает компания (потом работаешь у неё 3–5 лет)", cost: 1 });
         else if (program.price !== null) changes.push({ type: "paid", text: `рассмотри платное обучение ~${fmtRub(program.price)}/год или образовательный кредит`, cost: 2 });
         else return null;
         break;

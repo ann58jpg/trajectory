@@ -123,7 +123,8 @@ describe("персона 1: Аня, Москва", () => {
     for (const rec of top(r, 0, 10)) for (const p of rec.programs) expect(p.city === "Москва" || p.online).toBe(true);
   });
   it("портрет учитывает пол", () => {
-    expect(r.portrait).toContain("не готова к переезду");
+    expect(r.portrait).toContain("Не хочешь переезжать.");
+    expect(r.portrait).toContain("Готова долго учиться");
   });
 });
 

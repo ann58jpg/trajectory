@@ -1,3 +1,4 @@
+import { QUIZ } from "../../lib/copy";
 import { expect, test } from "@playwright/test";
 
 test("анкету можно пройти целиком на 375px, ответы не теряются при обновлении", async ({ page }) => {
@@ -8,16 +9,16 @@ test("анкету можно пройти целиком на 375px, ответ
 
   // согласие
   await expect(page.getByTestId("quiz-next")).toBeDisabled();
-  await page.getByRole("checkbox", { name: /Согласен/ }).click();
+  await page.getByRole("checkbox", { name: QUIZ.consent.agree }).click();
   await page.getByTestId("quiz-next").click();
 
   // A1–A3
-  await page.getByRole("radio", { name: "Хочу баланс" }).click();
+  await page.getByRole("radio", { name: QUIZ.start.options.balance }).click();
   await page.getByTestId("quiz-next").click();
   await page.getByRole("checkbox", { name: "Высокий доход" }).click();
   await page.getByRole("checkbox", { name: "Удалённая работа" }).click();
   await page.getByTestId("quiz-next").click();
-  await page.getByRole("radio", { name: /Хочу подрабатывать/ }).click();
+  await page.getByRole("radio", { name: QUIZ.horizon.options.parttime }).click();
   await page.getByTestId("quiz-next").click();
 
   // B4 регион — с поиском
@@ -32,7 +33,7 @@ test("анкету можно пройти целиком на 375px, ответ
   await page.getByTestId("quiz-next").click();
 
   // B5–B8
-  await page.getByRole("radio", { name: "В ближайший крупный город" }).click();
+  await page.getByRole("radio", { name: QUIZ.relocation.options.nearest }).click();
   await page.getByTestId("quiz-next").click();
   await page.getByRole("radio", { name: "Да" }).click();
   await page.getByTestId("quiz-next").click();

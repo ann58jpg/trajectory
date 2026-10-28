@@ -311,6 +311,7 @@ export const Rec = z.object({
   earlyEntryCourse: z.number().nullable(),
   remote: z.enum(["yes", "partial", "no"]),
   reasons: z.array(z.string()),
+  tasks: z.array(z.string()),
   available: z.boolean(), // есть хотя бы одна программа после фильтров
   egeOk: z.boolean(),
   programs: z.array(ProgramMatch), // прошедшие фильтры (топ)

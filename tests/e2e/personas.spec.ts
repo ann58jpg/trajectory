@@ -1,3 +1,4 @@
+import { UNIVERSITY } from "../../lib/copy";
 import { expect, test } from "@playwright/test";
 import { fillPersona, recIds } from "./helpers";
 
@@ -24,7 +25,7 @@ test("Артём (Сызрань): во вкладке «Интересы» не
     expect(regions.length).toBeGreaterThan(0);
     expect(new Set(regions)).toEqual(new Set(["samara"]));
   }
-  await expect(page.getByTestId("panel-interests")).toContainText(/можно начать с [12] курса/);
+  await expect(page.getByTestId("panel-interests")).toContainText(/работать с [12] курса/);
 
   await page.getByTestId("tab-money").click();
   const cards = page.getByTestId("tradeoff-card");
@@ -58,7 +59,7 @@ test("Илья (Новосибирск): ИТ в «Деньгах», тольк�
   const first = page.getByTestId("panel-money").getByTestId("program-uni-link").first();
   const href = await first.getAttribute("href");
   await page.goto(href!);
-  await expect(page.getByTestId("university-page")).toContainText("есть ВУЦ");
+  await expect(page.getByTestId("university-page")).toContainText(UNIVERSITY.vuc.yes);
   await page.goto("/profession/backend");
   await expect(page.getByTestId("outlook-card")).toContainText("ИИ");
 });

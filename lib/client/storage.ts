@@ -12,6 +12,10 @@ export const KEYS = {
   weights: "trajectory.weights.v1",
   slider: "trajectory.slider.v1",
   theme: "trajectory.theme",
+  compare: "trajectory.compare.v1",
+  mode: "trajectory.mode.v1",
+  presentation: "trajectory.presentation.v1",
+  session: "trajectory.session.v1",
 } as const;
 
 export function readLS<T>(key: string, schema: z.ZodType<T, z.ZodTypeDef, unknown>, fallback: T): T {
@@ -85,3 +89,7 @@ export const usePlan = () => useStored(KEYS.plan, PlanSchema, emptyPlan);
 const W = z.object({ demand: z.number(), income: z.number(), employment: z.number(), priority: z.number(), match: z.number() });
 export const AnchorsSchema = z.object({ interests: W, base: W, money: W });
 export const useWeights = () => useStored(KEYS.weights, AnchorsSchema, () => WEIGHT_ANCHORS);
+
+export const CompareItem = z.object({ kind: z.enum(["profession", "specialty", "university"]), id: z.string() });
+export type CompareItem = z.infer<typeof CompareItem>;
+export const useCompare = () => useStored(KEYS.compare, z.array(CompareItem), () => [] as CompareItem[]);

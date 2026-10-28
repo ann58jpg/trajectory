@@ -11,11 +11,13 @@ import { ProfilePrograms } from "@/components/app/profile-programs";
 import { ExplainBlock } from "@/components/app/explain-block";
 import { MarketBlock, SalaryLadder } from "@/components/app/market-block";
 import { pct } from "@/lib/utils";
+import { COMMON, NOT_FOUND, PROFESSION } from "@/lib/copy";
+import { Term } from "@/components/app/term";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const p = getCatalog().professions.find((x) => x.id === id);
-  return { title: p ? `${p.name} — Траектория` : "Профессия не найдена" };
+  return { title: p ? p.name : NOT_FOUND.title };
 }
 
 export default async function ProfessionPage({ params }: { params: Promise<{ id: string }> }) {
@@ -29,14 +31,14 @@ export default async function ProfessionPage({ params }: { params: Promise<{ id:
 
   return (
     <div className="space-y-6 pt-6" data-testid="profession-page">
-      <Link href="/results" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="h-4 w-4" /> К результатам</Link>
+      <Link href="/results" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="h-4 w-4" /> {COMMON.toResults}</Link>
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <h1 className="text-2xl font-bold sm:text-3xl">{prof.name}</h1>
           <div className="mt-2 flex flex-wrap items-center gap-2">
             <OutlookBadge status={prof.outlook.status} reason={prof.outlook.reason} />
-            {prof.earlyEntryCourse !== null && <Badge variant="secondary">работать можно с {prof.earlyEntryCourse} курса</Badge>}
-            <Badge variant="outline">удалёнка: {prof.remote === "yes" ? "да" : prof.remote === "partial" ? "частично" : "нет"}</Badge>
+            {prof.earlyEntryCourse !== null && <Badge variant="secondary">{PROFESSION.early(prof.earlyEntryCourse)}</Badge>}
+            <Badge variant="outline">{PROFESSION.remote[prof.remote]}</Badge>
           </div>
         </div>
         <PlanButton kind="professions" id={prof.id} size="default" />
@@ -44,11 +46,11 @@ export default async function ProfessionPage({ params }: { params: Promise<{ id:
 
       <div className="grid gap-4 lg:grid-cols-3">
         <Card className="lg:col-span-2">
-          <CardHeader><CardTitle className="text-base">Чем занимается</CardTitle></CardHeader>
+          <CardHeader><CardTitle className="text-base">{PROFESSION.tasks}</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <ul className="space-y-1.5">{prof.tasks.map((t) => <li key={t} className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />{t}</li>)}</ul>
             <div>
-              <p className="mb-1.5 flex items-center gap-1.5 font-medium"><Wrench className="h-4 w-4" /> Навыки и технологии</p>
+              <p className="mb-1.5 flex items-center gap-1.5 font-medium"><Wrench className="h-4 w-4" /> {PROFESSION.skills}</p>
               <div className="flex flex-wrap gap-1.5">
                 {prof.skills.map((s) => <Badge key={s} variant="secondary">{s}</Badge>)}
                 {prof.stack.map((s) => <Badge key={s} variant="outline">{s}</Badge>)}
@@ -57,26 +59,26 @@ export default async function ProfessionPage({ params }: { params: Promise<{ id:
           </CardContent>
         </Card>
         <Card data-testid="outlook-card">
-          <CardHeader><CardTitle className="text-base">Прогноз на 5 лет</CardTitle></CardHeader>
+          <CardHeader><CardTitle className="text-base"><Term k="outlook">{PROFESSION.outlookTitle}</Term></CardTitle></CardHeader>
           <CardContent className="space-y-3 text-sm">
             <OutlookBadge status={prof.outlook.status} />
             <p>{prof.outlook.reason}</p>
-            <p className="flex items-center gap-1.5 text-muted-foreground"><Bot className="h-4 w-4" /> Риск автоматизации ИИ: <b>{pct(prof.aiRisk)}</b></p>
+            <p className="flex items-center gap-1.5 text-muted-foreground"><Bot className="h-4 w-4" /> {PROFESSION.aiRisk}: <b>{pct(prof.aiRisk)}</b></p>
             {prios.length > 0 && (
               <div>
-                <p className="mb-1 flex items-center gap-1.5 font-medium"><Landmark className="h-4 w-4" /> Госприоритеты</p>
+                <p className="mb-1 flex items-center gap-1.5 font-medium"><Landmark className="h-4 w-4" /> {PROFESSION.priorities}</p>
                 <ul className="list-inside list-disc text-muted-foreground">{prios.map((p) => <li key={p.id} title={p.source}>{p.name}</li>)}</ul>
               </div>
             )}
-            <p className="text-xs text-muted-foreground">Источник: {prof.outlook.source}</p>
+            <p className="text-xs text-muted-foreground">{COMMON.source}: {prof.outlook.source}</p>
           </CardContent>
         </Card>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-base">Зарплатная лестница, ₽ в месяц</CardTitle>
-          <p className="text-xs text-muted-foreground">Средний регион РФ; в твоём регионе — с поправочным коэффициентом. <SourceMark source={prof.salary.meta.source} confidence={prof.salary.meta.confidence} updatedAt={prof.salary.meta.updatedAt} /></p>
+          <CardTitle className="text-base">{PROFESSION.ladderTitle}</CardTitle>
+          <p className="text-xs text-muted-foreground">{PROFESSION.ladderHint} <SourceMark source={prof.salary.meta.source} confidence={prof.salary.meta.confidence} updatedAt={prof.salary.meta.updatedAt} /></p>
         </CardHeader>
         <CardContent className="space-y-4">
           <SalaryLadder salary={prof.salary} />
@@ -87,11 +89,11 @@ export default async function ProfessionPage({ params }: { params: Promise<{ id:
       <ExplainBlock entityType="profession" entityId={prof.id} />
 
       <Card>
-        <CardHeader><CardTitle className="text-base">Через какие специальности</CardTitle></CardHeader>
+        <CardHeader><CardTitle className="text-base">{PROFESSION.via}</CardTitle></CardHeader>
         <CardContent className="flex flex-wrap gap-2">
           {specs.map((s) => (
             <Link key={s.code} href={`/specialty/${s.code}`} className="rounded-lg border px-3 py-2 text-sm hover:bg-muted" data-testid="profession-specialty-link">
-              <span className="font-medium">{s.code}</span> {s.name} <span className="text-xs text-muted-foreground">· трудоустройство {pct(s.employment.rate)}</span>
+              <span className="font-medium">{s.code}</span> {s.name} <span className="text-xs text-muted-foreground">· {PROFESSION.employment(pct(s.employment.rate))}</span>
             </Link>
           ))}
         </CardContent>
@@ -100,7 +102,7 @@ export default async function ProfessionPage({ params }: { params: Promise<{ id:
       <ProfilePrograms professionId={prof.id} />
 
       <Card>
-        <CardHeader><CardTitle className="text-base">Похожие профессии</CardTitle></CardHeader>
+        <CardHeader><CardTitle className="text-base">{PROFESSION.similar}</CardTitle></CardHeader>
         <CardContent className="flex flex-wrap gap-2">
           {similar.map((s) => (
             <Link key={s.id} href={`/profession/${s.id}`} className="inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-sm hover:bg-muted">

@@ -1,3 +1,4 @@
+import { COMMON, EVENTS, OUTLOOK_TEXT, PLAN } from "../../lib/copy";
 import { expect, test } from "@playwright/test";
 import { fillPersona, recIds } from "./helpers";
 
@@ -32,10 +33,10 @@ test("цепочка Специальность → Профессия → Ву�
 
 test("каждая профессия имеет статус перспективы с обоснованием", async ({ page }) => {
   await page.goto("/profession/copywriter");
-  await expect(page.getByTestId("outlook-card")).toContainText("Под риском");
+  await expect(page.getByTestId("outlook-card")).toContainText(OUTLOOK_TEXT.red);
   await page.goto("/profession/drone_engineer");
-  await expect(page.getByTestId("outlook-card")).toContainText("Растёт");
-  await expect(page.getByTestId("outlook-card")).toContainText("Источник");
+  await expect(page.getByTestId("outlook-card")).toContainText(OUTLOOK_TEXT.green);
+  await expect(page.getByTestId("outlook-card")).toContainText(COMMON.source);
 });
 
 test("«Мой план»: добавление, чек-лист, версия для родителей", async ({ page }) => {
@@ -43,14 +44,15 @@ test("«Мой план»: добавление, чек-лист, версия �
   await page.getByTestId("plan-professions-doctor").first().click();
   await page.goto("/university/dgmu");
   await page.getByTestId("plan-universities-dgmu").click();
-  await page.getByTestId("events-block").getByRole("button", { name: /В чек-лист/ }).first().click();
+  await page.getByTestId("events-block").getByRole("button", { name: EVENTS.add }).first().click();
   await page.goto("/plan");
   await expect(page.getByTestId("plan-profession")).toContainText("Врач");
-  await expect(page.getByTestId("plan")).toContainText("Чек-лист мероприятий");
-  await expect(page.getByTestId("plan")).toContainText("Этапы приёмной кампании");
-  await expect(page.getByTestId("plan")).toContainText("Твой набор предметов подходит");
+  await expect(page.getByTestId("plan")).toContainText(PLAN.events);
+  await expect(page.getByTestId("plan")).toContainText(PLAN.stagesTitle);
+  await expect(page.getByTestId("plan")).toContainText(PLAN.egeOk);
   await page.getByTestId("parents").click();
   await expect(page.getByTestId("parents-view")).toContainText("Зарплата");
+  await expect(page.getByTestId("parents-tasks").first().locator("li")).not.toHaveCount(0);
 });
 
 test("API: ошибки в формате {error, hint}", async ({ request }) => {

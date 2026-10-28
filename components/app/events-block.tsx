@@ -6,12 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/misc";
 import { usePlan } from "@/lib/client/storage";
 import type { UniEvent } from "@/lib/schemas";
+import { EVENTS } from "@/lib/copy";
 
-const TYPE: Record<UniEvent["type"], string> = {
-  open_day: "День открытых дверей", lecture: "Открытая лекция", olympiad: "Олимпиада", hackathon: "Хакатон",
-  school: "Школа абитуриента", festival: "Фестиваль", club: "Клубы и студжизнь", excursion: "Экскурсия",
-};
-const FORMAT = { online: "онлайн", offline: "офлайн", mixed: "офлайн + онлайн" } as const;
+const TYPE = EVENTS.types;
+const FORMAT = EVENTS.format;
 
 type Resp = { events: UniEvent[]; regular: UniEvent[]; source: "ai" | "seed"; eventsUrl: string };
 
@@ -26,7 +24,7 @@ export function EventsBlock({ universityId }: { universityId: string }) {
       .catch(() => setErr(true));
   }, [universityId]);
 
-  if (err) return <p className="text-sm text-muted-foreground">Мероприятия сейчас не загрузились — загляни на сайт вуза.</p>;
+  if (err) return <p className="text-sm text-muted-foreground">{EVENTS.error}</p>;
   if (!data) return <div className="space-y-2"><Skeleton className="h-20" /><Skeleton className="h-20" /></div>;
 
   const add = (e: UniEvent) =>
@@ -46,12 +44,12 @@ export function EventsBlock({ universityId }: { universityId: string }) {
             </div>
           </div>
           <Button size="sm" variant={inPlan ? "secondary" : "outline"} onClick={() => add(e)} aria-pressed={inPlan}>
-            {inPlan ? <Check /> : <Plus />} {inPlan ? "В плане" : "В чек-лист"}
+            {inPlan ? <Check /> : <Plus />} {inPlan ? EVENTS.added : EVENTS.add}
           </Button>
         </div>
         <p className="mt-2 text-muted-foreground">{e.why}</p>
         <a href={e.url} target="_blank" rel="noopener noreferrer" className="mt-1 inline-flex items-center gap-1 text-xs text-primary hover:underline" data-testid="event-link">
-          {e.source === "ai" ? "Страница события" : "Страница событий вуза"} <ExternalLink className="h-3 w-3" />
+          {e.source === "ai" ? EVENTS.link : EVENTS.linkVuz} <ExternalLink className="h-3 w-3" />
         </a>
       </li>
     );
@@ -61,13 +59,13 @@ export function EventsBlock({ universityId }: { universityId: string }) {
     <div className="space-y-3" data-testid="events-block">
       <p className="text-xs text-muted-foreground">
         {data.source === "ai"
-          ? "Свежие события на ближайшие 60 дней — найдены ИИ-поиском по сайту и соцсетям вуза. Даты сверяй по ссылке."
-          : "Демо-режим: даты не выдумываем — показываем, какие события вуз обычно проводит, и ссылку на его официальную страницу."}
+          ? EVENTS.aiNote
+          : EVENTS.seedNote}
       </p>
       <ul className="space-y-2">{data.events.map((e) => <Item key={e.id} e={e} />)}</ul>
       {data.regular.length > 0 && (
         <details className="text-sm">
-          <summary className="cursor-pointer text-muted-foreground">Регулярные события вуза</summary>
+          <summary className="cursor-pointer text-muted-foreground">{EVENTS.regular}</summary>
           <ul className="mt-2 space-y-2">{data.regular.map((e) => <Item key={e.id} e={e} />)}</ul>
         </details>
       )}

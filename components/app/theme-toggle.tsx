@@ -3,6 +3,7 @@ import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { KEYS } from "@/lib/client/storage";
+import { HEADER } from "@/lib/copy";
 
 export function ThemeToggle() {
   const [dark, setDark] = useState(false);
@@ -18,7 +19,7 @@ export function ThemeToggle() {
     }
   };
   return (
-    <Button variant="ghost" size="icon" onClick={toggle} aria-label={dark ? "Светлая тема" : "Тёмная тема"}>
+    <Button variant="ghost" size="icon" onClick={toggle} aria-label={dark ? HEADER.themeLight : HEADER.themeDark}>
       {dark ? <Sun /> : <Moon />}
     </Button>
   );

@@ -1,7 +1,7 @@
 import { getCatalog } from "@/lib/db/catalog";
 import { Quiz } from "./quiz";
 
-export const metadata = { title: "Анкета — Траектория" };
+export const metadata = { title: "Анкета" };
 
 export default function QuizPage() {
   const c = getCatalog();

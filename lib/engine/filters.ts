@@ -1,3 +1,4 @@
+import { EXCLUDE } from "@/lib/copy";
 import type { ExclusionReason, Program, Region, Specialty, StudentProfile, University } from "@/lib/schemas";
 import type { UserModel } from "./profile";
 
@@ -40,33 +41,33 @@ export function hardFilter(
 ): ExclusionReason[] {
   const reasons: ExclusionReason[] = [];
   const online = isOnline(pr);
-  const local = !!m.city && uni.city === m.city;
+  const local = Boolean(m.city) && uni.city === m.city;
   const reach = reachableRegionIds(p, regions);
 
   // Переезд
   if (uni.abroad) {
-    if (reach !== "all+abroad") reasons.push({ type: "abroad", text: `зарубежный вуз (${uni.country ?? "за рубежом"})` });
+    if (reach !== "all+abroad") reasons.push({ type: "abroad", text: EXCLUDE.abroad(uni.country ?? EXCLUDE.abroadDefault) });
   } else if (p.relocation === "no") {
-    if (!local && !online) reasons.push({ type: "relocation", text: `нужен переезд в ${uni.city}` });
+    if (!local && !online) reasons.push({ type: "relocation", text: EXCLUDE.move(uni.city) });
   } else if (reach instanceof Set) {
-    if (!reach.has(uni.regionId) && !online) reasons.push({ type: "relocation", text: `нужен переезд в ${uni.city}` });
+    if (!reach.has(uni.regionId) && !online) reasons.push({ type: "relocation", text: EXCLUDE.move(uni.city) });
   }
 
   // Финансы
   if (p.finance === "budget" && pr.budgetPlaces <= 0) {
-    reasons.push({ type: "finance", text: pr.price ? `нет бюджетных мест, платно ~${fmtRub(pr.price)}/год` : "нет бюджетных мест" });
+    reasons.push({ type: "finance", text: pr.price ? EXCLUDE.noBudgetPaid(fmtRub(pr.price)) : EXCLUDE.noBudget });
   } else if (p.finance === "budget_or_paid" && pr.budgetPlaces <= 0 && (pr.price ?? 0) > p.paidLimit) {
-    reasons.push({ type: "finance", text: `платно ~${fmtRub(pr.price ?? 0)}/год — выше твоего лимита` });
+    reasons.push({ type: "finance", text: EXCLUDE.overLimit(fmtRub(pr.price ?? 0)) });
   }
 
-  // ВУЦ
+  // Военная кафедра
   if (p.gender === "m" && p.vucImportant === "yes") {
-    if (!uni.vuc) reasons.push({ type: "vuc", text: "нет военного учебного центра" });
-    else if (!pr.forms.includes("full")) reasons.push({ type: "vuc", text: "ВУЦ доступен только при очной форме" });
+    if (!uni.vuc) reasons.push({ type: "vuc", text: EXCLUDE.noVuc });
+    else if (!pr.forms.includes("full")) reasons.push({ type: "vuc", text: EXCLUDE.vucFullOnly });
   }
 
   // Общежитие
-  if (p.dorm === "yes" && !local && !online && !uni.dorm) reasons.push({ type: "dorm", text: "нет общежития" });
+  if (p.dorm === "yes" && !local && !online && !uni.dorm) reasons.push({ type: "dorm", text: EXCLUDE.noDorm });
 
   // ЕГЭ
   if (!uni.abroad && m.egeChosen) {
@@ -76,7 +77,7 @@ export function hardFilter(
         ...c.missing.map((s) => egeNames.get(s) ?? s),
         ...(c.oneOfMissing.length ? [c.oneOfMissing.map((s) => egeNames.get(s) ?? s).join(" или ")] : []),
       ];
-      reasons.push({ type: "ege", text: `нужен ЕГЭ: ${need.join(", ")}` });
+      reasons.push({ type: "ege", text: EXCLUDE.ege(need.join(", ")) });
     }
   }
   return reasons;

@@ -22,6 +22,7 @@ import { RecommendResponse as RecommendResponseSchema } from "@/lib/schemas";
 import { cn, pct, rub, rubK } from "@/lib/utils";
 import { z } from "zod";
 import { yearsWord } from "@/lib/engine/ru";
+import { COMPARE, MATCH_TEXT, RESULTS } from "@/lib/copy";
 
 type State = { status: "idle" | "loading" | "error" | "ok"; data?: RecommendResponse; error?: string; hint?: string };
 
@@ -102,7 +103,7 @@ export function Results() {
             </div>
             <div className="flex items-center gap-2 sm:flex-col sm:items-end sm:gap-1">
               <Badge variant={conf >= 80 ? "green" : conf >= 50 ? "yellow" : "red"} data-testid="confidence" title={d.missing.length ? `Не хватает: ${d.missing.join(", ")}` : "Анкета заполнена полностью"}>
-                Уверенность {conf}%
+                {RESULTS.confidence(conf)}
               </Badge>
               {d.mode === "demo" && <span className="text-[11px] text-muted-foreground">тексты из шаблонов</span>}
             </div>
@@ -225,7 +226,7 @@ function InterestsTab({
               <div className="flex flex-wrap items-center gap-2">
                 <Badge variant="outline">{n + 1}</Badge>
                 <Link href={`/specialty/${g.code}`} className="hover:underline"><CardTitle className="text-base sm:text-lg">{g.code} {spec?.name}</CardTitle></Link>
-                {spec?.level === "spo" && <Badge variant="secondary">колледж (СПО)</Badge>}
+                {spec?.level === "spo" && <Badge variant="secondary">{RESULTS.levelLabel.spo}</Badge>}
               </div>
               <CardDescription>{spec?.level === "spo" ? "После 11 класса" : spec?.level === "specialist" ? "Специалитет" : "Бакалавриат"} · {spec ? yearsWord(spec.years) : ""}</CardDescription>
             </CardHeader>
@@ -306,7 +307,7 @@ function Comparison({ a, b }: { a: ComparisonSide | null; b: ComparisonSide | nu
     ["через 3 года", (s) => rubK(s.salary3)],
     ["через 5 лет", (s) => <b>{rubK(s.salary5)}</b>],
     ["Срок учёбы", (s) => yearsWord(s.years)],
-    ["Интересность (метч)", (s) => pct(s.match)],
+    [COMPARE.rows.match, (s) => MATCH_TEXT(s.match)],
     ["Перспектива", (s) => <OutlookBadge status={s.outlook} />],
     ["Риски", (s) => <ul className="list-inside list-disc text-left">{s.risks.map((r) => <li key={r}>{r}</li>)}</ul>],
     ["Чем жертвуешь", (s) => (s.sacrifices.length ? <ul className="list-inside list-disc text-left">{s.sacrifices.map((r) => <li key={r}>{r}</li>)}</ul> : "—")],
@@ -337,7 +338,7 @@ function Comparison({ a, b }: { a: ComparisonSide | null; b: ComparisonSide | nu
       </div>
       <Card>
         <CardHeader>
-          <CardTitle className="text-base">Доход за 10 лет с учётом стоимости обучения (простой ROI)</CardTitle>
+          <CardTitle className="text-base">{COMPARE.roiTitle}</CardTitle>
           <CardDescription>Накопленный доход минус оплата учёбы, тыс. ₽. Оценка: зарплаты растут от старта к уровню «опытный».</CardDescription>
         </CardHeader>
         <CardContent>

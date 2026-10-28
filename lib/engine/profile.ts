@@ -1,5 +1,6 @@
 import type { EgeSubject, Klimov, Region, StudentProfile } from "@/lib/schemas";
-import { genitiveCity } from "./ru";
+import { genitiveCity, prepositionalCity } from "./ru";
+import { PORTRAIT } from "@/lib/copy";
 import { DREAM_FEARS, DREAM_KEYWORDS, DREAM_VALUES, HOBBIES, LIKE_WEIGHT, TASK_PAIRS } from "./vocab";
 
 export type TagSignal = { weight: number; sources: string[] };
@@ -164,35 +165,21 @@ export function buildUserModel(p: StudentProfile, egeSubjects: EgeSubject[], reg
 
 /* ── Портрет ── */
 
-const KLIMOV_NOUN: Record<Klimov, string> = { P: "коммуникатор", T: "технарь", S: "аналитик", A: "творец", N: "натуралист" };
 
 export function buildPortrait(p: StudentProfile, m: UserModel): string {
-  let type = "исследователь";
+  const g = p.gender === "f" ? "готова" : p.gender === "m" ? "готов" : "готов(а)";
+  const parts: string[] = [];
   if (m.klimov) {
     const top = (Object.entries(m.klimov) as [Klimov, number][]).sort((a, b) => b[1] - a[1])[0][0];
-    type = KLIMOV_NOUN[top];
-  }
-  const prefix = m.style.hands > m.style.head ? "практик-" : m.style.head > m.style.hands ? "мыслитель-" : "";
-  const parts: string[] = [];
-  const where = m.city ? ` из ${genitiveCity(m.city)}` : m.region ? ` (${m.region.name})` : "";
-  parts.push(`Ты — ${prefix}${type}${where}`);
-  const ready = p.gender === "f" ? "готова" : "готов";
-  const reloc: Record<string, string> = {
-    no: `не ${ready} к переезду`,
-    region: `${ready} переехать в пределах региона`,
-    nearest: `${ready} к переезду в ближайший крупный город`,
-    russia: `${ready} переехать в любой город России`,
-    abroad: "рассматриваешь учёбу и за рубежом",
-  };
-  if (p.relocation) parts.push(reloc[p.relocation]);
-  const horizon: Record<string, string> = {
-    asap: "нужен доход уже с 1–2 курса",
-    parttime: "хочешь подрабатывать во время учёбы",
-    long: `${ready} учиться долго ради дохода потом`,
-  };
-  if (p.moneyHorizon && horizon[p.moneyHorizon]) parts.push(horizon[p.moneyHorizon]);
-  if (p.finance === "budget") parts.push("рассчитываешь на бюджет");
-  return parts.join(", ") + ".";
+    const style = m.style.hands > m.style.head ? PORTRAIT.hands : m.style.head > m.style.hands ? PORTRAIT.head : "";
+    parts.push(PORTRAIT.start(PORTRAIT.types[top] + style));
+  } else parts.push(PORTRAIT.unknownType);
+  if (m.city) parts.push(PORTRAIT.from(prepositionalCity(m.city)));
+  else if (m.region) parts.push(PORTRAIT.region(m.region.name));
+  if (p.relocation) parts.push(PORTRAIT.relocation(p.relocation, g));
+  if (p.moneyHorizon) parts.push(PORTRAIT.horizon(p.moneyHorizon, g));
+  if (p.finance === "budget") parts.push(PORTRAIT.budget);
+  return parts.filter(Boolean).join(" ");
 }
 
 export { genitiveCity };

@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/misc";
 import { useProfile } from "@/lib/client/storage";
 import type { Explanation, StudentProfile } from "@/lib/schemas";
+import { EXPLAIN } from "@/lib/copy";
 
 export function profileSummary(p: StudentProfile): string {
   const parts: string[] = [];
@@ -43,18 +44,18 @@ export function ExplainBlock({ entityType, entityId, variant = "profession" }: {
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-base">
           <Sparkles className="h-4 w-4 text-primary" />
-          {variant === "university" ? "Почувствуй вайб: совет перед визитом" : "Почему это тебе"}
-          <span className="ml-auto text-[11px] font-normal text-muted-foreground">{data.source === "ai" ? "персонально от ИИ" : "шаблон демо-режима"}</span>
+          {variant === "university" ? EXPLAIN.vibeTitle : EXPLAIN.whyTitle}
+          <span className="ml-auto text-[11px] font-normal text-muted-foreground">{data.source === "ai" ? EXPLAIN.ai : EXPLAIN.template}</span>
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4 text-sm">
         <p>{data.whyYou}</p>
         <div>
-          <p className="mb-1 flex items-center gap-1.5 font-medium"><Sun className="h-4 w-4 text-warn" /> {variant === "university" ? "Как прочувствовать атмосферу" : "День из жизни"}</p>
+          <p className="mb-1 flex items-center gap-1.5 font-medium"><Sun className="h-4 w-4 text-warn" /> {variant === "university" ? EXPLAIN.vibeDayTitle : EXPLAIN.dayTitle}</p>
           <p className="text-muted-foreground">{data.dayInLife}</p>
         </div>
         <div>
-          <p className="mb-1 flex items-center gap-1.5 font-medium"><MessageCircleQuestion className="h-4 w-4 text-accent" /> Что спросить у студентов 2–3 курса</p>
+          <p className="mb-1 flex items-center gap-1.5 font-medium"><MessageCircleQuestion className="h-4 w-4 text-accent" /> {EXPLAIN.askTitle}</p>
           <ul className="list-inside list-disc space-y-0.5 text-muted-foreground">{data.askStudents.map((q) => <li key={q}>{q}</li>)}</ul>
         </div>
       </CardContent>

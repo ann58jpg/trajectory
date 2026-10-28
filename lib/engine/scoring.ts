@@ -5,7 +5,8 @@ import type { Catalog } from "@/lib/data/validate";
 import { ENGINE, WEIGHT_ANCHORS, weightsAt, type Weights } from "./config";
 import { egeCheck, hardFilter, isOnline, reachableRegionIds, fmtRub } from "./filters";
 import type { UserModel } from "./profile";
-import { HOBBIES, OUTLOOK_LABEL } from "./vocab";
+import { HOBBIES } from "./vocab";
+import { REASONS } from "@/lib/copy";
 
 const clamp = (x: number, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 
@@ -167,7 +168,7 @@ export function scoreProgram(
 ): ProgramMatch {
   const excluded = hardFilter(pr, uni, spec, p, m, regions, egeNames);
   const online = isOnline(pr);
-  const local = !!m.city && uni.city === m.city;
+  const local = Boolean(m.city) && uni.city === m.city;
   const { chance, userSum } = chanceFor(pr, spec, p, m, uni);
   const egeOk = uni.abroad || egeCheck(spec, m.ege).ok || !m.egeChosen;
   const cost = pr.budgetPlaces > 0 && (p.finance === "budget" || p.finance === null || chance === "high" || chance === "medium")
@@ -304,27 +305,27 @@ export function computeRecs(ctx: ScoredContext, programs: Map<string, ProgramMat
     let bonus = 0;
     const hz = p.moneyHorizon === "asap" ? ENGINE.horizon.asap : p.moneyHorizon === "parttime" ? ENGINE.horizon.parttime : null;
     if (hz) {
-      if (prof.earlyEntryCourse !== null && prof.earlyEntryCourse <= 1) { bonus += hz.early1; bonusNotes.push("можно работать с 1 курса"); }
-      else if (prof.earlyEntryCourse === 2) { bonus += hz.early2; bonusNotes.push("можно начать работать со 2 курса"); }
-      else if (prof.earlyEntryCourse === 3) { bonus += hz.early3; bonusNotes.push("подработка по профилю с 3 курса"); }
+      if (prof.earlyEntryCourse !== null && prof.earlyEntryCourse <= 1) { bonus += hz.early1; bonusNotes.push(REASONS.early1); }
+      else if (prof.earlyEntryCourse === 2) { bonus += hz.early2; bonusNotes.push(REASONS.early2); }
+      else if (prof.earlyEntryCourse === 3) { bonus += hz.early3; bonusNotes.push(REASONS.early3); }
       if (passing.some((x) => x.forms.some((f) => f !== "full")) || passing.some((x) => catalog.programs.find((q) => q.id === x.programId)?.dual)) {
-        bonus += hz.flexibleForm; bonusNotes.push("есть вечерняя/дуальная/онлайн-форма");
+        bonus += hz.flexibleForm; bonusNotes.push(REASONS.flexible);
       }
-      if (passing.some((x) => specs.get(x.specialtyCode)?.level === "spo")) { bonus += hz.spo; bonusNotes.push("быстрый старт через колледж (СПО)"); }
+      if (passing.some((x) => specs.get(x.specialtyCode)?.level === "spo")) { bonus += hz.spo; bonusNotes.push(REASONS.spo); }
       const minYears = Math.min(...(passingSpecs.length ? passingSpecs : profSpecs).map((s) => s.years));
-      if (minYears >= 6) { bonus += hz.longPenalty; bonusNotes.push("долгое обучение (6 лет и более)"); }
+      if (minYears >= 6) { bonus += hz.longPenalty; bonusNotes.push(REASONS.long); }
     }
-    if (p.guides.includes("remote") && prof.remote === "yes") { bonus += 0.03; bonusNotes.push("можно работать удалённо"); }
+    if (p.guides.includes("remote") && prof.remote === "yes") { bonus += 0.03; bonusNotes.push(REASONS.remote); }
     if (p.guides.includes("employment")) bonus += 0.04 * (employment - 0.7);
 
     // Причины (2–4 человеческих)
     const reasons: string[] = [];
-    for (const h of r.hits.slice(0, 2)) reasons.push(`совпадает с твоими интересами: ${h.source}`);
-    if (prof.demand.trend >= 0.1) reasons.push(`спрос растёт: +${Math.round(prof.demand.trend * 100)}% вакансий за год (оценка по hh.ru)`);
-    if (prof.priorities.length) reasons.push(`входит в госприоритеты: «${prioName.get(prof.priorities[0])}»`);
+    for (const h of r.hits.slice(0, 2)) reasons.push(REASONS.interest(h.source));
+    if (prof.demand.trend >= 0.1) reasons.push(REASONS.demandGrows(Math.round(prof.demand.trend * 100)));
+    if (prof.priorities.length) reasons.push(REASONS.priority(prioName.get(prof.priorities[0]) ?? ""));
     if (bonusNotes.length && hz) reasons.push(bonusNotes[0]);
-    if (prof.outlook.status === "red") reasons.push(`осторожно: ${OUTLOOK_LABEL.red.toLowerCase()} — ${prof.outlook.reason.split(";")[0]}`);
-    if (reasons.length < 2) reasons.push(`зарплата через 3–5 лет ~${fmtRub(prof.salary.middle * r.salaryCoef)}/мес (${r.salaryLabel})`);
+    if (prof.outlook.status === "red") reasons.push(REASONS.careful(prof.outlook.reason.split(";")[0]));
+    if (reasons.length < 2) reasons.push(REASONS.salary(fmtRub(prof.salary.middle * r.salaryCoef), r.salaryLabel));
 
     const topPrograms = passing
       .slice()
@@ -356,6 +357,7 @@ export function computeRecs(ctx: ScoredContext, programs: Map<string, ProgramMat
       earlyEntryCourse: prof.earlyEntryCourse,
       remote: prof.remote,
       reasons: reasons.slice(0, 4),
+      tasks: prof.tasks.slice(0, 5),
       available: topPrograms.length > 0,
       egeOk,
       programs: topPrograms.slice(0, 6),

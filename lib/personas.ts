@@ -4,7 +4,7 @@ import { StudentProfile } from "@/lib/schemas";
 export const PERSONAS = {
   anya: {
     title: "Аня, Москва",
-    subtitle: "литература и рисование, «Интересы», без переезда",
+    subtitle: "литература и рисование, выбирает по интересам, без переезда",
     profile: StudentProfile.parse({
       consent: true,
       start: "interest",
@@ -34,7 +34,7 @@ export const PERSONAS = {
   },
   artem: {
     title: "Артём, Сызрань (Самарская обл.)",
-    subtitle: "математика и физика, деньги со 2 курса, без переезда, только бюджет",
+    subtitle: "математика и физика, деньги нужны со 2 курса, без переезда, только бюджет",
     profile: StudentProfile.parse({
       consent: true,
       start: "balance",
@@ -90,7 +90,7 @@ export const PERSONAS = {
   },
   ilya: {
     title: "Илья, Новосибирск",
-    subtitle: "программирование, информатика + математика, «Деньги», важен ВУЦ",
+    subtitle: "программирование, информатика и математика, выбирает по доходу, нужна военная кафедра",
     profile: StudentProfile.parse({
       consent: true,
       start: "money",

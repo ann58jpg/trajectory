@@ -94,3 +94,20 @@ export function pointsWord(n: number): string {
 }
 
 export const rubles = (n: number) => `${(Math.round(n / 1000) * 1000).toLocaleString("ru-RU")} ₽`;
+
+export const SUBJECT_SHORT: Record<string, string> = {
+  rus: "Русский",
+  math: "Математика (проф.)",
+  math_base: "Математика (база)",
+  phys: "Физика",
+  chem: "Химия",
+  bio: "Биология",
+  inf: "Информатика",
+  soc: "Обществознание",
+  hist: "История",
+  lit: "Литература",
+  eng: "Иностранный язык",
+  foreign: "Иностранный язык",
+  geo: "География",
+  creative: "Творческий экзамен",
+};

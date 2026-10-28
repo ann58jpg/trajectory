@@ -10,7 +10,8 @@ import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
 import { KEYS, readLS, removeLS, useProfile, writeLS } from "@/lib/client/storage";
 import { emptyProfile, type LikeReason, type StudentProfile } from "@/lib/schemas";
-import { ACHIEVEMENTS, BENEFITS, GUIDES, HOBBIES, LIKE_REASONS, TASK_PAIRS, UNI_CRITERIA, WORK_FORMATS, RELOCATION_LABEL } from "@/lib/engine/vocab";
+import { ACHIEVEMENTS, BENEFITS, GUIDES, HOBBIES, LIKE_REASONS, TASK_PAIRS, UNI_CRITERIA, WORK_FORMATS } from "@/lib/engine/vocab";
+import { QUIZ } from "@/lib/copy";
 import { PERSONAS, type PersonaId } from "@/lib/personas";
 import { z } from "zod";
 import { cn } from "@/lib/utils";
@@ -68,16 +69,14 @@ export function Quiz({ regions, universities, subjects }: Props) {
             <div className="rounded-lg border bg-muted/40 p-4 text-sm leading-relaxed">
               <p className="mb-2 flex items-center gap-2 font-medium"><Lock className="h-4 w-4 text-primary" /> Коротко о данных</p>
               <ul className="list-inside list-disc space-y-1 text-muted-foreground">
-                <li>Мы не спрашиваем ФИО, телефон и почту.</li>
-                <li>Ответы хранятся только в твоём браузере и отправляются на сервер лишь для расчёта — там они не сохраняются.</li>
-                <li>Можно пропустить любой вопрос: рекомендации станут менее точными, и мы честно это покажем.</li>
+                {QUIZ.consent.privacy.map((x) => <li key={x}>{x}</li>)}
               </ul>
             </div>
             <Chip selected={p.consent} onClick={() => up({ consent: !p.consent })} className="flex w-full items-center gap-3">
               <span className={cn("grid h-5 w-5 shrink-0 place-items-center rounded border", p.consent && "border-primary bg-primary text-primary-foreground")}>
                 {p.consent && <Check className="h-3.5 w-3.5" />}
               </span>
-              Согласен(на) на обработку ответов анкеты для расчёта рекомендаций
+              {QUIZ.consent.agree}
             </Chip>
             <div className="space-y-2 pt-2">
               <p className="flex items-center gap-2 text-sm font-medium"><Wand2 className="h-4 w-4 text-primary" /> Или посмотри на примере — заполнить анкету за тестового школьника:</p>
@@ -102,17 +101,12 @@ export function Quiz({ regions, universities, subjects }: Props) {
       {
         id: "start",
         block: "A. Отправная точка",
-        title: "Из чего ты исходишь при выборе?",
-        hint: "Это стартовое положение ползунка «Интерес ↔ Доход». На экране результатов его можно двигать.",
+        title: QUIZ.start.title,
+        hint: QUIZ.start.hint,
         answered: (p) => p.start !== null,
         render: () => (
           <div className="grid gap-2">
-            {([
-              ["interest", "Хочу заниматься тем, что нравится"],
-              ["money", "Мне важнее всего доход"],
-              ["balance", "Хочу баланс"],
-              ["unknown", "Пока не знаю"],
-            ] as const).map(([v, l]) => (
+            {(Object.entries(QUIZ.start.options) as [NonNullable<StudentProfile["start"]>, string][]).map(([v, l]) => (
               <Chip key={v} role="radio" selected={p.start === v} onClick={() => up({ start: v })}>{l}</Chip>
             ))}
           </div>
@@ -140,17 +134,12 @@ export function Quiz({ regions, universities, subjects }: Props) {
       {
         id: "horizon",
         block: "A. Отправная точка",
-        title: "Горизонт денег",
-        hint: "Если деньги нужны сразу, поднимем вечернюю и дуальную форму, целевое обучение, колледж с переходом в вуз и профессии с ранним входом.",
+        title: QUIZ.horizon.title,
+        hint: QUIZ.horizon.hint,
         answered: (p) => p.moneyHorizon !== null,
         render: () => (
           <div className="grid gap-2">
-            {([
-              ["long", "Готов(а) учиться долго ради дохода потом"],
-              ["parttime", "Хочу подрабатывать во время учёбы"],
-              ["asap", "Мне нужно зарабатывать уже с 1–2 курса"],
-              ["any", "Не важно"],
-            ] as const).map(([v, l]) => (
+            {(Object.entries(QUIZ.horizon.options) as [NonNullable<StudentProfile["moneyHorizon"]>, string][]).map(([v, l]) => (
               <Chip key={v} role="radio" selected={p.moneyHorizon === v} onClick={() => up({ moneyHorizon: v })}>{l}</Chip>
             ))}
           </div>
@@ -160,7 +149,7 @@ export function Quiz({ regions, universities, subjects }: Props) {
         id: "region",
         block: "B. География и условия",
         title: "Где ты живёшь?",
-        hint: "Регион — главный параметр: зарплаты, вакансии и стоимость жизни считаем для него.",
+        hint: QUIZ.region.hint,
         answered: (p) => p.regionId !== null,
         render: () => {
           const q = regionQuery.trim().toLowerCase();
@@ -196,11 +185,11 @@ export function Quiz({ regions, universities, subjects }: Props) {
         id: "relocation",
         block: "B. География и условия",
         title: "Готов(а) ли переехать ради учёбы?",
-        hint: "Это жёсткий фильтр: если «Нет», вузы других городов не покажем вообще — только онлайн и дистанционные форматы.",
+        hint: QUIZ.relocation.hint,
         answered: (p) => p.relocation !== null,
         render: () => (
           <div className="grid gap-2">
-            {(Object.entries(RELOCATION_LABEL) as [NonNullable<StudentProfile["relocation"]>, string][]).map(([v, l]) => (
+            {(Object.entries(QUIZ.relocation.options) as [NonNullable<StudentProfile["relocation"]>, string][]).map(([v, l]) => (
               <Chip key={v} role="radio" selected={p.relocation === v} onClick={() => up({ relocation: v })}>{l}</Chip>
             ))}
           </div>
@@ -257,7 +246,7 @@ export function Quiz({ regions, universities, subjects }: Props) {
         id: "gender",
         block: "B. География и условия",
         title: "Пол (необязательно)",
-        hint: "Спрашиваем только чтобы учесть военный учебный центр (ВУЦ).",
+        hint: QUIZ.gender.hint,
         answered: (p) => p.gender !== null,
         render: () => (
           <div className="space-y-4">
@@ -268,7 +257,7 @@ export function Quiz({ regions, universities, subjects }: Props) {
             </div>
             {p.gender === "m" && (
               <div className="space-y-2">
-                <p className="text-sm font-medium">Важна ли военная кафедра / ВУЦ?</p>
+                <p className="text-sm font-medium">{QUIZ.gender.vuc}</p>
                 <div className="flex flex-wrap gap-2">
                   {([["yes", "Да, обязательно"], ["no", "Нет"], ["unknown", "Не знаю"]] as const).map(([v, l]) => (
                     <Chip key={v} role="radio" selected={p.vucImportant === v} onClick={() => up({ vucImportant: v })}>{l}</Chip>
@@ -373,7 +362,7 @@ export function Quiz({ regions, universities, subjects }: Props) {
                 <b className="tabular-nums">{p.gpa?.toFixed(1) ?? "не указан"}</b>
               </div>
               <Slider value={[p.gpa ?? 4]} min={3} max={5} step={0.1} onValueChange={([v]) => up({ gpa: Math.round(v * 10) / 10 })} thumbLabel="Средний балл" />
-              <p className="text-xs text-muted-foreground">Нужен для колледжей (СПО): там конкурс по среднему баллу аттестата.</p>
+              <p className="text-xs text-muted-foreground">{QUIZ.grade.gpaHint}</p>
             </div>
           </div>
         ),
@@ -382,7 +371,7 @@ export function Quiz({ regions, universities, subjects }: Props) {
         id: "likes",
         block: "C. Школа и ЕГЭ",
         title: "Какие предметы нравятся или получаются — и почему?",
-        hint: "Важно: «интересно само по себе» весит больше, чем «нравится из-за учителя» или «хорошие оценки, но не нравится».",
+        hint: QUIZ.likes.hint,
         answered: (p) => Object.keys(p.subjectLikes).length > 0,
         render: () => {
           const ids = Array.from(new Set([...p.ege.map((e) => e.subject), ...Object.keys(p.subjectLikes)]));
@@ -442,7 +431,7 @@ export function Quiz({ regions, universities, subjects }: Props) {
               <div className="flex flex-wrap gap-2">
                 {([
                   ["none", "Не участвовал(а)"], ["school", "Школьный"], ["municipal", "Муниципальный"],
-                  ["regional", "Региональный"], ["final", "Заключительный ВсОШ"], ["listed", "Перечневые олимпиады вузов"],
+                  ["regional", "Региональный"], ["final", "Финал всероссийской"], ["listed", "Олимпиады вузов из перечня"],
                 ] as const).map(([v, l]) => (
                   <Chip key={v} role="radio" selected={p.olympiad === v} onClick={() => up({ olympiad: v })}>{l}</Chip>
                 ))}
@@ -477,7 +466,7 @@ export function Quiz({ regions, universities, subjects }: Props) {
         id: "pairs",
         block: "D. Интересы",
         title: "Какие задачи тебе ближе?",
-        hint: "Шесть пар в духе типологии Климова / RIASEC. Если нравится и то, и другое — выбирай «Оба».",
+        hint: "Если нравится и то и другое — выбирай «Оба».",
         answered: (p) => Object.keys(p.taskPairs).length >= 3,
         render: () => (
           <div className="space-y-3">
@@ -512,7 +501,7 @@ export function Quiz({ regions, universities, subjects }: Props) {
         id: "dream",
         block: "D. Интересы",
         title: "Кем хочешь стать и почему? Своими словами",
-        hint: "Пиши как есть: мечты, сомнения, что точно не хочется. С ключом ИИ текст разберёт модель, без него — поиск по ключевым словам.",
+        hint: QUIZ.dream.hint,
         answered: (p) => p.dream.trim().length >= 10,
         render: () => (
           <div className="space-y-2">
@@ -698,7 +687,7 @@ function Summary({ p, steps, completeness, onJump }: { p: StudentProfile; steps:
         </div>
         <Progress value={completeness} label="Полнота анкеты" />
         <p className="mt-2 text-xs text-muted-foreground">
-          {completeness >= 85 ? "Отлично — рекомендации будут точными." : "Пропущенные вопросы снижают уверенность рекомендаций — это будет видно в отчёте."}
+          {completeness >= 85 ? QUIZ.done.good : QUIZ.done.weak}
         </p>
       </div>
       {missed.length > 0 && (
