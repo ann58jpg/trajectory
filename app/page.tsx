@@ -106,12 +106,12 @@ export default function Home() {
             <CardContent className="space-y-2 pt-5 text-sm">
               <p className="font-medium">{LANDING.dataNow}</p>
               <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-muted-foreground">
-                <li>{c.regions.filter((r) => r.id !== "abroad").length} регионов</li>
-                <li>{c.specialties.length} направлений учёбы</li>
-                <li>{c.professions.length} профессий</li>
-                <li>{c.universities.length} вузов и колледжей</li>
-                <li>{cities} городов</li>
-                <li>{c.programs.length} программ</li>
+                <li>{LANDING.stats.regions(c.regions.filter((r) => r.id !== "abroad").length)}</li>
+                <li>{LANDING.stats.specialties(c.specialties.length)}</li>
+                <li>{LANDING.stats.professions(c.professions.length)}</li>
+                <li>{LANDING.stats.universities(c.universities.length)}</li>
+                <li>{LANDING.stats.cities(cities)}</li>
+                <li>{LANDING.stats.programs(c.programs.length)}</li>
               </ul>
               <p className="pt-2 font-medium">{LANDING.dataSources}</p>
               <ul className="list-inside list-disc text-muted-foreground">{LANDING.sources.map((s) => <li key={s}>{s}</li>)}</ul>

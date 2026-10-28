@@ -43,7 +43,7 @@ test("анкету можно пройти целиком на 375px, ответ
   await page.getByTestId("quiz-next").click();
 
   // C9–C13
-  await page.getByRole("radio", { name: /уже выбрал/ }).click();
+  await page.getByRole("radio", { name: QUIZ.egeOrder.options.chosen }).click();
   await page.getByTestId("quiz-next").click();
   // русский выбран сам и его нельзя снять
   await expect(page.getByRole("checkbox", { name: /Русский язык/ })).toBeDisabled();

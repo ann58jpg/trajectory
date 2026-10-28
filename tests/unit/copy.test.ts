@@ -77,3 +77,20 @@ describe("тексты интерфейса", () => {
     expect(findBanned("Мы подобрали профессии")).toEqual([]);
   });
 });
+
+describe("все тексты интерфейса — в lib/copy.ts", () => {
+  it("в разметке страниц и компонентов нет русских строк (кроме служебных /admin и текста для ИИ)", () => {
+    const allowed = [/app[\\/]admin[\\/]/, /explain-block\.tsx$/];
+    const problems: string[] = [];
+    for (const dir of ["app", "components"]) {
+      for (const f of walk(path.join(ROOT, dir), /\.tsx$/)) {
+        if (allowed.some((re) => re.test(f))) continue;
+        fs.readFileSync(f, "utf8").split("\n").forEach((line, i) => {
+          const code = line.replace(/\/\/.*$/, "").replace(/\{\/\*.*?\*\/\}/g, "").replace(/^\s*\*.*$/, "").replace(/\/\*.*?\*\//g, "");
+          if (/[А-Яа-яЁё]{3,}/.test(code)) problems.push(`${path.relative(ROOT, f)}:${i + 1}: ${line.trim().slice(0, 80)}`);
+        });
+      }
+    }
+    expect(problems).toEqual([]);
+  });
+});

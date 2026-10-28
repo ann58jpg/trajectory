@@ -118,7 +118,7 @@ function professionRows(d: RecommendResponse): Row<Rec>[] {
     { label: COMPARE.rows.outlook, show: (r) => <OutlookBadge status={r.outlook} />, num: (r) => ({ green: 3, yellow: 2, red: 1 })[r.outlook], better: "max" },
     { label: COMPARE.rows.years, show: (r) => yearsWord(r.years), num: (r) => r.years, better: "min" },
     { label: CARD.chance, show: (r) => (r.programs[0] ? CHANCE_TEXT[r.programs[0].chance] : "—"), num: (r) => (r.programs[0] ? CHANCE_NUM[r.programs[0].chance] : null), better: "max" },
-    { label: COMPARE.rows.tuition, show: (r) => { const x = tuition(r); return x === null ? "—" : x === 0 ? COMPARE.budget : `${rubK(x)}/год`; }, num: tuition, better: "min" },
+    { label: COMPARE.rows.tuition, show: (r) => { const x = tuition(r); return x === null ? "—" : x === 0 ? COMPARE.budget : COMPARE.perYear(rubK(x)); }, num: tuition, better: "min" },
     { label: COMPARE.rows.early, show: (r) => (r.earlyEntryCourse === null ? "—" : CARD.earlyWork(r.earlyEntryCourse)), num: (r) => (r.earlyEntryCourse === null ? null : -r.earlyEntryCourse), better: "max" },
     { label: COMPARE.rows.remote, show: (r) => COMPARE.remoteText[r.remote], num: (r) => ({ yes: 2, partial: 1, no: 0 })[r.remote], better: "max" },
     { label: COMPARE.rows.exams, show: (r) => r.programs[0]?.exams ?? "—" },
@@ -183,7 +183,7 @@ function Roi({ data }: { data: RecommendResponse }) {
               <CartesianGrid strokeDasharray="3 3" stroke={CHART.grid} />
               <XAxis dataKey="year" tickFormatter={(y) => `${y}`} stroke={CHART.axis} fontSize={12} />
               <YAxis stroke={CHART.axis} fontSize={12} width={56} />
-              <Tooltip formatter={(v: number) => `${v.toLocaleString("ru-RU")} тыс. ₽`} contentStyle={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 8 }} />
+              <Tooltip formatter={(v: number) => COMPARE.thousandsRub(v)} contentStyle={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 8 }} />
               <Legend formatter={(v) => (v === "interests" ? `${RESULTS.modeInterests}: ${a.name}` : `${RESULTS.modeMoney}: ${b.name}`)} />
               <ReferenceLine y={0} stroke={CHART.axis} />
               <Line type="monotone" dataKey="interests" stroke={CHART.primary} strokeWidth={2.5} dot={false} />

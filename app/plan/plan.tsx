@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { OutlookBadge } from "@/components/app/outlook-badge";
 import { usePlan, useProfile } from "@/lib/client/storage";
-import { ADMISSION_STAGES, COMMON, OUTLOOK_TEXT, PLAN } from "@/lib/copy";
+import { ADMISSION_STAGES, COMMON, EXAMS, OUTLOOK_TEXT, PLAN } from "@/lib/copy";
 import { track } from "@/lib/analytics";
 import type { Outlook, Rec, RecommendResponse } from "@/lib/schemas";
 import { rubK, cn } from "@/lib/utils";
@@ -59,7 +59,7 @@ export function Plan({ professions, universities, programs, specialties, subject
       const need = [...spec.mandatory.map((s) => subjects[s] ?? s), ...(spec.oneOf.length ? [spec.oneOf.map((s) => subjects[s] ?? s).join(" / ")] : [])];
       const missing = [
         ...spec.mandatory.filter((s) => !userSubjects.has(s)).map((s) => subjects[s] ?? s),
-        ...(spec.oneOf.length && !spec.oneOf.some((s) => userSubjects.has(s)) ? [spec.oneOf.map((s) => subjects[s] ?? s).join(" или ")] : []),
+        ...(spec.oneOf.length && !spec.oneOf.some((s) => userSubjects.has(s)) ? [spec.oneOf.map((s) => subjects[s] ?? s).join(EXAMS.or)] : []),
       ];
       out.push({ target: `${t.label} (${spec.code})`, need, missing });
     }

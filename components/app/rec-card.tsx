@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import type { Rec } from "@/lib/schemas";
 import { contributions } from "@/lib/engine/scoring";
 import type { WEIGHT_ANCHORS } from "@/lib/engine/config";
-import { CARD, CHANCE_TEXT, COMMON, MATCH_TEXT, OUTLOOK_TEXT } from "@/lib/copy";
+import { CARD, CHANCE_TEXT, COMMON, MATCH_TEXT, OUTLOOK_TEXT, RESULTS } from "@/lib/copy";
 import { rubK, cn } from "@/lib/utils";
 import { SourceMark } from "./source-mark";
 import { PlanButton } from "./plan-button";
@@ -74,7 +74,7 @@ export function RecCard({
         </Button>
         {variant !== "compact" && (
           <Button size="sm" variant="ghost" onClick={() => setOpen((x) => !x)} aria-expanded={open} data-testid="where-to-study">
-            <GraduationCap /> {`Где учиться (${rec.programs.length})`} <ChevronDown className={cn("transition-transform", open && "rotate-180")} />
+            <GraduationCap /> {RESULTS.whereToStudy(rec.programs.length)} <ChevronDown className={cn("transition-transform", open && "rotate-180")} />
           </Button>
         )}
         <span className="ml-auto flex gap-1.5">

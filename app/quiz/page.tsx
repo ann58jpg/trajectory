@@ -1,7 +1,8 @@
 import { getCatalog } from "@/lib/db/catalog";
 import { Quiz } from "./quiz";
+import { PAGE_TITLES } from "@/lib/copy";
 
-export const metadata = { title: "Анкета" };
+export const metadata = { title: PAGE_TITLES.quiz };
 
 export default function QuizPage() {
   const c = getCatalog();

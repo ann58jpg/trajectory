@@ -28,7 +28,7 @@ type Props = {
 
 type Step = {
   id: string;
-  block: "Старт" | "A. Отправная точка" | "B. География и условия" | "C. Школа и ЕГЭ" | "D. Интересы" | "E. Вузы" | "Готово";
+  block: string;
   title: string;
   hint?: string;
   answered: (p: StudentProfile) => boolean;
@@ -68,13 +68,13 @@ export function Quiz({ regions, universities, subjects }: Props) {
     const list: Step[] = [
       {
         id: "consent",
-        block: "Старт",
-        title: "Перед началом",
+        block: QUIZ.blocks.start,
+        title: QUIZ.consent.title,
         answered: (p) => p.consent,
         render: () => (
           <div className="space-y-4">
             <div className="rounded-lg border bg-muted/40 p-4 text-sm leading-relaxed">
-              <p className="mb-2 flex items-center gap-2 font-medium"><Lock className="h-4 w-4 text-primary" /> Коротко о данных</p>
+              <p className="mb-2 flex items-center gap-2 font-medium"><Lock className="h-4 w-4 text-primary" /> {QUIZ.consent.privacyTitle}</p>
               <ul className="list-inside list-disc space-y-1 text-muted-foreground">
                 {QUIZ.consent.privacy.map((x) => <li key={x}>{x}</li>)}
               </ul>
@@ -86,7 +86,7 @@ export function Quiz({ regions, universities, subjects }: Props) {
               {QUIZ.consent.agree}
             </Chip>
             <div className="space-y-2 pt-2">
-              <p className="flex items-center gap-2 text-sm font-medium"><Wand2 className="h-4 w-4 text-primary" /> Или посмотри на примере — заполнить анкету за тестового школьника:</p>
+              <p className="flex items-center gap-2 text-sm font-medium"><Wand2 className="h-4 w-4 text-primary" /> {QUIZ.consent.tryPersona}</p>
               <div className="grid gap-2 sm:grid-cols-2">
                 {(Object.keys(PERSONAS) as PersonaId[]).map((id) => (
                   <button
@@ -107,7 +107,7 @@ export function Quiz({ regions, universities, subjects }: Props) {
       },
       {
         id: "start",
-        block: "A. Отправная точка",
+        block: QUIZ.blocks.A,
         title: QUIZ.start.title,
         hint: QUIZ.start.hint,
         answered: (p) => p.start !== null,
@@ -121,9 +121,9 @@ export function Quiz({ regions, universities, subjects }: Props) {
       },
       {
         id: "guides",
-        block: "A. Отправная точка",
-        title: "Главный ориентир сейчас",
-        hint: "Выбери до трёх.",
+        block: QUIZ.blocks.A,
+        title: QUIZ.guides.title,
+        hint: QUIZ.guides.hint,
         answered: (p) => p.guides.length > 0 || p.guideOther.trim().length > 0,
         render: () => (
           <div className="space-y-3">
@@ -134,13 +134,13 @@ export function Quiz({ regions, universities, subjects }: Props) {
                 </Chip>
               ))}
             </div>
-            <Input placeholder="Свой вариант" value={p.guideOther} maxLength={200} onChange={(e) => up({ guideOther: e.target.value })} aria-label="Свой вариант ориентира" />
+            <Input placeholder={QUIZ.guides.other} value={p.guideOther} maxLength={200} onChange={(e) => up({ guideOther: e.target.value })} aria-label={QUIZ.guides.other} />
           </div>
         ),
       },
       {
         id: "horizon",
-        block: "A. Отправная точка",
+        block: QUIZ.blocks.A,
         title: QUIZ.horizon.title,
         hint: QUIZ.horizon.hint,
         answered: (p) => p.moneyHorizon !== null,
@@ -154,8 +154,8 @@ export function Quiz({ regions, universities, subjects }: Props) {
       },
       {
         id: "region",
-        block: "B. География и условия",
-        title: "Где ты живёшь?",
+        block: QUIZ.blocks.B,
+        title: QUIZ.region.title,
         hint: QUIZ.region.hint,
         answered: (p) => p.regionId !== null,
         render: () => {
@@ -166,18 +166,18 @@ export function Quiz({ regions, universities, subjects }: Props) {
             <div className="space-y-3">
               <div className="relative">
                 <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                <Input className="pl-9" placeholder="Поиск региона или города" value={regionQuery} onChange={(e) => setRegionQuery(e.target.value)} aria-label="Поиск региона" />
+                <Input className="pl-9" placeholder={QUIZ.region.search} value={regionQuery} onChange={(e) => setRegionQuery(e.target.value)} aria-label={QUIZ.region.searchLabel} />
               </div>
-              <div className="grid max-h-64 gap-1.5 overflow-y-auto pr-1 sm:grid-cols-2" role="radiogroup" aria-label="Регион">
+              <div className="grid max-h-64 gap-1.5 overflow-y-auto pr-1 sm:grid-cols-2" role="radiogroup" aria-label={QUIZ.region.label}>
                 {filtered.map((r) => (
                   <Chip key={r.id} role="radio" selected={p.regionId === r.id} onClick={() => up({ regionId: r.id, city: r.cities[0] })}>{r.name}</Chip>
                 ))}
-                {!filtered.length && <p className="text-sm text-muted-foreground">Не нашли регион? Выбери ближайший — данные по нему будут ближе всего.</p>}
+                {!filtered.length && <p className="text-sm text-muted-foreground">{QUIZ.region.notFound}</p>}
               </div>
               {region && (
                 <div className="space-y-2">
-                  <p className="text-sm font-medium">Город</p>
-                  <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="Город">
+                  <p className="text-sm font-medium">{QUIZ.region.city}</p>
+                  <div className="flex flex-wrap gap-2" role="radiogroup" aria-label={QUIZ.region.city}>
                     {region.cities.map((c) => (
                       <Chip key={c} role="radio" selected={p.city === c} onClick={() => up({ city: c })}>{c}</Chip>
                     ))}
@@ -190,8 +190,8 @@ export function Quiz({ regions, universities, subjects }: Props) {
       },
       {
         id: "relocation",
-        block: "B. География и условия",
-        title: "Готов(а) ли переехать ради учёбы?",
+        block: QUIZ.blocks.B,
+        title: QUIZ.relocation.title,
         hint: QUIZ.relocation.hint,
         answered: (p) => p.relocation !== null,
         render: () => (
@@ -204,12 +204,12 @@ export function Quiz({ regions, universities, subjects }: Props) {
       },
       {
         id: "dorm",
-        block: "B. География и условия",
-        title: "Нужно ли общежитие?",
+        block: QUIZ.blocks.B,
+        title: QUIZ.dorm.title,
         answered: (p) => p.dorm !== null,
         render: () => (
           <div className="flex flex-wrap gap-2">
-            {([["yes", "Да"], ["no", "Нет"], ["unknown", "Не знаю"]] as const).map(([v, l]) => (
+            {(Object.entries(QUIZ.dorm.options) as [keyof typeof QUIZ.dorm.options, string][]).map(([v, l]) => (
               <Chip key={v} role="radio" selected={p.dorm === v} onClick={() => up({ dorm: v })}>{l}</Chip>
             ))}
           </div>
@@ -217,29 +217,29 @@ export function Quiz({ regions, universities, subjects }: Props) {
       },
       {
         id: "finance",
-        block: "B. География и условия",
-        title: "Финансы и льготы",
+        block: QUIZ.blocks.B,
+        title: QUIZ.finance.title,
         answered: (p) => p.finance !== null,
         render: () => (
           <div className="space-y-4">
             <div className="grid gap-2">
               {([
-                ["budget", "Только бюджет"],
-                ["budget_or_paid", "Бюджет, но рассмотрю платное до суммы ниже"],
-                ["paid", "Готов(а) к платному"],
-                ["credit", "Рассматриваю образовательный кредит"],
+                ["budget", QUIZ.finance.options.budget],
+                ["budget_or_paid", QUIZ.finance.options.budget_or_paid],
+                ["paid", QUIZ.finance.options.paid],
+                ["credit", QUIZ.finance.options.credit],
               ] as const).map(([v, l]) => (
                 <Chip key={v} role="radio" selected={p.finance === v} onClick={() => up({ finance: v })}>{l}</Chip>
               ))}
             </div>
             {p.finance === "budget_or_paid" && (
               <div className="space-y-1 rounded-lg border p-3">
-                <p className="text-sm">Платное — не дороже <b>{p.paidLimit.toLocaleString("ru-RU")} ₽ в год</b></p>
-                <Slider value={[p.paidLimit]} min={50000} max={1000000} step={10000} onValueChange={([v]) => up({ paidLimit: v })} thumbLabel="Лимит стоимости в год" />
+                <p className="text-sm">{QUIZ.finance.limit(`${p.paidLimit.toLocaleString("ru-RU")} ₽`)}</p>
+                <Slider value={[p.paidLimit]} min={50000} max={1000000} step={10000} onValueChange={([v]) => up({ paidLimit: v })} thumbLabel={QUIZ.finance.limitLabel} />
               </div>
             )}
             <div className="space-y-2">
-              <p className="text-sm font-medium">Есть ли льготы? (можно несколько)</p>
+              <p className="text-sm font-medium">{QUIZ.finance.benefits}</p>
               <div className="flex flex-wrap gap-2">
                 {BENEFITS.map((b) => (
                   <Chip key={b.id} selected={p.benefits.includes(b.id)} onClick={() => up({ benefits: toggle(p.benefits, b.id) })}>{b.label}</Chip>
@@ -251,14 +251,14 @@ export function Quiz({ regions, universities, subjects }: Props) {
       },
       {
         id: "gender",
-        block: "B. География и условия",
-        title: "Пол (необязательно)",
+        block: QUIZ.blocks.B,
+        title: QUIZ.gender.title,
         hint: QUIZ.gender.hint,
         answered: (p) => p.gender !== null,
         render: () => (
           <div className="space-y-4">
             <div className="flex flex-wrap gap-2">
-              {([["m", "Мужской"], ["f", "Женский"], ["skip", "Не хочу указывать"]] as const).map(([v, l]) => (
+              {(Object.entries(QUIZ.gender.options) as [keyof typeof QUIZ.gender.options, string][]).map(([v, l]) => (
                 <Chip key={v} role="radio" selected={p.gender === v} onClick={() => up({ gender: v, vucImportant: v === "m" ? p.vucImportant : null })}>{l}</Chip>
               ))}
             </div>
@@ -266,7 +266,7 @@ export function Quiz({ regions, universities, subjects }: Props) {
               <div className="space-y-2">
                 <p className="text-sm font-medium">{QUIZ.gender.vuc}</p>
                 <div className="flex flex-wrap gap-2">
-                  {([["yes", "Да, обязательно"], ["no", "Нет"], ["unknown", "Не знаю"]] as const).map(([v, l]) => (
+                  {(Object.entries(QUIZ.gender.vucOptions) as [keyof typeof QUIZ.gender.vucOptions, string][]).map(([v, l]) => (
                     <Chip key={v} role="radio" selected={p.vucImportant === v} onClick={() => up({ vucImportant: v })}>{l}</Chip>
                   ))}
                 </div>
@@ -277,21 +277,21 @@ export function Quiz({ regions, universities, subjects }: Props) {
       },
       {
         id: "egeOrder",
-        block: "C. Школа и ЕГЭ",
-        title: "Как ты выбираешь предметы ЕГЭ?",
+        block: QUIZ.blocks.C,
+        title: QUIZ.egeOrder.title,
         answered: (p) => p.egeOrder !== null,
         render: () => (
           <div className="grid gap-2">
             {([
-              ["chosen", "Я уже выбрал(а) предметы ЕГЭ"],
-              ["by_goal", "Знаю вуз или профессию и подберу предметы под них"],
-              ["undecided", "Ещё не решил(а)"],
+              ["chosen", QUIZ.egeOrder.options.chosen],
+              ["by_goal", QUIZ.egeOrder.options.by_goal],
+              ["undecided", QUIZ.egeOrder.options.undecided],
             ] as const).map(([v, l]) => (
               <Chip key={v} role="radio" selected={p.egeOrder === v} onClick={() => up({ egeOrder: v })}>{l}</Chip>
             ))}
             {p.egeOrder && p.egeOrder !== "chosen" && (
               <p className="rounded-lg bg-primary/8 p-3 text-sm">
-                Хорошо — на экране результатов покажем, какие предметы нужны под каждую подходящую профессию. Ниже можно отметить предметы, которые ты рассматриваешь.
+                {QUIZ.egeOrder.goalHint}
               </p>
             )}
           </div>
@@ -299,7 +299,7 @@ export function Quiz({ regions, universities, subjects }: Props) {
       },
       {
         id: "ege",
-        block: "C. Школа и ЕГЭ",
+        block: QUIZ.blocks.C,
         title: QUIZ.ege.title,
         hint: QUIZ.ege.hint,
         answered: (p) => p.ege.some((e) => e.subject !== "rus") && p.ege.some((e) => e.subject === "rus" && e.score !== null),
@@ -307,7 +307,7 @@ export function Quiz({ regions, universities, subjects }: Props) {
       },
       {
         id: "dvi",
-        block: "C. Школа и ЕГЭ",
+        block: QUIZ.blocks.C,
         title: QUIZ.dvi.title,
         hint: QUIZ.dvi.hint,
         answered: (p) => p.dviReady.length > 0,
@@ -315,22 +315,22 @@ export function Quiz({ regions, universities, subjects }: Props) {
       },
       {
         id: "grade",
-        block: "C. Школа и ЕГЭ",
-        title: "Класс и средний балл",
+        block: QUIZ.blocks.C,
+        title: QUIZ.grade.title,
         answered: (p) => p.grade !== null,
         render: () => (
           <div className="space-y-4">
             <div className="flex flex-wrap gap-2">
-              {([["9", "9 класс"], ["10", "10 класс"], ["11", "11 класс"], ["grad", "Выпускник прошлых лет"]] as const).map(([v, l]) => (
+              {(Object.entries(QUIZ.grade.options) as [keyof typeof QUIZ.grade.options, string][]).map(([v, l]) => (
                 <Chip key={v} role="radio" selected={p.grade === v} onClick={() => up({ grade: v })}>{l}</Chip>
               ))}
             </div>
             <div className="rounded-lg border p-3">
               <div className="flex items-center justify-between text-sm">
-                <span>Средний балл аттестата / успеваемости</span>
-                <b className="tabular-nums">{p.gpa?.toFixed(1) ?? "не указан"}</b>
+                <span>{QUIZ.grade.gpa}</span>
+                <b className="tabular-nums">{p.gpa?.toFixed(1) ?? QUIZ.grade.gpaUnknown}</b>
               </div>
-              <Slider value={[p.gpa ?? 4]} min={3} max={5} step={0.1} onValueChange={([v]) => up({ gpa: Math.round(v * 10) / 10 })} thumbLabel="Средний балл" />
+              <Slider value={[p.gpa ?? 4]} min={3} max={5} step={0.1} onValueChange={([v]) => up({ gpa: Math.round(v * 10) / 10 })} thumbLabel={QUIZ.grade.gpa} />
               <p className="text-xs text-muted-foreground">{QUIZ.grade.gpaHint}</p>
             </div>
           </div>
@@ -338,8 +338,8 @@ export function Quiz({ regions, universities, subjects }: Props) {
       },
       {
         id: "likes",
-        block: "C. Школа и ЕГЭ",
-        title: "Какие предметы нравятся или получаются — и почему?",
+        block: QUIZ.blocks.C,
+        title: QUIZ.likes.title,
         hint: QUIZ.likes.hint,
         answered: (p) => Object.keys(p.subjectLikes).length > 0,
         render: () => {
@@ -376,7 +376,7 @@ export function Quiz({ regions, universities, subjects }: Props) {
               ))}
               {extra.length > 0 && (
                 <details className="rounded-lg border p-3 text-sm">
-                  <summary className="cursor-pointer">Добавить другой предмет, который нравится</summary>
+                  <summary className="cursor-pointer">{QUIZ.likes.addOther}</summary>
                   <div className="mt-2 flex flex-wrap gap-2">
                     {extra.map((s) => (
                       <Chip key={s.id} selected={false} onClick={() => up({ subjectLikes: { ...p.subjectLikes, [s.id]: ["intrinsic"] } })}>{s.name}</Chip>
@@ -390,18 +390,15 @@ export function Quiz({ regions, universities, subjects }: Props) {
       },
       {
         id: "achievements",
-        block: "C. Школа и ЕГЭ",
-        title: "Достижения",
+        block: QUIZ.blocks.C,
+        title: QUIZ.achievements.title,
         answered: (p) => p.olympiad !== "none" || p.achievements.length > 0 || p.achievementsOther.trim().length > 0,
         render: () => (
           <div className="space-y-4">
             <div className="space-y-2">
-              <p className="text-sm font-medium">Олимпиады — высший уровень</p>
+              <p className="text-sm font-medium">{QUIZ.achievements.olympiad}</p>
               <div className="flex flex-wrap gap-2">
-                {([
-                  ["none", "Не участвовал(а)"], ["school", "Школьный"], ["municipal", "Муниципальный"],
-                  ["regional", "Региональный"], ["final", "Финал всероссийской"], ["listed", "Олимпиады вузов из перечня"],
-                ] as const).map(([v, l]) => (
+                {(Object.entries(QUIZ.achievements.olympiadOptions) as [keyof typeof QUIZ.achievements.olympiadOptions, string][]).map(([v, l]) => (
                   <Chip key={v} role="radio" selected={p.olympiad === v} onClick={() => up({ olympiad: v })}>{l}</Chip>
                 ))}
               </div>
@@ -411,13 +408,13 @@ export function Quiz({ regions, universities, subjects }: Props) {
                 <Chip key={a.id} selected={p.achievements.includes(a.id)} onClick={() => up({ achievements: toggle(p.achievements, a.id) })}>{a.label}</Chip>
               ))}
             </div>
-            <Input placeholder="Свой вариант (например, «призёр хакатона по робототехнике»)" value={p.achievementsOther} maxLength={300} onChange={(e) => up({ achievementsOther: e.target.value })} aria-label="Свой вариант достижения" />
+            <Input placeholder={QUIZ.achievements.other} value={p.achievementsOther} maxLength={300} onChange={(e) => up({ achievementsOther: e.target.value })} aria-label={QUIZ.achievements.other} />
           </div>
         ),
       },
       {
         id: "hobbies",
-        block: "D. Интересы",
+        block: QUIZ.blocks.D,
         title: QUIZ.hobbies.title,
         hint: QUIZ.hobbies.hint,
         answered: (p) => p.hobbies.length > 0 || p.hobbyOther.trim().length > 0,
@@ -434,7 +431,7 @@ export function Quiz({ regions, universities, subjects }: Props) {
       },
       {
         id: "game",
-        block: "D. Интересы",
+        block: QUIZ.blocks.D,
         title: QUIZ.game.title,
         hint: QUIZ.game.hint,
         answered: (p) => p.game.filter((r) => r.pick).length >= GAME_ROUNDS,
@@ -442,7 +439,7 @@ export function Quiz({ regions, universities, subjects }: Props) {
       },
       {
         id: "formats",
-        block: "D. Интересы",
+        block: QUIZ.blocks.D,
         title: QUIZ.formats.title,
         hint: QUIZ.formats.hint,
         answered: (p) => p.workFormats.length > 0,
@@ -456,22 +453,22 @@ export function Quiz({ regions, universities, subjects }: Props) {
       },
       {
         id: "dream",
-        block: "D. Интересы",
-        title: "Кем хочешь стать и почему? Своими словами",
+        block: QUIZ.blocks.D,
+        title: QUIZ.dream.title,
         hint: QUIZ.dream.hint,
         answered: (p) => p.dream.trim().length >= 10,
         render: () => (
           <div className="space-y-2">
-            <Textarea value={p.dream} maxLength={2000} placeholder="Например: «Люблю собирать технику и хочу хорошо зарабатывать, но боюсь, что не потяну физику…»" onChange={(e) => up({ dream: e.target.value })} aria-label="Кем хочешь стать" />
+            <Textarea value={p.dream} maxLength={2000} placeholder={QUIZ.dream.placeholder} onChange={(e) => up({ dream: e.target.value })} aria-label={QUIZ.dream.label} />
             <p className="text-right text-xs text-muted-foreground">{p.dream.length}/2000</p>
           </div>
         ),
       },
       {
         id: "unis",
-        block: "E. Вузы",
-        title: "Какие вузы рассматриваешь?",
-        hint: "Можно несколько или «пока никакие».",
+        block: QUIZ.blocks.E,
+        title: QUIZ.unis.title,
+        hint: QUIZ.unis.hint,
         answered: (p) => p.universities.length > 0,
         render: () => {
           const q = uniQuery.trim().toLowerCase();
@@ -480,14 +477,14 @@ export function Quiz({ regions, universities, subjects }: Props) {
             <div className="space-y-3">
               <div className="relative">
                 <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                <Input className="pl-9" placeholder="Поиск: МФТИ, Бауманка, Казань…" value={uniQuery} onChange={(e) => setUniQuery(e.target.value)} aria-label="Поиск вуза" />
+                <Input className="pl-9" placeholder={QUIZ.unis.search} value={uniQuery} onChange={(e) => setUniQuery(e.target.value)} aria-label={QUIZ.unis.searchLabel} />
               </div>
               {p.universities.length > 0 && (
                 <div className="flex flex-wrap gap-1.5">
                   {p.universities.map((id) => (
                     <Badge key={id} variant="default" className="gap-1 py-1">
                       {universities.find((u) => u.id === id)?.short}
-                      <button type="button" aria-label="Убрать" className="cursor-pointer" onClick={() => up({ universities: p.universities.filter((x) => x !== id) })}><X className="h-3 w-3" /></button>
+                      <button type="button" aria-label={QUIZ.unis.remove} className="cursor-pointer" onClick={() => up({ universities: p.universities.filter((x) => x !== id) })}><X className="h-3 w-3" /></button>
                     </Badge>
                   ))}
                 </div>
@@ -496,20 +493,20 @@ export function Quiz({ regions, universities, subjects }: Props) {
                 {filtered.map((u) => (
                   <Chip key={u.id} selected={p.universities.includes(u.id)} onClick={() => up({ universities: toggle(p.universities, u.id) })}>
                     <span className="font-medium">{u.short}</span>
-                    <span className="block text-xs text-muted-foreground">{u.city}{u.abroad && " · за рубежом"}</span>
+                    <span className="block text-xs text-muted-foreground">{u.city}{u.abroad && ` · ${QUIZ.unis.abroad}`}</span>
                   </Chip>
                 ))}
               </div>
-              <Chip selected={false} onClick={() => up({ universities: [] })}>Пока никакие</Chip>
+              <Chip selected={false} onClick={() => up({ universities: [] })}>{QUIZ.unis.none}</Chip>
             </div>
           );
         },
       },
       {
         id: "criteria",
-        block: "E. Вузы",
-        title: "Что важно в вузе? Выбери и расставь топ-5",
-        hint: "Порядок выбора = приоритет (1 — самое важное). Стрелками можно поменять.",
+        block: QUIZ.blocks.E,
+        title: QUIZ.criteria.title,
+        hint: QUIZ.criteria.hint,
         answered: (p) => p.uniCriteria.length > 0,
         render: () => (
           <div className="space-y-3">
@@ -519,11 +516,11 @@ export function Quiz({ regions, universities, subjects }: Props) {
                   <li key={c} className="flex items-center gap-2 rounded-lg border bg-primary/5 px-3 py-2 text-sm">
                     <span className="grid h-6 w-6 place-items-center rounded-full bg-primary text-xs font-bold text-primary-foreground">{idx + 1}</span>
                     <span className="flex-1">{UNI_CRITERIA.find((x) => x.id === c)?.label}</span>
-                    <Button variant="ghost" size="icon" className="h-8 w-8" aria-label="Выше" disabled={idx === 0}
+                    <Button variant="ghost" size="icon" className="h-8 w-8" aria-label={QUIZ.criteria.up} disabled={idx === 0}
                       onClick={() => { const a = [...p.uniCriteria]; [a[idx - 1], a[idx]] = [a[idx], a[idx - 1]]; up({ uniCriteria: a }); }}><ChevronUp /></Button>
-                    <Button variant="ghost" size="icon" className="h-8 w-8" aria-label="Ниже" disabled={idx === p.uniCriteria.length - 1}
+                    <Button variant="ghost" size="icon" className="h-8 w-8" aria-label={QUIZ.criteria.down} disabled={idx === p.uniCriteria.length - 1}
                       onClick={() => { const a = [...p.uniCriteria]; [a[idx + 1], a[idx]] = [a[idx], a[idx + 1]]; up({ uniCriteria: a }); }}><ChevronDown /></Button>
-                    <Button variant="ghost" size="icon" className="h-8 w-8" aria-label="Убрать" onClick={() => up({ uniCriteria: p.uniCriteria.filter((x) => x !== c) })}><X /></Button>
+                    <Button variant="ghost" size="icon" className="h-8 w-8" aria-label={QUIZ.criteria.remove} onClick={() => up({ uniCriteria: p.uniCriteria.filter((x) => x !== c) })}><X /></Button>
                   </li>
                 ))}
               </ol>
@@ -538,8 +535,8 @@ export function Quiz({ regions, universities, subjects }: Props) {
       },
       {
         id: "done",
-        block: "Готово",
-        title: "Готово! Проверим ответы",
+        block: QUIZ.blocks.done,
+        title: QUIZ.done.title,
         answered: () => true,
         render: () => null,
       },
@@ -579,7 +576,7 @@ export function Quiz({ regions, universities, subjects }: Props) {
     router.push("/results");
   };
   const reset = () => {
-    if (!confirm("Сбросить все ответы?")) return;
+    if (!confirm(QUIZ.resetConfirm)) return;
     setP(emptyProfile());
     setI(0);
   };
@@ -589,9 +586,9 @@ export function Quiz({ regions, universities, subjects }: Props) {
       <div className="space-y-2">
         <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
           <span data-testid="quiz-block">{step.block}</span>
-          <span className="tabular-nums" data-testid="quiz-step">Шаг {idx + 1} из {total}</span>
+          <span className="tabular-nums" data-testid="quiz-step">{QUIZ.stepOf(idx + 1, total)}</span>
         </div>
-        <Progress value={((idx + 1) / total) * 100} label="Прогресс анкеты" />
+        <Progress value={((idx + 1) / total) * 100} label={QUIZ.progressLabel} />
       </div>
 
       <Card>
@@ -609,17 +606,17 @@ export function Quiz({ regions, universities, subjects }: Props) {
       </Card>
 
       <div className="flex items-center gap-2">
-        <Button variant="outline" onClick={() => go(-1)} disabled={idx === 0} aria-label="Назад">
-          <ArrowLeft /> Назад
+        <Button variant="outline" onClick={() => go(-1)} disabled={idx === 0} aria-label={QUIZ.back}>
+          <ArrowLeft /> {QUIZ.back}
         </Button>
         {step.id === "done" ? (
           <Button className="ml-auto" size="lg" onClick={finish} data-testid="quiz-finish">
-            <Sparkles /> <span className="sm:hidden">Результаты</span><span className="hidden sm:inline">Посмотреть результаты</span>
+            <Sparkles /> <span className="sm:hidden">{QUIZ.finishShort}</span><span className="hidden sm:inline">{QUIZ.finishLong}</span>
           </Button>
         ) : (
           <>
             {step.id !== "consent" && !step.answered(p) && (
-              <Button variant="ghost" className="ml-auto" onClick={() => go(1)}>Пропустить</Button>
+              <Button variant="ghost" className="ml-auto" onClick={() => go(1)}>{QUIZ.skip}</Button>
             )}
             <Button
               className={cn(step.id === "consent" || step.answered(p) ? "ml-auto" : "")}
@@ -627,14 +624,14 @@ export function Quiz({ regions, universities, subjects }: Props) {
               disabled={step.id === "consent" && !p.consent}
               data-testid="quiz-next"
             >
-              Далее <ArrowRight />
+              {QUIZ.next} <ArrowRight />
             </Button>
           </>
         )}
       </div>
       <div className="flex justify-between text-xs text-muted-foreground">
-        <span>Ответы сохраняются автоматически в этом браузере.</span>
-        <button type="button" onClick={reset} className="inline-flex cursor-pointer items-center gap-1 hover:text-foreground"><RotateCcw className="h-3 w-3" /> Сбросить</button>
+        <span>{QUIZ.autosave}</span>
+        <button type="button" onClick={reset} className="inline-flex cursor-pointer items-center gap-1 hover:text-foreground"><RotateCcw className="h-3 w-3" /> {QUIZ.reset}</button>
       </div>
     </div>
   );
@@ -646,17 +643,17 @@ function Summary({ p, steps, completeness, onJump }: { p: StudentProfile; steps:
     <div className="space-y-4">
       <div className="rounded-lg border p-4">
         <div className="mb-2 flex items-center justify-between text-sm">
-          <span>Полнота анкеты</span>
+          <span>{QUIZ.done.fullness}</span>
           <b data-testid="completeness">{completeness}%</b>
         </div>
-        <Progress value={completeness} label="Полнота анкеты" />
+        <Progress value={completeness} label={QUIZ.done.fullness} />
         <p className="mt-2 text-xs text-muted-foreground">
           {completeness >= 85 ? QUIZ.done.good : QUIZ.done.weak}
         </p>
       </div>
       {missed.length > 0 && (
         <div className="space-y-2">
-          <p className="text-sm font-medium">Можно вернуться и ответить:</p>
+          <p className="text-sm font-medium">{QUIZ.done.backTo}</p>
           <div className="flex flex-wrap gap-2">
             {missed.map(({ s, n }) => (
               <Button key={s.id} size="sm" variant="outline" onClick={() => onJump(n)}>{s.title}</Button>
