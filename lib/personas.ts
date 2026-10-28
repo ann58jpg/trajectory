@@ -1,4 +1,8 @@
 import { StudentProfile } from "@/lib/schemas";
+import { simulateGame, type GameCard } from "@/lib/engine/game";
+
+/** В игре персона выбирает задачи, у которых главный тег профессии — из её интересов. */
+const likes = (tags: string[]) => (c: GameCard) => tags.includes(c.tags[0]) || (c.tags.length > 1 && tags.includes(c.tags[1]));
 
 /** Тестовые персоны из ТЗ (раздел 10): используются в тестах и кнопке «Заполнить пример». */
 export const PERSONAS = {
@@ -25,9 +29,9 @@ export const PERSONAS = {
       subjectLikes: { lit: ["intrinsic"], rus: ["easy"], soc: ["useful"] },
       olympiad: "regional",
       achievements: ["portfolio", "contests"],
-      hobbies: ["drawing", "reading", "photo"],
-      taskPairs: { p1: "left", p2: "right", p3: "right", p4: "left", p5: "right", p6: "right" },
-      workFormats: ["office", "remote"],
+      hobbies: ["drawing", "reading"],
+      game: simulateGame(likes(["design", "writing", "media", "art"])),
+      workFormats: ["office", "remote", "hybrid", "flexible"],
       dream: "Хочу делать красивые книги и интерфейсы, рисовать иллюстрации и работать с текстами",
       universities: ["hse", "mospolytech"],
       uniCriteria: ["vibe", "subjects", "location", "budget_places", "internships"],
@@ -55,8 +59,8 @@ export const PERSONAS = {
       gpa: 4.1,
       subjectLikes: { math: ["easy"], phys: ["hard_ok"] },
       hobbies: ["tech", "programming"],
-      taskPairs: { p1: "right", p2: "left", p3: "right", p4: "right", p5: "left", p6: "left" },
-      workFormats: ["production", "office"],
+      game: simulateGame(likes(["engineering", "it", "electronics", "energy", "machine"])),
+      workFormats: ["site", "office", "stable"],
       dream: "Хочу нормально зарабатывать и работать с техникой, может быть инженером или программистом",
       universities: [],
       uniCriteria: ["work_study", "budget_places", "location", "employment_speed", "schedule"],
@@ -83,9 +87,9 @@ export const PERSONAS = {
       gpa: 4.8,
       subjectLikes: { bio: ["intrinsic", "olympiad"], chem: ["hard_ok", "useful"] },
       olympiad: "regional",
-      hobbies: ["medicine", "helping", "nature"],
-      taskPairs: { p1: "left", p2: "left", p3: "left", p4: "left", p5: "both", p6: "left" },
-      workFormats: ["office"],
+      hobbies: ["helping", "nature"],
+      game: simulateGame(likes(["medicine", "biology"])),
+      workFormats: ["people", "lab", "stable"],
       dream: "Хочу стать врачом и помогать людям, возможно хирургом",
       universities: ["sechenov", "rnimu"],
       uniCriteria: ["dorm", "budget_places", "pass_score", "prestige", "internships"],
@@ -114,9 +118,9 @@ export const PERSONAS = {
       gpa: 4.5,
       subjectLikes: { inf: ["intrinsic", "easy"], math: ["easy"] },
       olympiad: "municipal",
-      hobbies: ["programming", "games"],
-      taskPairs: { p1: "right", p2: "left", p3: "right", p4: "right", p5: "right", p6: "right" },
-      workFormats: ["remote", "office"],
+      hobbies: ["programming"],
+      game: simulateGame(likes(["it", "data", "security"])),
+      workFormats: ["remote", "office", "hybrid"],
       dream: "Хочу программировать и хорошо зарабатывать, интересует ИИ и анализ данных",
       universities: ["nsu", "itmo"],
       uniCriteria: ["vuc", "employer_rating", "internships", "prestige", "budget_places"],

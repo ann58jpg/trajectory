@@ -10,7 +10,9 @@ import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
 import { KEYS, readLS, removeLS, useProfile, writeLS } from "@/lib/client/storage";
 import { emptyProfile, type LikeReason, type StudentProfile } from "@/lib/schemas";
-import { ACHIEVEMENTS, BENEFITS, GUIDES, HOBBIES, LIKE_REASONS, TASK_PAIRS, UNI_CRITERIA, WORK_FORMATS } from "@/lib/engine/vocab";
+import { ACHIEVEMENTS, BENEFITS, GUIDES, HOBBIES, LIKE_REASONS, UNI_CRITERIA, WORK_FORMATS } from "@/lib/engine/vocab";
+import { GAME_ROUNDS } from "@/lib/engine/game";
+import { GameStep } from "./steps/game-step";
 import { QUIZ } from "@/lib/copy";
 import { DviStep, EgeStep, withRus } from "./steps/ege-step";
 import { PERSONAS, type PersonaId } from "@/lib/personas";
@@ -415,7 +417,8 @@ export function Quiz({ regions, universities, subjects }: Props) {
       {
         id: "hobbies",
         block: "D. Интересы",
-        title: "Хобби, которые могут стать работой",
+        title: QUIZ.hobbies.title,
+        hint: QUIZ.hobbies.hint,
         answered: (p) => p.hobbies.length > 0 || p.hobbyOther.trim().length > 0,
         render: () => (
           <div className="space-y-3">
@@ -424,36 +427,23 @@ export function Quiz({ regions, universities, subjects }: Props) {
                 <Chip key={h.id} selected={p.hobbies.includes(h.id)} onClick={() => up({ hobbies: toggle(p.hobbies, h.id) })}>{h.label}</Chip>
               ))}
             </div>
-            <Input placeholder="Свой вариант" value={p.hobbyOther} maxLength={200} onChange={(e) => up({ hobbyOther: e.target.value })} aria-label="Своё хобби" />
+            <Input placeholder={QUIZ.hobbies.other} value={p.hobbyOther} maxLength={200} onChange={(e) => up({ hobbyOther: e.target.value })} aria-label={QUIZ.hobbies.other} />
           </div>
         ),
       },
       {
-        id: "pairs",
+        id: "game",
         block: "D. Интересы",
-        title: "Какие задачи тебе ближе?",
-        hint: "Если нравится и то и другое — выбирай «Оба».",
-        answered: (p) => Object.keys(p.taskPairs).length >= 3,
-        render: () => (
-          <div className="space-y-3">
-            {TASK_PAIRS.map((pair) => (
-              <div key={pair.id} className="rounded-lg border p-3">
-                <p className="mb-2 text-xs font-medium uppercase tracking-wide text-muted-foreground">{pair.question}</p>
-                <div className="grid gap-2 sm:grid-cols-[1fr_auto_1fr]">
-                  <Chip role="radio" selected={p.taskPairs[pair.id] === "left"} onClick={() => up({ taskPairs: { ...p.taskPairs, [pair.id]: "left" } })}>{pair.left.label}</Chip>
-                  <Chip role="radio" className="text-center" selected={p.taskPairs[pair.id] === "both"} onClick={() => up({ taskPairs: { ...p.taskPairs, [pair.id]: "both" } })}>Оба</Chip>
-                  <Chip role="radio" selected={p.taskPairs[pair.id] === "right"} onClick={() => up({ taskPairs: { ...p.taskPairs, [pair.id]: "right" } })}>{pair.right.label}</Chip>
-                </div>
-              </div>
-            ))}
-          </div>
-        ),
+        title: QUIZ.game.title,
+        hint: QUIZ.game.hint,
+        answered: (p) => p.game.filter((r) => r.pick).length >= GAME_ROUNDS,
+        render: () => <GameStep rounds={p.game} onChange={(game) => up({ game })} />,
       },
       {
         id: "formats",
         block: "D. Интересы",
-        title: "Формат работы мечты",
-        hint: "Можно несколько.",
+        title: QUIZ.formats.title,
+        hint: QUIZ.formats.hint,
         answered: (p) => p.workFormats.length > 0,
         render: () => (
           <div className="flex flex-wrap gap-2">

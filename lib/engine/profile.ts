@@ -1,7 +1,8 @@
 import type { EgeSubject, Klimov, Region, StudentProfile } from "@/lib/schemas";
 import { genitiveCity, prepositionalCity } from "./ru";
 import { PORTRAIT } from "@/lib/copy";
-import { DREAM_FEARS, DREAM_KEYWORDS, DREAM_VALUES, HOBBIES, LIKE_WEIGHT, TASK_PAIRS } from "./vocab";
+import { DREAM_FEARS, DREAM_KEYWORDS, DREAM_VALUES, HANDS_FORMATS, HEAD_FORMATS, HOBBIES, LIKE_WEIGHT } from "./vocab";
+import { gamePicks } from "./game";
 
 export type TagSignal = { weight: number; sources: string[] };
 
@@ -10,6 +11,8 @@ export type UserModel = {
   klimov: Record<Klimov, number> | null;
   style: { hands: number; head: number; team: number; solo: number };
   formats: Set<string>;
+  /** Игра: профессии и группы направлений, чьи задачи понравились (вес 0..1), и сколько раундов сыграно. */
+  game: { profs: Map<string, number>; groups: Map<string, number>; tasks: Map<string, string>; rounds: number };
   subjectWeights: Map<string, { weight: number; reasonLabel: string }>;
   ege: Map<string, number | null>;
   egeChosen: boolean;
@@ -109,20 +112,29 @@ export function buildUserModel(p: StudentProfile, egeSubjects: EgeSubject[], reg
     }
   }
 
-  // Пары задач (вопрос 15)
+  // Игра «Что бы ты делал(а) завтра на работе?»: выбранные задачи дают теги, тип Климова и близость к профессиям
   const style = { hands: 0, head: 0, team: 0, solo: 0 };
-  let pairsAnswered = 0;
-  for (const pair of TASK_PAIRS) {
-    const a = p.taskPairs[pair.id];
-    if (!a) continue;
-    pairsAnswered++;
-    const sides = a === "both" ? [pair.left, pair.right] : [a === "left" ? pair.left : pair.right];
-    const k = a === "both" ? 0.5 : 1;
-    for (const side of sides) {
-      if (side.klimov) klimovRaw[side.klimov] += 1.2 * k;
-      if (side.style) style[side.style] += k;
-    }
-    if (pair.left.klimov) klimovSignals += 1.2;
+  const picks = gamePicks(p.game);
+  const gameProfs = new Map<string, number>();
+  const gameGroupsRaw = new Map<string, number>();
+  const gameTasks = new Map<string, string>();
+  const short = (t: string) => (t.length > 70 ? t.slice(0, 67).replace(/\s+\S*$/, "") + "…" : t);
+  for (const { card, weight } of picks) {
+    card.tags.forEach((t, i) => addTag(tags, t, weight * (i === 0 ? 0.9 : 0.75), `игра: задача «${short(card.text)}»`));
+    // первый тип у профессии главный, второй — дополнительный
+    card.klimov.forEach((k, i) => (klimovRaw[k] += (i === 0 ? 0.8 : 0.35) * weight));
+    klimovSignals += 0.8 * weight;
+    gameProfs.set(card.professionId, Math.max(gameProfs.get(card.professionId) ?? 0, weight));
+    gameGroupsRaw.set(card.group, (gameGroupsRaw.get(card.group) ?? 0) + weight);
+    if (weight === 1) gameTasks.set(card.professionId, card.text);
+  }
+  const maxGroup = Math.max(1, ...gameGroupsRaw.values());
+  const gameGroups = new Map([...gameGroupsRaw].map(([g, v]) => [g, v / maxGroup]));
+  const gameRounds = p.game.filter((r) => r.pick).length;
+  // Стиль «руками / головой» — из того, как хочет работать
+  for (const f of p.workFormats) {
+    if (HANDS_FORMATS.has(f)) style.hands += 1;
+    if (HEAD_FORMATS.has(f)) style.head += 1;
   }
 
   const maxK = Math.max(...Object.values(klimovRaw));
@@ -145,9 +157,9 @@ export function buildUserModel(p: StudentProfile, egeSubjects: EgeSubject[], reg
     [p.ege.some((e) => e.subject !== "rus" && e.score !== null), "баллы ЕГЭ", 0.5],
     [p.dviReady.length > 0, "доп. экзамены в вузе", 0.5],
     [Object.keys(p.subjectLikes).length > 0, "почему нравятся предметы", 1],
-    [p.hobbies.length > 0 || p.hobbyOther.trim().length > 0, "хобби", 1],
-    [pairsAnswered >= 3, "тип задач", 1],
-    [p.workFormats.length > 0, "формат работы", 0.5],
+    [p.hobbies.length > 0 || p.hobbyOther.trim().length > 0, "хобби", 0.5],
+    [gameRounds >= 5, "игра с задачами", 1.5],
+    [p.workFormats.length > 0, "как хочешь работать", 1],
     [p.dream.trim().length >= 10, "мечта своими словами", 0.5],
     [p.uniCriteria.length > 0, "что важно в вузе", 0.5],
   ];
@@ -160,6 +172,7 @@ export function buildUserModel(p: StudentProfile, egeSubjects: EgeSubject[], reg
     klimov,
     style,
     formats: new Set(p.workFormats),
+    game: { profs: gameProfs, groups: gameGroups, tasks: gameTasks, rounds: gameRounds },
     subjectWeights,
     ege: egeMap(p),
     egeChosen: (p.egeOrder === "chosen" && nonRus > 0) || (p.egeOrder === null && nonRus >= 2),

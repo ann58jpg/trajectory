@@ -229,6 +229,9 @@ export const LikeReason = z.enum([
 export type LikeReason = z.infer<typeof LikeReason>;
 
 export const PairAnswer = z.enum(["left", "right", "both"]);
+/** Раунд игры «Что бы ты делал(а) завтра на работе?»: показанные карточки и ответ (id карточки | all | none). */
+export const GameRound = z.object({ cards: z.array(z.string()).max(3), pick: z.string().nullable() });
+export type GameRound = z.infer<typeof GameRound>;
 
 export const StudentProfile = z.object({
   version: z.literal(1).default(1),
@@ -265,7 +268,9 @@ export const StudentProfile = z.object({
   // D
   hobbies: z.array(z.string()).default([]),
   hobbyOther: z.string().max(200).default(""),
+  /** Старый вопрос с парами задач (до v2) — больше не задаётся, оставлен для совместимости сохранённых ответов. */
   taskPairs: z.record(z.string(), PairAnswer).default({}),
+  game: z.array(GameRound).max(20).default([]),
   workFormats: z.array(z.string()).default([]),
   dream: z.string().max(2000).default(""),
   // E

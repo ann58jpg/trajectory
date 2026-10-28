@@ -68,15 +68,26 @@ test("анкету можно пройти целиком на 375px, ответ
   await page.getByRole("radio", { name: "Региональный" }).click();
   await page.getByTestId("quiz-next").click();
 
-  // D14–D17
-  await page.getByRole("checkbox", { name: "Программирование" }).click();
-  await page.getByRole("checkbox", { name: "Роботы" }).click();
+  // D: хобби, игра, как хочешь работать, мечта
+  await page.getByRole("checkbox", { name: "Программирование и игры" }).click();
+  await page.getByRole("checkbox", { name: "Техника, роботы, дроны" }).click();
   await page.getByTestId("quiz-next").click();
-  for (const id of ["Работать с техникой", "Знаки и числа", "С механизмами", "Разбираться в данных", "Головой", "В команде"]) {
-    await page.getByRole("radio", { name: new RegExp(id) }).click();
+  await expect(page.getByTestId("quiz-title")).toHaveText(QUIZ.game.title);
+  for (let r = 1; r <= 12; r++) {
+    await expect(page.getByTestId("game-round")).toHaveText(QUIZ.game.round(r, 12));
+    // профессия скрыта до выбора и открывается после
+    await expect(page.getByTestId("game-reveal")).toHaveCount(0);
+    if (r === 3) await page.getByTestId("game-none").click();
+    else if (r === 4) await page.getByTestId("game-all").click();
+    else await page.getByTestId("game-card").first().click();
+    await expect(page.getByTestId("game-reveal").first()).toContainText("Это задача:");
+    await page.getByTestId("game-next").click();
   }
+  await expect(page.getByTestId("game-summary")).toBeVisible();
   await page.getByTestId("quiz-next").click();
-  await page.getByRole("checkbox", { name: "Удалёнка" }).click();
+  await expect(page.getByTestId("quiz-title")).toHaveText(QUIZ.formats.title);
+  await page.getByRole("checkbox", { name: QUIZ.formats.options.remote }).click();
+  await page.getByRole("checkbox", { name: QUIZ.formats.options.flexible }).click();
   await page.getByTestId("quiz-next").click();
   await page.getByLabel("Кем хочешь стать").fill("Хочу делать роботов и программировать их, и чтобы хорошо платили");
   await page.getByTestId("quiz-next").click();

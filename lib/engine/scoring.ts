@@ -6,7 +6,7 @@ import { ENGINE, WEIGHT_ANCHORS, weightsAt, type Weights } from "./config";
 import { egeCheck, hardFilter, isOnline, reachableRegionIds, fmtRub } from "./filters";
 import { examSetText, hasBudget } from "./exams";
 import type { UserModel } from "./profile";
-import { HOBBIES } from "./vocab";
+import { HANDS_FORMATS, HOBBIES, WORK_FORMATS } from "./vocab";
 import { REASONS } from "@/lib/copy";
 
 const clamp = (x: number, a = 0, b = 1) => Math.min(b, Math.max(a, x));
@@ -29,13 +29,28 @@ export function tagScore(tags: string[], m: UserModel): { score: number; hits: {
   return { score: clamp(num / den), hits: hits.sort((a, b) => b.weight - a.weight) };
 }
 
+export function formatFit(prof: Profession, m: UserModel): number {
+  const hit = prof.workFormats.filter((f) => m.formats.has(f)).length;
+  return hit === 0 ? 0.1 : clamp(0.4 + 0.6 * hit / Math.min(3, m.formats.size));
+}
+
+export function gameAffinity(prof: Profession, m: UserModel): number {
+  const own = m.game.profs.get(prof.id) ?? 0;
+  const groups = new Set(prof.specialties.map((c) => c.slice(0, 2)));
+  const near = Math.max(0, ...[...groups].map((g) => m.game.groups.get(g) ?? 0));
+  return clamp(Math.max(own, 0.7 * near));
+}
+
 export function matchScore(prof: Profession, m: UserModel): { match: number; hits: { tag: string; weight: number; source: string }[] } {
   const parts: [number, number][] = [];
   const ts = tagScore(prof.tags, m);
   if (m.tags.size > 0) parts.push([ts.score, 0.6]);
   if (m.klimov) parts.push([prof.klimov.reduce((s, k) => s + m.klimov![k], 0) / prof.klimov.length, 0.25]);
-  if (m.formats.size > 0) parts.push([prof.workFormats.some((f) => m.formats.has(f)) ? 1 : 0.15, 0.1]);
-  const handsy = prof.workFormats.some((f) => f === "production" || f === "field");
+  // «Как ты хочешь работать?»: доля выбранных форматов, которые есть у профессии
+  if (m.formats.size > 0) parts.push([formatFit(prof, m), 0.15]);
+  // Игра: понравилась задача этой профессии или соседней по группе направлений
+  if (m.game.rounds > 0) parts.push([gameAffinity(prof, m), 0.25]);
+  const handsy = prof.workFormats.some((f) => HANDS_FORMATS.has(f));
   if (m.style.hands + m.style.head > 0) {
     const pref = (m.style.hands - m.style.head) / (m.style.hands + m.style.head); // -1 голова … +1 руки
     parts.push([clamp(0.5 + 0.5 * pref * (handsy ? 1 : -1)), 0.05]);
@@ -298,8 +313,10 @@ export function computeRecs(ctx: ScoredContext, programs: Map<string, ProgramMat
   const maxLogVac = Math.max(...raws.map((r) => Math.log1p(r.vacancies)));
   const realMid = (r: Raw) => (r.prof.salary.middle * r.salaryCoef) / r.costIdx;
   const realCeil = (r: Raw) => (r.prof.salary.ceiling * r.salaryCoef) / r.costIdx;
-  const maxMid = Math.max(...raws.map(realMid));
-  const maxCeil = Math.max(...raws.map(realCeil));
+  // доход нормируем от самой низкой до самой высокой зарплаты, чтобы разница между профессиями была видна
+  const minMid = Math.min(...raws.map(realMid)), maxMid = Math.max(...raws.map(realMid));
+  const minCeil = Math.min(...raws.map(realCeil)), maxCeil = Math.max(...raws.map(realCeil));
+  const norm = (x: number, lo: number, hi: number) => (hi > lo ? (x - lo) / (hi - lo) : 0.5);
 
   return raws.map((r) => {
     const prof = r.prof;
@@ -311,7 +328,7 @@ export function computeRecs(ctx: ScoredContext, programs: Map<string, ProgramMat
     const bestSpec = (passingSpecs.length ? passingSpecs : profSpecs).reduce((a, b) => (b.employment.rate > a.employment.rate ? b : a));
 
     const demand = clamp(0.75 * (maxLogVac > 0 ? Math.log1p(r.vacancies) / maxLogVac : 0) + 0.25 * clamp((prof.demand.trend + 0.1) / 0.5));
-    const income = clamp(0.65 * (realMid(r) / maxMid) + 0.35 * (realCeil(r) / maxCeil));
+    const income = clamp(0.65 * norm(realMid(r), minMid, maxMid) + 0.35 * norm(realCeil(r), minCeil, maxCeil));
     const employment = clamp(0.7 * bestSpec.employment.rate + 0.3 * (1 - Math.min(bestSpec.employment.monthsToJob, 12) / 12));
     const prioBase = prof.priorities.length ? 0.5 + 0.12 * Math.min(prof.priorities.length, 4) : 0.3;
     const outlookAdj = prof.outlook.status === "green" ? 0.25 : prof.outlook.status === "red" ? -0.3 : 0;
@@ -338,7 +355,11 @@ export function computeRecs(ctx: ScoredContext, programs: Map<string, ProgramMat
 
     // Причины (2–4 человеческих)
     const reasons: string[] = [];
-    for (const h of r.hits.slice(0, 2)) reasons.push(REASONS.interest(h.source));
+    const liked = m.game.tasks.get(prof.id);
+    if (liked) reasons.push(REASONS.game(liked));
+    for (const h of r.hits.slice(0, liked ? 1 : 2)) reasons.push(REASONS.interest(h.source));
+    const fmt = prof.workFormats.find((f) => m.formats.has(f));
+    if (fmt) reasons.push(REASONS.workFormat(WORK_FORMATS.find((w) => w.id === fmt)?.label ?? fmt));
     if (prof.demand.trend >= 0.1) reasons.push(REASONS.demandGrows(Math.round(prof.demand.trend * 100)));
     if (prof.priorities.length) reasons.push(REASONS.priority(prioName.get(prof.priorities[0]) ?? ""));
     if (bonusNotes.length && hz) reasons.push(bonusNotes[0]);

@@ -1,32 +1,20 @@
 import type { Klimov, LikeReason } from "@/lib/schemas";
+import { QUIZ } from "@/lib/copy";
 
 /** Хобби → теги интересов и типы Климова. */
 export const HOBBIES: { id: string; label: string; tags: string[]; klimov: Klimov[] }[] = [
   { id: "sport", label: "Спорт", tags: ["sport", "people"], klimov: ["P", "T"] },
-  { id: "drawing", label: "Рисование и дизайн", tags: ["design", "art"], klimov: ["A"] },
-  { id: "video", label: "Видео и монтаж", tags: ["media", "design", "art"], klimov: ["A", "T"] },
-  { id: "music", label: "Музыка", tags: ["art", "media"], klimov: ["A"] },
-  { id: "photo", label: "Фото", tags: ["media", "art", "design"], klimov: ["A"] },
-  { id: "programming", label: "Программирование", tags: ["it", "math", "data", "games"], klimov: ["S", "T"] },
-  { id: "games", label: "Игры и геймдизайн", tags: ["games", "it", "art"], klimov: ["S", "A"] },
-  { id: "blogging", label: "Блогинг и соцсети", tags: ["media", "writing", "business"], klimov: ["P", "A"] },
-  { id: "reading", label: "Чтение и письмо", tags: ["writing", "media", "art"], klimov: ["A", "S"] },
-  { id: "languages", label: "Иностранные языки", tags: ["languages", "intl"], klimov: ["S", "P"] },
-  { id: "tech", label: "Техника и сборка", tags: ["engineering", "electronics", "auto", "machine"], klimov: ["T"] },
-  { id: "robots", label: "Роботы", tags: ["robotics", "engineering", "electronics", "it"], klimov: ["T"] },
-  { id: "drones", label: "Дроны и авиамодели", tags: ["drones", "aviation", "engineering"], klimov: ["T"] },
-  { id: "chemistry", label: "Химия и опыты", tags: ["chemistry", "science", "bio"], klimov: ["N", "T"] },
-  { id: "nature", label: "Животные и природа", tags: ["nature", "animals", "biology", "ecology", "agro"], klimov: ["N"] },
-  { id: "helping", label: "Помощь людям и волонтёрство", tags: ["people", "medicine", "education", "psychology"], klimov: ["P"] },
-  { id: "business", label: "Бизнес и перепродажа", tags: ["business", "finance", "management"], klimov: ["P", "S"] },
-  { id: "debates", label: "Дебаты и публичные выступления", tags: ["people", "law", "politics", "media"], klimov: ["P"] },
-  { id: "cooking", label: "Кулинария", tags: ["food", "art"], klimov: ["A", "T"] },
-  { id: "fashion", label: "Мода", tags: ["fashion", "design", "art"], klimov: ["A"] },
-  { id: "travel", label: "Путешествия", tags: ["tourism", "languages", "geology"], klimov: ["P", "N"] },
-  { id: "medicine", label: "Медицина и анатомия", tags: ["medicine", "biology"], klimov: ["N", "P"] },
-  { id: "law", label: "Право и справедливость", tags: ["law", "social"], klimov: ["P", "S"] },
-  { id: "history", label: "История", tags: ["history", "politics", "social"], klimov: ["S", "P"] },
-  { id: "space", label: "Космос и астрономия", tags: ["space", "physics", "science"], klimov: ["T", "S"] },
+  { id: "drawing", label: "Рисование, дизайн, фото", tags: ["design", "art", "media"], klimov: ["A"] },
+  { id: "music", label: "Музыка, театр, танцы", tags: ["art", "theatre", "music", "media"], klimov: ["A", "P"] },
+  { id: "video", label: "Видео, блог, соцсети", tags: ["media", "design", "writing", "business"], klimov: ["A", "P"] },
+  { id: "programming", label: "Программирование и игры", tags: ["it", "games", "math", "data"], klimov: ["S", "T"] },
+  { id: "tech", label: "Техника, роботы, дроны", tags: ["engineering", "electronics", "robotics", "drones"], klimov: ["T"] },
+  { id: "nature", label: "Природа и животные", tags: ["nature", "animals", "biology", "ecology", "agro"], klimov: ["N"] },
+  { id: "helping", label: "Помогать людям, волонтёрство", tags: ["people", "medicine", "education", "psychology"], klimov: ["P"] },
+  { id: "business", label: "Бизнес, продажи, деньги", tags: ["business", "finance", "management"], klimov: ["P", "S"] },
+  { id: "reading", label: "Книги, история, языки", tags: ["writing", "history", "languages", "social"], klimov: ["A", "S"] },
+  { id: "cooking", label: "Кулинария и рукоделие", tags: ["food", "fashion", "art"], klimov: ["A", "T"] },
+  { id: "travel", label: "Путешествия и походы", tags: ["tourism", "travel", "nature", "languages"], klimov: ["P", "N"] },
 ];
 
 export const LIKE_REASONS: { id: LikeReason; label: string; weight: number }[] = [
@@ -42,29 +30,11 @@ export const LIKE_WEIGHT: Record<LikeReason, number> = Object.fromEntries(
   LIKE_REASONS.map((r) => [r.id, r.weight]),
 ) as Record<LikeReason, number>;
 
-/** 6 пар в духе RIASEC / Климова. left/right → тип. */
-export const TASK_PAIRS: {
-  id: string;
-  question: string;
-  left: { label: string; klimov?: Klimov; style?: "hands" | "head" | "team" | "solo" };
-  right: { label: string; klimov?: Klimov; style?: "hands" | "head" | "team" | "solo" };
-}[] = [
-  { id: "p1", question: "Что ближе?", left: { label: "Работать с людьми: объяснять, помогать, договариваться", klimov: "P" }, right: { label: "Работать с техникой: собирать, чинить, настраивать", klimov: "T" } },
-  { id: "p2", question: "Что интереснее?", left: { label: "Знаки и числа: формулы, код, таблицы", klimov: "S" }, right: { label: "Художественные образы: рисунок, текст, музыка", klimov: "A" } },
-  { id: "p3", question: "Где комфортнее?", left: { label: "С природой: растения, животные, экспедиции", klimov: "N" }, right: { label: "С механизмами и приборами", klimov: "T" } },
-  { id: "p4", question: "Что выберешь?", left: { label: "Вести переговоры и выступать", klimov: "P" }, right: { label: "Разбираться в данных и документах", klimov: "S" } },
-  { id: "p5", question: "Как любишь работать?", left: { label: "Руками: делать что-то осязаемое", style: "hands" }, right: { label: "Головой: думать, анализировать, планировать", style: "head" } },
-  { id: "p6", question: "С кем?", left: { label: "В команде", style: "team" }, right: { label: "Одному, в своём темпе", style: "solo" } },
-];
-
-export const WORK_FORMATS: { id: string; label: string }[] = [
-  { id: "office", label: "Офис" },
-  { id: "remote", label: "Удалёнка" },
-  { id: "production", label: "На производстве" },
-  { id: "field", label: "В поле / в разъездах" },
-  { id: "business", label: "Своё дело" },
-  { id: "gov", label: "Госслужба" },
-];
+/** 15 вариантов «Как ты хочешь работать?»; те же метки стоят у профессий в workFormats. */
+export const WORK_FORMATS: { id: string; label: string }[] = Object.entries(QUIZ.formats.options).map(([id, label]) => ({ id, label }));
+/** Форматы «руками/на месте» и «головой/за компьютером» — для стиля работы из игры. */
+export const HANDS_FORMATS = new Set(["site", "outdoor", "lab", "shift", "stage"]);
+export const HEAD_FORMATS = new Set(["office", "remote", "hybrid"]);
 
 export const GUIDES: { id: string; label: string }[] = [
   { id: "interest", label: "Интерес к профессии или предмету" },

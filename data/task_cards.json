@@ -1,0 +1,2843 @@
+{
+ "meta": {
+  "source": "Задачи профессий из data/professions.json (составлены нами по описаниям профессий и вакансий hh.ru)",
+  "updatedAt": "2026-10",
+  "confidence": "estimate"
+ },
+ "spheres": [
+  {
+   "id": "it",
+   "name": "ИТ и данные",
+   "groups": [
+    "01",
+    "02",
+    "09",
+    "10"
+   ]
+  },
+  {
+   "id": "eng",
+   "name": "Техника и производство",
+   "groups": [
+    "08",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "20",
+    "22",
+    "27",
+    "28",
+    "29"
+   ]
+  },
+  {
+   "id": "nature",
+   "name": "Природа, земля и животные",
+   "groups": [
+    "05",
+    "06",
+    "19",
+    "21",
+    "35",
+    "36"
+   ]
+  },
+  {
+   "id": "science",
+   "name": "Наука",
+   "groups": [
+    "03",
+    "04"
+   ]
+  },
+  {
+   "id": "med",
+   "name": "Медицина",
+   "groups": [
+    "30",
+    "31",
+    "32",
+    "33",
+    "34"
+   ]
+  },
+  {
+   "id": "people",
+   "name": "Люди: учить, помогать, тренировать",
+   "groups": [
+    "37",
+    "39",
+    "44",
+    "49"
+   ]
+  },
+  {
+   "id": "biz",
+   "name": "Бизнес и сервис",
+   "groups": [
+    "38",
+    "43"
+   ]
+  },
+  {
+   "id": "law",
+   "name": "Право и государство",
+   "groups": [
+    "40",
+    "41"
+   ]
+  },
+  {
+   "id": "words",
+   "name": "Тексты, языки, история",
+   "groups": [
+    "42",
+    "45",
+    "46",
+    "47",
+    "48",
+    "58"
+   ]
+  },
+  {
+   "id": "art",
+   "name": "Искусство и сцена",
+   "groups": [
+    "07",
+    "50",
+    "51",
+    "52",
+    "53",
+    "54",
+    "55"
+   ]
+  },
+  {
+   "id": "transport",
+   "name": "Транспорт и небо",
+   "groups": [
+    "23",
+    "24",
+    "25",
+    "26"
+   ]
+  }
+ ],
+ "cards": [
+  {
+   "id": "c001",
+   "text": "Доказать, что алгоритм шифрования нельзя взломать быстрее, чем за миллион лет",
+   "professionId": "mathematician",
+   "professionName": "Математик-исследователь",
+   "group": "01",
+   "sphere": "it",
+   "tags": [
+    "math",
+    "science",
+    "data"
+   ],
+   "klimov": [
+    "S"
+   ]
+  },
+  {
+   "id": "c002",
+   "text": "Научить модель угадывать, какие товары человек купит следующими",
+   "professionId": "data_scientist",
+   "professionName": "Data Scientist / ML-инженер",
+   "group": "01",
+   "sphere": "it",
+   "tags": [
+    "math",
+    "data",
+    "it"
+   ],
+   "klimov": [
+    "S"
+   ]
+  },
+  {
+   "id": "c003",
+   "text": "Объяснить дроби так, чтобы понял весь класс, а не только отличники",
+   "professionId": "teacher",
+   "professionName": "Учитель (математика, информатика, предметник)",
+   "group": "01",
+   "sphere": "it",
+   "tags": [
+    "education",
+    "people",
+    "social"
+   ],
+   "klimov": [
+    "P"
+   ]
+  },
+  {
+   "id": "c004",
+   "text": "Найти, почему оплата в приложении иногда проходит дважды, и починить так, чтобы деньги списывались один раз",
+   "professionId": "backend",
+   "professionName": "Backend-разработчик",
+   "group": "02",
+   "sphere": "it",
+   "tags": [
+    "it",
+    "math",
+    "data"
+   ],
+   "klimov": [
+    "S",
+    "T"
+   ]
+  },
+  {
+   "id": "c005",
+   "text": "Собрать данные из 30 разных систем банка в одно хранилище, чтобы их можно было анализировать",
+   "professionId": "data_engineer",
+   "professionName": "Data-инженер",
+   "group": "02",
+   "sphere": "it",
+   "tags": [
+    "it",
+    "data",
+    "math"
+   ],
+   "klimov": [
+    "S",
+    "T"
+   ]
+  },
+  {
+   "id": "c006",
+   "text": "Сделать так, чтобы новая версия сайта выкатывалась за 5 минут без остановки работы",
+   "professionId": "devops",
+   "professionName": "DevOps / SRE-инженер",
+   "group": "02",
+   "sphere": "it",
+   "tags": [
+    "it",
+    "engineering",
+    "security"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c007",
+   "text": "Собрать установку и измерить, как материал проводит ток при минус 200 градусах",
+   "professionId": "physicist",
+   "professionName": "Физик-исследователь",
+   "group": "03",
+   "sphere": "science",
+   "tags": [
+    "physics",
+    "science",
+    "engineering"
+   ],
+   "klimov": [
+    "S",
+    "T"
+   ]
+  },
+  {
+   "id": "c008",
+   "text": "Найти ошибку, из-за которой блок процессора иногда считает неправильно",
+   "professionId": "chip_designer",
+   "professionName": "Инженер-проектировщик микросхем",
+   "group": "03",
+   "sphere": "science",
+   "tags": [
+    "electronics",
+    "it",
+    "math"
+   ],
+   "klimov": [
+    "S",
+    "T"
+   ]
+  },
+  {
+   "id": "c009",
+   "text": "Рассчитать объектив, который снимает чётко и днём, и в сумерках",
+   "professionId": "optics_engineer",
+   "professionName": "Инженер-оптик",
+   "group": "03",
+   "sphere": "science",
+   "tags": [
+    "physics",
+    "electronics",
+    "engineering"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c010",
+   "text": "Определить, чем загрязнена вода в колодце, по одной пробе",
+   "professionId": "chemist_analyst",
+   "professionName": "Химик-аналитик",
+   "group": "04",
+   "sphere": "science",
+   "tags": [
+    "chemistry",
+    "science"
+   ],
+   "klimov": [
+    "N",
+    "S"
+   ]
+  },
+  {
+   "id": "c011",
+   "text": "Поднять выход продукта на установке нефтехимии на 1%, а это миллионы рублей в год",
+   "professionId": "process_engineer",
+   "professionName": "Инженер-технолог химического производства",
+   "group": "04",
+   "sphere": "science",
+   "tags": [
+    "chemistry",
+    "manufacturing",
+    "oil_gas"
+   ],
+   "klimov": [
+    "T",
+    "N"
+   ]
+  },
+  {
+   "id": "c012",
+   "text": "Проверить партию таблеток в лаборатории и не выпустить брак",
+   "professionId": "pharmacist",
+   "professionName": "Провизор / специалист фармотрасли",
+   "group": "04",
+   "sphere": "science",
+   "tags": [
+    "medicine",
+    "chemistry",
+    "bio"
+   ],
+   "klimov": [
+    "N",
+    "S"
+   ]
+  },
+  {
+   "id": "c013",
+   "text": "Пройти 15 км по тайге и найти выход руды по образцам камней",
+   "professionId": "geologist",
+   "professionName": "Геолог",
+   "group": "05",
+   "sphere": "nature",
+   "tags": [
+    "geology",
+    "nature",
+    "oil_gas"
+   ],
+   "klimov": [
+    "N",
+    "T"
+   ]
+  },
+  {
+   "id": "c014",
+   "text": "Выяснить, почему скважина стала давать меньше нефти, и подобрать новый режим насоса",
+   "professionId": "oil_engineer",
+   "professionName": "Инженер-нефтяник",
+   "group": "05",
+   "sphere": "nature",
+   "tags": [
+    "oil_gas",
+    "engineering",
+    "geology"
+   ],
+   "klimov": [
+    "T",
+    "N"
+   ]
+  },
+  {
+   "id": "c015",
+   "text": "Найти, откуда в реку попадает нефтяное пятно",
+   "professionId": "ecologist",
+   "professionName": "Эколог",
+   "group": "05",
+   "sphere": "nature",
+   "tags": [
+    "ecology",
+    "nature",
+    "biology"
+   ],
+   "klimov": [
+    "N",
+    "S"
+   ]
+  },
+  {
+   "id": "c016",
+   "text": "Поставить фотоловушки в заповеднике и посчитать, сколько там рысей",
+   "professionId": "biologist",
+   "professionName": "Биолог-исследователь",
+   "group": "06",
+   "sphere": "nature",
+   "tags": [
+    "biology",
+    "nature",
+    "science"
+   ],
+   "klimov": [
+    "N"
+   ]
+  },
+  {
+   "id": "c017",
+   "text": "Заставить бактерии производить больше белка для лекарства",
+   "professionId": "biotechnologist",
+   "professionName": "Биотехнолог",
+   "group": "06",
+   "sphere": "nature",
+   "tags": [
+    "bio",
+    "biology",
+    "chemistry"
+   ],
+   "klimov": [
+    "N",
+    "T"
+   ]
+  },
+  {
+   "id": "c018",
+   "text": "Найти в геномах 100 пациентов мутацию, которая связана с болезнью",
+   "professionId": "bioinformatician",
+   "professionName": "Биоинформатик",
+   "group": "06",
+   "sphere": "nature",
+   "tags": [
+    "bio",
+    "biology",
+    "data"
+   ],
+   "klimov": [
+    "S",
+    "N"
+   ]
+  },
+  {
+   "id": "c019",
+   "text": "Придумать дом, где в каждой квартире солнце хотя бы три часа в день",
+   "professionId": "architect",
+   "professionName": "Архитектор",
+   "group": "07",
+   "sphere": "art",
+   "tags": [
+    "architecture",
+    "design",
+    "art"
+   ],
+   "klimov": [
+    "A",
+    "T"
+   ]
+  },
+  {
+   "id": "c020",
+   "text": "Придумать, как перестроить промзону в жилой район с парком",
+   "professionId": "urban_planner",
+   "professionName": "Градостроитель",
+   "group": "07",
+   "sphere": "art",
+   "tags": [
+    "architecture",
+    "construction",
+    "gov"
+   ],
+   "klimov": [
+    "A",
+    "S"
+   ]
+  },
+  {
+   "id": "c021",
+   "text": "Сделать 3D-модель будущего жилого квартала, чтобы покупатели «погуляли» по нему",
+   "professionId": "designer_3d",
+   "professionName": "3D-дизайнер / визуализатор",
+   "group": "07",
+   "sphere": "art",
+   "tags": [
+    "design",
+    "art",
+    "games"
+   ],
+   "klimov": [
+    "A",
+    "T"
+   ]
+  },
+  {
+   "id": "c022",
+   "text": "Проверить армирование перед заливкой бетона и не пропустить ошибку",
+   "professionId": "construction_engineer",
+   "professionName": "Инженер-строитель / BIM-проектировщик",
+   "group": "08",
+   "sphere": "eng",
+   "tags": [
+    "construction",
+    "engineering",
+    "design"
+   ],
+   "klimov": [
+    "T",
+    "A"
+   ]
+  },
+  {
+   "id": "c023",
+   "text": "Найти, почему мост дрожит при сильном ветре",
+   "professionId": "road_engineer",
+   "professionName": "Инженер мостов и дорог",
+   "group": "08",
+   "sphere": "eng",
+   "tags": [
+    "construction",
+    "engineering",
+    "transport"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c024",
+   "text": "Разметить на пустом участке, где будут стоять углы будущего дома",
+   "professionId": "geodesist",
+   "professionName": "Геодезист / специалист ГИС",
+   "group": "08",
+   "sphere": "eng",
+   "tags": [
+    "construction",
+    "nature",
+    "drones"
+   ],
+   "klimov": [
+    "T",
+    "N"
+   ]
+  },
+  {
+   "id": "c025",
+   "text": "Найти с осциллографом, почему новая плата не включается",
+   "professionId": "electronics_engineer",
+   "professionName": "Инженер-разработчик электроники",
+   "group": "09",
+   "sphere": "it",
+   "tags": [
+    "electronics",
+    "engineering",
+    "physics"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c026",
+   "text": "Утром разобраться, почему у бухгалтерии не печатает принтер, а у цеха пропал интернет",
+   "professionId": "sysadmin",
+   "professionName": "Системный администратор",
+   "group": "09",
+   "sphere": "it",
+   "tags": [
+    "it",
+    "engineering"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c027",
+   "text": "Выяснить, где на складе теряются заказы, и описать, как это исправить",
+   "professionId": "business_analyst",
+   "professionName": "Бизнес/системный аналитик",
+   "group": "09",
+   "sphere": "it",
+   "tags": [
+    "business",
+    "it",
+    "data"
+   ],
+   "klimov": [
+    "S",
+    "P"
+   ]
+  },
+  {
+   "id": "c028",
+   "text": "Найти, кто ночью пытался зайти в почту директора, и закрыть дыру",
+   "professionId": "security",
+   "professionName": "Специалист по кибербезопасности",
+   "group": "10",
+   "sphere": "it",
+   "tags": [
+    "security",
+    "it",
+    "math"
+   ],
+   "klimov": [
+    "S",
+    "T"
+   ]
+  },
+  {
+   "id": "c029",
+   "text": "Взломать по договору сайт банка и показать, где у него дыры",
+   "professionId": "pentester",
+   "professionName": "Этичный хакер (пентестер)",
+   "group": "10",
+   "sphere": "it",
+   "tags": [
+    "security",
+    "it"
+   ],
+   "klimov": [
+    "S",
+    "T"
+   ]
+  },
+  {
+   "id": "c030",
+   "text": "Проверить, нельзя ли подделать электронную подпись",
+   "professionId": "crypto_analyst",
+   "professionName": "Криптограф",
+   "group": "10",
+   "sphere": "it",
+   "tags": [
+    "security",
+    "math"
+   ],
+   "klimov": [
+    "S"
+   ]
+  },
+  {
+   "id": "c031",
+   "text": "Выяснить, почему в одном районе плохо ловит мобильная связь, и перенастроить антенну",
+   "professionId": "radio_engineer",
+   "professionName": "Радиоинженер / инженер связи",
+   "group": "11",
+   "sphere": "eng",
+   "tags": [
+    "electronics",
+    "engineering",
+    "physics"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c032",
+   "text": "Протянуть оптоволокно в посёлок, где до сих пор нет нормального интернета",
+   "professionId": "telecom_engineer",
+   "professionName": "Инженер связи",
+   "group": "11",
+   "sphere": "eng",
+   "tags": [
+    "electronics",
+    "it",
+    "engineering"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c033",
+   "text": "Выяснить, откуда в каждой сотой коробке сока берётся брак",
+   "professionId": "quality_engineer",
+   "professionName": "Инженер по качеству",
+   "group": "11",
+   "sphere": "eng",
+   "tags": [
+    "manufacturing",
+    "engineering",
+    "management"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c034",
+   "text": "Выяснить, почему на складе по документам 100 коробок, а на полках 97",
+   "professionId": "metrologist",
+   "professionName": "Метролог",
+   "group": "12",
+   "sphere": "eng",
+   "tags": [
+    "engineering",
+    "physics"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c035",
+   "text": "Починить томограф в больнице за день, пока не сорвались записи пациентов",
+   "professionId": "medtech_engineer",
+   "professionName": "Инженер медицинской техники",
+   "group": "12",
+   "sphere": "eng",
+   "tags": [
+    "medicine",
+    "electronics",
+    "engineering"
+   ],
+   "klimov": [
+    "T",
+    "N"
+   ]
+  },
+  {
+   "id": "c036",
+   "text": "Настроить лазер, чтобы он резал сталь толщиной 2 см без окалины",
+   "professionId": "laser_engineer",
+   "professionName": "Инженер по лазерам",
+   "group": "12",
+   "sphere": "eng",
+   "tags": [
+    "physics",
+    "electronics",
+    "manufacturing"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c037",
+   "text": "Найти, почему в доме холодные батареи, хотя котельная работает",
+   "professionId": "heat_engineer",
+   "professionName": "Инженер-теплоэнергетик",
+   "group": "13",
+   "sphere": "eng",
+   "tags": [
+    "energy",
+    "engineering",
+    "physics"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c038",
+   "text": "Найти, почему отключился свет в целом микрорайоне, и восстановить его",
+   "professionId": "power_engineer",
+   "professionName": "Инженер-энергетик",
+   "group": "13",
+   "sphere": "eng",
+   "tags": [
+    "energy",
+    "engineering",
+    "physics"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c039",
+   "text": "Найти и заменить повреждённый кабель, из-за которого обесточен дом",
+   "professionId": "electrician",
+   "professionName": "Электромонтёр / техник-электрик",
+   "group": "13",
+   "sphere": "eng",
+   "tags": [
+    "energy",
+    "engineering"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c040",
+   "text": "Следить за реактором со щита управления и вовремя реагировать на отклонения",
+   "professionId": "nuclear_engineer",
+   "professionName": "Инженер атомной отрасли",
+   "group": "14",
+   "sphere": "eng",
+   "tags": [
+    "nuclear",
+    "physics",
+    "energy"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c041",
+   "text": "Подобрать состав краски, которая не выцветает на солнце",
+   "professionId": "materials_engineer",
+   "professionName": "Инженер по материалам",
+   "group": "14",
+   "sphere": "eng",
+   "tags": [
+    "chemistry",
+    "physics",
+    "manufacturing"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c042",
+   "text": "Перенастроить линию розлива, чтобы она выпускала на 15% больше бутылок",
+   "professionId": "automation_engineer",
+   "professionName": "Инженер АСУ ТП / КИПиА",
+   "group": "14",
+   "sphere": "eng",
+   "tags": [
+    "engineering",
+    "electronics",
+    "manufacturing"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c043",
+   "text": "Выяснить, почему новая деталь трескается, и переделать её",
+   "professionId": "mechanical_engineer",
+   "professionName": "Инженер-конструктор (машиностроение)",
+   "group": "15",
+   "sphere": "eng",
+   "tags": [
+    "machine",
+    "engineering",
+    "manufacturing"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c044",
+   "text": "Написать программу для станка и выточить деталь с точностью до сотой миллиметра",
+   "professionId": "cnc_technologist",
+   "professionName": "Технолог / наладчик станков с ЧПУ",
+   "group": "15",
+   "sphere": "eng",
+   "tags": [
+    "machine",
+    "manufacturing",
+    "engineering"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c045",
+   "text": "Починить пресс за ночь, чтобы утром завод не встал",
+   "professionId": "maintenance_engineer",
+   "professionName": "Инженер по ремонту оборудования",
+   "group": "15",
+   "sphere": "eng",
+   "tags": [
+    "machine",
+    "engineering",
+    "manufacturing"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c046",
+   "text": "Посчитать на компьютере, выдержит ли мост ураганный ветер",
+   "professionId": "calc_engineer",
+   "professionName": "Инженер-расчётчик",
+   "group": "16",
+   "sphere": "eng",
+   "tags": [
+    "engineering",
+    "physics",
+    "math"
+   ],
+   "klimov": [
+    "S",
+    "T"
+   ]
+  },
+  {
+   "id": "c047",
+   "text": "Рассчитать охлаждение склада с мороженым на 1000 тонн",
+   "professionId": "refrigeration_engineer",
+   "professionName": "Инженер по холодильным системам",
+   "group": "16",
+   "sphere": "eng",
+   "tags": [
+    "engineering",
+    "physics",
+    "energy"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c048",
+   "text": "Испытать систему ориентации спутника на стенде и найти, почему он чуть вращается",
+   "professionId": "space_engineer",
+   "professionName": "Инженер ракетно-космической отрасли",
+   "group": "16",
+   "sphere": "eng",
+   "tags": [
+    "space",
+    "aviation",
+    "engineering"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c049",
+   "text": "Рассчитать, как снаряд полетит при сильном боковом ветре",
+   "professionId": "weapons_engineer",
+   "professionName": "Инженер-конструктор вооружения",
+   "group": "17",
+   "sphere": "eng",
+   "tags": [
+    "engineering",
+    "machine",
+    "safety"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c050",
+   "text": "Рассчитать корпус ледокола, чтобы он ломал лёд толщиной 3 метра",
+   "professionId": "shipbuilder",
+   "professionName": "Инженер-кораблестроитель",
+   "group": "17",
+   "sphere": "eng",
+   "tags": [
+    "sea",
+    "engineering"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c051",
+   "text": "Выяснить, почему партия пластика получилась хрупкой",
+   "professionId": "process_engineer",
+   "professionName": "Инженер-технолог химического производства",
+   "group": "17",
+   "sphere": "eng",
+   "tags": [
+    "chemistry",
+    "manufacturing",
+    "oil_gas"
+   ],
+   "klimov": [
+    "T",
+    "N"
+   ]
+  },
+  {
+   "id": "c052",
+   "text": "Обойти цех и найти, где рабочий может упасть или обжечься",
+   "professionId": "hse_engineer",
+   "professionName": "Специалист по охране труда и экологии",
+   "group": "18",
+   "sphere": "eng",
+   "tags": [
+    "safety",
+    "ecology",
+    "engineering"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c053",
+   "text": "Проверить, не подделка ли дорогой коньяк",
+   "professionId": "chemist_analyst",
+   "professionName": "Химик-аналитик",
+   "group": "18",
+   "sphere": "eng",
+   "tags": [
+    "chemistry",
+    "science"
+   ],
+   "klimov": [
+    "N",
+    "S"
+   ]
+  },
+  {
+   "id": "c054",
+   "text": "Разобрать жалобу покупателя, у которого сломался новый холодильник",
+   "professionId": "quality_engineer",
+   "professionName": "Инженер по качеству",
+   "group": "18",
+   "sphere": "eng",
+   "tags": [
+    "manufacturing",
+    "engineering",
+    "management"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c055",
+   "text": "Придумать йогурт без сахара, который всё равно вкусный",
+   "professionId": "food_technologist",
+   "professionName": "Технолог пищевого производства",
+   "group": "19",
+   "sphere": "nature",
+   "tags": [
+    "food",
+    "chemistry",
+    "manufacturing"
+   ],
+   "klimov": [
+    "T",
+    "N"
+   ]
+  },
+  {
+   "id": "c056",
+   "text": "Проверить мясо на рынке и найти больную тушу",
+   "professionId": "vet_inspector",
+   "professionName": "Ветеринарно-санитарный эксперт",
+   "group": "19",
+   "sphere": "nature",
+   "tags": [
+    "animals",
+    "food",
+    "safety"
+   ],
+   "klimov": [
+    "N",
+    "S"
+   ]
+  },
+  {
+   "id": "c057",
+   "text": "Придумать новое блюдо из местных продуктов для меню сезона",
+   "professionId": "chef",
+   "professionName": "Шеф-повар / технолог общепита",
+   "group": "19",
+   "sphere": "nature",
+   "tags": [
+    "food",
+    "art",
+    "business"
+   ],
+   "klimov": [
+    "A",
+    "T"
+   ]
+  },
+  {
+   "id": "c058",
+   "text": "Проверить, успеют ли люди выйти из торгового центра при пожаре",
+   "professionId": "fire_engineer",
+   "professionName": "Инженер пожарной безопасности",
+   "group": "20",
+   "sphere": "eng",
+   "tags": [
+    "safety",
+    "engineering"
+   ],
+   "klimov": [
+    "T",
+    "P"
+   ]
+  },
+  {
+   "id": "c059",
+   "text": "Найти, почему в половине района из крана течёт ржавая вода",
+   "professionId": "water_engineer",
+   "professionName": "Инженер по водным системам",
+   "group": "20",
+   "sphere": "eng",
+   "tags": [
+    "ecology",
+    "engineering",
+    "construction"
+   ],
+   "klimov": [
+    "T",
+    "N"
+   ]
+  },
+  {
+   "id": "c060",
+   "text": "Расследовать, почему на стройке упал кран, чтобы это не повторилось",
+   "professionId": "hse_engineer",
+   "professionName": "Специалист по охране труда и экологии",
+   "group": "20",
+   "sphere": "eng",
+   "tags": [
+    "safety",
+    "ecology",
+    "engineering"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c061",
+   "text": "Разобраться в споре соседей, где проходит граница участка",
+   "professionId": "cadastral_engineer",
+   "professionName": "Кадастровый инженер",
+   "group": "21",
+   "sphere": "nature",
+   "tags": [
+    "construction",
+    "law",
+    "nature"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c062",
+   "text": "Сделать карту, где видно, какие дома останутся без света при паводке",
+   "professionId": "gis_specialist",
+   "professionName": "Специалист по геоданным и картам",
+   "group": "21",
+   "sphere": "nature",
+   "tags": [
+    "nature",
+    "data",
+    "it"
+   ],
+   "klimov": [
+    "S",
+    "N"
+   ]
+  },
+  {
+   "id": "c063",
+   "text": "Облететь 500 гектаров поля и найти участки, где болеют посевы",
+   "professionId": "drone_operator",
+   "professionName": "Оператор и техник БАС",
+   "group": "21",
+   "sphere": "nature",
+   "tags": [
+    "drones",
+    "aviation",
+    "engineering"
+   ],
+   "klimov": [
+    "T",
+    "N"
+   ]
+  },
+  {
+   "id": "c064",
+   "text": "Подобрать режим плавки, чтобы сталь для рельсов не лопалась на морозе",
+   "professionId": "metallurgist",
+   "professionName": "Металлург",
+   "group": "22",
+   "sphere": "eng",
+   "tags": [
+    "manufacturing",
+    "chemistry",
+    "engineering"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c065",
+   "text": "Сделать композит для крыла дрона, который легче алюминия",
+   "professionId": "materials_engineer",
+   "professionName": "Инженер по материалам",
+   "group": "22",
+   "sphere": "eng",
+   "tags": [
+    "chemistry",
+    "physics",
+    "manufacturing"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c066",
+   "text": "Сделать так, чтобы на конвейере ошибку ловили сразу, а не на выходе",
+   "professionId": "quality_engineer",
+   "professionName": "Инженер по качеству",
+   "group": "22",
+   "sphere": "eng",
+   "tags": [
+    "manufacturing",
+    "engineering",
+    "management"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c067",
+   "text": "Найти, как довезти контейнер из Китая, если граница закрыта на неделю",
+   "professionId": "logistics_manager",
+   "professionName": "Логист / специалист ВЭД",
+   "group": "23",
+   "sphere": "transport",
+   "tags": [
+    "logistics",
+    "business",
+    "management"
+   ],
+   "klimov": [
+    "S",
+    "P"
+   ]
+  },
+  {
+   "id": "c068",
+   "text": "Перекроить маршруты автобусов, чтобы до работы ехать без пересадок",
+   "professionId": "transport_planner",
+   "professionName": "Транспортный планировщик",
+   "group": "23",
+   "sphere": "transport",
+   "tags": [
+    "transport",
+    "logistics",
+    "data"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c069",
+   "text": "Найти по сканеру, почему машина дёргается при разгоне",
+   "professionId": "auto_mechanic",
+   "professionName": "Автомеханик / диагност",
+   "group": "23",
+   "sphere": "transport",
+   "tags": [
+    "auto",
+    "transport",
+    "engineering"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c070",
+   "text": "Переделать крыло беспилотника, чтобы он летал на 10 минут дольше",
+   "professionId": "drone_engineer",
+   "professionName": "Инженер-конструктор БПЛА",
+   "group": "24",
+   "sphere": "transport",
+   "tags": [
+    "drones",
+    "aviation",
+    "engineering"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c071",
+   "text": "Рассчитать, выдержит ли крепление двигателя новый, более мощный двигатель",
+   "professionId": "aircraft_engineer",
+   "professionName": "Авиационный инженер",
+   "group": "24",
+   "sphere": "transport",
+   "tags": [
+    "aviation",
+    "engineering",
+    "physics"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c072",
+   "text": "Найти, почему двигатель на стенде перегревается на максимальной тяге",
+   "professionId": "engine_engineer",
+   "professionName": "Инженер по двигателям",
+   "group": "24",
+   "sphere": "transport",
+   "tags": [
+    "aviation",
+    "engineering",
+    "machine"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c073",
+   "text": "Найти за 40 минут между рейсами, почему загорелась лампочка неисправности",
+   "professionId": "aircraft_tech",
+   "professionName": "Авиатехник",
+   "group": "25",
+   "sphere": "transport",
+   "tags": [
+    "aviation",
+    "engineering"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c074",
+   "text": "Развести по высотам 15 самолётов, которые одновременно заходят на посадку",
+   "professionId": "air_traffic_controller",
+   "professionName": "Авиадиспетчер",
+   "group": "25",
+   "sphere": "transport",
+   "tags": [
+    "aviation",
+    "transport"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c075",
+   "text": "Посадить самолёт в тумане по приборам",
+   "professionId": "pilot",
+   "professionName": "Пилот гражданской авиации",
+   "group": "25",
+   "sphere": "transport",
+   "tags": [
+    "aviation",
+    "transport"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c076",
+   "text": "Разгрузить контейнеровоз за сутки вместо трёх",
+   "professionId": "port_manager",
+   "professionName": "Специалист по работе порта",
+   "group": "26",
+   "sphere": "transport",
+   "tags": [
+    "sea",
+    "logistics",
+    "transport"
+   ],
+   "klimov": [
+    "P",
+    "T"
+   ]
+  },
+  {
+   "id": "c077",
+   "text": "Провести судно через пролив ночью, когда навстречу идут три танкера",
+   "professionId": "ship_navigator",
+   "professionName": "Штурман, капитан судна",
+   "group": "26",
+   "sphere": "transport",
+   "tags": [
+    "sea",
+    "transport",
+    "travel"
+   ],
+   "klimov": [
+    "T",
+    "P"
+   ]
+  },
+  {
+   "id": "c078",
+   "text": "Починить двигатель судна посреди моря, где нет сервиса",
+   "professionId": "ship_engineer",
+   "professionName": "Судовой механик",
+   "group": "26",
+   "sphere": "transport",
+   "tags": [
+    "sea",
+    "engineering",
+    "machine"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c079",
+   "text": "Довести проект до конца, когда подрядчик сорвал сроки на неделю",
+   "professionId": "manager",
+   "professionName": "Менеджер проектов",
+   "group": "27",
+   "sphere": "eng",
+   "tags": [
+    "management",
+    "business",
+    "people"
+   ],
+   "klimov": [
+    "P",
+    "S"
+   ]
+  },
+  {
+   "id": "c080",
+   "text": "Выяснить по данным, почему в одном регионе продажи упали на 20%",
+   "professionId": "data_analyst",
+   "professionName": "Аналитик данных",
+   "group": "27",
+   "sphere": "eng",
+   "tags": [
+    "data",
+    "math",
+    "business"
+   ],
+   "klimov": [
+    "S"
+   ]
+  },
+  {
+   "id": "c081",
+   "text": "Научить робота-сварщика находить деталь на конвейере камерой",
+   "professionId": "robotics_engineer",
+   "professionName": "Инженер-робототехник",
+   "group": "27",
+   "sphere": "eng",
+   "tags": [
+    "robotics",
+    "engineering",
+    "it"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c082",
+   "text": "Нанести на стекло покрытие толщиной в 100 атомов, чтобы оно не запотевало",
+   "professionId": "nanotech_engineer",
+   "professionName": "Инженер-нанотехнолог",
+   "group": "28",
+   "sphere": "eng",
+   "tags": [
+    "electronics",
+    "chemistry",
+    "physics"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c083",
+   "text": "Спроектировать часть микросхемы, которая шифрует данные",
+   "professionId": "chip_designer",
+   "professionName": "Инженер-проектировщик микросхем",
+   "group": "28",
+   "sphere": "eng",
+   "tags": [
+    "electronics",
+    "it",
+    "math"
+   ],
+   "klimov": [
+    "S",
+    "T"
+   ]
+  },
+  {
+   "id": "c084",
+   "text": "Выяснить под микроскопом, почему сломалась деталь двигателя",
+   "professionId": "materials_engineer",
+   "professionName": "Инженер по материалам",
+   "group": "28",
+   "sphere": "eng",
+   "tags": [
+    "chemistry",
+    "physics",
+    "manufacturing"
+   ],
+   "klimov": [
+    "T",
+    "S"
+   ]
+  },
+  {
+   "id": "c085",
+   "text": "Сделать так, чтобы куртку можно было сшить за 40 минут вместо часа",
+   "professionId": "garment_technologist",
+   "professionName": "Технолог швейного производства",
+   "group": "29",
+   "sphere": "eng",
+   "tags": [
+    "fashion",
+    "manufacturing"
+   ],
+   "klimov": [
+    "T",
+    "A"
+   ]
+  },
+  {
+   "id": "c086",
+   "text": "Придумать коллекцию курток для жизни в северном городе",
+   "professionId": "fashion_designer",
+   "professionName": "Дизайнер одежды",
+   "group": "29",
+   "sphere": "eng",
+   "tags": [
+    "fashion",
+    "design",
+    "art"
+   ],
+   "klimov": [
+    "A"
+   ]
+  },
+  {
+   "id": "c087",
+   "text": "Добиться, чтобы цвет на коробке был точно как на макете",
+   "professionId": "print_technologist",
+   "professionName": "Технолог полиграфии и упаковки",
+   "group": "29",
+   "sphere": "eng",
+   "tags": [
+    "manufacturing",
+    "design",
+    "media"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c088",
+   "text": "Понять по анализу крови, почему у ребёнка постоянная слабость",
+   "professionId": "medical_biochemist",
+   "professionName": "Врач клинической лабораторной диагностики",
+   "group": "30",
+   "sphere": "med",
+   "tags": [
+    "medicine",
+    "biology",
+    "science"
+   ],
+   "klimov": [
+    "N",
+    "S"
+   ]
+  },
+  {
+   "id": "c089",
+   "text": "Перенести процесс из колбы в огромный заводской реактор и не потерять качество",
+   "professionId": "biotechnologist",
+   "professionName": "Биотехнолог",
+   "group": "30",
+   "sphere": "med",
+   "tags": [
+    "bio",
+    "biology",
+    "chemistry"
+   ],
+   "klimov": [
+    "N",
+    "T"
+   ]
+  },
+  {
+   "id": "c090",
+   "text": "Сделать бионический протез руки, который слушается мышц",
+   "professionId": "medtech_engineer",
+   "professionName": "Инженер медицинской техники",
+   "group": "30",
+   "sphere": "med",
+   "tags": [
+    "medicine",
+    "electronics",
+    "engineering"
+   ],
+   "klimov": [
+    "T",
+    "N"
+   ]
+  },
+  {
+   "id": "c091",
+   "text": "Понять по жалобам и анализам, почему у человека уже месяц держится температура",
+   "professionId": "doctor",
+   "professionName": "Врач (терапевт → узкий специалист)",
+   "group": "31",
+   "sphere": "med",
+   "tags": [
+    "medicine",
+    "biology",
+    "people"
+   ],
+   "klimov": [
+    "P",
+    "N"
+   ]
+  },
+  {
+   "id": "c092",
+   "text": "Приехать на вызов, по ЭКГ понять, что это инфаркт, и довезти человека в больницу вовремя",
+   "professionId": "paramedic",
+   "professionName": "Фельдшер скорой помощи",
+   "group": "31",
+   "sphere": "med",
+   "tags": [
+    "medicine",
+    "people"
+   ],
+   "klimov": [
+    "P",
+    "N"
+   ]
+  },
+  {
+   "id": "c093",
+   "text": "Понять, почему у годовалого ребёнка сыпь: аллергия или инфекция",
+   "professionId": "pediatrician",
+   "professionName": "Врач-педиатр",
+   "group": "31",
+   "sphere": "med",
+   "tags": [
+    "medicine",
+    "people",
+    "biology"
+   ],
+   "klimov": [
+    "P",
+    "N"
+   ]
+  },
+  {
+   "id": "c094",
+   "text": "Найти, откуда началось отравление в школьной столовой",
+   "professionId": "sanitary_doctor",
+   "professionName": "Санитарный врач, эпидемиолог",
+   "group": "32",
+   "sphere": "med",
+   "tags": [
+    "medicine",
+    "ecology",
+    "safety"
+   ],
+   "klimov": [
+    "N",
+    "S"
+   ]
+  },
+  {
+   "id": "c095",
+   "text": "Принять 20 пациентов за день и никого не упустить",
+   "professionId": "doctor",
+   "professionName": "Врач (терапевт → узкий специалист)",
+   "group": "32",
+   "sphere": "med",
+   "tags": [
+    "medicine",
+    "biology",
+    "people"
+   ],
+   "klimov": [
+    "P",
+    "N"
+   ]
+  },
+  {
+   "id": "c096",
+   "text": "Подобрать замену лекарству, которого нет в аптеке",
+   "professionId": "pharmacist",
+   "professionName": "Провизор / специалист фармотрасли",
+   "group": "33",
+   "sphere": "med",
+   "tags": [
+    "medicine",
+    "chemistry",
+    "bio"
+   ],
+   "klimov": [
+    "N",
+    "S"
+   ]
+  },
+  {
+   "id": "c097",
+   "text": "Найти, почему партия краски на заводе выцветает на солнце",
+   "professionId": "chemist_analyst",
+   "professionName": "Химик-аналитик",
+   "group": "33",
+   "sphere": "med",
+   "tags": [
+    "chemistry",
+    "science"
+   ],
+   "klimov": [
+    "N",
+    "S"
+   ]
+  },
+  {
+   "id": "c098",
+   "text": "Составить график смен, чтобы ночью в отделении не остаться без медсестры",
+   "professionId": "head_nurse",
+   "professionName": "Старшая медсестра, организатор сестринского дела",
+   "group": "34",
+   "sphere": "med",
+   "tags": [
+    "medicine",
+    "people",
+    "management"
+   ],
+   "klimov": [
+    "P",
+    "N"
+   ]
+  },
+  {
+   "id": "c099",
+   "text": "Поставить капельницу ребёнку, который боится иголок",
+   "professionId": "nurse",
+   "professionName": "Медсестра / медбрат",
+   "group": "34",
+   "sphere": "med",
+   "tags": [
+    "medicine",
+    "people"
+   ],
+   "klimov": [
+    "P",
+    "N"
+   ]
+  },
+  {
+   "id": "c100",
+   "text": "Найти очаг короеда в лесу до того, как он съест сотни гектаров",
+   "professionId": "forester",
+   "professionName": "Лесничий, инженер леса",
+   "group": "35",
+   "sphere": "nature",
+   "tags": [
+    "nature",
+    "agro",
+    "ecology"
+   ],
+   "klimov": [
+    "N"
+   ]
+  },
+  {
+   "id": "c101",
+   "text": "Подобрать режим сушки, чтобы доски не трескались",
+   "professionId": "wood_technologist",
+   "professionName": "Технолог деревообработки",
+   "group": "35",
+   "sphere": "nature",
+   "tags": [
+    "manufacturing",
+    "nature"
+   ],
+   "klimov": [
+    "T"
+   ]
+  },
+  {
+   "id": "c102",
+   "text": "Взять пробы почвы на поле и решить, каких удобрений не хватает",
+   "professionId": "soil_scientist",
+   "professionName": "Почвовед, агрохимик",
+   "group": "35",
+   "sphere": "nature",
+   "tags": [
+    "agro",
+    "nature",
+    "biology"
+   ],
+   "klimov": [
+    "N"
+   ]
+  },
+  {
+   "id": "c103",
+   "text": "Подобрать корм, чтобы коровы давали больше молока и не болели",
+   "professionId": "zootechnician",
+   "professionName": "Зоотехник",
+   "group": "36",
+   "sphere": "nature",
+   "tags": [
+    "animals",
+    "agro",
+    "biology"
+   ],
+   "klimov": [
+    "N"
+   ]
+  },
+  {
+   "id": "c104",
+   "text": "Осмотреть корову, которая перестала есть, и понять, что с ней",
+   "professionId": "vet",
+   "professionName": "Ветеринарный врач",
+   "group": "36",
+   "sphere": "nature",
+   "tags": [
+    "animals",
+    "biology",
+    "medicine"
+   ],
+   "klimov": [
+    "N",
+    "P"
+   ]
+  },
+  {
+   "id": "c105",
+   "text": "Выяснить, откуда в молоке антибиотики",
+   "professionId": "vet_inspector",
+   "professionName": "Ветеринарно-санитарный эксперт",
+   "group": "36",
+   "sphere": "nature",
+   "tags": [
+    "animals",
+    "food",
+    "safety"
+   ],
+   "klimov": [
+    "N",
+    "S"
+   ]
+  },
+  {
+   "id": "c106",
+   "text": "Помочь подростку справиться со страхом перед экзаменами",
+   "professionId": "psychologist",
+   "professionName": "Психолог",
+   "group": "37",
+   "sphere": "people",
+   "tags": [
+    "psychology",
+    "people",
+    "medicine"
+   ],
+   "klimov": [
+    "P"
+   ]
+  },
+  {
+   "id": "c107",
+   "text": "Найти за месяц десять инженеров для нового завода",
+   "professionId": "hr",
+   "professionName": "HR-специалист / рекрутер",
+   "group": "37",
+   "sphere": "people",
+   "tags": [
+    "people",
+    "psychology",
+    "management"
+   ],
+   "klimov": [
+    "P"
+   ]
+  },
+  {
+   "id": "c108",
+   "text": "Понаблюдать, как бабушка записывается к врачу через приложение, и найти, где она путается",
+   "professionId": "ux_researcher",
+   "professionName": "UX-исследователь",
+   "group": "37",
+   "sphere": "people",
+   "tags": [
+    "psychology",
+    "design",
+    "it"
+   ],
+   "klimov": [
+    "P",
+    "S"
+   ]
+  },
+  {
+   "id": "c109",
+   "text": "Посчитать, окупится ли новая линия завода за 5 лет",
+   "professionId": "economist",
+   "professionName": "Экономист / финансовый аналитик",
+   "group": "38",
+   "sphere": "biz",
+   "tags": [
+    "finance",
+    "business",
+    "math"
+   ],
+   "klimov": [
+    "S"
+   ]
+  },
+  {
+   "id": "c110",
+   "text": "Решить, выдавать ли кредит заводу, по его отчётам",
+   "professionId": "banker",
+   "professionName": "Специалист банка / риск-аналитик",
+   "group": "38",
+   "sphere": "biz",
+   "tags": [
+    "finance",
+    "math",
+    "data"
+   ],
+   "klimov": [
+    "S"
+   ]
+  },
+  {
+   "id": "c111",
+   "text": "Свести остатки на складе, если не сходится 40 коробок",
+   "professionId": "accountant",
+   "professionName": "Бухгалтер",
+   "group": "38",
+   "sphere": "biz",
+   "tags": [
+    "finance",
+    "business"
+   ],
+   "klimov": [
+    "S"
+   ]
+  },
+  {
+   "id": "c112",
+   "text": "Провести опрос и выяснить, что школьники думают о профориентации",
+   "professionId": "sociologist",
+   "professionName": "Социолог",
+   "group": "39",
+   "sphere": "people",
+   "tags": [
+    "social",
+    "data",
+    "people"
+   ],
+   "klimov": [
+    "P",
+    "S"
+   ]
+  },
+  {
+   "id": "c113",
+   "text": "Запустить рекламу нового сока и понять за неделю, какое объявление работает",
+   "professionId": "marketer",
+   "professionName": "Маркетолог / интернет-маркетолог",
+   "group": "39",
+   "sphere": "people",
+   "tags": [
+    "business",
+    "media",
+    "data"
+   ],
+   "klimov": [
+    "P",
+    "S"
+   ]
+  },
+  {
+   "id": "c114",
+   "text": "Помочь одинокой пенсионерке оформить льготы и найти волонтёров",
+   "professionId": "social_worker",
+   "professionName": "Социальный работник",
+   "group": "39",
+   "sphere": "people",
+   "tags": [
+    "people",
+    "social",
+    "psychology"
+   ],
+   "klimov": [
+    "P"
+   ]
+  },
+  {
+   "id": "c115",
+   "text": "Найти в договоре пункт, из-за которого клиент может потерять миллион",
+   "professionId": "lawyer",
+   "professionName": "Юрист",
+   "group": "40",
+   "sphere": "law",
+   "tags": [
+    "law",
+    "social",
+    "people"
+   ],
+   "klimov": [
+    "P",
+    "S"
+   ]
+  },
+  {
+   "id": "c116",
+   "text": "Восстановить по камерам и показаниям, что случилось на месте кражи",
+   "professionId": "investigator",
+   "professionName": "Следователь, сотрудник полиции",
+   "group": "40",
+   "sphere": "law",
+   "tags": [
+    "law",
+    "safety",
+    "people"
+   ],
+   "klimov": [
+    "P",
+    "S"
+   ]
+  },
+  {
+   "id": "c117",
+   "text": "Придумать, как городу потратить бюджет на парки, чтобы жители были довольны",
+   "professionId": "civil_servant",
+   "professionName": "Госслужащий / специалист госуправления",
+   "group": "40",
+   "sphere": "law",
+   "tags": [
+    "gov",
+    "social",
+    "law"
+   ],
+   "klimov": [
+    "P",
+    "S"
+   ]
+  },
+  {
+   "id": "c118",
+   "text": "Объяснить компании, как продавать свой товар в Индии и что там не принято",
+   "professionId": "regional_analyst",
+   "professionName": "Регионовед-аналитик",
+   "group": "41",
+   "sphere": "law",
+   "tags": [
+    "intl",
+    "politics",
+    "languages"
+   ],
+   "klimov": [
+    "P",
+    "S"
+   ]
+  },
+  {
+   "id": "c119",
+   "text": "Подготовить справку для делегации перед переговорами в Китае",
+   "professionId": "diplomat",
+   "professionName": "Специалист по международным отношениям",
+   "group": "41",
+   "sphere": "law",
+   "tags": [
+    "politics",
+    "languages",
+    "history"
+   ],
+   "klimov": [
+    "P",
+    "S"
+   ]
+  },
+  {
+   "id": "c120",
+   "text": "Перевести на переговорах шутку так, чтобы смеялись обе стороны",
+   "professionId": "translator",
+   "professionName": "Переводчик / локализатор",
+   "group": "41",
+   "sphere": "law",
+   "tags": [
+    "languages",
+    "writing",
+    "intl"
+   ],
+   "klimov": [
+    "S",
+    "P"
+   ]
+  },
+  {
+   "id": "c121",
+   "text": "Добиться, чтобы о новом заводе написали федеральные СМИ",
+   "professionId": "pr_specialist",
+   "professionName": "PR-специалист",
+   "group": "42",
+   "sphere": "words",
+   "tags": [
+    "media",
+    "writing",
+    "people"
+   ],
+   "klimov": [
+    "P",
+    "A"
+   ]
+  },
+  {
+   "id": "c122",
+   "text": "Сделать ролик, который за неделю посмотрят 100 тысяч человек",
+   "professionId": "smm",
+   "professionName": "SMM-специалист / контент-маркетолог",
+   "group": "42",
+   "sphere": "words",
+   "tags": [
+    "media",
+    "writing",
+    "business"
+   ],
+   "klimov": [
+    "A",
+    "P"
+   ]
+  },
+  {
+   "id": "c123",
+   "text": "Съездить на открытие завода, поговорить с рабочими и снять сюжет",
+   "professionId": "journalist",
+   "professionName": "Журналист / мультимедиа-автор",
+   "group": "42",
+   "sphere": "words",
+   "tags": [
+    "media",
+    "writing",
+    "social"
+   ],
+   "klimov": [
+    "P",
+    "A"
+   ]
+  },
+  {
+   "id": "c124",
+   "text": "Разобраться с клиентом, у которого сломалась только что купленная машина",
+   "professionId": "service_manager",
+   "professionName": "Менеджер сервиса",
+   "group": "43",
+   "sphere": "biz",
+   "tags": [
+    "people",
+    "business",
+    "management"
+   ],
+   "klimov": [
+    "P"
+   ]
+  },
+  {
+   "id": "c125",
+   "text": "Придумать маршрут по Алтаю на неделю для семьи с детьми",
+   "professionId": "tourism_manager",
+   "professionName": "Менеджер в туризме и гостеприимстве",
+   "group": "43",
+   "sphere": "biz",
+   "tags": [
+    "tourism",
+    "people",
+    "business"
+   ],
+   "klimov": [
+    "P"
+   ]
+  },
+  {
+   "id": "c126",
+   "text": "Провести группу по горному маршруту на Алтае и вернуть всех целыми",
+   "professionId": "tour_guide",
+   "professionName": "Гид, инструктор по туризму",
+   "group": "43",
+   "sphere": "biz",
+   "tags": [
+    "tourism",
+    "people",
+    "sport"
+   ],
+   "klimov": [
+    "P",
+    "N"
+   ]
+  },
+  {
+   "id": "c127",
+   "text": "Провести вебинар по подготовке к ЕГЭ для 50 учеников",
+   "professionId": "tutor_edtech",
+   "professionName": "Методист / репетитор в EdTech",
+   "group": "44",
+   "sphere": "people",
+   "tags": [
+    "education",
+    "people",
+    "writing"
+   ],
+   "klimov": [
+    "P",
+    "S"
+   ]
+  },
+  {
+   "id": "c128",
+   "text": "Помочь пятикласснику, которого травят одноклассники",
+   "professionId": "school_psychologist",
+   "professionName": "Педагог-психолог",
+   "group": "44",
+   "sphere": "people",
+   "tags": [
+    "psychology",
+    "education",
+    "people"
+   ],
+   "klimov": [
+    "P"
+   ]
+  },
+  {
+   "id": "c129",
+   "text": "Научить ребёнка выговаривать «р» за три месяца",
+   "professionId": "speech_therapist",
+   "professionName": "Логопед, дефектолог",
+   "group": "44",
+   "sphere": "people",
+   "tags": [
+    "education",
+    "medicine",
+    "people"
+   ],
+   "klimov": [
+    "P"
+   ]
+  },
+  {
+   "id": "c130",
+   "text": "Сократить рукопись на 100 страниц и не потерять смысл",
+   "professionId": "editor",
+   "professionName": "Редактор / книжный издатель",
+   "group": "45",
+   "sphere": "words",
+   "tags": [
+    "writing",
+    "media",
+    "art"
+   ],
+   "klimov": [
+    "A",
+    "S"
+   ]
+  },
+  {
+   "id": "c131",
+   "text": "Написать текст на упаковку, который прочитают за три секунды",
+   "professionId": "copywriter",
+   "professionName": "Копирайтер / автор контента",
+   "group": "45",
+   "sphere": "words",
+   "tags": [
+    "writing",
+    "media"
+   ],
+   "klimov": [
+    "A",
+    "S"
+   ]
+  },
+  {
+   "id": "c132",
+   "text": "Научить голосового помощника понимать вопрос «а чё там с погодой»",
+   "professionId": "computational_linguist",
+   "professionName": "Компьютерный лингвист",
+   "group": "45",
+   "sphere": "words",
+   "tags": [
+    "languages",
+    "it",
+    "data"
+   ],
+   "klimov": [
+    "S"
+   ]
+  },
+  {
+   "id": "c133",
+   "text": "Выяснить по документам, как на самом деле жил город во время войны",
+   "professionId": "historian",
+   "professionName": "Историк-исследователь",
+   "group": "46",
+   "sphere": "words",
+   "tags": [
+    "history",
+    "culture",
+    "science"
+   ],
+   "klimov": [
+    "S"
+   ]
+  },
+  {
+   "id": "c134",
+   "text": "Придумать выставку, на которую подростки придут сами, а не со школой",
+   "professionId": "museum_specialist",
+   "professionName": "Музейный специалист, экскурсовод",
+   "group": "46",
+   "sphere": "words",
+   "tags": [
+    "culture",
+    "history",
+    "art"
+   ],
+   "klimov": [
+    "P",
+    "S"
+   ]
+  },
+  {
+   "id": "c135",
+   "text": "Найти в архиве документы о прадедушке, который воевал в 1943 году",
+   "professionId": "archivist",
+   "professionName": "Архивист, специалист по документам",
+   "group": "46",
+   "sphere": "words",
+   "tags": [
+    "history",
+    "gov",
+    "writing"
+   ],
+   "klimov": [
+    "S"
+   ]
+  },
+  {
+   "id": "c136",
+   "text": "Разобрать, кто отвечает, если беспилотный автомобиль собьёт человека",
+   "professionId": "philosopher",
+   "professionName": "Философ, преподаватель и аналитик",
+   "group": "47",
+   "sphere": "words",
+   "tags": [
+    "social",
+    "science",
+    "writing"
+   ],
+   "klimov": [
+    "S"
+   ]
+  },
+  {
+   "id": "c137",
+   "text": "Предсказать по данным и опросам, кто выиграет выборы мэра",
+   "professionId": "political_analyst",
+   "professionName": "Политический аналитик",
+   "group": "47",
+   "sphere": "words",
+   "tags": [
+    "politics",
+    "social",
+    "media"
+   ],
+   "klimov": [
+    "P",
+    "S"
+   ]
+  },
+  {
+   "id": "c138",
+   "text": "Подготовить экспертизу: является ли организация религиозной",
+   "professionId": "religion_scholar",
+   "professionName": "Религиовед",
+   "group": "47",
+   "sphere": "words",
+   "tags": [
+    "religion",
+    "history",
+    "social"
+   ],
+   "klimov": [
+    "S"
+   ]
+  },
+  {
+   "id": "c139",
+   "text": "Перевести старинный церковный текст на современный язык",
+   "professionId": "theologian",
+   "professionName": "Теолог",
+   "group": "48",
+   "sphere": "words",
+   "tags": [
+    "religion",
+    "history",
+    "culture"
+   ],
+   "klimov": [
+    "P",
+    "S"
+   ]
+  },
+  {
+   "id": "c140",
+   "text": "Объяснить журналистам, чем отличаются два направления одной религии",
+   "professionId": "religion_scholar",
+   "professionName": "Религиовед",
+   "group": "48",
+   "sphere": "words",
+   "tags": [
+    "religion",
+    "history",
+    "social"
+   ],
+   "klimov": [
+    "S"
+   ]
+  },
+  {
+   "id": "c141",
+   "text": "Подготовить юношескую команду к первенству области",
+   "professionId": "sports_coach",
+   "professionName": "Тренер / специалист по спорту",
+   "group": "49",
+   "sphere": "people",
+   "tags": [
+    "sport",
+    "people",
+    "education"
+   ],
+   "klimov": [
+    "P",
+    "T"
+   ]
+  },
+  {
+   "id": "c142",
+   "text": "Составить программу, чтобы человек подтянулся первый раз в жизни",
+   "professionId": "fitness_trainer",
+   "professionName": "Фитнес-тренер",
+   "group": "49",
+   "sphere": "people",
+   "tags": [
+    "sport",
+    "people"
+   ],
+   "klimov": [
+    "P",
+    "T"
+   ]
+  },
+  {
+   "id": "c143",
+   "text": "Научить человека снова ходить после инсульта",
+   "professionId": "rehab_specialist",
+   "professionName": "Специалист по реабилитации",
+   "group": "49",
+   "sphere": "people",
+   "tags": [
+    "medicine",
+    "sport",
+    "people"
+   ],
+   "klimov": [
+    "P",
+    "T"
+   ]
+  },
+  {
+   "id": "c144",
+   "text": "Собрать выставку молодых художников и найти для неё площадку",
+   "professionId": "curator",
+   "professionName": "Куратор выставок",
+   "group": "50",
+   "sphere": "art",
+   "tags": [
+    "art",
+    "culture",
+    "history"
+   ],
+   "klimov": [
+    "A",
+    "S"
+   ]
+  },
+  {
+   "id": "c145",
+   "text": "Определить, кто написал картину без подписи",
+   "professionId": "art_historian",
+   "professionName": "Искусствовед",
+   "group": "50",
+   "sphere": "art",
+   "tags": [
+    "art",
+    "history",
+    "culture"
+   ],
+   "klimov": [
+    "A",
+    "S"
+   ]
+  },
+  {
+   "id": "c146",
+   "text": "Написать заявку на грант и получить деньги на фестиваль в своём городе",
+   "professionId": "culture_manager",
+   "professionName": "Менеджер культурных проектов",
+   "group": "50",
+   "sphere": "art",
+   "tags": [
+    "culture",
+    "people",
+    "business"
+   ],
+   "klimov": [
+    "P",
+    "A"
+   ]
+  },
+  {
+   "id": "c147",
+   "text": "Оцифровать старинные газеты так, чтобы в них работал поиск",
+   "professionId": "librarian",
+   "professionName": "Библиотекарь, специалист по цифровым коллекциям",
+   "group": "51",
+   "sphere": "art",
+   "tags": [
+    "culture",
+    "writing",
+    "education"
+   ],
+   "klimov": [
+    "S"
+   ]
+  },
+  {
+   "id": "c148",
+   "text": "Собрать хор из жителей села и выступить на областном конкурсе",
+   "professionId": "folk_leader",
+   "professionName": "Руководитель творческого коллектива",
+   "group": "51",
+   "sphere": "art",
+   "tags": [
+    "culture",
+    "music",
+    "theatre"
+   ],
+   "klimov": [
+    "P",
+    "A"
+   ]
+  },
+  {
+   "id": "c149",
+   "text": "Организовать конференцию на 500 человек за месяц",
+   "professionId": "event_manager",
+   "professionName": "Организатор мероприятий",
+   "group": "51",
+   "sphere": "art",
+   "tags": [
+    "people",
+    "culture",
+    "business"
+   ],
+   "klimov": [
+    "P"
+   ]
+  },
+  {
+   "id": "c150",
+   "text": "Поставить танец для 40 школьников, которые никогда не танцевали",
+   "professionId": "choreographer",
+   "professionName": "Хореограф, педагог танца",
+   "group": "52",
+   "sphere": "art",
+   "tags": [
+    "theatre",
+    "sport",
+    "art"
+   ],
+   "klimov": [
+    "A",
+    "P"
+   ]
+  },
+  {
+   "id": "c151",
+   "text": "Выучить партию за две недели и станцевать её без ошибок",
+   "professionId": "dancer",
+   "professionName": "Артист балета, танцовщик",
+   "group": "52",
+   "sphere": "art",
+   "tags": [
+    "theatre",
+    "sport",
+    "art"
+   ],
+   "klimov": [
+    "A",
+    "T"
+   ]
+  },
+  {
+   "id": "c152",
+   "text": "Придумать номер на воздушных полотнах, которого ещё не было",
+   "professionId": "circus_artist",
+   "professionName": "Цирковой артист",
+   "group": "52",
+   "sphere": "art",
+   "tags": [
+    "theatre",
+    "sport",
+    "art"
+   ],
+   "klimov": [
+    "A",
+    "T"
+   ]
+  },
+  {
+   "id": "c153",
+   "text": "Записать песню, которая наберёт первые 100 тысяч прослушиваний",
+   "professionId": "pop_musician",
+   "professionName": "Эстрадный музыкант",
+   "group": "53",
+   "sphere": "art",
+   "tags": [
+    "music",
+    "art",
+    "media"
+   ],
+   "klimov": [
+    "A"
+   ]
+  },
+  {
+   "id": "c154",
+   "text": "Выучить партию на итальянском за месяц",
+   "professionId": "singer",
+   "professionName": "Вокалист, артист оперы и хора",
+   "group": "53",
+   "sphere": "art",
+   "tags": [
+    "music",
+    "theatre",
+    "art"
+   ],
+   "klimov": [
+    "A"
+   ]
+  },
+  {
+   "id": "c155",
+   "text": "Сыграть с оркестром новую программу после трёх репетиций",
+   "professionId": "instrumental_musician",
+   "professionName": "Музыкант оркестра, солист",
+   "group": "53",
+   "sphere": "art",
+   "tags": [
+    "music",
+    "art"
+   ],
+   "klimov": [
+    "A"
+   ]
+  },
+  {
+   "id": "c156",
+   "text": "Придумать логотип и фирменный стиль для новой кофейни",
+   "professionId": "graphic_designer",
+   "professionName": "Графический дизайнер",
+   "group": "54",
+   "sphere": "art",
+   "tags": [
+    "design",
+    "art",
+    "media"
+   ],
+   "klimov": [
+    "A"
+   ]
+  },
+  {
+   "id": "c157",
+   "text": "Понять, почему пожилые люди не могут записаться к врачу через приложение, и переделать экран",
+   "professionId": "uxui",
+   "professionName": "UX/UI-дизайнер",
+   "group": "54",
+   "sphere": "art",
+   "tags": [
+    "design",
+    "art",
+    "it"
+   ],
+   "klimov": [
+    "A",
+    "P"
+   ]
+  },
+  {
+   "id": "c158",
+   "text": "Придумать, почему игроку захочется вернуться в игру завтра",
+   "professionId": "game_designer",
+   "professionName": "Геймдизайнер",
+   "group": "54",
+   "sphere": "art",
+   "tags": [
+    "games",
+    "art",
+    "writing"
+   ],
+   "klimov": [
+    "A",
+    "S"
+   ]
+  },
+  {
+   "id": "c159",
+   "text": "Снять сцену погони за один день, потому что дорогу перекрыли только на день",
+   "professionId": "film_director",
+   "professionName": "Режиссёр кино и сериалов",
+   "group": "55",
+   "sphere": "art",
+   "tags": [
+    "film",
+    "art",
+    "media"
+   ],
+   "klimov": [
+    "A",
+    "P"
+   ]
+  },
+  {
+   "id": "c160",
+   "text": "Придумать формат шоу, которое будут смотреть подростки",
+   "professionId": "tv_producer",
+   "professionName": "Телепродюсер, редактор телепрограмм",
+   "group": "55",
+   "sphere": "art",
+   "tags": [
+    "media",
+    "film",
+    "people"
+   ],
+   "klimov": [
+    "P",
+    "A"
+   ]
+  },
+  {
+   "id": "c161",
+   "text": "Записать оркестр так, чтобы в наушниках было слышно каждую скрипку",
+   "professionId": "sound_engineer",
+   "professionName": "Звукорежиссёр",
+   "group": "55",
+   "sphere": "art",
+   "tags": [
+    "music",
+    "film",
+    "media"
+   ],
+   "klimov": [
+    "T",
+    "A"
+   ]
+  },
+  {
+   "id": "c162",
+   "text": "Перевести переговоры с китайским поставщиком и заметить, где тебя хотят обмануть",
+   "professionId": "orientalist",
+   "professionName": "Востоковед, переводчик восточных языков",
+   "group": "58",
+   "sphere": "words",
+   "tags": [
+    "languages",
+    "intl",
+    "history"
+   ],
+   "klimov": [
+    "S",
+    "P"
+   ]
+  },
+  {
+   "id": "c163",
+   "text": "Перевести инструкцию к станку, не перепутав ни одного термина",
+   "professionId": "translator",
+   "professionName": "Переводчик / локализатор",
+   "group": "58",
+   "sphere": "words",
+   "tags": [
+    "languages",
+    "writing",
+    "intl"
+   ],
+   "klimov": [
+    "S",
+    "P"
+   ]
+  },
+  {
+   "id": "c164",
+   "text": "Помочь гражданину, у которого украли паспорт за границей",
+   "professionId": "diplomat",
+   "professionName": "Специалист по международным отношениям",
+   "group": "58",
+   "sphere": "words",
+   "tags": [
+    "politics",
+    "languages",
+    "history"
+   ],
+   "klimov": [
+    "P",
+    "S"
+   ]
+  }
+ ]
+}
