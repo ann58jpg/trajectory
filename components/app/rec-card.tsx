@@ -15,6 +15,8 @@ import { ProgramRow } from "./program-row";
 import { FactorBar } from "./factor-bar";
 import { CompareToggle } from "./compare";
 import { Term } from "./term";
+import { DataGap } from "./data-gap";
+import { usePresentation } from "@/lib/client/storage";
 
 const DOT = { green: "🟢", yellow: "🟡", red: "🔴" } as const;
 
@@ -24,6 +26,8 @@ export function RecCard({
 }: { rec: Rec & { score?: number }; t: number; anchors: typeof WEIGHT_ANCHORS; variant?: "interests" | "money" | "compact"; rank?: number; onlineHint?: boolean }) {
   const [open, setOpen] = useState(false);
   const [more, setMore] = useState(false);
+  const [presentation] = usePresentation();
+  const hideEstimate = presentation && rec.salary.confidence !== "verified";
   const s = rec.salary;
   const best = rec.programs[0];
   const badges: React.ReactNode[] = [];
@@ -47,7 +51,9 @@ export function RecCard({
       <dl className="mt-4 grid grid-cols-3 gap-2 text-center text-xs">
         <div className="rounded-md bg-primary/10 px-1 py-2">
           <dt className="text-muted-foreground">{CARD.salary5}</dt>
-          <dd className="mt-0.5 text-sm font-semibold tabular-nums" data-testid="card-salary">{rubK(s.middle)}</dd>
+          <dd className="mt-0.5 text-sm font-semibold tabular-nums" data-testid="card-salary">
+            {hideEstimate ? <DataGap what={CARD.salaryGap} where={CARD.salaryGapWhere} compact /> : rubK(s.middle)}
+          </dd>
         </div>
         <div className="rounded-md bg-muted/60 px-1 py-2">
           <dt className="text-muted-foreground">{CARD.chance}</dt>

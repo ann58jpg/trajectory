@@ -93,3 +93,6 @@ export const useWeights = () => useStored(KEYS.weights, AnchorsSchema, () => WEI
 export const CompareItem = z.object({ kind: z.enum(["profession", "specialty", "university"]), id: z.string() });
 export type CompareItem = z.infer<typeof CompareItem>;
 export const useCompare = () => useStored(KEYS.compare, z.array(CompareItem), () => [] as CompareItem[]);
+
+/** «Режим презентации» (/admin): оценки скрыты, вместо них — рамка «Подтверждённых данных нет». */
+export const usePresentation = () => useStored(KEYS.presentation, z.boolean(), () => false);

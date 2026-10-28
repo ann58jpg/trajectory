@@ -409,6 +409,8 @@ export const COMPARE = {
 };
 
 export const CARD = {
+  salaryGap: "Зарплата",
+  salaryGapWhere: "данные СФР и ФНС по выпускникам, hh.ru",
   salary5: "Зарплата через 5 лет",
   chance: "Шанс поступить",
   outlook: "Нужна через 5 лет",
@@ -446,6 +448,13 @@ export const PROGRAM = {
   passGpa: "средний балл аттестата",
   year2025: "данные 2025 года",
   year2026: "2026 год",
+  official: (year: number, total: number) => `проходной ${year}: ${total}`,
+  basisPaid: "на платное",
+  withDvi: "с доп. экзаменом",
+  sourceLink: "источник",
+  checked: (d: string) => `проверено ${d}`,
+  budgetGapWhat: "Число бюджетных мест",
+  budgetGapWhere: "контрольные цифры приёма, сайт вуза",
   budget: (n: number) => `бюджетных мест: ~${n}`,
   noBudget: "бюджетных мест нет",
   budgetUnknown: "бюджетные места есть, сколько — уточни на сайте вуза",
@@ -738,3 +747,4 @@ export const EXAMS = {
   dvi: (s: string) => `Доп. экзамен: ${s}`,
   dviNone: "Доп. экзамен: нет",
 };
+

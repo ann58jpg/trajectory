@@ -17,7 +17,8 @@ import { examSetText } from "@/lib/engine/exams";
 import { rubK } from "@/lib/utils";
 import { yearsWord } from "@/lib/engine/ru";
 import { HowToGet } from "./how-to-get";
-import { PassScore } from "@/components/app/pass-score";
+import { BudgetValue, PassValue } from "@/components/app/pass-score";
+import { officialScore } from "@/lib/engine/scoring";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -109,9 +110,9 @@ export default async function UniversityPage({ params }: { params: Promise<{ id:
                 </p>
                 {s && <p className="text-xs" data-testid="exam-set">{PROGRAM.exams}: {examSetText(s, p)}</p>}
                 <p className="text-xs">{UNIVERSITY.keySubjects}: {p.keySubjects.join(", ")}</p>
-                <PassScore program={p} />
+                <p><PassValue official={officialScore(p)} min={p.passScore.min} max={p.passScore.max} confidence={p.passScore.meta.confidence} /></p>
                 <p className="text-xs text-muted-foreground">
-                  {p.budgetPlaces === null ? PROGRAM.budgetUnknown : p.budgetPlaces > 0 ? PROGRAM.budget(p.budgetPlaces) : PROGRAM.noBudget}
+                  <BudgetValue places={p.budgetPlaces} />
                   {(p.targetPlaces ?? 0) > 0 && <> · <Term k="target">+{p.targetPlaces}</Term></>} · {p.price === null ? PROGRAM.sponsored : PROGRAM.paid(rubK(p.price))}{" "}
                   <SourceMark source={p.meta.source} confidence={p.meta.confidence} />
                 </p>
