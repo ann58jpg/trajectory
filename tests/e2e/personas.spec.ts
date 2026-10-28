@@ -51,3 +51,24 @@ test("Илья (Новосибирск): ИТ по доходу, только в
   await page.goto("/profession/backend");
   await expect(page.getByTestId("outlook-card")).toContainText("ИИ");
 });
+
+test("Тимур (Казань): госуправление в топ-5 направлений, КФУ и РАНХиГС", async ({ page }) => {
+  await fillPersona(page, "timur");
+  const codes = await page.getByTestId("specialty-group").evaluateAll((els) => els.map((e) => e.getAttribute("data-code")));
+  expect(codes).toContain("38.03.04");
+  const gmu = page.locator('[data-testid=specialty-group][data-code="38.03.04"]');
+  await gmu.getByTestId("specialty-where").click();
+  await expect(gmu.getByTestId("specialty-programs")).toContainText("КФУ");
+  await expect(gmu.getByTestId("specialty-programs")).toContainText("РАНХиГС");
+});
+
+test("Соня (Ярославль): театр в подборке, Ярославский театральный среди вузов", async ({ page }) => {
+  await fillPersona(page, "sonya");
+  await expect(page.getByTestId("portrait")).toContainText("в Ярославле");
+  const codes = await page.getByTestId("specialty-group").evaluateAll((els) => els.map((e) => e.getAttribute("data-code")));
+  const theatre = codes.find((c) => c && ["52.05.01", "52.05.02", "52.03.05"].includes(c));
+  expect(theatre).toBeTruthy();
+  const card = page.locator(`[data-testid=specialty-group][data-code="${theatre}"]`);
+  await card.getByTestId("specialty-where").click();
+  await expect(card.getByTestId("specialty-programs")).toContainText(/ГИТИС|РГИСИ|Ярославский театральный/);
+});

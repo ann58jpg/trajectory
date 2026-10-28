@@ -15,6 +15,7 @@ export function genitiveCity(name: string): string {
   if (SPECIAL_GENITIVE[name]) return SPECIAL_GENITIVE[name];
   if (/\(/.test(name)) return name;
   if (/[иоеуюэ]$/i.test(name)) return name;
+  if (MASC_L.has(name)) return name.slice(0, -1) + "я";
   if (/ь$/.test(name)) return name.slice(0, -1) + "и";
   if (/[кгхжшчщ]а$/.test(name)) return name.slice(0, -1) + "и";
   if (/а$/.test(name)) return name.slice(0, -1) + "ы";
@@ -33,8 +34,12 @@ export function accusativeCity(name: string): string {
 }
 
 /** «в …» (предложный) */
+/** Города мужского рода на -ль: «в Ярославле», «из Ярославля». */
+const MASC_L = new Set(["Ярославль", "Кремль"]);
+
 export function prepositionalCity(name: string): string {
   if (name === "Нижний Новгород") return "Нижнем Новгороде";
+  if (MASC_L.has(name)) return name.slice(0, -1) + "е";
   if (name === "Ростов-на-Дону") return "Ростове-на-Дону";
   if (/\(/.test(name)) return name;
   if (/[иоеуюэ]$/i.test(name)) return name;

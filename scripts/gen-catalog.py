@@ -81,6 +81,10 @@ for p in professions:
     if not p["similar"]:
         cands = sorted((q for q in professions if q["id"] != p["id"]), key=lambda q: -sim(p, q))
         p["similar"] = [q["id"] for q in cands[:4]]
+# Порядок направлений у профессии: сначала те, где она главная (первая в списке профессий направления)
+primacy = {(pid, s["code"]): i for s in SPECS for i, pid in enumerate(s["profs"])}
+for p in professions:
+    p["specialties"] = sorted(p["specialties"], key=lambda c: primacy.get((p["id"], c), 99))
 prof_by_id = {p["id"]: p for p in professions}
 
 # ───────── Направления ─────────

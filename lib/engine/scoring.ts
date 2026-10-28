@@ -57,7 +57,9 @@ export function matchScore(prof: Profession, m: UserModel): { match: number; hit
   }
   if (!parts.length) return { match: 0.5, hits: [] };
   const wsum = parts.reduce((s, p) => s + p[1], 0);
-  return { match: clamp(parts.reduce((s, p) => s + p[0] * p[1], 0) / wsum), hits: ts.hits };
+  // сам написал, что это «не моё», — главная сфера профессии в отказе
+  const avoided = prof.tags.slice(0, 2).some((t) => m.avoid.has(t)) ? 0.55 : 1;
+  return { match: clamp((avoided * parts.reduce((s, p) => s + p[0] * p[1], 0)) / wsum), hits: ts.hits };
 }
 
 /* ───────────── Региональные коэффициенты ───────────── */

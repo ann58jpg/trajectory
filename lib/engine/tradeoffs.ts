@@ -92,6 +92,8 @@ function salaryAfter(pm: ProgramMatch, changes: TradeoffChange[], rec: Rec, cata
   return Math.round((prof.salary.middle * coef) / 1000) * 1000;
 }
 
+/** «МГТУ (Мурманск)» уже содержит город — второй раз не пишем. */
+const uniWhere = (pm: ProgramMatch) => (pm.universityShort.includes(pm.city) ? pm.universityShort : `${pm.universityShort} (${pm.city})`);
 const clamp = (x: number, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const joinIf = (list: string[]) => (list.length > 1 ? `${list.slice(0, -1).join(", ")} и ${list[list.length - 1]}` : list[0]);
 /** Изменение ЕГЭ на один предмет — «близкий» вариант; на два и больше — уже другой профиль. */
@@ -178,7 +180,7 @@ export function computeTradeoffs(recs: Rec[], p: StudentProfile, m: UserModel, c
       ? ` Зарплата через 5 лет примерно на ${Math.round(gainPct * 100)}% выше (~${rubles(bestOpt.salary)} в месяц).`
       : gainPct <= -0.05 ? ` Зарплата через 5 лет примерно на ${Math.round(-gainPct * 100)}% ниже, зато это ближе к тебе.` : " По деньгам примерно так же.";
     const sentence = kind === "unlock"
-      ? `Если ${cond}, сможешь поступить на «${spec.name}» в ${bestOpt.pm.universityShort} (${bestOpt.pm.city}) — это близко к ${bestOpt.closeTo}.${money}`
+      ? `Если ${cond}, сможешь поступить на «${spec.name}» в ${uniWhere(bestOpt.pm)} — это близко к ${bestOpt.closeTo}.${money}`
       : `Если ${cond}, профессия «${prof.name}», которая тебе уже подходит, станет выгоднее, место учёбы — ${bestOpt.pm.universityShort}.${money}`;
 
     out.push({

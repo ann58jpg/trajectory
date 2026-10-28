@@ -22,13 +22,13 @@ export function buildDirections<R extends Rec & { score: number }>(
   const byCode = new Map<string, Direction<R>>();
   for (const r of ranked.slice(0, pool)) {
     const codes = r.specialtyCodes.filter((c) => hasPrograms(c) || r.programs.some((p) => p.specialtyCode === c));
-    for (const c of codes) {
+    codes.forEach((c, idx) => {
       const d = byCode.get(c) ?? { code: c, group: c.slice(0, 2), score: 0, recs: [] };
-      // группы, чьи задачи понравились в игре, чуть выше при равных профессиях
-      d.score = Math.max(d.score, r.score + 0.04 * (likedGroups[d.group] ?? 0));
+      // группы, чьи задачи понравились в игре, выше; главное направление профессии — выше запасных
+      d.score = Math.max(d.score, r.score + 0.1 * (likedGroups[d.group] ?? 0) - 0.015 * idx);
       d.recs.push(r);
       byCode.set(c, d);
-    }
+    });
   }
   const sorted = [...byCode.values()].sort((a, b) => b.score - a.score || b.recs.length - a.recs.length);
   const shown = new Set<string>();

@@ -11,6 +11,8 @@ export type UserModel = {
   klimov: Record<Klimov, number> | null;
   style: { hands: number; head: number; team: number; solo: number };
   formats: Set<string>;
+  /** Сферы, от которых человек сам отказался в тексте мечты («медицина не моё»). */
+  avoid: Set<string>;
   /** Игра: профессии и группы направлений, чьи задачи понравились (вес 0..1), и сколько раундов сыграно. */
   game: { profs: Map<string, number>; groups: Map<string, number>; tasks: Map<string, string>; rounds: number };
   subjectWeights: Map<string, { weight: number; reasonLabel: string }>;
@@ -45,12 +47,25 @@ function addTag(m: Map<string, TagSignal>, tag: string, w: number, source: strin
   }
 }
 
-export function parseDreamKeywords(text: string): { tags: string[]; values: string[]; fears: string[] } {
+/** «не хочу», «не моё», «не люблю»… — части фразы с отказом. */
+const NEGATIVE = /(^|\s)не\s+(хочу|хотел|моё|мое|люблю|нравится|интересн|буду|готов)|терпеть не могу|ненавиж/i;
+
+export function parseDreamKeywords(text: string): { tags: string[]; values: string[]; fears: string[]; avoid: string[] } {
   const tags = new Set<string>();
-  for (const [re, ts] of DREAM_KEYWORDS) if (re.test(text)) ts.forEach((t) => tags.add(t));
+  const avoid = new Set<string>();
+  for (const part of text.split(/[.!?;,]+/)) {
+    const negative = NEGATIVE.test(part);
+    for (const [re, ts] of DREAM_KEYWORDS) {
+      if (!re.test(part)) continue;
+      // в отказе берём только главный тег ключевого слова: «медицина не моё» → не медицина, но биология не запрещена
+      if (negative) avoid.add(ts[0]);
+      else ts.forEach((t) => tags.add(t));
+    }
+  }
+  for (const t of avoid) tags.delete(t);
   const values = DREAM_VALUES.filter(([re]) => re.test(text)).map(([, v]) => v);
   const fears = DREAM_FEARS.filter(([re]) => re.test(text)).map(([, v]) => v);
-  return { tags: [...tags], values, fears };
+  return { tags: [...tags], values, fears, avoid: [...avoid] };
 }
 
 /** Русский нужен для любого вуза, поэтому он есть всегда (балл может быть неизвестен). */
@@ -172,6 +187,7 @@ export function buildUserModel(p: StudentProfile, egeSubjects: EgeSubject[], reg
     klimov,
     style,
     formats: new Set(p.workFormats),
+    avoid: new Set(dream.avoid),
     game: { profs: gameProfs, groups: gameGroups, tasks: gameTasks, rounds: gameRounds },
     subjectWeights,
     ege: egeMap(p),
