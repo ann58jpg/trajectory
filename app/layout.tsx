@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import "./globals.css";
 import { SiteHeader } from "@/components/app/site-header";
 import { themeScript } from "@/components/app/theme-toggle";
@@ -22,6 +23,8 @@ export const viewport: Viewport = {
 
 export const dynamic = "force-dynamic";
 
+const YM_ID = Number(process.env.NEXT_PUBLIC_YM_ID) || null;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ru" suppressHydrationWarning>
@@ -35,6 +38,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main id="main" className="mx-auto w-full max-w-6xl px-4 pb-24">{children}</main>
         <CompareTray />
+        {YM_ID && (
+          // Яндекс Метрика: цели — события track() (reachGoal), вебвизор и карта кликов. Настройка — в README.
+          <Script id="ym" strategy="afterInteractive">{`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(${YM_ID},"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});`}</Script>
+        )}
         <footer className="border-t py-6 text-xs text-muted-foreground">
           <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-4 gap-y-2 px-4">
             <span>{FOOTER.note}</span>

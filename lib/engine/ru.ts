@@ -59,6 +59,21 @@ export const SUBJECT_ACC: Record<string, string> = {
   geo: "географию",
 };
 
+export const SUBJECT_GEN: Record<string, string> = {
+  rus: "русского языка",
+  math: "профильной математики",
+  phys: "физики",
+  chem: "химии",
+  bio: "биологии",
+  inf: "информатики",
+  soc: "обществознания",
+  hist: "истории",
+  lit: "литературы",
+  foreign: "иностранного языка",
+  math_base: "базовой математики",
+  geo: "географии",
+};
+
 export const SUBJECT_NOM: Record<string, string> = {
   rus: "русский язык",
   math: "профильная математика",

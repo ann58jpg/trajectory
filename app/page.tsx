@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { getCatalog } from "@/lib/db/catalog";
 import { LANDING } from "@/lib/copy";
+import { TrackView } from "@/components/app/track-view";
 
 const STEP_ICONS = [ClipboardList, BarChart3, Scale];
 const FEATURE_ICONS = [MapPin, TrendingUp, CalendarHeart];
@@ -14,6 +15,7 @@ export default function Home() {
   const cities = new Set(c.universities.map((u) => u.city)).size;
   return (
     <div className="space-y-16">
+      <TrackView event="landing_view" />
       <section className="hero-bg -mx-4 px-4 pb-10 pt-12 sm:pt-20">
         <div className="mx-auto max-w-3xl text-center">
           <Badge className="mb-4">{LANDING.badge}</Badge>

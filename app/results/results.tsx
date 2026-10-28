@@ -1,51 +1,52 @@
 "use client";
-import { CHART } from "@/lib/chart-colors";
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { AlertTriangle, ArrowRight, Coins, GitCompare, Heart, Info, RefreshCcw, Sparkles, TrendingUp } from "lucide-react";
-import { CartesianGrid, Legend, Line, LineChart, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { AlertTriangle, ArrowRight, CalendarDays, Coins, GitCompare, Heart, Info, RefreshCcw, Sparkles, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Slider } from "@/components/ui/slider";
 import { Skeleton } from "@/components/ui/misc";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { RecCard } from "@/components/app/rec-card";
 import { ProgramRow } from "@/components/app/program-row";
-import { OutlookBadge } from "@/components/app/outlook-badge";
 import { PlanButton } from "@/components/app/plan-button";
+import { EventItem } from "@/components/app/events-block";
+import { Feedback } from "@/components/app/feedback";
 import { KEYS, readLS, useProfile, useWeights, writeLS } from "@/lib/client/storage";
 import { rankRecs } from "@/lib/engine/scoring";
-import type { ComparisonSide, Rec, RecommendResponse, Tradeoff } from "@/lib/schemas";
+import { buildDirections, type Direction } from "@/lib/engine/directions";
+import type { Rec, RecommendResponse, Tradeoff, UniEvent } from "@/lib/schemas";
 import { RecommendResponse as RecommendResponseSchema } from "@/lib/schemas";
-import { cn, pct, rub, rubK } from "@/lib/utils";
+import { cn, rub } from "@/lib/utils";
 import { z } from "zod";
 import { yearsWord } from "@/lib/engine/ru";
-import { COMPARE, MATCH_TEXT, RESULTS } from "@/lib/copy";
+import { COMPARE, RESULTS } from "@/lib/copy";
+import { track } from "@/lib/analytics";
 
 type State = { status: "idle" | "loading" | "error" | "ok"; data?: RecommendResponse; error?: string; hint?: string };
+type Mode = "interests" | "money";
+type Ranked = Rec & { score: number };
 
 export function Results() {
   const [profile, , ready] = useProfile();
   const [anchors] = useWeights();
   const [state, setState] = useState<State>({ status: "idle" });
-  const [t, setT] = useState<number | null>(null);
-  const [tab, setTab] = useState("interests");
+  const [mode, setModeState] = useState<Mode | null>(null);
 
   const load = async () => {
     setState({ status: "loading" });
     try {
       const res = await fetch("/api/recommend", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(profile) });
       const json = await res.json();
-      if (!res.ok) return setState({ status: "error", error: json.error ?? "Ошибка", hint: json.hint });
+      if (!res.ok) return setState({ status: "error", error: json.error ?? RESULTS.errorTitle, hint: json.hint });
       const parsed = RecommendResponseSchema.safeParse(json);
-      if (!parsed.success) return setState({ status: "error", error: "Сервер вернул неожиданный ответ", hint: "Обновите страницу" });
+      if (!parsed.success) return setState({ status: "error", error: RESULTS.errorBadAnswer, hint: RESULTS.errorBadAnswerHint });
       setState({ status: "ok", data: parsed.data });
-      const saved = readLS(KEYS.slider, z.number().min(0).max(1), parsed.data.startT);
-      setT(saved);
+      // стартовый режим — по первому ответу анкеты, дальше — как переключил сам человек
+      setModeState(readLS(KEYS.mode, z.enum(["interests", "money"]), parsed.data.startT >= 0.75 ? "money" : "interests"));
+      track("results_view", { mode: parsed.data.startT >= 0.75 ? "money" : "interests", confidence: parsed.data.confidence });
     } catch {
-      setState({ status: "error", error: "Нет связи с сервером", hint: "Проверьте, что приложение запущено (npm run dev), и попробуйте ещё раз" });
+      setState({ status: "error", error: RESULTS.errorNetwork, hint: RESULTS.errorNetworkHint });
     }
   };
 
@@ -54,14 +55,20 @@ export function Results() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ready]);
 
-  const tv = t ?? state.data?.startT ?? 0.5;
-  const setSlider = (v: number) => {
-    setT(v);
-    writeLS(KEYS.slider, v);
+  const m: Mode = mode ?? "interests";
+  const setMode = (v: Mode) => {
+    if (v === m) return;
+    setModeState(v);
+    writeLS(KEYS.mode, v);
+    track("mode_switch", { to: v });
   };
 
-  const ranked = useMemo(() => (state.data ? rankRecs(state.data.recs, tv, { anchors }) : []), [state.data, tv, anchors]);
-  const moneyRanked = useMemo(() => (state.data ? rankRecs(state.data.recs, tv, { anchors, moneyMode: true }) : []), [state.data, tv, anchors]);
+  const t = m === "money" ? 1 : 0;
+  const ranked = useMemo(() => (state.data ? rankRecs(state.data.recs, t, { anchors, moneyMode: m === "money" }) : []), [state.data, t, anchors, m]);
+  const dirs = useMemo(
+    () => (state.data ? buildDirections(ranked, (c) => (state.data!.specialtyPrograms[c]?.length ?? 0) > 0, { likedGroups: state.data.likedGroups }) : { top: [], similar: {} }),
+    [ranked, state.data],
+  );
 
   if (!ready || state.status === "loading" || (profile.consent && state.status === "idle")) return <ResultsSkeleton />;
 
@@ -69,9 +76,9 @@ export function Results() {
     return (
       <div className="mx-auto max-w-xl pt-16 text-center">
         <Sparkles className="mx-auto h-10 w-10 text-primary" />
-        <h1 className="mt-3 text-2xl font-bold">Сначала пройди анкету</h1>
-        <p className="mt-2 text-muted-foreground">7 минут — и мы покажем профессии, специальности и вузы под твой регион, интересы и деньги.</p>
-        <Button asChild size="lg" className="mt-6"><Link href="/quiz">Пройти тест <ArrowRight /></Link></Button>
+        <h1 className="mt-3 text-2xl font-bold">{RESULTS.noConsentTitle}</h1>
+        <p className="mt-2 text-muted-foreground">{RESULTS.noConsentText}</p>
+        <Button asChild size="lg" className="mt-6"><Link href="/quiz">{RESULTS.start} <ArrowRight /></Link></Button>
       </div>
     );
   }
@@ -80,9 +87,9 @@ export function Results() {
     return (
       <div className="mx-auto max-w-xl pt-16 text-center" role="alert">
         <AlertTriangle className="mx-auto h-10 w-10 text-bad" />
-        <h1 className="mt-3 text-xl font-bold">{state.error ?? "Не удалось загрузить результаты"}</h1>
+        <h1 className="mt-3 text-xl font-bold">{state.error ?? RESULTS.errorTitle}</h1>
         {state.hint && <p className="mt-2 text-sm text-muted-foreground">{state.hint}</p>}
-        <Button className="mt-6" onClick={load}><RefreshCcw /> Повторить</Button>
+        <Button className="mt-6" onClick={load}><RefreshCcw /> {RESULTS.retry}</Button>
       </div>
     );
   }
@@ -90,203 +97,205 @@ export function Results() {
   const d = state.data;
   const specName = new Map(d.specialties.map((s) => [s.code, s]));
   const conf = Math.round(d.confidence * 100);
+  const shownUnis = new Set(dirs.top.flatMap((x) => (d.specialtyPrograms[x.code] ?? []).map((p) => p.universityId)));
 
   return (
-    <div className="space-y-6 pt-6" data-testid="results">
-      {/* Портрет + ползунок */}
+    <div className="space-y-8 pt-6" data-testid="results">
+      {/* Портрет и переключатель */}
       <Card className="hero-bg overflow-hidden">
         <CardContent className="space-y-4 pt-5">
           <div className="flex flex-col-reverse items-start justify-between gap-2 sm:flex-row sm:gap-3">
             <div className="min-w-0 flex-1">
-              <p className="text-xs uppercase tracking-wide text-muted-foreground">Твой портрет</p>
+              <p className="text-xs uppercase tracking-wide text-muted-foreground">{RESULTS.portrait}</p>
               <h1 className="text-lg font-semibold leading-snug sm:text-xl" data-testid="portrait">{d.portrait}</h1>
             </div>
             <div className="flex items-center gap-2 sm:flex-col sm:items-end sm:gap-1">
-              <Badge variant={conf >= 80 ? "green" : conf >= 50 ? "yellow" : "red"} data-testid="confidence" title={d.missing.length ? `Не хватает: ${d.missing.join(", ")}` : "Анкета заполнена полностью"}>
+              <Badge variant={conf >= 80 ? "green" : conf >= 50 ? "yellow" : "red"} data-testid="confidence" title={RESULTS.confidenceHint(d.missing)}>
                 {RESULTS.confidence(conf)}
               </Badge>
-              {d.mode === "demo" && <span className="text-[11px] text-muted-foreground">тексты из шаблонов</span>}
+              {d.mode === "demo" && <span className="text-[11px] text-muted-foreground">{RESULTS.templates}</span>}
             </div>
           </div>
           {d.missing.length > 0 && (
             <p className="flex items-start gap-1.5 text-xs text-muted-foreground">
-              <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" /> Пропущено: {d.missing.join(", ")}. <Link href="/quiz" className="text-primary hover:underline">Дополнить анкету</Link>
+              <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" /> {RESULTS.skipped(d.missing.join(", "))} <Link href="/quiz" className="text-primary hover:underline">{RESULTS.fill}</Link>
             </p>
           )}
-
-          <div className="rounded-lg border bg-card/80 p-4">
-            <div className="flex items-center justify-between text-sm font-medium">
-              <span className="flex items-center gap-1.5"><Heart className="h-4 w-4 text-primary" /> Интерес</span>
-              <span className="text-xs text-muted-foreground tabular-nums" data-testid="slider-value">{Math.round((1 - tv) * 100)} / {Math.round(tv * 100)}</span>
-              <span className="flex items-center gap-1.5">Доход <Coins className="h-4 w-4 text-accent" /></span>
-            </div>
-            <Slider value={[Math.round(tv * 100)]} min={0} max={100} step={1} onValueChange={([v]) => setSlider(v / 100)} thumbLabel="Интерес или доход" data-testid="slider" />
-            <div className="mt-1 flex flex-wrap justify-center gap-2">
-              {[[0, "Интересы"], [0.5, "Баланс"], [1, "Деньги"]].map(([v, l]) => (
-                <Button key={l as string} size="sm" variant={Math.abs(tv - (v as number)) < 0.01 ? "secondary" : "ghost"} onClick={() => setSlider(v as number)} data-testid={`slider-${v}`}>
-                  {l}
-                </Button>
+          <div className="space-y-1.5">
+            <p className="text-sm font-medium">{RESULTS.modeLabel}</p>
+            <div className="inline-grid w-full grid-cols-2 rounded-lg border bg-card p-1 sm:w-auto" role="radiogroup" aria-label={RESULTS.modeLabel}>
+              {([["interests", RESULTS.modeInterests, Heart], ["money", RESULTS.modeMoney, Coins]] as const).map(([v, label, Icon]) => (
+                <button
+                  key={v}
+                  type="button"
+                  role="radio"
+                  aria-checked={m === v}
+                  onClick={() => setMode(v)}
+                  data-testid={`mode-${v}`}
+                  className={cn(
+                    "inline-flex cursor-pointer items-center justify-center gap-1.5 rounded-md px-4 py-2 text-sm font-medium transition-colors",
+                    m === v ? "bg-primary text-primary-foreground shadow-sm" : "text-muted-foreground hover:text-foreground",
+                  )}
+                >
+                  <Icon className="h-4 w-4" /> {label}
+                </button>
               ))}
             </div>
-            <p className="mt-1 text-center text-[11px] text-muted-foreground">Рейтинг пересчитывается мгновенно, без перезагрузки.</p>
+            <p className="text-[11px] text-muted-foreground">{RESULTS.modeHint}</p>
           </div>
         </CardContent>
       </Card>
 
       {d.egeAdvice.length > 0 && profile.egeOrder !== "chosen" && (
         <Card>
-          <CardHeader><CardTitle className="text-base">Какие предметы ЕГЭ нужны под подходящие профессии</CardTitle></CardHeader>
+          <CardHeader><CardTitle className="text-base">{RESULTS.egeTitle}</CardTitle></CardHeader>
           <CardContent><ul className="list-inside list-disc space-y-1 text-sm">{d.egeAdvice.map((a) => <li key={a}>{a}</li>)}</ul></CardContent>
         </Card>
       )}
 
-      <Tabs value={tab} onValueChange={setTab}>
-        <TabsList>
-          <TabsTrigger value="interests" data-testid="tab-interests"><Heart /> Интересы</TabsTrigger>
-          <TabsTrigger value="money" data-testid="tab-money"><Coins /> Деньги</TabsTrigger>
-          <TabsTrigger value="compare" data-testid="tab-compare"><GitCompare /> Сравнение</TabsTrigger>
-        </TabsList>
+      {/* Направления */}
+      <section className="space-y-4" data-testid="directions" data-mode={m}>
+        <div>
+          <h2 className="text-lg font-semibold">{m === "money" ? RESULTS.moneyTitle : RESULTS.tabs.interests}</h2>
+          <p className="text-sm text-muted-foreground">{m === "money" ? RESULTS.moneyIntro : RESULTS.interestsIntro}</p>
+        </div>
+        {dirs.top.length === 0 && <Empty text={m === "money" ? RESULTS.emptyMoney : RESULTS.emptyInterests} />}
+        {dirs.top.map((g, n) => (
+          <DirectionCard key={g.code} n={n + 1} dir={g} similar={dirs.similar[g.code] ?? []} data={d} specName={specName} t={t} anchors={anchors} relocationNo={profile.relocation === "no"} />
+        ))}
+        {d.comparison.interests && d.comparison.money && (
+          <Button asChild variant="outline" size="sm">
+            <Link href="/compare" onClick={() => track("compare_open", { from: "results" })} data-testid="compare-default"><GitCompare /> {COMPARE.defaultIntro}</Link>
+          </Button>
+        )}
+      </section>
 
-        <TabsContent value="interests" data-testid="panel-interests">
-          <InterestsTab ranked={ranked} data={d} t={tv} anchors={anchors} specName={specName} relocationNo={profile.relocation === "no"} />
-        </TabsContent>
+      <UpcomingEvents events={d.upcomingEvents} shownUnis={shownUnis} unis={uniNames(d)} />
 
-        <TabsContent value="money" data-testid="panel-money" className="space-y-6">
-          {tv < 0.5 && (
-            <div className="flex flex-wrap items-center gap-2 rounded-lg border border-accent/40 bg-accent/10 p-3 text-sm">
-              Ползунок сейчас ближе к интересам. <Button size="sm" variant="secondary" onClick={() => setSlider(1)}>Сдвинуть на «Деньги»</Button>
-            </div>
-          )}
-          <section className="space-y-3">
-            <h2 className="text-lg font-semibold">Профессии с высоким потолком дохода</h2>
-            {moneyRanked.length === 0 && <Empty text="Под твои условия не нашлось профессий с минимальной совместимостью. Попробуй ослабить фильтры в анкете." />}
-            <div className="grid gap-3 lg:grid-cols-2">
-              {moneyRanked.slice(0, 5).map((r, n) => (
-                <div key={r.professionId} className="space-y-2">
-                  <RecCard rec={r} t={tv} anchors={anchors} variant="money" rank={n + 1} onlineHint={profile.relocation === "no"} />
-                  <p className="px-1 text-xs text-muted-foreground">
-                    Специальности:{" "}
-                    {r.specialtyCodes.filter((c) => specName.has(c)).slice(0, 4).map((c, k) => (
-                      <span key={c}>{k > 0 && ", "}<Link href={`/specialty/${c}`} className="text-primary hover:underline">{c} {specName.get(c)!.name}</Link></span>
-                    ))}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </section>
-          <TradeoffsBlock tradeoffs={d.tradeoffs} />
-        </TabsContent>
+      <TradeoffsBlock tradeoffs={d.tradeoffs} />
 
-        <TabsContent value="compare" data-testid="panel-compare">
-          <Comparison a={d.comparison.interests} b={d.comparison.money} />
-        </TabsContent>
-      </Tabs>
+      <Feedback mode={m} />
 
-      <p className="rounded-lg border border-dashed p-4 text-center text-sm text-muted-foreground" data-testid="disclaimer">
-        Это рекомендации на основе открытых данных, а не гарантия. Проверяй проходные баллы и даты на официальных сайтах вузов.
-      </p>
+      <p className="rounded-lg border border-dashed p-4 text-center text-sm text-muted-foreground" data-testid="disclaimer">{RESULTS.disclaimer}</p>
     </div>
   );
 }
 
-function InterestsTab({
-  ranked, data, t, anchors, specName, relocationNo,
+function uniNames(d: RecommendResponse): Map<string, string> {
+  const map = new Map<string, string>();
+  for (const list of Object.values(d.specialtyPrograms)) for (const p of list) map.set(p.universityId, `${p.universityShort}, ${p.city}`);
+  return map;
+}
+
+function DirectionCard({
+  n, dir, similar, data, specName, t, anchors, relocationNo,
 }: {
-  ranked: (Rec & { score: number })[]; data: RecommendResponse; t: number; anchors: Parameters<typeof RecCard>[0]["anchors"];
+  n: number; dir: Direction<Ranked>; similar: Direction<Ranked>[]; data: RecommendResponse; t: number; anchors: Parameters<typeof RecCard>[0]["anchors"];
   specName: Map<string, { code: string; name: string; level: string; years: number }>; relocationNo: boolean;
 }) {
-  const [openSpec, setOpenSpec] = useState<string | null>(null);
-  // специальности → профессии: берём лучшие профессии и группируем по специальностям, где для них есть программы
-  const groups = useMemo(() => {
-    const top = ranked.slice(0, 18);
-    const map = new Map<string, { code: string; best: number; recs: (Rec & { score: number })[] }>();
-    for (const r of top) {
-      const codes = new Set(r.programs.map((p) => p.specialtyCode));
-      for (const c of r.specialtyCodes.filter((x) => codes.has(x) || (data.specialtyPrograms[x]?.length ?? 0) > 0)) {
-        const g = map.get(c) ?? { code: c, best: 0, recs: [] };
-        g.best = Math.max(g.best, r.score);
-        if (g.recs.length < 5) g.recs.push(r);
-        map.set(c, g);
-      }
-    }
-    return [...map.values()].sort((a, b) => b.best - a.best || b.recs.length - a.recs.length).slice(0, 5);
-  }, [ranked, data.specialtyPrograms]);
-
-  if (!ranked.length) return <Empty text="Под твои условия не нашлось подходящих программ. Проверь регион, готовность к переезду и финансы в анкете." />;
-
+  const [open, setOpen] = useState(false);
+  const [showSimilar, setShowSimilar] = useState(false);
+  const spec = specName.get(dir.code);
+  const programs = data.specialtyPrograms[dir.code] ?? [];
+  const level = (spec?.level ?? "bachelor") as keyof typeof RESULTS.levelLabel;
   return (
-    <div className="space-y-5">
-      <p className="text-sm text-muted-foreground">Специальности, которые ведут к подходящим тебе профессиям. Нажми «Где учиться», чтобы увидеть программы, прошедшие твои фильтры.</p>
-      {groups.map((g, n) => {
-        const spec = specName.get(g.code);
-        const programs = data.specialtyPrograms[g.code] ?? [];
-        return (
-          <Card key={g.code} data-testid="specialty-group">
-            <CardHeader>
-              <div className="flex flex-wrap items-center gap-2">
-                <Badge variant="outline">{n + 1}</Badge>
-                <Link href={`/specialty/${g.code}`} className="hover:underline"><CardTitle className="text-base sm:text-lg">{g.code} {spec?.name}</CardTitle></Link>
-                {spec?.level === "spo" && <Badge variant="secondary">{RESULTS.levelLabel.spo}</Badge>}
-              </div>
-              <CardDescription>{spec?.level === "spo" ? "После 11 класса" : spec?.level === "specialist" ? "Специалитет" : "Бакалавриат"} · {spec ? yearsWord(spec.years) : ""}</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              <div className="grid gap-3 md:grid-cols-2">
-                {g.recs.map((r) => <RecCard key={r.professionId} rec={r} t={t} anchors={anchors} variant="compact" />)}
-              </div>
-              <Button variant="outline" size="sm" onClick={() => setOpenSpec(openSpec === g.code ? null : g.code)} aria-expanded={openSpec === g.code} data-testid="specialty-where">
-                Где учиться ({programs.length})
-              </Button>
-              {openSpec === g.code && (
-                <div className="space-y-2" data-testid="specialty-programs">
-                  {programs.map((pm) => <ProgramRow key={pm.programId} pm={pm} />)}
-                  {relocationNo && <p className="text-xs text-muted-foreground">Ты не готов(а) к переезду — показываем только вузы твоего города и онлайн-программы вузов твоего региона.</p>}
-                </div>
-              )}
-            </CardContent>
-          </Card>
-        );
-      })}
-    </div>
+    <Card data-testid="specialty-group" data-code={dir.code}>
+      <CardHeader>
+        <div className="flex flex-wrap items-center gap-2">
+          <Badge variant="outline">{n}</Badge>
+          <Link href={`/specialty/${dir.code}`} className="hover:underline"><CardTitle className="text-base sm:text-lg">{spec?.name ?? dir.code}</CardTitle></Link>
+        </div>
+        <CardDescription>{dir.code} · {RESULTS.levelLabel[level]} · {spec ? yearsWord(spec.years) : ""}</CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="grid gap-4 md:grid-cols-2">
+          {dir.recs.map((r) => <RecCard key={r.professionId} rec={r} t={t} anchors={anchors} variant="compact" />)}
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <Button variant="outline" size="sm" onClick={() => setOpen(!open)} aria-expanded={open} data-testid="specialty-where">{RESULTS.whereToStudy(programs.length)}</Button>
+          {similar.length > 0 && (
+            <Button variant="ghost" size="sm" onClick={() => setShowSimilar(!showSimilar)} aria-expanded={showSimilar} data-testid="show-similar">
+              {showSimilar ? RESULTS.hideSimilar : RESULTS.showSimilar(similar.length)}
+            </Button>
+          )}
+        </div>
+        {open && (
+          <div className="space-y-2" data-testid="specialty-programs">
+            {programs.map((pm) => <ProgramRow key={pm.programId} pm={pm} />)}
+            {relocationNo && <p className="text-xs text-muted-foreground">{RESULTS.relocationNoNote}</p>}
+          </div>
+        )}
+        {showSimilar && (
+          <ul className="space-y-2" data-testid="similar-list">
+            {similar.map((s) => (
+              <li key={s.code} className="rounded-lg border p-3 text-sm">
+                <Link href={`/specialty/${s.code}`} className="font-medium text-primary hover:underline">{specName.get(s.code)?.name ?? s.code}</Link>
+                <span className="text-xs text-muted-foreground"> · {s.code} · {RESULTS.whereToStudy(data.specialtyPrograms[s.code]?.length ?? 0)}</span>
+                <p className="mt-1 text-xs text-muted-foreground">{s.recs.map((r) => r.name).join(", ")}</p>
+              </li>
+            ))}
+          </ul>
+        )}
+      </CardContent>
+    </Card>
+  );
+}
+
+function UpcomingEvents({ events, shownUnis, unis }: { events: UniEvent[]; shownUnis: Set<string>; unis: Map<string, string> }) {
+  const today = new Date();
+  const limit = new Date(today.getTime() + 31 * 24 * 3600 * 1000).toISOString().slice(0, 10);
+  const month = events.filter((e) => e.date! <= limit);
+  // сначала события вузов из твоей подборки, потом остальных, прошедших фильтры
+  const list = [...month.filter((e) => shownUnis.has(e.universityId)), ...month.filter((e) => !shownUnis.has(e.universityId))].slice(0, 5);
+  const later = list.length === 0 ? events.slice(0, 3) : [];
+  return (
+    <section className="space-y-3" data-testid="upcoming-events">
+      <h2 className="flex items-center gap-2 text-lg font-semibold"><CalendarDays className="h-5 w-5 text-primary" /> {RESULTS.eventsTitle}</h2>
+      <p className="text-sm text-muted-foreground">{RESULTS.eventsIntro}</p>
+      {list.length > 0 && <ul className="space-y-2">{list.map((e) => <EventItem key={e.id} e={e} uniName={unis.get(e.universityId)} />)}</ul>}
+      {list.length === 0 && (
+        <>
+          <Empty text={RESULTS.eventsEmpty} />
+          {later.length > 0 && (
+            <>
+              <p className="text-sm font-medium">{RESULTS.eventsLater}</p>
+              <ul className="space-y-2">{later.map((e) => <EventItem key={e.id} e={e} uniName={unis.get(e.universityId)} />)}</ul>
+            </>
+          )}
+        </>
+      )}
+    </section>
   );
 }
 
 function TradeoffsBlock({ tradeoffs }: { tradeoffs: Tradeoff[] }) {
   return (
     <section className="space-y-3" data-testid="tradeoffs">
-      <h2 className="flex items-center gap-2 text-lg font-semibold"><TrendingUp className="h-5 w-5 text-primary" /> Если готов изменить…</h2>
-      <p className="text-sm text-muted-foreground">Цена компромисса: что нужно поменять, сколько это даст через 5 лет и чем придётся пожертвовать.</p>
-      {tradeoffs.length === 0 && (
-        <Empty text="Ты уже открыл(а) себе самые денежные варианты под свой профиль — изменения в анкете не дают +25% к доходу." />
-      )}
+      <h2 className="flex items-center gap-2 text-lg font-semibold"><TrendingUp className="h-5 w-5 text-primary" /> {RESULTS.tradeoffsTitle}</h2>
+      <p className="text-sm text-muted-foreground">{RESULTS.tradeoffsIntro}</p>
+      {tradeoffs.length === 0 && <Empty text={RESULTS.tradeoffsEmpty} />}
       <div className="grid gap-3 lg:grid-cols-2">
         {tradeoffs.map((t) => (
           <Card key={t.professionId + t.programId} className="border-primary/30" data-testid="tradeoff-card">
             <CardContent className="space-y-3 pt-5">
-              <div className="flex flex-wrap items-center gap-2">
-                <Link href={`/profession/${t.professionId}`} className="font-semibold hover:underline">{t.professionName}</Link>
-                {t.gainPct >= 0.05 && <Badge variant="green" data-testid="tradeoff-gain">+{Math.round(t.gainPct * 100)}%</Badge>}
-              </div>
-              <ul className="space-y-1 text-sm">
-                {t.changes.filter((c) => c.type !== "form").map((c) => (
-                  <li key={c.text} className="flex gap-2"><ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> <span className="first-letter:uppercase">{c.text}</span></li>
-                ))}
-              </ul>
-              <div className="grid grid-cols-2 gap-2 text-center text-sm">
-                <div className="rounded-md bg-muted/60 p-2">
-                  <div className="text-xs text-muted-foreground">сейчас: {t.salaryNowLabel}</div>
-                  <div className="font-semibold tabular-nums">~{rub(t.salaryNow)}</div>
+              <p className="text-sm leading-relaxed" data-testid="tradeoff-sentence">{t.sentence}</p>
+              {t.gainPct >= 0.05 && (
+                <div className="grid grid-cols-2 gap-2 text-center text-sm">
+                  <div className="rounded-md bg-muted/60 p-2">
+                    <div className="text-xs text-muted-foreground">{RESULTS.tradeoffNow}</div>
+                    <div className="font-semibold tabular-nums">~{rub(t.salaryNow)}</div>
+                  </div>
+                  <div className="rounded-md bg-ok/12 p-2">
+                    <div className="text-xs text-muted-foreground">{RESULTS.tradeoffAfter}</div>
+                    <div className="font-semibold tabular-nums" data-testid="tradeoff-gain">~{rub(t.salaryNew)}</div>
+                  </div>
                 </div>
-                <div className="rounded-md bg-ok/12 p-2">
-                  <div className="text-xs text-muted-foreground">после изменений</div>
-                  <div className="font-semibold tabular-nums">~{rub(t.salaryNew)}</div>
-                </div>
-              </div>
-              <p className="text-xs text-muted-foreground">через 5 лет, в месяц · +{rub(t.gainAbs)} · оценка по данным hh.ru и Росстата</p>
-              <div className="text-sm">
-                <p className="font-medium">Чем придётся пожертвовать:</p>
-                <ul className="list-inside list-disc text-muted-foreground">{t.sacrifices.map((s) => <li key={s}>{s}</li>)}</ul>
-              </div>
+              )}
+              <details className="text-sm">
+                <summary className="cursor-pointer text-muted-foreground">{RESULTS.tradeoffSacrifice}</summary>
+                <ul className="mt-1 list-inside list-disc text-muted-foreground">{t.sacrifices.map((s) => <li key={s}>{s}</li>)}</ul>
+                <p className="mt-1 text-xs text-muted-foreground">{RESULTS.tradeoffNote}</p>
+              </details>
               <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
                 <Link href={`/university/${t.universityId}`} className="text-primary hover:underline">{t.universityName}, {t.city}</Link>
                 <PlanButton kind="professions" id={t.professionId} />
@@ -299,78 +308,14 @@ function TradeoffsBlock({ tradeoffs }: { tradeoffs: Tradeoff[] }) {
   );
 }
 
-function Comparison({ a, b }: { a: ComparisonSide | null; b: ComparisonSide | null }) {
-  if (!a || !b) return <Empty text="Недостаточно данных для сравнения — дополни анкету." />;
-  const rows: [string, (s: ComparisonSide) => React.ReactNode][] = [
-    ["Профессия", (s) => <Link href={`/profession/${s.professionId}`} className="font-semibold text-primary hover:underline">{s.name}</Link>],
-    ["Зарплата через 1 год", (s) => rubK(s.salary1)],
-    ["через 3 года", (s) => rubK(s.salary3)],
-    ["через 5 лет", (s) => <b>{rubK(s.salary5)}</b>],
-    ["Срок учёбы", (s) => yearsWord(s.years)],
-    [COMPARE.rows.match, (s) => MATCH_TEXT(s.match)],
-    ["Перспектива", (s) => <OutlookBadge status={s.outlook} />],
-    ["Риски", (s) => <ul className="list-inside list-disc text-left">{s.risks.map((r) => <li key={r}>{r}</li>)}</ul>],
-    ["Чем жертвуешь", (s) => (s.sacrifices.length ? <ul className="list-inside list-disc text-left">{s.sacrifices.map((r) => <li key={r}>{r}</li>)}</ul> : "—")],
-    ["Стоимость обучения", (s) => (s.tuitionPerYear ? `${rubK(s.tuitionPerYear)}/год` : "бюджет")],
-  ];
-  const chart = a.roi.map((p, i) => ({ year: p.year, interests: Math.round(p.cumulative / 1000), money: Math.round(b.roi[i].cumulative / 1000) }));
-  return (
-    <div className="space-y-5" data-testid="comparison">
-      <div className="overflow-x-auto rounded-lg border">
-        <table className="w-full min-w-[520px] text-sm">
-          <thead className="bg-muted/60">
-            <tr>
-              <th className="p-3 text-left font-medium text-muted-foreground"> </th>
-              <th className="p-3 text-left"><span className="inline-flex items-center gap-1.5"><Heart className="h-4 w-4 text-primary" /> Интересы</span></th>
-              <th className="p-3 text-left"><span className="inline-flex items-center gap-1.5"><Coins className="h-4 w-4 text-accent" /> Деньги</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map(([label, f]) => (
-              <tr key={label} className="border-t align-top">
-                <td className="p-3 text-muted-foreground">{label}</td>
-                <td className="p-3">{f(a)}</td>
-                <td className="p-3">{f(b)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-base">{COMPARE.roiTitle}</CardTitle>
-          <CardDescription>Накопленный доход минус оплата учёбы, тыс. ₽. Оценка: зарплаты растут от старта к уровню «опытный».</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="h-64 w-full">
-            <ResponsiveContainer>
-              <LineChart data={chart} margin={{ top: 5, right: 10, left: 0, bottom: 0 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke={CHART.grid} />
-                <XAxis dataKey="year" tickFormatter={(y) => `${y} г.`} stroke={CHART.axis} fontSize={12} />
-                <YAxis stroke={CHART.axis} fontSize={12} width={56} tickFormatter={(v) => `${v}`} />
-                <Tooltip formatter={(v: number) => `${v.toLocaleString("ru-RU")} тыс. ₽`} labelFormatter={(y) => `${y}-й год`} contentStyle={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 8 }} />
-                <Legend formatter={(v) => (v === "interests" ? `Интересы: ${a.name}` : `Деньги: ${b.name}`)} />
-                <ReferenceLine y={0} stroke={CHART.axis} />
-                <Line type="monotone" dataKey="interests" stroke={CHART.primary} strokeWidth={2.5} dot={false} />
-                <Line type="monotone" dataKey="money" stroke={CHART.accent} strokeWidth={2.5} dot={false} strokeDasharray="6 3" />
-              </LineChart>
-            </ResponsiveContainer>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  );
-}
-
 function Empty({ text }: { text: string }) {
-  return <div className={cn("rounded-lg border border-dashed p-6 text-center text-sm text-muted-foreground")}>{text}</div>;
+  return <div className="rounded-lg border border-dashed p-6 text-center text-sm text-muted-foreground">{text}</div>;
 }
 
 function ResultsSkeleton() {
   return (
-    <div className="space-y-4 pt-6" aria-busy="true" aria-label="Загрузка результатов">
+    <div className="space-y-4 pt-6" aria-busy="true" aria-label={RESULTS.loading}>
       <Skeleton className="h-40 w-full" />
-      <Skeleton className="h-11 w-72" />
       <div className="grid gap-3 md:grid-cols-2">
         {Array.from({ length: 4 }).map((_, i) => <Skeleton key={i} className="h-48" />)}
       </div>

@@ -4,4 +4,5 @@ export const CHART = {
   accent: "#3b82f6",
   grid: "rgba(127,127,160,0.25)",
   axis: "#8a87a6",
+  ok: "#16a34a",
 };

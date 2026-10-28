@@ -29,9 +29,14 @@ export function readLS<T>(key: string, schema: z.ZodType<T, z.ZodTypeDef, unknow
   }
 }
 
+const LOCAL_EVENT = "trajectory:storage";
+
 export function writeLS(key: string, value: unknown) {
   try {
     window.localStorage.setItem(key, JSON.stringify(value));
+    // другие компоненты в этой же вкладке (событие storage приходит только из других вкладок)
+    // после текущего рендера: writeLS вызывается и из апдейтера setState
+    queueMicrotask(() => window.dispatchEvent(new CustomEvent(LOCAL_EVENT, { detail: key })));
   } catch {
     /* приватный режим / квота — работаем без сохранения */
   }
@@ -55,8 +60,15 @@ export function useStored<T>(key: string, schema: z.ZodType<T, z.ZodTypeDef, unk
     const onStorage = (e: StorageEvent) => {
       if (e.key === key) setValue(readLS(key, schema, initial()));
     };
+    const onLocal = (e: Event) => {
+      if ((e as CustomEvent<string>).detail === key) setValue(readLS(key, schema, initial()));
+    };
     window.addEventListener("storage", onStorage);
-    return () => window.removeEventListener("storage", onStorage);
+    window.addEventListener(LOCAL_EVENT, onLocal);
+    return () => {
+      window.removeEventListener("storage", onStorage);
+      window.removeEventListener(LOCAL_EVENT, onLocal);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [key]);
   const update = useCallback(

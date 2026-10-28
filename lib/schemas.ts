@@ -367,6 +367,8 @@ export type Rec = z.infer<typeof Rec>;
 export const TradeoffChange = z.object({
   type: z.enum(["add_ege", "replace_ege", "raise_score", "relocate", "paid", "target", "drop_vuc", "drop_dorm", "form", "dvi", "math_profile"]),
   text: z.string(),
+  /** То же изменение в форме условия: «досдашь химию». */
+  ifText: z.string().default(""),
   cost: z.number(),
 });
 export type TradeoffChange = z.infer<typeof TradeoffChange>;
@@ -388,6 +390,8 @@ export const Tradeoff = z.object({
   sentence: z.string(),
   confidence: Confidence,
   match: z.number(),
+  /** Почему это близко к тому, что уже подходит. */
+  closeTo: z.string().default(""),
 });
 export type Tradeoff = z.infer<typeof Tradeoff>;
 
@@ -419,6 +423,10 @@ export const RecommendResponse = z.object({
   missing: z.array(z.string()),
   egeAdvice: z.array(z.string()),
   startT: z.number(),
+  /** Группы направлений, задачи которых понравились в игре (0..1). */
+  likedGroups: z.record(z.string(), z.number()).default({}),
+  /** Будущие мероприятия с подтверждённой датой в вузах, прошедших фильтры (ближайшие первыми). */
+  upcomingEvents: z.array(UniEvent).default([]),
   mode: z.enum(["ai", "demo"]),
   generatedAt: z.string(),
 });

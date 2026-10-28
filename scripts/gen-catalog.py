@@ -231,6 +231,18 @@ for x in unis.UNIS:
                            when="По записи через приёмную комиссию", url=u["site"],
                            why="Увидишь, где работают выпускники, и спросишь про целевое обучение."))
 
+# Подтверждённые мероприятия с датами (data/events_verified.json)
+if os.path.exists(D("events_verified.json")):
+    ver = load("events_verified.json")
+    have_ev = {e["id"] for e in events}
+    for e in ver["events"]:
+        assert e["universityId"] in uni_by_id, e["id"]
+        if e["id"] not in have_ev:
+            y, mth, d = e["date"].split("-")
+            MON = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"]
+            when = f"{int(d)} {MON[int(mth) - 1]} {y}" + (f", {e['time']}" if e["time"] else "")
+            events.append(dict(e, when=when, source="verified", sourceUrl=e["url"], checkedAt=ver["meta"]["checkedAt"]))
+
 # ───────── Запись ─────────
 os.makedirs(D("specialties"), exist_ok=True)
 for f in glob.glob(D("specialties", "*.json")):

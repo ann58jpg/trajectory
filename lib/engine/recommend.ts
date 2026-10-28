@@ -6,8 +6,16 @@ import { computeTradeoffs } from "./tradeoffs";
 import { egeCheck } from "./filters";
 import { hasBudget } from "./exams";
 import { yearsWord } from "./ru";
+import type { UniEvent } from "@/lib/schemas";
 
-const START_T = { interest: 0, money: 1, balance: 0.5, unknown: 0.5 } as const;
+/** Мероприятия с датой не раньше сегодняшнего дня, ближайшие первыми. */
+export function upcomingEvents(events: UniEvent[], uniIds: Set<string>, now = new Date()): UniEvent[] {
+  const today = now.toISOString().slice(0, 10);
+  return events.filter((e) => e.date !== null && e.date >= today && uniIds.has(e.universityId)).sort((a, b) => a.date!.localeCompare(b.date!));
+}
+
+/** С какого режима открывается выдача: по первому ответу анкеты; «баланс» и «не знаю» — по интересам. */
+const START_T = { interest: 0, money: 1, balance: 0, unknown: 0 } as const;
 
 function roiSeries(rec: Rec, p: StudentProfile, tuitionPerYear: number): { year: number; cumulative: number }[] {
   const out: { year: number; cumulative: number }[] = [];
@@ -69,7 +77,9 @@ export function recommend(catalog: Catalog, profile: StudentProfile, mode: "ai" 
   const tradeoffs = computeTradeoffs(recs, profile, model, catalog, programs);
 
   const iBest = rankRecs(recs, 0)[0];
-  const mBest = rankRecs(recs, 1, { moneyMode: true })[0];
+  // если лучшее по доходу совпало с лучшим по интересам — сравниваем со следующим по доходу
+  const moneyRanked = rankRecs(recs, 1, { moneyMode: true });
+  const mBest = moneyRanked.find((r) => r.professionId !== iBest?.professionId) ?? moneyRanked[0];
   const mSacr: string[] = [];
   if (iBest && mBest && mBest.professionId !== iBest.professionId) {
     if (mBest.factors.match < iBest.factors.match) mSacr.push(`интереснее на ${Math.round((iBest.factors.match - mBest.factors.match) * 100)} п.п. меньше`);
@@ -113,6 +123,8 @@ export function recommend(catalog: Catalog, profile: StudentProfile, mode: "ai" 
     missing: model.missing,
     egeAdvice,
     startT: START_T[profile.start ?? "unknown"],
+    likedGroups: Object.fromEntries(model.game.groups),
+    upcomingEvents: upcomingEvents(catalog.events, new Set(Object.values(specialtyPrograms).flat().map((pm) => pm.universityId))),
     mode,
     generatedAt: new Date().toISOString(),
   };

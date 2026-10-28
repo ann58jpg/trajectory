@@ -18,6 +18,7 @@ import { DviStep, EgeStep, withRus } from "./steps/ege-step";
 import { PERSONAS, type PersonaId } from "@/lib/personas";
 import { z } from "zod";
 import { cn } from "@/lib/utils";
+import { track } from "@/lib/analytics";
 
 type Props = {
   regions: { id: string; name: string; cities: string[] }[];
@@ -563,11 +564,18 @@ export function Quiz({ regions, universities, subjects }: Props) {
   }
 
   const go = (d: number) => {
+    if (d > 0) {
+      const next = steps[Math.min(total - 1, idx + 1)];
+      if (step.id === "consent") track("quiz_start");
+      const letter = step.block.match(/^([A-E])\./)?.[1];
+      if (letter && next.block !== step.block) track("quiz_block_done", { block: letter });
+    }
     setI((x) => Math.max(0, Math.min(total - 1, x + d)));
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   const finish = () => {
-    removeLS(KEYS.slider);
+    track("quiz_complete", { completeness });
+    removeLS(KEYS.mode);
     router.push("/results");
   };
   const reset = () => {

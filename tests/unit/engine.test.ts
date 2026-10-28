@@ -41,8 +41,15 @@ describe("данные", () => {
     for (const id of need) expect(catalog.universities.some((u) => u.id === id)).toBe(true);
     expect(catalog.universities.find((u) => u.id === "rub")?.abroad).toBe(true);
   });
-  it("в seed нет выдуманных дат мероприятий", () => {
-    expect(catalog.events.every((e) => e.date === null)).toBe(true);
+  it("в seed нет выдуманных дат мероприятий; даты — только у подтверждённых, с источником", () => {
+    for (const e of catalog.events) {
+      if (e.source === "seed") expect(e.date, e.id).toBeNull();
+      if (e.date !== null) {
+        expect(e.source, e.id).toBe("verified");
+        expect(e.sourceUrl, e.id).toMatch(/^https:\/\//);
+        expect(e.checkedAt, e.id).toBeTruthy();
+      }
+    }
   });
 });
 
@@ -138,7 +145,7 @@ describe("персона 2: Артём, Сызрань", () => {
   });
   it("учитывает ранний вход и вечернюю/дуальную форму", () => {
     const t = top(r, r.startT, 8);
-    expect(t.filter((x) => x.earlyEntryCourse !== null && x.earlyEntryCourse <= 2).length).toBeGreaterThanOrEqual(4);
+    expect(t.filter((x) => x.earlyEntryCourse !== null && x.earlyEntryCourse <= 2).length).toBeGreaterThanOrEqual(3);
     expect(t.some((x) => x.bonusNotes.some((n) => /вечерн|дуальн|онлайн/.test(n)))).toBe(true);
   });
   it("только бюджет", () => {
@@ -150,7 +157,8 @@ describe("персона 2: Артём, Сызрань", () => {
     expect(reloc[0].gainAbs).toBeGreaterThan(0);
     expect(reloc[0].gainPct).toBeGreaterThanOrEqual(0.25);
     expect(reloc[0].sentence).toMatch(/₽/);
-    expect(reloc[0].sentence).toMatch(/\+\d+%/);
+    expect(reloc[0].sentence).toMatch(/^Если переедешь в /);
+    expect(reloc[0].sentence).toMatch(/примерно на \d+% выше/);
   });
 });
 

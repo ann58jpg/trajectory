@@ -8,6 +8,7 @@ import { OutlookBadge } from "@/components/app/outlook-badge";
 import { SourceMark } from "@/components/app/source-mark";
 import { PlanButton } from "@/components/app/plan-button";
 import { ProfilePrograms } from "@/components/app/profile-programs";
+import { TrackView } from "@/components/app/track-view";
 import { ExplainBlock } from "@/components/app/explain-block";
 import { MarketBlock, SalaryLadder } from "@/components/app/market-block";
 import { pct } from "@/lib/utils";
@@ -31,6 +32,7 @@ export default async function ProfessionPage({ params }: { params: Promise<{ id:
 
   return (
     <div className="space-y-6 pt-6" data-testid="profession-page">
+      <TrackView event="profession_open" props={{ professionId: prof.id }} />
       <Link href="/results" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="h-4 w-4" /> {COMMON.toResults}</Link>
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
