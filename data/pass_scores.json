@@ -1,0 +1,29 @@
+{
+ "meta": {
+  "checkedAt": "2026-10-28",
+  "method": "WebSearch по официальным сайтам вузов, tabiturient.ru, «Поступи онлайн» и агрегаторам приказов о зачислении. Страницы вузов и агрегаторов из песочницы открыть не удалось (сетевые правила), поэтому берём только числа из выдачи поиска, где год, программа и вид мест указаны явно и источники не противоречат друг другу.",
+  "rule": "Нет 2026 — показываем 2025 с пометкой «данные 2025 года». Нет и 2025 — DataGap. Ничего не придумываем."
+ },
+ "scores": [
+  {"programId": "hse__09.03.04", "year": 2025, "basis": "budget", "total": 299, "includesDvi": false,
+   "url": "https://vuz.lancmanschool.ru/vuzy/hse/programmy/09-03-04", "source": "Таблица проходных баллов НИУ ВШЭ 2025 (по данным Lancman School и ucheba.ru, совпадают)"},
+  {"programId": "hse__09.03.04", "year": 2025, "basis": "paid", "total": 260, "includesDvi": false,
+   "url": "https://vuz.lancmanschool.ru/vuzy/hse/programmy/09-03-04", "source": "Таблица проходных баллов НИУ ВШЭ 2025 (по данным Lancman School)"},
+  {"programId": "mipt__01.03.02", "year": 2025, "basis": "budget", "total": 303, "includesDvi": false,
+   "url": "https://www.postupashkin.ru/catalog/mfti", "source": "Приказы о зачислении МФТИ 2025 (postupashkin.ru и itkidz.ru, совпадают); сумма 3 ЕГЭ + индивидуальные достижения"},
+  {"programId": "kubsau__36.05.01", "year": 2025, "basis": "budget", "total": 216, "includesDvi": false,
+   "url": "https://krasnodar.ucheba.ru/program/61746/1", "source": "ucheba.ru: история проходных баллов КубГАУ, «Ветеринария» 36.05.01"},
+  {"programId": "gitis__52.05.01", "year": 2025, "basis": "budget", "total": 149, "includesDvi": false,
+   "url": "https://tabiturient.ru/vuzu/gitis/proxodnoi/", "source": "tabiturient.ru: ГИТИС, актёрский факультет (драматический театр и кино) — 149 баллов ЕГЭ плюс баллы творческого экзамена"}
+ ],
+ "rejected": [
+  {"programId": "sechenov__31.05.01", "year": 2026, "why": "источники расходятся: 261 (t-j.ru) и 269 (ucheba.ru)"},
+  {"programId": "mipt__01.03.02", "year": 2026, "why": "источники расходятся: 310 (Lancman School) и 301 (postupashkin.ru)"},
+  {"programId": "itmo__09.03.04", "year": 2026, "why": "найден только промежуточный порог 298, не итоговый"},
+  {"programId": "kfu__38.03.04", "year": 2026, "why": "261 на ucheba.ru — неясно, факт или прогноз"},
+  {"programId": "kubsau__36.05.01", "year": 2026, "why": "236 на ucheba.ru — похоже на прогноз"},
+  {"programId": "spbu__40.03.01", "year": 2026, "why": "284 у одного агрегатора без указания источника, другие дают 269"},
+  {"programId": "msu__01.05.01", "year": 2025, "why": "322 из 400 на неофициальном сайте mgudvi.ru, год указан как «2025/2026»"},
+  {"programId": "knitu__18.03.01", "year": 2025, "why": "162 на mir-vuzov.ru без разделения по институтам"}
+ ]
+}

@@ -59,6 +59,10 @@ test("пробелы в данных и режим презентации", asyn
   for (const owner of ["СФР", "ФНС", "Вузы", "hh.ru", "Минобрнауки", "Минтруд"]) await expect(page.getByTestId("data-gaps-page")).toContainText(owner);
   await page.goto("/university/msu");
   await expect(page.getByTestId("pass-estimate").first()).toBeVisible();
+  // официальный балл 2025 года — с пометкой и ссылкой на источник
+  await page.goto("/university/hse");
+  await expect(page.getByTestId("pass-official").first()).toContainText("299");
+  await expect(page.getByTestId("pass-2025").first()).toBeVisible();
   await page.goto("/admin");
   await page.getByTestId("presentation-toggle").click();
   await expect(page.getByTestId("presentation-toggle")).toHaveAttribute("aria-pressed", "true");

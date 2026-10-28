@@ -353,7 +353,26 @@
     "confidence": "estimate"
    },
    "includesDvi": false,
-   "official": []
+   "official": [
+    {
+     "year": 2025,
+     "basis": "budget",
+     "total": 299,
+     "includesDvi": false,
+     "url": "https://vuz.lancmanschool.ru/vuzy/hse/programmy/09-03-04",
+     "source": "Таблица проходных баллов НИУ ВШЭ 2025 (по данным Lancman School и ucheba.ru, совпадают)",
+     "checkedAt": "2026-10-28"
+    },
+    {
+     "year": 2025,
+     "basis": "paid",
+     "total": 260,
+     "includesDvi": false,
+     "url": "https://vuz.lancmanschool.ru/vuzy/hse/programmy/09-03-04",
+     "source": "Таблица проходных баллов НИУ ВШЭ 2025 (по данным Lancman School)",
+     "checkedAt": "2026-10-28"
+    }
+   ]
   },
   "budgetPlaces": 110,
   "targetPlaces": 0,
@@ -1484,7 +1503,17 @@
     "confidence": "estimate"
    },
    "includesDvi": false,
-   "official": []
+   "official": [
+    {
+     "year": 2025,
+     "basis": "budget",
+     "total": 303,
+     "includesDvi": false,
+     "url": "https://www.postupashkin.ru/catalog/mfti",
+     "source": "Приказы о зачислении МФТИ 2025 (postupashkin.ru и itkidz.ru, совпадают); сумма 3 ЕГЭ + индивидуальные достижения",
+     "checkedAt": "2026-10-28"
+    }
+   ]
   },
   "budgetPlaces": 250,
   "targetPlaces": 20,
@@ -9859,7 +9888,17 @@
     "confidence": "estimate"
    },
    "includesDvi": false,
-   "official": []
+   "official": [
+    {
+     "year": 2025,
+     "basis": "budget",
+     "total": 216,
+     "includesDvi": false,
+     "url": "https://krasnodar.ucheba.ru/program/61746/1",
+     "source": "ucheba.ru: история проходных баллов КубГАУ, «Ветеринария» 36.05.01",
+     "checkedAt": "2026-10-28"
+    }
+   ]
   },
   "budgetPlaces": 150,
   "targetPlaces": 60,
@@ -11676,7 +11715,17 @@
     "updatedAt": "2026-10",
     "confidence": "estimate"
    },
-   "official": []
+   "official": [
+    {
+     "year": 2025,
+     "basis": "budget",
+     "total": 149,
+     "includesDvi": false,
+     "url": "https://tabiturient.ru/vuzu/gitis/proxodnoi/",
+     "source": "tabiturient.ru: ГИТИС, актёрский факультет (драматический театр и кино) — 149 баллов ЕГЭ плюс баллы творческого экзамена",
+     "checkedAt": "2026-10-28"
+    }
+   ]
   },
   "budgetPlaces": null,
   "targetPlaces": null,

@@ -27,3 +27,20 @@ describe("пробелы в данных", () => {
     }
   });
 });
+
+describe("официальные проходные баллы", () => {
+  it("у каждого есть год, источник, ссылка и дата проверки; шанс считается по официальному баллу", async () => {
+    const withOfficial = catalog!.programs.filter((p) => p.passScore.official.length > 0);
+    expect(withOfficial.length).toBeGreaterThan(0);
+    for (const p of withOfficial)
+      for (const o of p.passScore.official) {
+        expect([2025, 2026]).toContain(o.year);
+        expect(o.url).toMatch(/^https:\/\//);
+        expect(o.source.length).toBeGreaterThan(10);
+        expect(o.checkedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      }
+    const { officialScore } = await import("@/lib/engine/scoring");
+    const hse = catalog!.programs.find((p) => p.id === "hse__09.03.04")!;
+    expect(officialScore(hse)).toMatchObject({ basis: "budget", total: 299, year: 2025 });
+  });
+});

@@ -231,6 +231,17 @@ for x in unis.UNIS:
                            when="По записи через приёмную комиссию", url=u["site"],
                            why="Увидишь, где работают выпускники, и спросишь про целевое обучение."))
 
+# Проходные баллы из официальных источников (data/pass_scores.json): 2026, иначе 2025
+if os.path.exists(D("pass_scores.json")):
+    ps = load("pass_scores.json")
+    prog_by_id = {p["id"]: p for p in programs}
+    for p in programs:
+        p["passScore"]["official"] = []
+    for x in ps["scores"]:
+        assert x["programId"] in prog_by_id, x["programId"]
+        prog_by_id[x["programId"]]["passScore"]["official"].append(dict(
+            year=x["year"], basis=x["basis"], total=x["total"], includesDvi=x["includesDvi"], url=x["url"], source=x["source"], checkedAt=ps["meta"]["checkedAt"]))
+
 # Подтверждённые мероприятия с датами (data/events_verified.json)
 if os.path.exists(D("events_verified.json")):
     ver = load("events_verified.json")
