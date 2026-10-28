@@ -265,7 +265,7 @@ function TradeoffsBlock({ tradeoffs }: { tradeoffs: Tradeoff[] }) {
             <CardContent className="space-y-3 pt-5">
               <div className="flex flex-wrap items-center gap-2">
                 <Link href={`/profession/${t.professionId}`} className="font-semibold hover:underline">{t.professionName}</Link>
-                <Badge variant="green" data-testid="tradeoff-gain">+{Math.round(t.gainPct * 100)}%</Badge>
+                {t.gainPct >= 0.05 && <Badge variant="green" data-testid="tradeoff-gain">+{Math.round(t.gainPct * 100)}%</Badge>}
               </div>
               <ul className="space-y-1 text-sm">
                 {t.changes.filter((c) => c.type !== "form").map((c) => (

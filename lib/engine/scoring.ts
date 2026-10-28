@@ -1,9 +1,10 @@
 import type {
-  Chance, Factors, Profession, Program, ProgramMatch, Rec, Region, Specialty, StudentProfile, University,
+  Chance, Factors, OfficialScore, Profession, Program, ProgramMatch, Rec, Region, Specialty, StudentProfile, University,
 } from "@/lib/schemas";
 import type { Catalog } from "@/lib/data/validate";
 import { ENGINE, WEIGHT_ANCHORS, weightsAt, type Weights } from "./config";
 import { egeCheck, hardFilter, isOnline, reachableRegionIds, fmtRub } from "./filters";
+import { examSetText } from "./exams";
 import type { UserModel } from "./profile";
 import { HOBBIES } from "./vocab";
 import { REASONS } from "@/lib/copy";
@@ -85,27 +86,35 @@ export function remoteCoef(prof: Profession, coef: number): number {
 
 /* ───────────── Шанс поступления ───────────── */
 
-export function userSumFor(spec: Specialty, m: UserModel): { sum: number | null; estimatedCreative: boolean } {
-  if (spec.level === "spo") return { sum: null, estimatedCreative: false };
-  const known = [...m.ege.values()].filter((v): v is number => v !== null);
-  const avg = known.length ? known.reduce((a, b) => a + b, 0) / known.length : null;
+/**
+ * Сумма баллов человека для направления: обязательные предметы (русский — всегда) + лучший предмет «на выбор».
+ * Если проходной балл учитывает доп. экзамен вуза, добавляем его прикидку — средний балл по ЕГЭ человека.
+ */
+export function userSumFor(spec: Specialty, m: UserModel, withDvi = false): { sum: number | null; estimatedDvi: boolean } {
+  if (spec.level === "spo") return { sum: null, estimatedDvi: false };
   let sum = 0;
-  let estimatedCreative = false;
   for (const s of spec.ege.mandatory) {
-    if (s === "creative") {
-      if (avg === null) return { sum: null, estimatedCreative };
-      sum += avg; estimatedCreative = true; continue;
-    }
     const v = m.ege.get(s);
-    if (v === undefined || v === null) return { sum: null, estimatedCreative };
+    if (v === undefined || v === null) return { sum: null, estimatedDvi: false };
     sum += v;
   }
   if (spec.ege.oneOf.length) {
-    const opts = spec.ege.oneOf.map((s) => (s === "creative" ? avg : m.ege.get(s) ?? null)).filter((v): v is number => v !== null && v !== undefined);
-    if (!opts.length) return { sum: null, estimatedCreative };
+    const opts = spec.ege.oneOf.map((s) => m.ege.get(s)).filter((v): v is number => typeof v === "number");
+    if (!opts.length) return { sum: null, estimatedDvi: false };
     sum += Math.max(...opts);
   }
-  return { sum: Math.round(sum), estimatedCreative };
+  if (withDvi) {
+    const known = [...m.ege.values()].filter((v): v is number => typeof v === "number");
+    if (!known.length) return { sum: null, estimatedDvi: false };
+    sum += known.reduce((x, y) => x + y, 0) / known.length;
+  }
+  return { sum: Math.round(sum), estimatedDvi: withDvi };
+}
+
+/** Лучший найденный официальный балл: сначала 2026, потом 2025; бюджет важнее платного. */
+export function officialScore(pr: Program): OfficialScore | null {
+  const list = [...pr.passScore.official].sort((a, b) => b.year - a.year || (a.basis === "budget" ? -1 : 1));
+  return list.find((x) => x.basis === "budget") ?? list[0] ?? null;
 }
 
 export function chanceFor(pr: Program, spec: Specialty, p: StudentProfile, m: UserModel, uni: University): { chance: Chance; userSum: number | null } {
@@ -117,9 +126,16 @@ export function chanceFor(pr: Program, spec: Specialty, p: StudentProfile, m: Us
     const mid = (pr.passScore.min + max) / 2;
     return { chance: g >= max ? "high" : g >= mid ? "medium" : g >= pr.passScore.min - 20 ? "low" : "risky", userSum: Math.round(g) };
   }
-  const { sum } = userSumFor(spec, m);
+  const official = officialScore(pr);
+  const withDvi = official ? official.includesDvi : pr.passScore.includesDvi;
+  const { sum } = userSumFor(spec, m, withDvi);
   if (sum === null) return { chance: "unknown", userSum: null };
   if (pr.budgetPlaces <= 0) return { chance: sum >= 150 ? "high" : "medium", userSum: sum }; // только платные/онлайн — по минимальным баллам
+  if (official && official.basis === "budget") {
+    const t = official.total;
+    const chance: Chance = sum >= t + 10 ? "high" : sum >= t ? "medium" : sum >= t - 10 ? "low" : "risky";
+    return { chance, userSum: sum };
+  }
   if (pr.passScore.min === null) return { chance: "unknown", userSum: sum };
   const max = pr.passScore.max ?? pr.passScore.min;
   const mid = (pr.passScore.min + max) / 2;
@@ -212,6 +228,8 @@ export function scoreProgram(
     passMin: pr.passScore.min,
     passMax: pr.passScore.max,
     passConfidence: pr.passScore.meta.confidence,
+    passOfficial: officialScore(pr),
+    exams: examSetText(spec, pr),
     userSum,
     chance,
     price: pr.price,

@@ -32,6 +32,7 @@ export function ProgramRow({ pm, showExcluded = false }: { pm: ProgramMatch; sho
         </div>
         <PlanButton kind="programs" id={pm.programId} label="★" />
       </div>
+      {pm.exams && <p className="mt-1 text-xs" data-testid="exam-set">{PROGRAM.exams}: {pm.exams}</p>}
       <div className="mt-2 flex flex-wrap items-center gap-1.5">
         {pm.forms.map((f) => (
           <Badge key={f} variant="secondary">{f === "online" && <Wifi className="h-3 w-3" />}<Term k={FORM_TERM[f]}>{FORM_TEXT[f]}</Term></Badge>

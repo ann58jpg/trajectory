@@ -1,14 +1,195 @@
 [
- {"id":"rus","name":"Русский язык","short":"Рус","tags":["writing","languages"],"klimov":["S","P"],"minScore":40},
- {"id":"math","name":"Математика (профильная)","short":"Мат","tags":["math","data","engineering","it","finance"],"klimov":["S","T"],"minScore":39},
- {"id":"phys","name":"Физика","short":"Физ","tags":["physics","engineering","energy","electronics","aviation"],"klimov":["T","S"],"minScore":39},
- {"id":"chem","name":"Химия","short":"Хим","tags":["chemistry","medicine","oil_gas","bio"],"klimov":["N","T"],"minScore":39},
- {"id":"bio","name":"Биология","short":"Био","tags":["biology","medicine","nature","bio","agro"],"klimov":["N"],"minScore":39},
- {"id":"inf","name":"Информатика","short":"Инф","tags":["it","data","math","games","security"],"klimov":["S","T"],"minScore":44},
- {"id":"soc","name":"Обществознание","short":"Общ","tags":["social","law","business","management","psychology","politics"],"klimov":["P","S"],"minScore":45},
- {"id":"hist","name":"История","short":"Ист","tags":["history","social","politics","law"],"klimov":["P","S"],"minScore":35},
- {"id":"lit","name":"Литература","short":"Лит","tags":["writing","media","art","education"],"klimov":["A","P"],"minScore":40},
- {"id":"eng","name":"Иностранный язык (англ.)","short":"Англ","tags":["languages","intl","tourism"],"klimov":["P","S"],"minScore":30},
- {"id":"geo","name":"География","short":"Гео","tags":["nature","ecology","tourism","logistics","oil_gas"],"klimov":["N","S"],"minScore":40},
- {"id":"creative","name":"Творческий экзамен в вузе","short":"Творч","tags":["design","art"],"klimov":["A"],"minScore":40}
+ {
+  "id": "rus",
+  "name": "Русский язык",
+  "short": "Рус",
+  "tags": [
+   "writing",
+   "languages"
+  ],
+  "klimov": [
+   "S",
+   "P"
+  ],
+  "minScore": 40
+ },
+ {
+  "id": "math",
+  "name": "Математика (профильная)",
+  "short": "Мат",
+  "tags": [
+   "math",
+   "data",
+   "engineering",
+   "it",
+   "finance"
+  ],
+  "klimov": [
+   "S",
+   "T"
+  ],
+  "minScore": 39
+ },
+ {
+  "id": "math_base",
+  "name": "Математика (базовая)",
+  "short": "Мат.база",
+  "tags": [],
+  "klimov": [],
+  "minScore": 3
+ },
+ {
+  "id": "soc",
+  "name": "Обществознание",
+  "short": "Общ",
+  "tags": [
+   "social",
+   "law",
+   "business",
+   "management",
+   "psychology",
+   "politics",
+   "gov"
+  ],
+  "klimov": [
+   "P",
+   "S"
+  ],
+  "minScore": 45
+ },
+ {
+  "id": "inf",
+  "name": "Информатика",
+  "short": "Инф",
+  "tags": [
+   "it",
+   "data",
+   "math",
+   "games",
+   "security"
+  ],
+  "klimov": [
+   "S",
+   "T"
+  ],
+  "minScore": 44
+ },
+ {
+  "id": "foreign",
+  "name": "Иностранный язык",
+  "short": "Ин.яз",
+  "tags": [
+   "languages",
+   "intl",
+   "tourism"
+  ],
+  "klimov": [
+   "P",
+   "S"
+  ],
+  "minScore": 30
+ },
+ {
+  "id": "bio",
+  "name": "Биология",
+  "short": "Био",
+  "tags": [
+   "biology",
+   "medicine",
+   "nature",
+   "bio",
+   "agro",
+   "animals"
+  ],
+  "klimov": [
+   "N"
+  ],
+  "minScore": 39
+ },
+ {
+  "id": "chem",
+  "name": "Химия",
+  "short": "Хим",
+  "tags": [
+   "chemistry",
+   "medicine",
+   "oil_gas",
+   "bio"
+  ],
+  "klimov": [
+   "N",
+   "T"
+  ],
+  "minScore": 39
+ },
+ {
+  "id": "phys",
+  "name": "Физика",
+  "short": "Физ",
+  "tags": [
+   "physics",
+   "engineering",
+   "energy",
+   "electronics",
+   "aviation"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "minScore": 39
+ },
+ {
+  "id": "geo",
+  "name": "География",
+  "short": "Гео",
+  "tags": [
+   "nature",
+   "ecology",
+   "tourism",
+   "logistics",
+   "oil_gas"
+  ],
+  "klimov": [
+   "N",
+   "S"
+  ],
+  "minScore": 40
+ },
+ {
+  "id": "lit",
+  "name": "Литература",
+  "short": "Лит",
+  "tags": [
+   "writing",
+   "media",
+   "art",
+   "education",
+   "theatre",
+   "culture"
+  ],
+  "klimov": [
+   "A",
+   "P"
+  ],
+  "minScore": 40
+ },
+ {
+  "id": "hist",
+  "name": "История",
+  "short": "Ист",
+  "tags": [
+   "history",
+   "social",
+   "politics",
+   "law",
+   "culture",
+   "gov"
+  ],
+  "klimov": [
+   "P",
+   "S"
+  ],
+  "minScore": 35
+ }
 ]

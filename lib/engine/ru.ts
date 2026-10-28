@@ -54,9 +54,9 @@ export const SUBJECT_ACC: Record<string, string> = {
   soc: "обществознание",
   hist: "историю",
   lit: "литературу",
-  eng: "иностранный язык",
+  foreign: "иностранный язык",
+  math_base: "базовую математику",
   geo: "географию",
-  creative: "творческое испытание",
 };
 
 export const SUBJECT_NOM: Record<string, string> = {
@@ -69,9 +69,9 @@ export const SUBJECT_NOM: Record<string, string> = {
   soc: "обществознание",
   hist: "история",
   lit: "литература",
-  eng: "иностранный язык",
+  foreign: "иностранный язык",
+  math_base: "базовая математика",
   geo: "география",
-  creative: "творческое испытание",
 };
 
 export function yearsWord(n: number): string {
@@ -106,8 +106,6 @@ export const SUBJECT_SHORT: Record<string, string> = {
   soc: "Обществознание",
   hist: "История",
   lit: "Литература",
-  eng: "Иностранный язык",
   foreign: "Иностранный язык",
   geo: "География",
-  creative: "Творческий экзамен",
 };

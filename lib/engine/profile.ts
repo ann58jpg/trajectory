@@ -50,6 +50,13 @@ export function parseDreamKeywords(text: string): { tags: string[]; values: stri
   return { tags: [...tags], values, fears };
 }
 
+/** Русский нужен для любого вуза, поэтому он есть всегда (балл может быть неизвестен). */
+export function egeMap(p: StudentProfile): Map<string, number | null> {
+  const m = new Map(p.ege.map((e) => [e.subject, e.score] as [string, number | null]));
+  if (!m.has("rus")) m.set("rus", null);
+  return m;
+}
+
 export function buildUserModel(p: StudentProfile, egeSubjects: EgeSubject[], regions: Region[]): UserModel {
   const tags = new Map<string, TagSignal>();
   const subj = new Map(egeSubjects.map((s) => [s.id, s]));
@@ -133,8 +140,10 @@ export function buildUserModel(p: StudentProfile, egeSubjects: EgeSubject[], reg
     [p.regionId !== null, "регион", 1.5],
     [p.relocation !== null, "готовность к переезду", 1.5],
     [p.finance !== null, "финансы", 1],
-    [p.ege.length > 0, "предметы ЕГЭ", 1.5],
-    [p.ege.some((e) => e.score !== null), "баллы ЕГЭ", 1],
+    [p.ege.some((e) => e.subject !== "rus"), "предметы ЕГЭ", 1.5],
+    [p.ege.some((e) => e.subject === "rus" && e.score !== null), "балл по русскому", 1],
+    [p.ege.some((e) => e.subject !== "rus" && e.score !== null), "баллы ЕГЭ", 0.5],
+    [p.dviReady.length > 0, "доп. экзамены в вузе", 0.5],
     [Object.keys(p.subjectLikes).length > 0, "почему нравятся предметы", 1],
     [p.hobbies.length > 0 || p.hobbyOther.trim().length > 0, "хобби", 1],
     [pairsAnswered >= 3, "тип задач", 1],
@@ -145,14 +154,15 @@ export function buildUserModel(p: StudentProfile, egeSubjects: EgeSubject[], reg
   const total = checks.reduce((s, c) => s + c[2], 0);
   const got = checks.reduce((s, c) => s + (c[0] ? c[2] : 0), 0);
 
+  const nonRus = p.ege.filter((e) => e.subject !== "rus").length;
   return {
     tags,
     klimov,
     style,
     formats: new Set(p.workFormats),
     subjectWeights,
-    ege: new Map(p.ege.map((e) => [e.subject, e.score])),
-    egeChosen: p.egeOrder === "chosen" && p.ege.length > 0 || (p.egeOrder === null && p.ege.length >= 3),
+    ege: egeMap(p),
+    egeChosen: (p.egeOrder === "chosen" && nonRus > 0) || (p.egeOrder === null && nonRus >= 2),
     region,
     city: cityDef?.name ?? null,
     cityCoef: cityDef?.salaryCoef ?? 1,

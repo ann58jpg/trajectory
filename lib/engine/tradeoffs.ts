@@ -4,6 +4,8 @@ import { ENGINE } from "./config";
 import { cityCoef, rankRecs, remoteCoef } from "./scoring";
 import type { UserModel } from "./profile";
 import { egeCheck, fmtRub } from "./filters";
+import { effectiveDvi } from "./exams";
+import { DVI_TEXT } from "@/lib/copy";
 import { accusativeCity, prepositionalCity, pointsWord, rubles, SUBJECT_ACC, yearsWord } from "./ru";
 
 const RELOC_COST = { region: 1, nearest: 1.5, russia: 2.5, abroad: 3.5 } as const;
@@ -43,9 +45,18 @@ function changesFor(pm: ProgramMatch, p: StudentProfile, m: UserModel, catalog: 
       case "dorm":
         changes.push({ type: "drop_dorm", text: `рассмотри съём жилья (~${rubles(region?.rent ?? 30000)}/мес)`, cost: 1.5 });
         break;
+      case "math_base":
+        changes.push({ type: "math_profile", text: "сдай профильную математику вместо базовой", cost: 1.5 });
+        break;
+      case "dvi": {
+        const dvi = effectiveDvi(spec, program);
+        changes.push({ type: "dvi", text: `подготовься к доп. экзамену в вузе: ${dvi ? DVI_TEXT[dvi].short : ""}`, cost: 1.5 });
+        break;
+      }
       case "ege": {
         const c = egeCheck(spec, m.ege);
-        const need = [...c.missing, ...(c.oneOfMissing.length ? [c.oneOfMissing[0]] : [])];
+        const need = [...c.missing, ...(c.oneOfMissing.length ? [c.oneOfMissing[0]] : [])].filter((x) => !(c.mathBaseOnly && x === "math"));
+        if (!need.length) break;
         const names = need.map((s) => SUBJECT_ACC[s] ?? s);
         const extra = [...m.ege.keys()].filter((s) => s !== "rus" && !spec.ege.mandatory.includes(s) && !spec.ege.oneOf.includes(s));
         const replace = m.ege.size >= 3 && extra.length > 0 && need.length === 1;
@@ -122,14 +133,17 @@ export function computeTradeoffs(recs: Rec[], p: StudentProfile, m: UserModel, c
     const ref = kind === "unlock" ? baseSalary : rec.salary.middle;
     const refLabel = kind === "unlock" ? `у «${best.name}» сейчас` : `в ${prepositionalCity(homeName)}`;
     const gainPct = (bestOpt.salary - ref) / ref;
-    if (gainPct < ENGINE.tradeoffMinGain) continue;
+    // Программа, закрытая только из-за доп. экзамена или базовой математики, не пропадает:
+    // если направление тебе подходит, показываем её здесь даже без прибавки к доходу.
+    const examOnly = kind === "unlock" && bestOpt.changes.every((c) => c.type === "dvi" || c.type === "math_profile");
+    if (gainPct < ENGINE.tradeoffMinGain && !(examOnly && rec.factors.match >= best.factors.match - 0.15)) continue;
 
     const spec = specs.get(bestOpt.pm.specialtyCode)!;
     const sacrifices: string[] = [];
     if (rec.factors.match < best.factors.match - 0.12)
       sacrifices.push(`меньше совпадений с твоими интересами (${Math.round(rec.factors.match * 100)}% против ${Math.round(best.factors.match * 100)}%)`);
     if (bestOpt.changes.some((c) => c.type === "add_ege" || c.type === "replace_ege")) {
-      const req = [...spec.ege.mandatory, ...spec.ege.oneOf.slice(0, 1)].filter((s) => s !== "rus" && s !== "creative" && !liked.has(s));
+      const req = [...spec.ege.mandatory, ...spec.ege.oneOf.slice(0, 1)].filter((s) => s !== "rus" && !liked.has(s));
       if (req.length) sacrifices.push(`больше предметов, которые сейчас не в приоритете: ${req.map((s) => SUBJECT_ACC[s]).join(", ")}`);
     }
     if (spec.years > best.years) sacrifices.push(`дольше учиться: ${yearsWord(spec.years)} вместо ${yearsWord(best.years)}`);
@@ -143,9 +157,11 @@ export function computeTradeoffs(recs: Rec[], p: StudentProfile, m: UserModel, c
 
     const head = joinChanges(bestOpt.changes.filter((c) => c.type !== "form").map((c) => c.text));
     const opens = kind === "unlock" ? `откроется «${prof.name}»` : `«${prof.name}» станет заметно выгоднее`;
-    const sentence =
-      `${head} — ${opens} (${bestOpt.pm.universityShort}, ${bestOpt.pm.city}): ~${rubles(bestOpt.salary)} в месяц через 5 лет ` +
-      `против ~${rubles(ref)} ${refLabel} (+${Math.round(gainPct * 100)}%). Компромисс: ${sacrifices[0].replace(/\.$/, "")}.`;
+    const money =
+      gainPct >= 0.05
+        ? `: ~${rubles(bestOpt.salary)} в месяц через 5 лет против ~${rubles(ref)} ${refLabel} (+${Math.round(gainPct * 100)}%)`
+        : "";
+    const sentence = `${head} — ${opens} (${bestOpt.pm.universityShort}, ${bestOpt.pm.city})${money}. Компромисс: ${sacrifices[0].replace(/\.$/, "")}.`;
 
     out.push({
       professionId: prof.id,

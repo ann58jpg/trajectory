@@ -54,6 +54,14 @@ export const Region = z.object({
 export type Region = z.infer<typeof Region>;
 
 export const SpecialtyLevel = z.enum(["bachelor", "specialist", "spo"]);
+
+/** Дополнительный экзамен в вузе. */
+export const DviType = z.enum(["art", "stage", "contest", "physical", "written", "interview"]);
+export type DviType = z.infer<typeof DviType>;
+
+/** Укрупнённая группа направлений (сфера), например 52.00.00 «Сценические искусства…». */
+export const SpecialtyGroup = z.object({ code: z.string().regex(/^\d{2}\.00\.00$/), name: z.string(), short: z.string() });
+export type SpecialtyGroup = z.infer<typeof SpecialtyGroup>;
 export const Specialty = z.object({
   code: z.string().regex(/^\d{2}\.\d{2}\.\d{2}$/),
   name: z.string(),
@@ -63,11 +71,15 @@ export const Specialty = z.object({
     mandatory: z.array(z.string()), // всегда включает rus для вуза
     oneOf: z.array(z.string()), // предмет по выбору (пусто = нет выбора)
   }),
+  dvi: DviType.nullable().default(null),
+  group: z.string().regex(/^\d{2}\.00\.00$/).optional(),
   tags: z.array(z.string()),
   klimov: z.array(Klimov),
   disciplines: z.array(z.string()),
   employment: z.object({ rate: z.number().min(0).max(1), monthsToJob: z.number(), meta: SourceMeta }),
   description: z.string(),
+  autoDescription: z.boolean().default(false),
+  professions: z.array(z.string()).default([]),
 });
 export type Specialty = z.infer<typeof Specialty>;
 
@@ -134,16 +146,34 @@ export type University = z.infer<typeof University>;
 export const StudyForm = z.enum(["full", "evening", "distance", "online"]);
 export type StudyForm = z.infer<typeof StudyForm>;
 
+/** Официальный проходной балл из источника (приказ о зачислении, сайт вуза, агрегатор). */
+export const OfficialScore = z.object({
+  year: z.number().int(),
+  basis: z.enum(["budget", "paid"]),
+  total: z.number(),
+  includesDvi: z.boolean(),
+  url: z.string().url(),
+  source: z.string(),
+  checkedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+});
+export type OfficialScore = z.infer<typeof OfficialScore>;
+
 export const Program = z.object({
   id: z.string(),
   universityId: z.string(),
   specialtyCode: z.string(),
   name: z.string(),
+  /** Доп. экзамен именно этой программы; undefined — как у направления. */
+  dvi: DviType.nullable().optional(),
   passScore: z.object({
-    min: z.number().nullable(), // сумма 3 предметов (или средний балл аттестата ×100 для СПО)
+    // Наша оценка (диапазон): сумма предметов (или средний балл аттестата ×100 для колледжа)
+    min: z.number().nullable(),
     max: z.number().nullable(),
     year: z.number(),
+    includesDvi: z.boolean().default(false),
     meta: SourceMeta,
+    /** Найденные официальные баллы (сначала 2026, потом 2025). */
+    official: z.array(OfficialScore).default([]),
   }),
   budgetPlaces: z.number().int(),
   targetPlaces: z.number().int(),
@@ -157,7 +187,7 @@ export const Program = z.object({
 });
 export type Program = z.infer<typeof Program>;
 
-export const EventType = z.enum(["open_day", "lecture", "olympiad", "hackathon", "school", "festival", "club", "excursion"]);
+export const EventType = z.enum(["open_day", "lecture", "olympiad", "hackathon", "school", "festival", "club", "excursion", "masterclass"]);
 export const UniEvent = z.object({
   id: z.string(),
   universityId: z.string(),
@@ -165,10 +195,13 @@ export const UniEvent = z.object({
   type: EventType,
   format: z.enum(["online", "offline", "mixed"]),
   date: z.string().nullable(), // в seed даты не выдумываем → null
+  time: z.string().nullable().default(null), // «ЧЧ:ММ», если известно
   when: z.string(), // человеческое описание периодичности
+  sourceUrl: z.string().url().optional(), // где нашли дату (для проверенных событий)
+  checkedAt: z.string().optional(),
   url: z.string().url(),
   why: z.string(),
-  source: z.enum(["seed", "ai"]),
+  source: z.enum(["seed", "ai", "verified"]),
 });
 export type UniEvent = z.infer<typeof UniEvent>;
 
@@ -218,7 +251,10 @@ export const StudentProfile = z.object({
   egeOrder: z.enum(["chosen", "by_goal", "undecided"]).nullable().default(null),
   ege: z
     .array(z.object({ subject: z.string(), score: z.number().min(0).max(100).nullable() }))
-    .default([]),
+    .default([{ subject: "rus", score: null }]),
+  foreignLang: z.enum(["en", "de", "fr", "es", "zh"]).default("en"),
+  /** К каким доп. экзаменам в вузе готов; "none" — только ЕГЭ; пусто — не отвечал. */
+  dviReady: z.array(z.enum(["art", "stage", "contest", "physical", "written", "interview", "none"])).default([]),
   grade: z.enum(["9", "10", "11", "grad"]).nullable().default(null),
   gpa: z.number().min(2).max(5).nullable().default(null),
   subjectLikes: z.record(z.string(), z.array(LikeReason)).default({}),
@@ -258,7 +294,7 @@ export const Chance = z.enum(["high", "medium", "low", "risky", "unknown"]);
 export type Chance = z.infer<typeof Chance>;
 
 export const ExclusionReason = z.object({
-  type: z.enum(["relocation", "finance", "vuc", "dorm", "ege", "abroad"]),
+  type: z.enum(["relocation", "finance", "vuc", "dorm", "ege", "abroad", "math_base", "dvi"]),
   text: z.string(),
 });
 export type ExclusionReason = z.infer<typeof ExclusionReason>;
@@ -276,6 +312,8 @@ export const ProgramMatch = z.object({
   passMin: z.number().nullable(),
   passMax: z.number().nullable(),
   passConfidence: Confidence,
+  passOfficial: OfficialScore.nullable().default(null),
+  exams: z.string().default(""),
   userSum: z.number().nullable(),
   chance: Chance,
   price: z.number().nullable(),
@@ -321,7 +359,7 @@ export const Rec = z.object({
 export type Rec = z.infer<typeof Rec>;
 
 export const TradeoffChange = z.object({
-  type: z.enum(["add_ege", "replace_ege", "raise_score", "relocate", "paid", "target", "drop_vuc", "drop_dorm", "form"]),
+  type: z.enum(["add_ege", "replace_ege", "raise_score", "relocate", "paid", "target", "drop_vuc", "drop_dorm", "form", "dvi", "math_profile"]),
   text: z.string(),
   cost: z.number(),
 });
@@ -399,6 +437,7 @@ export type Explanation = z.infer<typeof Explanation>;
 export const AiEvent = z.object({
   title: z.string().min(3),
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  time: z.string().default(""),
   type: EventType,
   format: z.enum(["online", "offline", "mixed"]),
   url: z.string().url(),

@@ -45,8 +45,21 @@ test("анкету можно пройти целиком на 375px, ответ
   // C9–C13
   await page.getByRole("radio", { name: /уже выбрал/ }).click();
   await page.getByTestId("quiz-next").click();
-  for (const s of ["Русский язык", "Математика (профильная)", "Информатика"]) await page.getByRole("checkbox", { name: s, exact: true }).click();
-  for (let k = 0; k < 3; k++) await page.getByRole("button", { name: "указать" }).first().click();
+  // русский выбран сам и его нельзя снять
+  await expect(page.getByRole("checkbox", { name: /Русский язык/ })).toBeDisabled();
+  await expect(page.getByTestId("rus-score-needed")).toBeVisible();
+  for (const s of ["Математика (профильная)", "Информатика"]) await page.getByRole("checkbox", { name: s, exact: true }).click();
+  // базовая и профильная математика взаимоисключающие, базовую честно предупреждаем
+  await page.getByRole("checkbox", { name: "Математика (базовая)", exact: true }).click();
+  await expect(page.getByTestId("math-base-warning")).toBeVisible();
+  await page.getByRole("checkbox", { name: "Математика (профильная)", exact: true }).click();
+  await expect(page.getByTestId("math-base-warning")).toBeHidden();
+  for (let k = 0; k < 3; k++) await page.getByRole("button", { name: QUIZ.ege.setScore }).first().click();
+  await expect(page.getByTestId("rus-score-needed")).toBeHidden();
+  await page.getByTestId("quiz-next").click();
+  // доп. экзамены в вузе
+  await expect(page.getByTestId("quiz-title")).toHaveText(QUIZ.dvi.title);
+  await page.getByRole("checkbox", { name: QUIZ.dvi.none }).click();
   await page.getByTestId("quiz-next").click();
   await page.getByRole("radio", { name: "11 класс" }).click();
   await page.getByTestId("quiz-next").click();

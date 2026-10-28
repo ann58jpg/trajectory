@@ -1,4 +1,5 @@
-import { EXCLUDE } from "@/lib/copy";
+import { DVI_TEXT, EXCLUDE } from "@/lib/copy";
+import { effectiveDvi, egeCheck } from "./exams";
 import type { ExclusionReason, Program, Region, Specialty, StudentProfile, University } from "@/lib/schemas";
 import type { UserModel } from "./profile";
 
@@ -21,13 +22,7 @@ export function reachableRegionIds(p: StudentProfile, regions: Region[]): Set<st
   }
 }
 
-/** Проверка ЕГЭ: выполнены ли обязательные предметы и предмет по выбору. Творческое испытание сдаётся в вузе (ДВИ). */
-export function egeCheck(spec: Specialty, ege: Map<string, number | null>): { ok: boolean; missing: string[]; oneOfMissing: string[] } {
-  if (spec.level === "spo") return { ok: true, missing: [], oneOfMissing: [] };
-  const missing = spec.ege.mandatory.filter((s) => s !== "creative" && !ege.has(s));
-  const oneOfOk = spec.ege.oneOf.length === 0 || spec.ege.oneOf.some((s) => s === "creative" || ege.has(s));
-  return { ok: missing.length === 0 && oneOfOk, missing, oneOfMissing: oneOfOk ? [] : spec.ege.oneOf };
-}
+export { egeCheck } from "./exams";
 
 /** Жёсткие фильтры 6.1. Возвращает причины исключения (пусто — программа проходит). */
 export function hardFilter(
@@ -69,16 +64,22 @@ export function hardFilter(
   // Общежитие
   if (p.dorm === "yes" && !local && !online && !uni.dorm) reasons.push({ type: "dorm", text: EXCLUDE.noDorm });
 
-  // ЕГЭ
+  // ЕГЭ. Базовая математика профильную не заменяет — об этом говорим отдельно.
   if (!uni.abroad && m.egeChosen) {
     const c = egeCheck(spec, m.ege);
-    if (!c.ok) {
-      const need = [
-        ...c.missing.map((s) => egeNames.get(s) ?? s),
-        ...(c.oneOfMissing.length ? [c.oneOfMissing.map((s) => egeNames.get(s) ?? s).join(" или ")] : []),
-      ];
+    if (c.mathBaseOnly) reasons.push({ type: "math_base", text: EXCLUDE.mathBase });
+    const missing = c.missing.filter((s) => !(c.mathBaseOnly && s === "math"));
+    const oneOf = c.mathBaseOnly && c.oneOfMissing.includes("math") ? [] : c.oneOfMissing;
+    if (missing.length || oneOf.length) {
+      const need = [...missing.map((s) => egeNames.get(s) ?? s), ...(oneOf.length ? [oneOf.map((s) => egeNames.get(s) ?? s).join(" или ")] : [])];
       reasons.push({ type: "ege", text: EXCLUDE.ege(need.join(", ")) });
     }
+  }
+
+  // Доп. экзамен в вузе: если человек сказал, к каким готов, а этого вида нет — программа уходит в «Если готов изменить»
+  const dvi = effectiveDvi(spec, pr);
+  if (!uni.abroad && dvi && p.dviReady.length > 0 && !p.dviReady.includes(dvi)) {
+    reasons.push({ type: "dvi", text: EXCLUDE.dvi(DVI_TEXT[dvi].short) });
   }
   return reasons;
 }

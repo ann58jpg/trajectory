@@ -78,7 +78,7 @@ export async function findEvents(uni: University, seed: UniEvent[]): Promise<{ e
     // отбрасываем прошедшие, слишком далёкие и без ссылки
     const events: UniEvent[] = r.events
       .filter((e) => e.date >= iso(today) && e.date <= iso(until) && /^https?:\/\//.test(e.url))
-      .map((e, i) => ({ id: `${uni.id}__ai${i}`, universityId: uni.id, title: e.title, type: e.type, format: e.format, date: e.date, when: e.date, url: e.url, why: e.why, source: "ai" as const }))
+      .map((e, i) => ({ id: `${uni.id}__ai${i}`, universityId: uni.id, title: e.title, type: e.type, format: e.format, date: e.date, time: e.time || null, when: e.date, url: e.url, why: e.why, source: "ai" as const }))
       .sort((a, b) => (a.date! < b.date! ? -1 : 1));
     cacheSet(key, events);
     return events.length ? { events, source: "ai" } : { events: seed, source: "seed" };

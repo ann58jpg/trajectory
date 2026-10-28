@@ -12,6 +12,7 @@ import { KEYS, readLS, removeLS, useProfile, writeLS } from "@/lib/client/storag
 import { emptyProfile, type LikeReason, type StudentProfile } from "@/lib/schemas";
 import { ACHIEVEMENTS, BENEFITS, GUIDES, HOBBIES, LIKE_REASONS, TASK_PAIRS, UNI_CRITERIA, WORK_FORMATS } from "@/lib/engine/vocab";
 import { QUIZ } from "@/lib/copy";
+import { DviStep, EgeStep, withRus } from "./steps/ege-step";
 import { PERSONAS, type PersonaId } from "@/lib/personas";
 import { z } from "zod";
 import { cn } from "@/lib/utils";
@@ -50,6 +51,9 @@ export function Quiz({ regions, universities, subjects }: Props) {
   }, [i, ready]);
 
   const up = (patch: Partial<StudentProfile>) => setP((prev) => ({ ...prev, ...patch }));
+  useEffect(() => {
+    if (ready && !p.ege.some((e) => e.subject === "rus")) setP((prev) => ({ ...prev, ege: withRus(prev.ege) }));
+  }, [ready, p.ege, setP]);
   const subjName = (id: string) => subjects.find((s) => s.id === id)?.name ?? id;
 
   const fillPersona = (id: PersonaId) => {
@@ -293,56 +297,18 @@ export function Quiz({ regions, universities, subjects }: Props) {
       {
         id: "ege",
         block: "C. Школа и ЕГЭ",
-        title: "Предметы ЕГЭ и баллы",
-        hint: "Отметь предметы и ожидаемые (или полученные) баллы. Не знаешь балл — оставь «не знаю».",
-        answered: (p) => p.ege.length > 0,
-        render: () => (
-          <div className="space-y-3">
-            <div className="flex flex-wrap gap-2">
-              {subjects.map((s) => {
-                const sel = p.ege.some((e) => e.subject === s.id);
-                return (
-                  <Chip
-                    key={s.id}
-                    selected={sel}
-                    onClick={() => up({ ege: sel ? p.ege.filter((e) => e.subject !== s.id) : [...p.ege, { subject: s.id, score: null }] })}
-                  >
-                    {s.name}
-                  </Chip>
-                );
-              })}
-            </div>
-            <div className="space-y-2">
-              {p.ege.map((e) => (
-                <div key={e.subject} className="rounded-lg border p-3">
-                  <div className="flex items-center justify-between gap-2 text-sm">
-                    <span className="font-medium">{subjName(e.subject)}</span>
-                    <span className="flex items-center gap-2">
-                      <b className="tabular-nums">{e.score ?? "не знаю"}</b>
-                      <button
-                        type="button"
-                        className="cursor-pointer text-xs text-muted-foreground underline"
-                        onClick={() => up({ ege: p.ege.map((x) => (x.subject === e.subject ? { ...x, score: x.score === null ? 70 : null } : x)) })}
-                      >
-                        {e.score === null ? "указать" : "не знаю"}
-                      </button>
-                    </span>
-                  </div>
-                  {e.score !== null && (
-                    <Slider
-                      value={[e.score]}
-                      min={0}
-                      max={100}
-                      step={1}
-                      onValueChange={([v]) => up({ ege: p.ege.map((x) => (x.subject === e.subject ? { ...x, score: v } : x)) })}
-                      thumbLabel={`Балл: ${subjName(e.subject)}`}
-                    />
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        ),
+        title: QUIZ.ege.title,
+        hint: QUIZ.ege.hint,
+        answered: (p) => p.ege.some((e) => e.subject !== "rus") && p.ege.some((e) => e.subject === "rus" && e.score !== null),
+        render: () => <EgeStep p={p} up={up} subjects={subjects} />,
+      },
+      {
+        id: "dvi",
+        block: "C. Школа и ЕГЭ",
+        title: QUIZ.dvi.title,
+        hint: QUIZ.dvi.hint,
+        answered: (p) => p.dviReady.length > 0,
+        render: () => <DviStep p={p} up={up} />,
       },
       {
         id: "grade",
