@@ -46,7 +46,16 @@
    "security",
    "pentester",
    "devops"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 3857,
+   "universities": 103,
+   "programs": 114,
+   "avgPassPerSubject": 73.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1031",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "10.05.01",
@@ -95,7 +104,16 @@
    "security",
    "pentester",
    "crypto_analyst"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1188,
+   "universities": 32,
+   "programs": 35,
+   "avgPassPerSubject": 74.6,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1190",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "10.05.02",
@@ -108,8 +126,8 @@
     "math"
    ],
    "oneOf": [
-    "inf",
-    "phys"
+    "phys",
+    "inf"
    ]
   },
   "dvi": null,
@@ -145,7 +163,16 @@
   "professions": [
    "security",
    "telecom_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 777,
+   "universities": 23,
+   "programs": 24,
+   "avgPassPerSubject": 66.4,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1191",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "10.05.03",
@@ -194,7 +221,16 @@
    "security",
    "pentester",
    "automation_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1764,
+   "universities": 58,
+   "programs": 61,
+   "avgPassPerSubject": 70,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1192",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "10.05.04",
@@ -207,8 +243,8 @@
     "math"
    ],
    "oneOf": [
-    "inf",
-    "phys"
+    "phys",
+    "inf"
    ]
   },
   "dvi": null,
@@ -243,7 +279,16 @@
    "security",
    "crypto_analyst",
    "data_analyst"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 490,
+   "universities": 17,
+   "programs": 17,
+   "avgPassPerSubject": 69.6,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1193",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "10.05.05",
@@ -256,8 +301,8 @@
     "math"
    ],
    "oneOf": [
-    "inf",
-    "phys"
+    "phys",
+    "inf"
    ]
   },
   "dvi": "physical",
@@ -293,6 +338,66 @@
    "cyber_forensic",
    "security",
    "investigator"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 286,
+   "universities": 13,
+   "programs": 13,
+   "avgPassPerSubject": 75.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1194",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "10.05.07",
+  "name": "Противодействие техническим разведкам",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math",
+    "inf"
+   ],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "10.00.00",
+  "tags": [
+   "security",
+   "it",
+   "math"
+  ],
+  "klimov": [
+   "S",
+   "T"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Информационная безопасность». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "security",
+   "pentester",
+   "crypto_analyst"
+  ],
+  "stats": {
+   "budgetRF": 3,
+   "universities": 1,
+   "programs": 1,
+   "avgPassPerSubject": 78.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1484",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

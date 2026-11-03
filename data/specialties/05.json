@@ -10,10 +10,10 @@
     "math"
    ],
    "oneOf": [
-    "geo",
-    "phys",
     "chem",
-    "inf"
+    "phys",
+    "inf",
+    "geo"
    ]
   },
   "dvi": null,
@@ -49,7 +49,16 @@
    "geologist",
    "oil_engineer",
    "ecologist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1275,
+   "universities": 26,
+   "programs": 35,
+   "avgPassPerSubject": 63.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1014",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "05.03.02",
@@ -103,7 +112,16 @@
    "urban_planner",
    "teacher",
    "tourism_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1021,
+   "universities": 43,
+   "programs": 45,
+   "avgPassPerSubject": 55.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1015",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "05.03.03",
@@ -155,7 +173,16 @@
    "gis_specialist",
    "geodesist",
    "data_analyst"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 579,
+   "universities": 21,
+   "programs": 21,
+   "avgPassPerSubject": 62.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1016",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "05.03.04",
@@ -165,12 +192,12 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "geo"
    ],
    "oneOf": [
-    "geo",
+    "math",
+    "bio",
     "phys",
-    "chem",
     "inf"
    ]
   },
@@ -206,7 +233,16 @@
    "meteorologist",
    "ecologist",
    "gis_specialist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 267,
+   "universities": 13,
+   "programs": 14,
+   "avgPassPerSubject": 61.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1017",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "05.03.05",
@@ -216,12 +252,12 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "geo"
    ],
    "oneOf": [
-    "geo",
+    "math",
+    "bio",
     "phys",
-    "chem",
     "inf"
    ]
   },
@@ -258,7 +294,16 @@
   "professions": [
    "meteorologist",
    "ecologist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 169,
+   "universities": 4,
+   "programs": 7,
+   "avgPassPerSubject": 59.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1018",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "05.03.06",
@@ -309,6 +354,15 @@
    "ecologist",
    "hse_engineer",
    "gis_specialist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 3096,
+   "universities": 135,
+   "programs": 152,
+   "avgPassPerSubject": 59.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1019",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

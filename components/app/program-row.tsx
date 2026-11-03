@@ -6,6 +6,7 @@ import { UNI_CRITERIA } from "@/lib/engine/vocab";
 import { CHANCE_TEXT, FORM_TEXT, PROGRAM } from "@/lib/copy";
 import { rubK } from "@/lib/utils";
 import { BudgetValue, PassValue } from "./pass-score";
+import { DataGap } from "./data-gap";
 import { PlanButton } from "./plan-button";
 import { Term } from "./term";
 
@@ -41,7 +42,7 @@ export function ProgramRow({ pm, showExcluded = false }: { pm: ProgramMatch; sho
       <p className="mt-1 text-xs text-muted-foreground">
         <BudgetValue places={pm.budgetPlaces} />
         {pm.price !== null && pm.price > 0 && <> · {PROGRAM.paid(rubK(pm.price))}</>}
-        {pm.price === null && <> · {PROGRAM.sponsored}</>}
+        {pm.price === null && (pm.sponsored ? <> · {PROGRAM.sponsored}</> : <> · <DataGap what={PROGRAM.priceGapWhat} where={PROGRAM.priceGapWhere} compact /></>)}
         {pm.criteriaHits.length > 0 && <> · {PROGRAM.hits(pm.criteriaHits.slice(0, 3).map((c) => UNI_CRITERIA.find((x) => x.id === c)?.label.toLowerCase()).join(", "))}</>}
       </p>
       {showExcluded && pm.excluded.length > 0 && <p className="mt-1 text-xs text-bad">{PROGRAM.excluded(pm.excluded.map((e) => e.text).join("; "))}</p>}

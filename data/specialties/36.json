@@ -10,7 +10,11 @@
     "bio"
    ],
    "oneOf": [
-    "chem"
+    "math",
+    "chem",
+    "phys",
+    "inf",
+    "geo"
    ]
   },
   "dvi": null,
@@ -48,7 +52,16 @@
   "professions": [
    "vet_inspector",
    "food_technologist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1392,
+   "universities": 40,
+   "programs": 46,
+   "avgPassPerSubject": 54.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1108",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "36.03.02",
@@ -61,7 +74,11 @@
     "bio"
    ],
    "oneOf": [
-    "chem"
+    "math",
+    "chem",
+    "phys",
+    "inf",
+    "geo"
    ]
   },
   "dvi": null,
@@ -96,7 +113,16 @@
   "professions": [
    "zootechnician",
    "vet"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2536,
+   "universities": 62,
+   "programs": 82,
+   "avgPassPerSubject": 52.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1109",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "36.05.01",
@@ -109,7 +135,11 @@
     "bio"
    ],
    "oneOf": [
-    "chem"
+    "math",
+    "chem",
+    "phys",
+    "inf",
+    "geo"
    ]
   },
   "dvi": null,
@@ -146,6 +176,15 @@
   "professions": [
    "vet",
    "vet_inspector"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 5331,
+   "universities": 65,
+   "programs": 88,
+   "avgPassPerSubject": 62.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1250",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

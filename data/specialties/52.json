@@ -43,7 +43,16 @@
   "professions": [
    "choreographer",
    "dancer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 229,
+   "universities": 25,
+   "programs": 42,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1167",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "52.03.02",
@@ -89,7 +98,16 @@
   "professions": [
    "dancer",
    "choreographer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 13,
+   "universities": 4,
+   "programs": 4,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1168",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "52.03.03",
@@ -181,7 +199,16 @@
   "professions": [
    "stage_tech",
    "set_designer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 15,
+   "universities": 2,
+   "programs": 2,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1170",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "52.03.05",
@@ -193,10 +220,7 @@
     "rus",
     "lit"
    ],
-   "oneOf": [
-    "hist",
-    "soc"
-   ]
+   "oneOf": []
   },
   "dvi": "contest",
   "group": "52.00.00",
@@ -232,7 +256,16 @@
   "professions": [
    "theatre_critic",
    "culture_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 22,
+   "universities": 2,
+   "programs": 3,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1171",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "52.03.06",
@@ -279,7 +312,16 @@
   "professions": [
    "playwright",
    "writer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 66,
+   "universities": 6,
+   "programs": 8,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1172",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "52.05.01",
@@ -325,7 +367,16 @@
   "professions": [
    "actor",
    "event_director"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 329,
+   "universities": 35,
+   "programs": 50,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1262",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "52.05.02",
@@ -371,7 +422,16 @@
   "professions": [
    "theatre_director",
    "event_director"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 44,
+   "universities": 7,
+   "programs": 14,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1263",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "52.05.03",
@@ -419,7 +479,16 @@
   "professions": [
    "set_designer",
    "stage_tech"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 18,
+   "universities": 1,
+   "programs": 3,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1264",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "52.05.04",
@@ -431,7 +500,11 @@
     "rus",
     "lit"
    ],
-   "oneOf": []
+   "oneOf": [
+    "soc",
+    "hist",
+    "foreign"
+   ]
   },
   "dvi": "contest",
   "group": "52.00.00",
@@ -466,6 +539,64 @@
    "writer",
    "editor",
    "copywriter"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 189,
+   "universities": 12,
+   "programs": 14,
+   "avgPassPerSubject": 70.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1265",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "52.05.05",
+  "name": "Актерское искусство в музыкальном театре",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "52.00.00",
+  "tags": [
+   "theatre",
+   "art",
+   "people"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Сценические искусства и литературное творчество». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "choreographer",
+   "dancer",
+   "stage_tech"
+  ],
+  "stats": {
+   "budgetRF": 20,
+   "universities": 2,
+   "programs": 3,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1488",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

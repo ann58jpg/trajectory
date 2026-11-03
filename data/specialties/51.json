@@ -10,9 +10,10 @@
     "lit"
    ],
    "oneOf": [
-    "hist",
     "soc",
-    "inf"
+    "inf",
+    "hist",
+    "foreign"
    ]
   },
   "dvi": null,
@@ -50,7 +51,16 @@
   "professions": [
    "librarian",
    "archivist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 491,
+   "universities": 23,
+   "programs": 32,
+   "avgPassPerSubject": 62.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1166",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "51.03.01",
@@ -101,7 +111,16 @@
    "culture_manager",
    "museum_specialist",
    "curator"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 399,
+   "universities": 33,
+   "programs": 39,
+   "avgPassPerSubject": 72.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1161",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "51.03.02",
@@ -153,7 +172,16 @@
   "professions": [
    "folk_leader",
    "culture_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 790,
+   "universities": 34,
+   "programs": 89,
+   "avgPassPerSubject": 59.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1162",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "51.03.03",
@@ -203,7 +231,16 @@
   "professions": [
    "culture_manager",
    "event_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 694,
+   "universities": 32,
+   "programs": 42,
+   "avgPassPerSubject": 71.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1163",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "51.03.04",
@@ -218,7 +255,8 @@
    "oneOf": [
     "soc",
     "lit",
-    "foreign"
+    "foreign",
+    "geo"
    ]
   },
   "dvi": null,
@@ -254,7 +292,16 @@
    "museum_specialist",
    "curator",
    "tour_guide"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 322,
+   "universities": 24,
+   "programs": 29,
+   "avgPassPerSubject": 63.6,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1164",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "51.03.05",
@@ -264,13 +311,9 @@
   "ege": {
    "mandatory": [
     "rus",
-    "hist"
+    "lit"
    ],
-   "oneOf": [
-    "soc",
-    "lit",
-    "foreign"
-   ]
+   "oneOf": []
   },
   "dvi": "stage",
   "group": "51.00.00",
@@ -305,6 +348,65 @@
   "professions": [
    "event_director",
    "event_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 506,
+   "universities": 21,
+   "programs": 24,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1165",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "51.05.01",
+  "name": "Звукорежиссура культурно-массовых представлений и концертных программ",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "written",
+  "group": "51.00.00",
+  "tags": [
+   "culture",
+   "people",
+   "art"
+  ],
+  "klimov": [
+   "P",
+   "A"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.58,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Культуроведение и социокультурные проекты». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "culture_manager",
+   "museum_specialist",
+   "curator"
+  ],
+  "stats": {
+   "budgetRF": 84,
+   "universities": 12,
+   "programs": 13,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1261",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

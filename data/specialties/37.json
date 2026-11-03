@@ -45,7 +45,16 @@
    "psychologist",
    "hr",
    "ux_researcher"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2043,
+   "universities": 141,
+   "programs": 157,
+   "avgPassPerSubject": 73.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1110",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "37.03.02",
@@ -58,9 +67,9 @@
     "soc"
    ],
    "oneOf": [
-    "hist",
+    "math",
     "bio",
-    "math"
+    "hist"
    ]
   },
   "dvi": null,
@@ -93,7 +102,16 @@
    "mediator",
    "hr",
    "psychologist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 388,
+   "universities": 17,
+   "programs": 17,
+   "avgPassPerSubject": 74.4,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1111",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "37.05.01",
@@ -107,7 +125,8 @@
    ],
    "oneOf": [
     "math",
-    "soc"
+    "soc",
+    "chem"
    ]
   },
   "dvi": null,
@@ -141,7 +160,16 @@
   "professions": [
    "clinical_psychologist",
    "psychologist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1680,
+   "universities": 77,
+   "programs": 79,
+   "avgPassPerSubject": 77.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1251",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "37.05.02",
@@ -191,6 +219,15 @@
   "professions": [
    "psychologist",
    "hr"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 517,
+   "universities": 39,
+   "programs": 39,
+   "avgPassPerSubject": 72.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1252",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

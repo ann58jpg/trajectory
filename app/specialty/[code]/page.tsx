@@ -40,6 +40,15 @@ export default async function SpecialtyPage({ params }: { params: Promise<{ code
         </div>
         <p className="mt-3 max-w-3xl text-muted-foreground">{spec.description}</p>
         {spec.autoDescription && <p className="mt-1 text-xs text-muted-foreground" data-testid="auto-description">{SPECIALTY.autoDescription}</p>}
+        {spec.stats && (
+          <div className="mt-3 flex flex-wrap items-center gap-2 text-sm" data-testid="spec-stats">
+            <span className="font-medium">{SPECIALTY.statsTitle}:</span>
+            {spec.stats.budgetRF !== null && <Badge variant="secondary">{SPECIALTY.statsBudget(spec.stats.budgetRF)}</Badge>}
+            {spec.stats.universities !== null && <Badge variant="secondary">{SPECIALTY.statsUnis(spec.stats.universities)}</Badge>}
+            {spec.stats.avgPassPerSubject !== null && spec.stats.year !== null && <Badge variant="secondary">{SPECIALTY.statsPass(spec.stats.avgPassPerSubject, spec.stats.year)}</Badge>}
+            <a href={spec.stats.url} target="_blank" rel="noreferrer" className="text-xs text-primary hover:underline">{SPECIALTY.statsSource(spec.stats.checkedAt)}</a>
+          </div>
+        )}
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">

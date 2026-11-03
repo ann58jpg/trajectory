@@ -8,7 +8,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts", "data_src"))
 import groups, common, specialties_a, specialties_b  # noqa: E402,F401
 import prof_common, prof_old, prof_new_a, prof_new_b, prof_new_c  # noqa: E402,F401
-import regions_new, unis  # noqa: E402
+import regions_new, unis, tabiturient  # noqa: E402
 from groups import G  # noqa: E402
 from common import SPECS  # noqa: E402
 from prof_common import PROFS, OVERRIDES  # noqa: E402
@@ -138,7 +138,11 @@ for c in ("Нижнекамск",):
     pass
 
 # ───────── Вузы ─────────
-universities = [u for u in load("universities.json")]
+# вузы, добавленные из tabiturient.ru (id «t_…»), собираются заново ниже
+universities = [u for u in load("universities.json") if not u["id"].startswith("t_")]
+for u in universities:
+    u["sponsored"] = u["id"] in ("alabuga", "sirius", "mgimo_extra")
+    u.setdefault("tabiturientSlug", None)
 old_uni_ids = {u["id"] for u in universities}
 new_ids = {u["id"] for u in unis.UNIS}
 universities = [u for u in universities if u["id"] not in new_ids]
@@ -160,7 +164,7 @@ universities.sort(key=lambda u: u["abroad"])
 uni_by_id = {u["id"]: u for u in universities}
 
 # ───────── Программы ─────────
-programs = [p for p in load("programs.json") if p["universityId"] not in new_ids and not p.get("generated")]
+programs = [p for p in load("programs.json") if p["universityId"] not in new_ids and not p.get("generated") and not p["universityId"].startswith("t_")]
 NO_SCORE = {"source": "Проходной балл ещё не найден в официальных источниках — смотри сайт вуза", "updatedAt": "2026-10", "confidence": "estimate"}
 PROG_META = {"source": "Направление есть в перечне программ вуза (по открытым данным); набор на этот год проверь на сайте вуза",
              "updatedAt": "2026-10", "confidence": "estimate"}
@@ -212,7 +216,7 @@ for p in programs:
     p.setdefault("generated", False)
 
 # ───────── Мероприятия (без выдуманных дат: тип + когда обычно + ссылка) ─────────
-events = [e for e in load("events.json") if e["universityId"] not in new_ids]
+events = [e for e in load("events.json") if e["universityId"] not in new_ids and not e["universityId"].startswith("t_") and not e["id"].startswith("t_dod_")]
 for x in unis.UNIS:
     u = uni_by_id[x["id"]]
     uid = u["id"]
@@ -258,6 +262,61 @@ if os.path.exists(D("events_verified.json")):
             when = f"{int(d)} {MON[int(mth) - 1]} {y}" + (f", {e['time']}" if e["time"] else "")
             events.append(dict(e, when=when, source="verified", sourceUrl=e["url"], checkedAt=ver["meta"]["checkedAt"]))
 
+# ───────── Все вузы и направления России с tabiturient.ru (data/import, npm run import:tabiturient) ─────────
+T = tabiturient.load(D)
+tab_report = {}
+if T:
+    spec_profs_by_group = defaultdict(list)
+    for s in SPECS:
+        for pid in s["profs"]:
+            spec_profs_by_group[s["group"]].append(pid)
+    for g, lst in spec_profs_by_group.items():
+        spec_profs_by_group[g] = [p for p, _ in sorted(((p, lst.count(p)) for p in dict.fromkeys(lst)), key=lambda z: -z[1])]
+    before = {u["id"] for u in universities}
+    tab_report = tabiturient.merge(T, specialties=specialties, spec_index=spec_by_code, regions=regions, universities=universities, programs=programs, events=events,
+                                   profs=prof_by_id, G=G, spec_profs_by_group=spec_profs_by_group, new_program=new_program, today=T["np"]["checkedAt"])
+    uni_by_id = {u["id"]: u for u in universities}
+    reg_by_id = {r["id"]: r for r in regions}
+    spec_by_code = {s["code"]: s for s in specialties}
+    # у каждого добавленного вуза — ссылка на его страницу ДОД, даже если ближайших дат нет
+    for u in universities:
+        if u["id"] in before:
+            continue
+        if not any(e["universityId"] == u["id"] for e in events):
+            events.append(dict(id=f"{u['id']}__open", universityId=u["id"], date=None, time=None, source="seed",
+                               title=f"Дни открытых дверей {u['short']}", type="open_day", format="mixed",
+                               when="Даты публикует вуз; список ближайших — на странице по ссылке", url=u["eventsUrl"],
+                               why="Расскажут о программах, экзаменах и бюджетных местах, можно задать вопросы приёмной комиссии."))
+    universities.sort(key=lambda u: u["abroad"])
+    for k, v in tab_report.items():
+        if k != "conflict_list":
+            print(f"  tabiturient: {k} = {v}")
+    for c in tab_report.get("conflict_list", []):
+        print("  расхождение:", c)
+
+# Официальные проходные баллы с сайтов вузов (data/official_scores.json) — главнее данных агрегаторов
+if os.path.exists(D("official_scores.json")):
+    off = load("official_scores.json")
+    prog_by_id = {p["id"]: p for p in programs}
+    for x in off["scores"]:
+        pid = f"{x['universityId']}__{x['code']}"
+        p = prog_by_id.get(pid)
+        if not p:
+            if x["code"] not in spec_by_code:
+                continue
+            p = new_program(uni_by_id[x["universityId"]], x["code"])
+            programs.append(p)
+            prog_by_id[pid] = p
+        entry = {k: x[k] for k in ("year", "basis", "total", "includesDvi", "url", "source", "checkedAt")}
+        for o in p["passScore"]["official"]:
+            if o["year"] == x["year"] and o["basis"] == x["basis"] and o["total"] != x["total"]:
+                tab_report.setdefault("official_vs_other", []).append(f"{pid} {x['year']}: официально {x['total']}, {o['source'][:30]} {o['total']}")
+        p["passScore"]["official"] = sorted([o for o in p["passScore"]["official"] if not (o["year"] == x["year"] and o["basis"] == x["basis"])] + [entry],
+                                            key=lambda o: (-o["year"], o["basis"] != "budget"))
+    print(f"  официальные баллы: {len(off['scores'])}")
+    for c in tab_report.get("official_vs_other", []):
+        print("  расхождение:", c)
+
 # ───────── Запись ─────────
 os.makedirs(D("specialties"), exist_ok=True)
 for f in glob.glob(D("specialties", "*.json")):
@@ -272,7 +331,10 @@ if os.path.exists(D("specialties.json")):
 dump(professions, D("professions.json"))
 dump(regions, D("regions.json"))
 dump(universities, D("universities.json"))
-dump(programs, D("programs.json"))
+# программ тысячи — пишем компактно
+with open(D("programs.json"), "w", encoding="utf8") as f:
+    json.dump(programs, f, ensure_ascii=False, separators=(",", ":"))
+    f.write("\n")
 dump(events, D("events.json"))
 
 # Индекс для статического импорта (lib/data/raw-static.ts)

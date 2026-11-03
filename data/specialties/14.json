@@ -7,12 +7,12 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "phys"
    ],
    "oneOf": [
-    "phys",
-    "inf",
-    "chem"
+    "math",
+    "chem",
+    "inf"
    ]
   },
   "dvi": null,
@@ -48,7 +48,16 @@
   "professions": [
    "nuclear_engineer",
    "heat_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 361,
+   "universities": 9,
+   "programs": 10,
+   "avgPassPerSubject": 81.2,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1044",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "14.03.02",
@@ -58,12 +67,12 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "phys"
    ],
    "oneOf": [
-    "phys",
-    "inf",
-    "chem"
+    "math",
+    "chem",
+    "inf"
    ]
   },
   "dvi": null,
@@ -99,7 +108,16 @@
   "professions": [
    "nuclear_engineer",
    "physicist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 363,
+   "universities": 11,
+   "programs": 13,
+   "avgPassPerSubject": 76.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1045",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "14.05.01",
@@ -109,12 +127,12 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "phys"
    ],
    "oneOf": [
-    "phys",
-    "inf",
-    "chem"
+    "math",
+    "chem",
+    "inf"
    ]
   },
   "dvi": null,
@@ -152,7 +170,16 @@
   "professions": [
    "nuclear_engineer",
    "materials_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 192,
+   "universities": 7,
+   "programs": 7,
+   "avgPassPerSubject": 80,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1198",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "14.05.02",
@@ -162,12 +189,12 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "phys"
    ],
    "oneOf": [
-    "phys",
-    "inf",
-    "chem"
+    "math",
+    "chem",
+    "inf"
    ]
   },
   "dvi": null,
@@ -204,7 +231,16 @@
   "professions": [
    "nuclear_engineer",
    "power_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 647,
+   "universities": 16,
+   "programs": 17,
+   "avgPassPerSubject": 79.2,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1199",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "14.05.03",
@@ -268,12 +304,12 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "phys"
    ],
    "oneOf": [
-    "phys",
-    "inf",
-    "chem"
+    "math",
+    "chem",
+    "inf"
    ]
   },
   "dvi": null,
@@ -310,6 +346,15 @@
    "nuclear_engineer",
    "electronics_engineer",
    "automation_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 166,
+   "universities": 5,
+   "programs": 7,
+   "avgPassPerSubject": 78.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1468",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

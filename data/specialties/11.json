@@ -47,7 +47,16 @@
    "radio_engineer",
    "electronics_engineer",
    "telecom_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2085,
+   "universities": 49,
+   "programs": 60,
+   "avgPassPerSubject": 62.4,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1032",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "11.03.02",
@@ -60,9 +69,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -97,7 +106,16 @@
    "telecom_engineer",
    "sysadmin",
    "radio_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 5387,
+   "universities": 76,
+   "programs": 107,
+   "avgPassPerSubject": 62.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1033",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "11.03.03",
@@ -149,7 +167,16 @@
   "professions": [
    "electronics_engineer",
    "quality_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1449,
+   "universities": 40,
+   "programs": 45,
+   "avgPassPerSubject": 63.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1034",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "11.03.04",
@@ -201,7 +228,16 @@
    "electronics_engineer",
    "chip_designer",
    "robotics_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2964,
+   "universities": 65,
+   "programs": 85,
+   "avgPassPerSubject": 64.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1035",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "11.05.01",
@@ -211,12 +247,12 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "phys"
    ],
    "oneOf": [
-    "phys",
-    "inf",
-    "chem"
+    "math",
+    "chem",
+    "inf"
    ]
   },
   "dvi": null,
@@ -252,7 +288,16 @@
    "radio_engineer",
    "space_engineer",
    "electronics_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1542,
+   "universities": 34,
+   "programs": 39,
+   "avgPassPerSubject": 64.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1195",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "11.05.02",
@@ -262,12 +307,11 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "phys"
    ],
    "oneOf": [
-    "phys",
-    "inf",
-    "chem"
+    "math",
+    "inf"
    ]
   },
   "dvi": null,
@@ -303,6 +347,67 @@
   "professions": [
    "radio_engineer",
    "electronics_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 74,
+   "universities": 3,
+   "programs": 3,
+   "avgPassPerSubject": 51.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1196",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "11.05.04",
+  "name": "Инфокоммуникационные технологии и системы специальной связи",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "11.00.00",
+  "tags": [
+   "electronics",
+   "engineering",
+   "physics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.83,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Электроника, радиотехника и системы связи». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "electronics_engineer",
+   "radio_engineer",
+   "telecom_engineer"
+  ],
+  "stats": {
+   "budgetRF": 224,
+   "universities": 6,
+   "programs": 6,
+   "avgPassPerSubject": 59.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1472",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

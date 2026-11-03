@@ -48,7 +48,16 @@
    "lawyer",
    "investigator",
    "civil_servant"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 6637,
+   "universities": 290,
+   "programs": 385,
+   "avgPassPerSubject": 83.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1123",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "40.05.01",
@@ -61,9 +70,9 @@
     "soc"
    ],
    "oneOf": [
+    "inf",
     "hist",
-    "foreign",
-    "inf"
+    "foreign"
    ]
   },
   "dvi": "physical",
@@ -100,7 +109,16 @@
   "professions": [
    "lawyer",
    "investigator"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 536,
+   "universities": 75,
+   "programs": 89,
+   "avgPassPerSubject": 81.6,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1255",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "40.05.02",
@@ -113,9 +131,8 @@
     "soc"
    ],
    "oneOf": [
-    "hist",
-    "foreign",
-    "inf"
+    "inf",
+    "hist"
    ]
   },
   "dvi": "physical",
@@ -152,7 +169,16 @@
   "professions": [
    "investigator",
    "lawyer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 36,
+   "universities": 20,
+   "programs": 25,
+   "avgPassPerSubject": 86.2,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1256",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "40.05.03",
@@ -165,9 +191,7 @@
     "soc"
    ],
    "oneOf": [
-    "bio",
-    "chem",
-    "math",
+    "inf",
     "hist"
    ]
   },
@@ -206,7 +230,16 @@
   "professions": [
    "forensic_expert",
    "cyber_forensic"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 68,
+   "universities": 24,
+   "programs": 26,
+   "avgPassPerSubject": 83.6,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1257",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "40.05.04",
@@ -219,9 +252,8 @@
     "soc"
    ],
    "oneOf": [
-    "hist",
-    "foreign",
-    "inf"
+    "inf",
+    "hist"
    ]
   },
   "dvi": null,
@@ -257,6 +289,68 @@
   "professions": [
    "lawyer",
    "prosecutor"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1201,
+   "universities": 81,
+   "programs": 95,
+   "avgPassPerSubject": 83.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1258",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "40.03.02",
+  "name": "Обеспечение законности и правопорядка",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "soc"
+   ],
+   "oneOf": [
+    "inf",
+    "hist"
+   ]
+  },
+  "dvi": null,
+  "group": "40.00.00",
+  "tags": [
+   "law",
+   "social",
+   "gov"
+  ],
+  "klimov": [
+   "P",
+   "S"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.7,
+   "monthsToJob": 5,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Юриспруденция». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "lawyer",
+   "investigator",
+   "civil_servant"
+  ],
+  "stats": {
+   "budgetRF": 0,
+   "universities": 1,
+   "programs": 1,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1480",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

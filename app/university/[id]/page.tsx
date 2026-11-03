@@ -18,6 +18,7 @@ import { rubK } from "@/lib/utils";
 import { yearsWord } from "@/lib/engine/ru";
 import { HowToGet } from "./how-to-get";
 import { BudgetValue, PassValue } from "@/components/app/pass-score";
+import { DataGap } from "@/components/app/data-gap";
 import { officialScore } from "@/lib/engine/scoring";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
@@ -47,8 +48,9 @@ export default async function UniversityPage({ params }: { params: Promise<{ id:
             <Badge variant="outline"><MapPin className="h-3 w-3" /> {uni.city}</Badge>
             {uni.abroad && <Badge variant="yellow">{UNIVERSITY.abroad}</Badge>}
             {uni.type === "college" && <Badge variant="secondary"><Term k="spo">{UNIVERSITY.college}</Term></Badge>}
-            <Badge variant={uni.dorm ? "green" : "outline"}><Home className="h-3 w-3" /> {uni.dorm ? UNIVERSITY.dorm.yes : UNIVERSITY.dorm.no}</Badge>
-            <Badge variant={uni.vuc ? "green" : "outline"}><Shield className="h-3 w-3" /> <Term k="vuc">{uni.vuc ? UNIVERSITY.vuc.yes : UNIVERSITY.vuc.no}</Term></Badge>
+            <Badge variant={uni.dorm ? "green" : "outline"}><Home className="h-3 w-3" /> {uni.dorm === null ? UNIVERSITY.dorm.unknown : uni.dorm ? UNIVERSITY.dorm.yes : UNIVERSITY.dorm.no}</Badge>
+            <Badge variant={uni.vuc ? "green" : "outline"}><Shield className="h-3 w-3" /> <Term k="vuc">{uni.vuc === null ? UNIVERSITY.vuc.unknown : uni.vuc ? UNIVERSITY.vuc.yes : UNIVERSITY.vuc.no}</Term></Badge>
+            {uni.features.includes("branch") && <Badge variant="secondary">{UNIVERSITY.branch}</Badge>}
           </div>
         </div>
         <div className="flex gap-2">
@@ -73,7 +75,7 @@ export default async function UniversityPage({ params }: { params: Promise<{ id:
             <div className="flex flex-wrap gap-1.5">{uni.features.map((f) => <Badge key={f} variant="secondary">{UNIVERSITY.features[f] ?? f}</Badge>)}</div>
             <p className="text-muted-foreground">
               {UNIVERSITY.price}:{" "}
-              {uni.priceFrom === null ? UNIVERSITY.priceSponsored : uni.priceFrom === 0 ? UNIVERSITY.priceAbroad : `~${rubK(uni.priceFrom)}–${rubK(uni.priceTo)} ${COMMON.perYear}`}{" "}
+              {uni.priceFrom === null ? (uni.sponsored ? UNIVERSITY.priceSponsored : UNIVERSITY.priceUnknown) : uni.priceFrom === 0 ? UNIVERSITY.priceAbroad : `~${rubK(uni.priceFrom)}–${rubK(uni.priceTo)} ${COMMON.perYear}`}{" "}
               <SourceMark source={uni.priceMeta.source} confidence={uni.priceMeta.confidence} updatedAt={uni.priceMeta.updatedAt} />
             </p>
           </CardContent>
@@ -110,10 +112,11 @@ export default async function UniversityPage({ params }: { params: Promise<{ id:
                 </p>
                 {s && <p className="text-xs" data-testid="exam-set">{PROGRAM.exams}: {examSetText(s, p)}</p>}
                 <p className="text-xs">{UNIVERSITY.keySubjects}: {p.keySubjects.join(", ")}</p>
+                {p.profiles && p.profiles.length > 0 && <p className="text-xs text-muted-foreground" data-testid="program-profiles">{PROGRAM.profiles(p.profiles.slice(0, 6).join("; "))}</p>}
                 <p><PassValue official={officialScore(p)} min={p.passScore.min} max={p.passScore.max} confidence={p.passScore.meta.confidence} /></p>
                 <p className="text-xs text-muted-foreground">
                   <BudgetValue places={p.budgetPlaces} />
-                  {(p.targetPlaces ?? 0) > 0 && <> · <Term k="target">+{p.targetPlaces}</Term></>} · {p.price === null ? PROGRAM.sponsored : PROGRAM.paid(rubK(p.price))}{" "}
+                  {(p.targetPlaces ?? 0) > 0 && <> · <Term k="target">+{p.targetPlaces}</Term></>} · {p.price === null ? (uni.sponsored ? PROGRAM.sponsored : <DataGap what={PROGRAM.priceGapWhat} where={PROGRAM.priceGapWhere} compact />) : p.price === 0 ? PROGRAM.free : PROGRAM.paid(rubK(p.price))}{" "}
                   <SourceMark source={p.meta.source} confidence={p.meta.confidence} />
                 </p>
                 {p.partners.length > 0 && <p className="text-xs">{UNIVERSITY.partners}: {p.partners.join(", ")}{p.dual && <> · <Term k="dual" /></>}</p>}

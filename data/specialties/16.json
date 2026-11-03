@@ -46,7 +46,16 @@
    "physicist",
    "optics_engineer",
    "calc_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 507,
+   "universities": 18,
+   "programs": 21,
+   "avgPassPerSubject": 70.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1052",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "16.03.02",
@@ -56,13 +65,10 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "math",
+    "phys"
    ],
-   "oneOf": [
-    "phys",
-    "inf",
-    "chem"
-   ]
+   "oneOf": []
   },
   "dvi": null,
   "group": "16.00.00",
@@ -96,7 +102,16 @@
   "professions": [
    "physicist",
    "nuclear_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 72,
+   "universities": 2,
+   "programs": 2,
+   "avgPassPerSubject": 90.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1053",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "16.03.03",
@@ -145,7 +160,16 @@
   "professions": [
    "refrigeration_engineer",
    "heat_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 273,
+   "universities": 15,
+   "programs": 16,
+   "avgPassPerSubject": 56.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1054",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "16.05.01",
@@ -155,12 +179,12 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "phys"
    ],
    "oneOf": [
-    "phys",
-    "inf",
-    "chem"
+    "math",
+    "chem",
+    "inf"
    ]
   },
   "dvi": null,
@@ -197,6 +221,15 @@
   "professions": [
    "refrigeration_engineer",
    "space_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 49,
+   "universities": 2,
+   "programs": 2,
+   "avgPassPerSubject": 74.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1202",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

@@ -10,8 +10,11 @@
     "bio"
    ],
    "oneOf": [
+    "math",
     "chem",
-    "math"
+    "phys",
+    "inf",
+    "geo"
    ]
   },
   "dvi": null,
@@ -47,7 +50,16 @@
    "biotechnologist",
    "bioinformatician",
    "teacher"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 3976,
+   "universities": 107,
+   "programs": 127,
+   "avgPassPerSubject": 61.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1020",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "06.03.02",
@@ -60,8 +72,11 @@
     "bio"
    ],
    "oneOf": [
+    "math",
     "chem",
-    "math"
+    "phys",
+    "inf",
+    "geo"
    ]
   },
   "dvi": null,
@@ -97,7 +112,16 @@
    "soil_scientist",
    "agronomist",
    "ecologist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 188,
+   "universities": 9,
+   "programs": 9,
+   "avgPassPerSubject": 58.2,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1021",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "06.05.01",
@@ -149,7 +173,16 @@
    "bioinformatician",
    "biotechnologist",
    "data_scientist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 292,
+   "universities": 22,
+   "programs": 22,
+   "avgPassPerSubject": 75.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1187",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "06.05.02",
@@ -159,11 +192,11 @@
   "ege": {
    "mandatory": [
     "rus",
+    "math",
     "bio"
    ],
    "oneOf": [
-    "chem",
-    "math"
+    "chem"
    ]
   },
   "dvi": null,
@@ -200,6 +233,15 @@
    "biologist",
    "biotechnologist",
    "medical_biochemist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 202,
+   "universities": 3,
+   "programs": 4,
+   "avgPassPerSubject": 93.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1483",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

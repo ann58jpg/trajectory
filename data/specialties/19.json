@@ -51,7 +51,16 @@
    "biotechnologist",
    "food_technologist",
    "pharmacist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2820,
+   "universities": 89,
+   "programs": 111,
+   "avgPassPerSubject": 69.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1058",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "19.03.02",
@@ -103,7 +112,16 @@
   "professions": [
    "food_technologist",
    "quality_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1254,
+   "universities": 47,
+   "programs": 55,
+   "avgPassPerSubject": 56.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1059",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "19.03.03",
@@ -154,7 +172,16 @@
    "food_technologist",
    "quality_engineer",
    "vet_inspector"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1136,
+   "universities": 43,
+   "programs": 49,
+   "avgPassPerSubject": 53.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1060",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "19.03.04",
@@ -206,7 +233,16 @@
    "chef",
    "food_technologist",
    "restaurant_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1470,
+   "universities": 73,
+   "programs": 86,
+   "avgPassPerSubject": 59.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1061",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "19.03.05",

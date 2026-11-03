@@ -10,9 +10,9 @@
     "math"
    ],
    "oneOf": [
-    "inf",
+    "chem",
     "phys",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -48,7 +48,16 @@
   "professions": [
    "metrologist",
    "quality_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 956,
+   "universities": 49,
+   "programs": 54,
+   "avgPassPerSubject": 63.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1083",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "27.03.02",
@@ -61,9 +70,9 @@
     "math"
    ],
    "oneOf": [
-    "inf",
+    "chem",
     "phys",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -100,7 +109,16 @@
   "professions": [
    "quality_engineer",
    "manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1346,
+   "universities": 68,
+   "programs": 76,
+   "avgPassPerSubject": 63.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1084",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "27.03.03",
@@ -113,9 +131,9 @@
     "math"
    ],
    "oneOf": [
-    "inf",
+    "chem",
     "phys",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -151,7 +169,16 @@
    "business_analyst",
    "data_analyst",
    "manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 841,
+   "universities": 30,
+   "programs": 39,
+   "avgPassPerSubject": 74.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1085",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "27.03.04",
@@ -164,9 +191,9 @@
     "math"
    ],
    "oneOf": [
-    "inf",
+    "chem",
     "phys",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -205,7 +232,16 @@
   "professions": [
    "automation_engineer",
    "robotics_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2271,
+   "universities": 90,
+   "programs": 117,
+   "avgPassPerSubject": 69.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1086",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "27.03.05",
@@ -218,9 +254,9 @@
     "math"
    ],
    "oneOf": [
-    "inf",
+    "chem",
     "phys",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -257,6 +293,123 @@
    "product_manager",
    "manager",
    "tech_entrepreneur"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1798,
+   "universities": 75,
+   "programs": 93,
+   "avgPassPerSubject": 72,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1087",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "27.05.01",
+  "name": "Специальные организационно-технические системы",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "27.00.00",
+  "tags": [
+   "engineering",
+   "management",
+   "data"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Управление в технических системах». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "manager",
+   "quality_engineer",
+   "metrologist"
+  ],
+  "stats": {
+   "budgetRF": 89,
+   "universities": 7,
+   "programs": 7,
+   "avgPassPerSubject": 65.4,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1240",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "27.05.02",
+  "name": "Метрологическое обеспечение вооружения и военной техники",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "27.00.00",
+  "tags": [
+   "engineering",
+   "management",
+   "data"
+  ],
+  "klimov": [
+   "T",
+   "S"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Управление в технических системах». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "manager",
+   "quality_engineer",
+   "metrologist"
+  ],
+  "stats": {
+   "budgetRF": 27,
+   "universities": 2,
+   "programs": 2,
+   "avgPassPerSubject": 57.2,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1471",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

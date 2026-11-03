@@ -5,6 +5,7 @@ import { cityCoef, rankRecs, remoteCoef } from "./scoring";
 import type { UserModel } from "./profile";
 import { egeCheck, fmtRub } from "./filters";
 import { effectiveDvi } from "./exams";
+import { catalogIndex } from "./index";
 import { DVI_TEXT } from "@/lib/copy";
 import { accusativeCity, pointsWord, rubles, SUBJECT_ACC, SUBJECT_GEN, yearsWord } from "./ru";
 
@@ -20,9 +21,10 @@ function relocationLevel(pm: ProgramMatch, m: UserModel): keyof typeof RELOC_COS
 /** Список изменений, которые снимут все препятствия для программы. null — нереалистично. */
 function changesFor(pm: ProgramMatch, p: StudentProfile, m: UserModel, catalog: Catalog): TradeoffChange[] | null {
   const changes: TradeoffChange[] = [];
-  const program = catalog.programs.find((x) => x.id === pm.programId)!;
-  const spec = catalog.specialties.find((s) => s.code === pm.specialtyCode)!;
-  const region = catalog.regions.find((r) => r.id === pm.regionId);
+  const ix = catalogIndex(catalog);
+  const program = ix.programs.get(pm.programId)!;
+  const spec = ix.specialties.get(pm.specialtyCode)!;
+  const region = ix.regions.get(pm.regionId);
   const ready = p.gender === "f" ? "готова" : "готов";
   for (const ex of pm.excluded as ExclusionReason[]) {
     switch (ex.type) {
@@ -84,8 +86,9 @@ function changesFor(pm: ProgramMatch, p: StudentProfile, m: UserModel, catalog: 
 type Option = { pm: ProgramMatch; changes: TradeoffChange[]; salary: number; cost: number };
 
 function salaryAfter(pm: ProgramMatch, changes: TradeoffChange[], rec: Rec, catalog: Catalog, m: UserModel): number {
-  const prof = catalog.professions.find((x) => x.id === rec.professionId)!;
-  const region = catalog.regions.find((r) => r.id === pm.regionId)!;
+  const ix = catalogIndex(catalog);
+  const prof = ix.professions.get(rec.professionId)!;
+  const region = ix.regions.get(pm.regionId)!;
   let coef = changes.some((c) => c.type === "relocate") ? cityCoef(region, pm.city) : m.region ? cityCoef(m.region, m.city) : 1;
   if (region.id === "abroad") coef = 1.5;
   coef = remoteCoef(prof, coef);
@@ -119,6 +122,8 @@ export function computeTradeoffs(recs: Rec[], p: StudentProfile, m: UserModel, c
   for (const r of topRecs) for (const pm of r.programs.slice(0, 3)) if (!topSpecByGroup.has(pm.specialtyCode.slice(0, 2))) topSpecByGroup.set(pm.specialtyCode.slice(0, 2), pm.specialtyCode);
   const topIds = new Set(topRecs.map((r) => r.professionId));
 
+  const bySpec = new Map<string, ProgramMatch[]>();
+  for (const pm of programs.values()) bySpec.set(pm.specialtyCode, [...(bySpec.get(pm.specialtyCode) ?? []), pm]);
   const out: (Tradeoff & { useful: number })[] = [];
   for (const rec of recs) {
     if (rec.factors.match < ENGINE.moneyMatchThreshold) continue;
@@ -128,8 +133,7 @@ export function computeTradeoffs(recs: Rec[], p: StudentProfile, m: UserModel, c
     if (kind === "unlock" && topIds.has(rec.professionId)) continue;
 
     let bestOpt: (Option & { closeTo: string }) | null = null;
-    for (const pm of programs.values()) {
-      if (!prof.specialties.includes(pm.specialtyCode)) continue;
+    for (const pm of prof.specialties.flatMap((c) => bySpec.get(c) ?? [])) {
       const changes = changesFor(pm, p, m, catalog);
       if (!changes || changes.length === 0) continue;
       const real = changes.filter((c) => c.type !== "form");
@@ -169,7 +173,7 @@ export function computeTradeoffs(recs: Rec[], p: StudentProfile, m: UserModel, c
     }
     if (spec.years > best.years) sacrifices.push(`дольше учиться: ${yearsWord(spec.years)} вместо ${yearsWord(best.years)}`);
     if (bestOpt.changes.some((c) => c.type === "relocate")) {
-      const r = catalog.regions.find((x) => x.id === bestOpt!.pm.regionId);
+      const r = catalogIndex(catalog).regions.get(bestOpt!.pm.regionId);
       sacrifices.push(`жизнь в другом городе: аренда ~${rubles(r?.rent ?? 30000)}/мес, если не дадут общежитие`);
     }
     if (prof.outlook.status !== "green") sacrifices.push(`перспектива «${prof.outlook.status === "red" ? "под риском" : "меняется"}»: ${prof.outlook.reason.split(";")[0].toLowerCase()}`);

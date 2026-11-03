@@ -12,8 +12,8 @@
    "oneOf": [
     "soc",
     "inf",
-    "foreign",
     "hist",
+    "foreign",
     "geo"
    ]
   },
@@ -51,7 +51,16 @@
    "economist",
    "banker",
    "accountant"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 5919,
+   "universities": 384,
+   "programs": 659,
+   "avgPassPerSubject": 82.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1112",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "38.03.02",
@@ -66,8 +75,8 @@
    "oneOf": [
     "soc",
     "inf",
-    "foreign",
     "hist",
+    "foreign",
     "geo"
    ]
   },
@@ -105,7 +114,16 @@
    "manager",
    "marketer",
    "product_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 3391,
+   "universities": 340,
+   "programs": 543,
+   "avgPassPerSubject": 82.4,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1113",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "38.03.03",
@@ -115,13 +133,13 @@
   "ege": {
    "mandatory": [
     "rus",
-    "soc"
+    "math"
    ],
    "oneOf": [
-    "math",
+    "soc",
+    "inf",
     "hist",
-    "foreign",
-    "inf"
+    "foreign"
    ]
   },
   "dvi": null,
@@ -157,7 +175,16 @@
   "professions": [
    "hr",
    "manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 295,
+   "universities": 78,
+   "programs": 90,
+   "avgPassPerSubject": 82.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1114",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "38.03.04",
@@ -211,7 +238,16 @@
    "civil_servant",
    "municipal_manager",
    "manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1928,
+   "universities": 203,
+   "programs": 235,
+   "avgPassPerSubject": 79.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1115",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "38.03.05",
@@ -224,9 +260,9 @@
     "math"
    ],
    "oneOf": [
-    "inf",
     "soc",
-    "foreign"
+    "inf",
+    "hist"
    ]
   },
   "dvi": null,
@@ -263,7 +299,16 @@
    "business_analyst",
    "product_manager",
    "data_analyst"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1405,
+   "universities": 122,
+   "programs": 140,
+   "avgPassPerSubject": 84.4,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1116",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "38.03.06",
@@ -278,9 +323,8 @@
    "oneOf": [
     "soc",
     "inf",
-    "foreign",
     "hist",
-    "geo"
+    "foreign"
    ]
   },
   "dvi": null,
@@ -317,7 +361,16 @@
    "trade_manager",
    "marketer",
    "logistics_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 347,
+   "universities": 41,
+   "programs": 46,
+   "avgPassPerSubject": 78.4,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1117",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "38.03.07",
@@ -332,9 +385,8 @@
    "oneOf": [
     "soc",
     "inf",
-    "foreign",
     "hist",
-    "geo"
+    "foreign"
    ]
   },
   "dvi": null,
@@ -369,7 +421,16 @@
    "commodity_expert",
    "trade_manager",
    "quality_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 93,
+   "universities": 16,
+   "programs": 17,
+   "avgPassPerSubject": 79.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1118",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "38.03.10",
@@ -383,10 +444,8 @@
    ],
    "oneOf": [
     "soc",
-    "inf",
-    "foreign",
-    "hist",
-    "geo"
+    "phys",
+    "inf"
    ]
   },
   "dvi": null,
@@ -424,7 +483,16 @@
   "professions": [
    "housing_manager",
    "municipal_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 53,
+   "universities": 7,
+   "programs": 7,
+   "avgPassPerSubject": 63.2,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1119",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "38.05.01",
@@ -439,9 +507,7 @@
    "oneOf": [
     "soc",
     "inf",
-    "foreign",
-    "hist",
-    "geo"
+    "hist"
    ]
   },
   "dvi": null,
@@ -476,7 +542,16 @@
    "econ_security",
    "accountant",
    "economist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 889,
+   "universities": 166,
+   "programs": 193,
+   "avgPassPerSubject": 82,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1253",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "38.05.02",
@@ -489,7 +564,7 @@
     "soc"
    ],
    "oneOf": [
-    "math",
+    "inf",
     "hist",
     "foreign",
     "geo"
@@ -529,7 +604,16 @@
   "professions": [
    "customs_officer",
    "logistics_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 432,
+   "universities": 95,
+   "programs": 113,
+   "avgPassPerSubject": 82.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1254",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "38.02.01",

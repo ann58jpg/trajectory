@@ -50,7 +50,16 @@
    "pr_specialist",
    "marketer",
    "smm"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1316,
+   "universities": 145,
+   "programs": 197,
+   "avgPassPerSubject": 83.4,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1130",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "42.03.02",
@@ -65,7 +74,8 @@
    "oneOf": [
     "soc",
     "hist",
-    "foreign"
+    "foreign",
+    "geo"
    ]
   },
   "dvi": "contest",
@@ -101,7 +111,16 @@
    "journalist",
    "editor",
    "smm"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1419,
+   "universities": 111,
+   "programs": 130,
+   "avgPassPerSubject": 77.2,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1131",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "42.03.03",
@@ -111,11 +130,12 @@
   "ege": {
    "mandatory": [
     "rus",
-    "lit"
+    "soc"
    ],
    "oneOf": [
-    "soc",
+    "inf",
     "hist",
+    "lit",
     "foreign"
    ]
   },
@@ -153,7 +173,16 @@
    "editor",
    "print_technologist",
    "copywriter"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 132,
+   "universities": 13,
+   "programs": 14,
+   "avgPassPerSubject": 82.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1132",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "42.03.04",
@@ -203,7 +232,16 @@
    "tv_producer",
    "journalist",
    "video_editor"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 61,
+   "universities": 10,
+   "programs": 12,
+   "avgPassPerSubject": 85.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1133",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "42.03.05",
@@ -213,13 +251,13 @@
   "ege": {
    "mandatory": [
     "rus",
-    "soc"
+    "lit"
    ],
    "oneOf": [
-    "lit",
+    "soc",
     "hist",
     "foreign",
-    "inf"
+    "geo"
    ]
   },
   "dvi": null,
@@ -255,6 +293,15 @@
    "smm",
    "pr_specialist",
    "editor"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 457,
+   "universities": 35,
+   "programs": 45,
+   "avgPassPerSubject": 86.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1134",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

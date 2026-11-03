@@ -10,8 +10,8 @@
     "math"
    ],
    "oneOf": [
-    "inf",
-    "phys"
+    "phys",
+    "inf"
    ]
   },
   "dvi": null,
@@ -47,7 +47,16 @@
    "data_scientist",
    "teacher",
    "data_analyst"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 932,
+   "universities": 33,
+   "programs": 35,
+   "avgPassPerSubject": 65.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1001",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "01.03.02",
@@ -60,8 +69,8 @@
     "math"
    ],
    "oneOf": [
-    "inf",
-    "phys"
+    "phys",
+    "inf"
    ]
   },
   "dvi": null,
@@ -98,7 +107,16 @@
    "backend",
    "quant_analyst",
    "data_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 6004,
+   "universities": 123,
+   "programs": 150,
+   "avgPassPerSubject": 72.6,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1002",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "01.03.03",
@@ -111,8 +129,8 @@
     "math"
    ],
    "oneOf": [
-    "inf",
-    "phys"
+    "phys",
+    "inf"
    ]
   },
   "dvi": null,
@@ -149,7 +167,16 @@
    "calc_engineer",
    "mathematician",
    "aircraft_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 504,
+   "universities": 16,
+   "programs": 18,
+   "avgPassPerSubject": 73.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1003",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "01.03.04",
@@ -162,8 +189,8 @@
     "math"
    ],
    "oneOf": [
-    "inf",
-    "phys"
+    "phys",
+    "inf"
    ]
   },
   "dvi": null,
@@ -199,7 +226,16 @@
    "data_analyst",
    "quant_analyst",
    "calc_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1023,
+   "universities": 35,
+   "programs": 42,
+   "avgPassPerSubject": 76.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1004",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "01.03.05",
@@ -209,13 +245,10 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "math",
+    "inf"
    ],
-   "oneOf": [
-    "inf",
-    "soc",
-    "foreign"
-   ]
+   "oneOf": []
   },
   "dvi": null,
   "group": "01.00.00",
@@ -251,7 +284,16 @@
    "data_analyst",
    "statistician",
    "banker"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 343,
+   "universities": 19,
+   "programs": 21,
+   "avgPassPerSubject": 65.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1005",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "01.05.01",
@@ -264,8 +306,8 @@
     "math"
    ],
    "oneOf": [
-    "inf",
-    "phys"
+    "phys",
+    "inf"
    ]
   },
   "dvi": null,
@@ -300,6 +342,15 @@
    "mathematician",
    "quant_analyst",
    "calc_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 623,
+   "universities": 8,
+   "programs": 13,
+   "avgPassPerSubject": 72,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1183",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

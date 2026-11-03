@@ -47,7 +47,16 @@
   "professions": [
    "service_manager",
    "manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1708,
+   "universities": 81,
+   "programs": 109,
+   "avgPassPerSubject": 70.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1135",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "43.03.02",
@@ -99,7 +108,16 @@
   "professions": [
    "tourism_manager",
    "tour_guide"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2533,
+   "universities": 156,
+   "programs": 190,
+   "avgPassPerSubject": 67.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1136",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "43.03.03",
@@ -149,6 +167,15 @@
    "hotel_manager",
    "event_manager",
    "tourism_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1251,
+   "universities": 72,
+   "programs": 88,
+   "avgPassPerSubject": 71.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1137",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

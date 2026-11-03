@@ -10,8 +10,8 @@
     "hist"
    ],
    "oneOf": [
-    "foreign",
     "soc",
+    "foreign",
     "geo"
    ]
   },
@@ -48,7 +48,16 @@
    "regional_analyst",
    "diplomat",
    "translator"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 532,
+   "universities": 41,
+   "programs": 43,
+   "avgPassPerSubject": 83.4,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1124",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "41.03.02",
@@ -61,8 +70,8 @@
     "hist"
    ],
    "oneOf": [
-    "foreign",
     "soc",
+    "foreign",
     "geo"
    ]
   },
@@ -101,7 +110,16 @@
    "regional_analyst",
    "civil_servant",
    "tourism_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 57,
+   "universities": 7,
+   "programs": 8,
+   "avgPassPerSubject": 72.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1125",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "41.03.04",
@@ -111,12 +129,14 @@
   "ege": {
    "mandatory": [
     "rus",
-    "soc"
+    "hist"
    ],
    "oneOf": [
-    "hist",
+    "math",
+    "soc",
+    "inf",
     "foreign",
-    "math"
+    "geo"
    ]
   },
   "dvi": null,
@@ -155,7 +175,16 @@
    "political_analyst",
    "civil_servant",
    "pr_specialist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 892,
+   "universities": 52,
+   "programs": 58,
+   "avgPassPerSubject": 77.4,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1127",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "41.03.05",
@@ -168,8 +197,10 @@
     "hist"
    ],
    "oneOf": [
-    "foreign",
+    "math",
     "soc",
+    "inf",
+    "foreign",
     "geo"
    ]
   },
@@ -206,7 +237,16 @@
    "diplomat",
    "regional_analyst",
    "translator"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 960,
+   "universities": 72,
+   "programs": 95,
+   "avgPassPerSubject": 85.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1128",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "41.03.06",
@@ -220,8 +260,8 @@
    ],
    "oneOf": [
     "hist",
-    "math",
-    "foreign"
+    "foreign",
+    "geo"
    ]
   },
   "dvi": null,
@@ -262,6 +302,15 @@
   "professions": [
    "political_analyst",
    "civil_servant"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 180,
+   "universities": 15,
+   "programs": 16,
+   "avgPassPerSubject": 76.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1129",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

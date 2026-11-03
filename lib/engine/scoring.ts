@@ -5,6 +5,7 @@ import type { Catalog } from "@/lib/data/validate";
 import { ENGINE, WEIGHT_ANCHORS, weightsAt, type Weights } from "./config";
 import { egeCheck, hardFilter, isOnline, reachableRegionIds, fmtRub } from "./filters";
 import { examSetText, hasBudget } from "./exams";
+import { catalogIndex } from "./index";
 import type { UserModel } from "./profile";
 import { HANDS_FORMATS, HOBBIES, WORK_FORMATS } from "./vocab";
 import { REASONS } from "@/lib/copy";
@@ -189,8 +190,8 @@ function criterionScore(
     case "schedule": return pr.schedule === "free" || pr.schedule === "evening" ? 1 : pr.schedule === "morning" ? 0.6 : 0.3;
     case "career_help": return uni.features.includes("career") ? 1 : 0.4;
     case "studlife": return uni.features.includes("studlife") ? 1 : 0.4;
-    case "dorm": return uni.dorm ? 1 : 0;
-    case "vuc": return uni.vuc ? 1 : 0;
+    case "dorm": return uni.dorm === null ? 0.5 : uni.dorm ? 1 : 0;
+    case "vuc": return uni.vuc === null ? 0.5 : uni.vuc ? 1 : 0;
     case "exchange": return uni.features.includes("intl") ? 1 : 0.2;
     default: return 0.5;
   }
@@ -206,7 +207,7 @@ export function scoreProgram(
   const egeOk = uni.abroad || egeCheck(spec, m.ege).ok || !m.egeChosen;
   const cost = hasBudget(pr) && (p.finance === "budget" || p.finance === null || chance === "high" || chance === "medium")
     ? 1
-    : pr.price === null ? 0.8 : clamp(1 - pr.price / 800000);
+    : pr.price === null ? (uni.sponsored ? 1 : 0.5) : clamp(1 - pr.price / 800000);
   const tagFit = tagScore(spec.tags, m).score;
   const ctx = { local, online, chance, cost, egeOk, tagFit };
 
@@ -250,6 +251,7 @@ export function scoreProgram(
     userSum,
     chance,
     price: pr.price,
+    sponsored: uni.sponsored,
     budgetPlaces: pr.budgetPlaces,
     score: Math.round(score * 1000) / 1000,
     criteriaHits: hits,
@@ -345,7 +347,7 @@ export function computeRecs(ctx: ScoredContext, programs: Map<string, ProgramMat
       if (prof.earlyEntryCourse !== null && prof.earlyEntryCourse <= 1) { bonus += hz.early1; bonusNotes.push(REASONS.early1); }
       else if (prof.earlyEntryCourse === 2) { bonus += hz.early2; bonusNotes.push(REASONS.early2); }
       else if (prof.earlyEntryCourse === 3) { bonus += hz.early3; bonusNotes.push(REASONS.early3); }
-      if (passing.some((x) => x.forms.some((f) => f !== "full")) || passing.some((x) => catalog.programs.find((q) => q.id === x.programId)?.dual)) {
+      if (passing.some((x) => x.forms.some((f) => f !== "full")) || passing.some((x) => catalogIndex(catalog).programs.get(x.programId)?.dual)) {
         bonus += hz.flexibleForm; bonusNotes.push(REASONS.flexible);
       }
       if (passing.some((x) => specs.get(x.specialtyCode)?.level === "spo")) { bonus += hz.spo; bonusNotes.push(REASONS.spo); }

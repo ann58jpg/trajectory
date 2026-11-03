@@ -49,7 +49,16 @@
    "sociologist",
    "data_analyst",
    "marketer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2626,
+   "universities": 94,
+   "programs": 113,
+   "avgPassPerSubject": 77.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1120",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "39.03.02",
@@ -100,7 +109,16 @@
   "professions": [
    "social_worker",
    "psychologist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2094,
+   "universities": 110,
+   "programs": 120,
+   "avgPassPerSubject": 61.4,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1121",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "39.03.03",
@@ -151,6 +169,15 @@
   "professions": [
    "youth_worker",
    "culture_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1086,
+   "universities": 56,
+   "programs": 60,
+   "avgPassPerSubject": 65.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1122",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

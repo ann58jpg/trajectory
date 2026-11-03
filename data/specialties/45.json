@@ -48,7 +48,16 @@
    "editor",
    "teacher",
    "copywriter"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 3000,
+   "universities": 85,
+   "programs": 176,
+   "avgPassPerSubject": 74.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1143",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "45.03.02",
@@ -98,7 +107,16 @@
    "translator",
    "computational_linguist",
    "teacher"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2954,
+   "universities": 141,
+   "programs": 276,
+   "avgPassPerSubject": 81.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1144",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "45.03.03",
@@ -108,12 +126,14 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "foreign"
    ],
    "oneOf": [
-    "foreign",
+    "math",
+    "soc",
     "inf",
-    "soc"
+    "hist",
+    "lit"
    ]
   },
   "dvi": null,
@@ -152,7 +172,16 @@
   "professions": [
    "computational_linguist",
    "data_analyst"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 279,
+   "universities": 21,
+   "programs": 21,
+   "avgPassPerSubject": 87.4,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1145",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "45.03.04",
@@ -165,9 +194,11 @@
     "math"
    ],
    "oneOf": [
+    "soc",
     "inf",
-    "foreign",
-    "soc"
+    "hist",
+    "lit",
+    "foreign"
    ]
   },
   "dvi": null,
@@ -206,7 +237,16 @@
   "professions": [
    "computational_linguist",
    "data_analyst"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 185,
+   "universities": 16,
+   "programs": 16,
+   "avgPassPerSubject": 81,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1146",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "45.05.01",
@@ -219,9 +259,11 @@
     "foreign"
    ],
    "oneOf": [
-    "lit",
+    "soc",
+    "inf",
     "hist",
-    "soc"
+    "lit",
+    "geo"
    ]
   },
   "dvi": null,
@@ -257,6 +299,15 @@
   "professions": [
    "translator",
    "diplomat"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 504,
+   "universities": 38,
+   "programs": 50,
+   "avgPassPerSubject": 81.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1260",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

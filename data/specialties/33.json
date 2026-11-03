@@ -7,13 +7,10 @@
   "ege": {
    "mandatory": [
     "rus",
+    "bio",
     "chem"
    ],
-   "oneOf": [
-    "bio",
-    "math",
-    "phys"
-   ]
+   "oneOf": []
   },
   "dvi": null,
   "group": "33.00.00",
@@ -47,6 +44,15 @@
   "professions": [
    "pharmacist",
    "chemist_analyst"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2043,
+   "universities": 71,
+   "programs": 77,
+   "avgPassPerSubject": 65,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1249",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

@@ -80,6 +80,11 @@ export const Specialty = z.object({
   description: z.string(),
   autoDescription: z.boolean().default(false),
   professions: z.array(z.string()).default([]),
+  /** Статистика по России с tabiturient.ru: бюджетные места, число вузов, средний проходной за предмет. */
+  stats: z.object({
+    budgetRF: z.number().nullable(), universities: z.number().nullable(), programs: z.number().nullable(),
+    avgPassPerSubject: z.number().nullable(), year: z.number().nullable(), url: z.string().url(), checkedAt: z.string(),
+  }).optional(),
 });
 export type Specialty = z.infer<typeof Specialty>;
 
@@ -129,8 +134,13 @@ export const University = z.object({
   site: z.string().url(),
   admissionUrl: z.string().url(),
   eventsUrl: z.string().url(),
-  dorm: z.boolean(),
-  vuc: z.boolean(),
+  /** null — нет данных (у вузов, добавленных из перечня tabiturient.ru). */
+  dorm: z.boolean().nullable(),
+  vuc: z.boolean().nullable(),
+  /** Учёбу оплачивает вуз или партнёр (грант, ведомство): цена программ = null. */
+  sponsored: z.boolean().default(false),
+  /** Адрес вуза на tabiturient.ru, если он там есть. */
+  tabiturientSlug: z.string().nullable().default(null),
   budget: z.boolean(),
   features: z.array(z.string()), // dual, internships, evening, online, target, intl, studlife, career
   ratings: z.object({ raex: z.number().nullable(), employers: z.number().min(0).max(1), meta: SourceMeta }),
@@ -163,6 +173,8 @@ export const Program = z.object({
   universityId: z.string(),
   specialtyCode: z.string(),
   name: z.string(),
+  /** Профили (образовательные программы) внутри направления — по данным tabiturient.ru. */
+  profiles: z.array(z.string()).optional(),
   /** Доп. экзамен именно этой программы; undefined — как у направления. */
   dvi: DviType.nullable().optional(),
   passScore: z.object({
@@ -324,6 +336,7 @@ export const ProgramMatch = z.object({
   chance: Chance,
   price: z.number().nullable(),
   budgetPlaces: z.number().nullable(),
+  sponsored: z.boolean().default(false),
   score: z.number(),
   criteriaHits: z.array(z.string()),
   online: z.boolean(),

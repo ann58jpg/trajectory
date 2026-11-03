@@ -47,7 +47,16 @@
    "curator",
    "art_historian",
    "culture_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 156,
+   "universities": 17,
+   "programs": 20,
+   "avgPassPerSubject": 66.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1157",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "50.03.02",
@@ -97,7 +106,16 @@
   "professions": [
    "painter",
    "curator"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 24,
+   "universities": 7,
+   "programs": 8,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1158",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "50.03.03",
@@ -107,11 +125,11 @@
   "ege": {
    "mandatory": [
     "rus",
-    "lit"
+    "hist"
    ],
    "oneOf": [
-    "hist",
     "soc",
+    "lit",
     "foreign"
    ]
   },
@@ -147,7 +165,16 @@
    "art_historian",
    "curator",
    "museum_specialist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 137,
+   "universities": 11,
+   "programs": 12,
+   "avgPassPerSubject": 77.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1159",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "50.03.04",
@@ -160,8 +187,8 @@
     "lit"
    ],
    "oneOf": [
-    "hist",
     "soc",
+    "hist",
     "foreign"
    ]
   },
@@ -197,6 +224,15 @@
    "art_historian",
    "curator",
    "theatre_critic"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 87,
+   "universities": 5,
+   "programs": 8,
+   "avgPassPerSubject": 70.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1160",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

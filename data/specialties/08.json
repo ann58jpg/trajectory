@@ -10,9 +10,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -45,7 +45,16 @@
    "construction_engineer",
    "road_engineer",
    "geodesist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 12891,
+   "universities": 170,
+   "programs": 327,
+   "avgPassPerSubject": 66.2,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1026",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "08.05.01",
@@ -58,9 +67,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -93,7 +102,16 @@
    "construction_engineer",
    "calc_engineer",
    "road_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1906,
+   "universities": 46,
+   "programs": 55,
+   "avgPassPerSubject": 76.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1188",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "08.05.02",
@@ -143,5 +161,57 @@
    "road_engineer",
    "construction_engineer"
   ]
+ },
+ {
+  "code": "08.05.03",
+  "name": "Строительство, эксплуатация, восстановление и техническое прикрытие автомобильных дорог, мостов и тоннелей",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "08.00.00",
+  "tags": [
+   "construction",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.8,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Техника и технологии строительства». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "construction_engineer",
+   "road_engineer",
+   "geodesist"
+  ],
+  "stats": {
+   "budgetRF": 119,
+   "universities": 7,
+   "programs": 7,
+   "avgPassPerSubject": 66,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1189",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

@@ -7,10 +7,13 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math",
-    "phys"
+    "math"
    ],
-   "oneOf": []
+   "oneOf": [
+    "chem",
+    "phys",
+    "inf"
+   ]
   },
   "dvi": null,
   "group": "03.00.00",
@@ -46,7 +49,16 @@
    "physicist",
    "data_scientist",
    "chip_designer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1088,
+   "universities": 20,
+   "programs": 31,
+   "avgPassPerSubject": 79.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1009",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "03.03.02",
@@ -56,10 +68,13 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math",
     "phys"
    ],
-   "oneOf": []
+   "oneOf": [
+    "math",
+    "chem",
+    "inf"
+   ]
   },
   "dvi": null,
   "group": "03.00.00",
@@ -95,7 +110,16 @@
    "physicist",
    "teacher",
    "optics_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2153,
+   "universities": 73,
+   "programs": 84,
+   "avgPassPerSubject": 62.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1010",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "03.03.03",
@@ -145,6 +169,124 @@
    "radio_engineer",
    "physicist",
    "telecom_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 512,
+   "universities": 19,
+   "programs": 19,
+   "avgPassPerSubject": 56.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1011",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "03.05.01",
+  "name": "Астрономия",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "phys"
+   ],
+   "oneOf": [
+    "math",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "03.00.00",
+  "tags": [
+   "physics",
+   "science",
+   "math",
+   "space"
+  ],
+  "klimov": [
+   "S",
+   "T"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Физика и астрономия». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "physicist",
+   "data_scientist",
+   "chip_designer"
+  ],
+  "stats": {
+   "budgetRF": 74,
+   "universities": 4,
+   "programs": 4,
+   "avgPassPerSubject": 82.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1184",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "03.05.02",
+  "name": "Фундаментальная и прикладная физика",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "phys"
+   ],
+   "oneOf": [
+    "math",
+    "chem",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "03.00.00",
+  "tags": [
+   "physics",
+   "science",
+   "math",
+   "space"
+  ],
+  "klimov": [
+   "S",
+   "T"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.76,
+   "monthsToJob": 3,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Физика и астрономия». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "physicist",
+   "data_scientist",
+   "chip_designer"
+  ],
+  "stats": {
+   "budgetRF": 437,
+   "universities": 5,
+   "programs": 7,
+   "avgPassPerSubject": 84.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1475",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

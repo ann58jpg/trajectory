@@ -42,7 +42,16 @@
   "professions": [
    "pop_musician",
    "singer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 144,
+   "universities": 23,
+   "programs": 40,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1173",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "53.03.02",
@@ -87,7 +96,16 @@
   "professions": [
    "instrumental_musician",
    "music_teacher"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 380,
+   "universities": 35,
+   "programs": 77,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1174",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "53.03.03",
@@ -133,7 +151,16 @@
   "professions": [
    "singer",
    "music_teacher"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 83,
+   "universities": 24,
+   "programs": 25,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1175",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "53.03.04",
@@ -179,7 +206,16 @@
   "professions": [
    "folk_singer",
    "folk_leader"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 153,
+   "universities": 20,
+   "programs": 26,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1176",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "53.03.05",
@@ -225,7 +261,16 @@
   "professions": [
    "conductor",
    "music_teacher"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 138,
+   "universities": 23,
+   "programs": 30,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1177",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "53.03.06",
@@ -269,7 +314,16 @@
    "sound_producer",
    "musicologist",
    "music_teacher"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 126,
+   "universities": 21,
+   "programs": 37,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1178",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "53.05.01",
@@ -311,7 +365,16 @@
   "autoDescription": true,
   "professions": [
    "instrumental_musician"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 423,
+   "universities": 17,
+   "programs": 55,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1266",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "53.05.04",
@@ -357,7 +420,16 @@
   "professions": [
    "singer",
    "actor"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 63,
+   "universities": 12,
+   "programs": 13,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1269",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "53.05.05",
@@ -404,7 +476,16 @@
   "professions": [
    "musicologist",
    "music_teacher"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 38,
+   "universities": 9,
+   "programs": 9,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1270",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "53.05.06",
@@ -450,6 +531,111 @@
   "professions": [
    "composer",
    "sound_producer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 21,
+   "universities": 8,
+   "programs": 8,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1271",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "53.05.02",
+  "name": "Художественное руководство оперно-симфоническим оркестром и академическим хором",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "53.00.00",
+  "tags": [
+   "music",
+   "art"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Музыкальное искусство». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "music_teacher",
+   "singer",
+   "instrumental_musician"
+  ],
+  "stats": {
+   "budgetRF": 75,
+   "universities": 13,
+   "programs": 16,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1267",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "53.05.03",
+  "name": "Музыкальная звукорежиссура",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "lit"
+   ],
+   "oneOf": []
+  },
+  "dvi": "stage",
+  "group": "53.00.00",
+  "tags": [
+   "music",
+   "art"
+  ],
+  "klimov": [
+   "A"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.6,
+   "monthsToJob": 4,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Музыкальное искусство». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "music_teacher",
+   "singer",
+   "instrumental_musician"
+  ],
+  "stats": {
+   "budgetRF": 19,
+   "universities": 3,
+   "programs": 3,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1268",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

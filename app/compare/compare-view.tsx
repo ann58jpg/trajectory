@@ -17,7 +17,7 @@ import { CHART } from "@/lib/chart-colors";
 import { cn, rubK } from "@/lib/utils";
 import { track } from "@/lib/analytics";
 
-type Uni = { id: string; name: string; short: string; city: string; dorm: boolean; vuc: boolean; budget: boolean; priceFrom: number | null; priceTo: number | null; employers: number; programs: number };
+type Uni = { id: string; name: string; short: string; city: string; dorm: boolean | null; vuc: boolean | null; budget: boolean; priceFrom: number | null; priceTo: number | null; employers: number; programs: number };
 /** Строка таблицы: значение для показа и число для поиска лучшего (better: больше или меньше лучше). */
 type Row<T> = { label: string; show: (x: T) => React.ReactNode; num?: (x: T) => number | null; better?: "max" | "min" };
 
@@ -127,9 +127,9 @@ function professionRows(d: RecommendResponse): Row<Rec>[] {
 
 const UNI_ROWS: Row<Uni>[] = [
   { label: COMPARE.rows.city, show: (u) => u.city },
-  { label: COMPARE.rows.price, show: (u) => (u.priceFrom ? `${rubK(u.priceFrom)}–${rubK(u.priceTo ?? u.priceFrom)}` : COMPARE.budget), num: (u) => u.priceFrom, better: "min" },
-  { label: COMPARE.rows.dorm, show: (u) => (u.dorm ? COMMON.yes : COMMON.no), num: (u) => (u.dorm ? 1 : 0), better: "max" },
-  { label: COMPARE.rows.vuc, show: (u) => (u.vuc ? COMMON.yes : COMMON.no), num: (u) => (u.vuc ? 1 : 0), better: "max" },
+  { label: COMPARE.rows.price, show: (u) => (u.priceFrom ? `${rubK(u.priceFrom)}–${rubK(u.priceTo ?? u.priceFrom)}` : "—"), num: (u) => u.priceFrom, better: "min" },
+  { label: COMPARE.rows.dorm, show: (u) => (u.dorm === null ? "—" : u.dorm ? COMMON.yes : COMMON.no), num: (u) => (u.dorm === null ? null : u.dorm ? 1 : 0), better: "max" },
+  { label: COMPARE.rows.vuc, show: (u) => (u.vuc === null ? "—" : u.vuc ? COMMON.yes : COMMON.no), num: (u) => (u.vuc === null ? null : u.vuc ? 1 : 0), better: "max" },
   { label: COMPARE.rows.rating, show: (u) => `${Math.round(u.employers * 100)}%`, num: (u) => u.employers, better: "max" },
   { label: COMPARE.rows.programs, show: (u) => u.programs, num: (u) => u.programs, better: "max" },
 ];

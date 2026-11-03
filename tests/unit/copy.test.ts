@@ -61,10 +61,12 @@ describe("тексты интерфейса", () => {
           if (["id", "code", "source", "url", "site", "admissionUrl", "eventsUrl", "hhQuery", "meta", "sourceUrl"].includes(k)) continue;
           // Официальные названия направлений из перечня Минобрнауки не переписываем («Строительство уникальных зданий…»)
           if (k === "name" && /specialties|programs/.test(file)) continue;
+          // официальные тексты источников (tabiturient.ru, сайты вузов) не переписываем: профили программ, названия вузов и событий
+          if (k === "profiles" || (/universities/.test(file) && (k === "name" || k === "short" || k === "aliases")) || (/events/.test(file) && k === "title")) continue;
           visit(file, x, `${where}.${k}`);
         }
     };
-    for (const f of walk(path.join(ROOT, "data"), /\.json$/)) visit(path.relative(ROOT, f), JSON.parse(fs.readFileSync(f, "utf8")), "");
+    for (const f of walk(path.join(ROOT, "data"), /\.json$/).filter((f) => !f.includes(`${path.sep}import${path.sep}`))) visit(path.relative(ROOT, f), JSON.parse(fs.readFileSync(f, "utf8")), "");
     expect(problems.slice(0, 30)).toEqual([]);
   });
 

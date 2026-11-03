@@ -46,7 +46,16 @@
   "professions": [
    "forester",
    "ecologist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1849,
+   "universities": 53,
+   "programs": 62,
+   "avgPassPerSubject": 55.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1097",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "35.03.02",
@@ -56,11 +65,14 @@
   "ege": {
    "mandatory": [
     "rus",
-    "bio"
+    "math"
    ],
    "oneOf": [
-    "math",
-    "chem"
+    "bio",
+    "chem",
+    "phys",
+    "inf",
+    "geo"
    ]
   },
   "dvi": null,
@@ -96,7 +108,16 @@
   "professions": [
    "wood_technologist",
    "forester"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1171,
+   "universities": 22,
+   "programs": 33,
+   "avgPassPerSubject": 54.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1098",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "35.03.03",
@@ -110,7 +131,10 @@
    ],
    "oneOf": [
     "math",
-    "chem"
+    "chem",
+    "phys",
+    "inf",
+    "geo"
    ]
   },
   "dvi": null,
@@ -146,7 +170,16 @@
   "professions": [
    "soil_scientist",
    "agronomist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 740,
+   "universities": 29,
+   "programs": 33,
+   "avgPassPerSubject": 51.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1099",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "35.03.04",
@@ -160,7 +193,10 @@
    ],
    "oneOf": [
     "math",
-    "chem"
+    "chem",
+    "phys",
+    "inf",
+    "geo"
    ]
   },
   "dvi": null,
@@ -197,7 +233,16 @@
   "professions": [
    "agronomist",
    "drone_operator"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 3491,
+   "universities": 67,
+   "programs": 99,
+   "avgPassPerSubject": 56,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1100",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "35.03.05",
@@ -211,7 +256,10 @@
    ],
    "oneOf": [
     "math",
-    "chem"
+    "chem",
+    "phys",
+    "inf",
+    "geo"
    ]
   },
   "dvi": null,
@@ -248,7 +296,16 @@
   "professions": [
    "agronomist",
    "landscape_architect"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 810,
+   "universities": 28,
+   "programs": 33,
+   "avgPassPerSubject": 53.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1101",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "35.03.06",
@@ -301,7 +358,16 @@
   "professions": [
    "agro_engineer",
    "auto_mechanic"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 6576,
+   "universities": 68,
+   "programs": 133,
+   "avgPassPerSubject": 56.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1102",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "35.03.07",
@@ -353,7 +419,16 @@
   "professions": [
    "food_technologist",
    "agronomist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2890,
+   "universities": 62,
+   "programs": 81,
+   "avgPassPerSubject": 53.4,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1103",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "35.03.08",
@@ -367,7 +442,10 @@
    ],
    "oneOf": [
     "math",
-    "chem"
+    "chem",
+    "phys",
+    "inf",
+    "geo"
    ]
   },
   "dvi": null,
@@ -404,7 +482,16 @@
   "professions": [
    "aquaculture_specialist",
    "ecologist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 687,
+   "universities": 34,
+   "programs": 38,
+   "avgPassPerSubject": 51.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1104",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "35.03.09",
@@ -414,11 +501,14 @@
   "ege": {
    "mandatory": [
     "rus",
-    "bio"
+    "math"
    ],
    "oneOf": [
-    "math",
-    "chem"
+    "bio",
+    "chem",
+    "phys",
+    "inf",
+    "geo"
    ]
   },
   "dvi": null,
@@ -455,7 +545,16 @@
   "professions": [
    "fishery_specialist",
    "ship_navigator"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 75,
+   "universities": 4,
+   "programs": 5,
+   "avgPassPerSubject": 55.2,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1105",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "35.03.10",
@@ -506,7 +605,16 @@
   "professions": [
    "landscape_architect",
    "environment_designer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2512,
+   "universities": 62,
+   "programs": 72,
+   "avgPassPerSubject": 62.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1106",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "35.03.11",
@@ -519,9 +627,11 @@
     "math"
    ],
    "oneOf": [
+    "bio",
+    "chem",
     "phys",
     "inf",
-    "bio"
+    "geo"
    ]
   },
   "dvi": null,
@@ -559,6 +669,15 @@
   "professions": [
    "water_engineer",
    "agro_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 238,
+   "universities": 9,
+   "programs": 11,
+   "avgPassPerSubject": 54.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1107",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

@@ -46,7 +46,16 @@
    "data_scientist",
    "backend",
    "mathematician"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1239,
+   "universities": 36,
+   "programs": 42,
+   "avgPassPerSubject": 70.6,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1006",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "02.03.02",
@@ -59,8 +68,8 @@
     "math"
    ],
    "oneOf": [
-    "inf",
-    "phys"
+    "phys",
+    "inf"
    ]
   },
   "dvi": null,
@@ -95,7 +104,16 @@
    "data_engineer",
    "devops",
    "gamedev"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1922,
+   "universities": 49,
+   "programs": 56,
+   "avgPassPerSubject": 73.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1007",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "02.03.03",
@@ -108,8 +126,8 @@
     "math"
    ],
    "oneOf": [
-    "inf",
-    "phys"
+    "phys",
+    "inf"
    ]
   },
   "dvi": null,
@@ -145,6 +163,15 @@
    "sysadmin",
    "devops",
    "qa"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1450,
+   "universities": 44,
+   "programs": 45,
+   "avgPassPerSubject": 67.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1008",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

@@ -46,7 +46,16 @@
   "professions": [
    "heat_engineer",
    "power_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 3865,
+   "universities": 102,
+   "programs": 150,
+   "avgPassPerSubject": 60.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1041",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "13.03.02",
@@ -96,7 +105,16 @@
    "power_engineer",
    "electrician",
    "automation_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 10224,
+   "universities": 195,
+   "programs": 327,
+   "avgPassPerSubject": 62.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1042",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "13.03.03",
@@ -146,7 +164,16 @@
   "professions": [
    "heat_engineer",
    "mechanical_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1267,
+   "universities": 34,
+   "programs": 45,
+   "avgPassPerSubject": 65.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1043",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "13.02.07",
@@ -189,5 +216,111 @@
    "electrician",
    "power_engineer"
   ]
+ },
+ {
+  "code": "13.05.01",
+  "name": "Тепло- и электрообеспечение специальных технических систем и объектов",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "phys"
+   ],
+   "oneOf": [
+    "math",
+    "chem",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "13.00.00",
+  "tags": [
+   "energy",
+   "engineering",
+   "physics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.84,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Электро- и теплоэнергетика». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "power_engineer",
+   "heat_engineer",
+   "electrician"
+  ],
+  "stats": {
+   "budgetRF": 15,
+   "universities": 1,
+   "programs": 1,
+   "avgPassPerSubject": 57,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1474",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "13.05.02",
+  "name": "Специальные электромеханические системы",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus"
+   ],
+   "oneOf": [
+    "math",
+    "chem",
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "13.00.00",
+  "tags": [
+   "energy",
+   "engineering",
+   "physics"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.84,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Электро- и теплоэнергетика». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "power_engineer",
+   "heat_engineer",
+   "electrician"
+  ],
+  "stats": {
+   "budgetRF": 108,
+   "universities": 4,
+   "programs": 5,
+   "avgPassPerSubject": 54.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1470",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

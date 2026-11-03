@@ -7,10 +7,11 @@
   "ege": {
    "mandatory": [
     "rus",
-    "chem",
     "bio"
    ],
-   "oneOf": []
+   "oneOf": [
+    "chem"
+   ]
   },
   "dvi": null,
   "group": "31.00.00",
@@ -45,7 +46,16 @@
   "professions": [
    "doctor",
    "paramedic"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 19122,
+   "universities": 89,
+   "programs": 112,
+   "avgPassPerSubject": 84.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1244",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "31.05.02",
@@ -55,8 +65,8 @@
   "ege": {
    "mandatory": [
     "rus",
-    "chem",
-    "bio"
+    "bio",
+    "chem"
    ],
    "oneOf": []
   },
@@ -93,7 +103,16 @@
   "professions": [
    "pediatrician",
    "doctor"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 8517,
+   "universities": 67,
+   "programs": 69,
+   "avgPassPerSubject": 77.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1245",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "31.05.03",
@@ -103,8 +122,8 @@
   "ege": {
    "mandatory": [
     "rus",
-    "chem",
-    "bio"
+    "bio",
+    "chem"
    ],
    "oneOf": []
   },
@@ -139,7 +158,16 @@
   "autoDescription": true,
   "professions": [
    "dentist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1767,
+   "universities": 68,
+   "programs": 79,
+   "avgPassPerSubject": 94.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1246",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "31.05.04",
@@ -229,5 +257,56 @@
    "paramedic",
    "nurse"
   ]
+ },
+ {
+  "code": "31.08.52",
+  "name": "Остеопатия",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "bio",
+    "chem"
+   ],
+   "oneOf": []
+  },
+  "dvi": null,
+  "group": "31.00.00",
+  "tags": [
+   "medicine",
+   "biology",
+   "people"
+  ],
+  "klimov": [
+   "P",
+   "N"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.93,
+   "monthsToJob": 1,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Клиническая медицина». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "doctor",
+   "paramedic",
+   "pediatrician"
+  ],
+  "stats": {
+   "budgetRF": 4,
+   "universities": 1,
+   "programs": 1,
+   "avgPassPerSubject": 85,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1247",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

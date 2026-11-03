@@ -10,9 +10,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -47,7 +47,16 @@
    "hse_engineer",
    "ecologist",
    "fire_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 4847,
+   "universities": 194,
+   "programs": 254,
+   "avgPassPerSubject": 60.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1062",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "20.03.02",
@@ -99,7 +108,16 @@
   "professions": [
    "water_engineer",
    "ecologist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 644,
+   "universities": 32,
+   "programs": 41,
+   "avgPassPerSubject": 59.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1063",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "20.05.01",
@@ -112,9 +130,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": "physical",
@@ -148,6 +166,15 @@
   "professions": [
    "fire_engineer",
    "hse_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 502,
+   "universities": 19,
+   "programs": 23,
+   "avgPassPerSubject": 60.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1208",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

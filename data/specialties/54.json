@@ -44,7 +44,16 @@
    "uxui",
    "designer_3d",
    "game_designer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1340,
+   "universities": 139,
+   "programs": 214,
+   "avgPassPerSubject": 76,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1179",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "54.03.02",
@@ -89,7 +98,16 @@
   "professions": [
    "crafts_artist",
    "jeweler"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 333,
+   "universities": 30,
+   "programs": 37,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1180",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "54.03.03",
@@ -136,7 +154,16 @@
   "professions": [
    "fashion_designer",
    "set_designer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 321,
+   "universities": 16,
+   "programs": 21,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1181",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "54.03.04",
@@ -183,7 +210,16 @@
   "professions": [
    "restorer",
    "museum_specialist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 54,
+   "universities": 8,
+   "programs": 8,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1182",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "54.05.01",
@@ -227,7 +263,16 @@
   "professions": [
    "painter",
    "crafts_artist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 147,
+   "universities": 13,
+   "programs": 17,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1273",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "54.05.02",
@@ -271,7 +316,16 @@
   "professions": [
    "painter",
    "illustrator"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 143,
+   "universities": 20,
+   "programs": 24,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1274",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "54.05.03",
@@ -316,7 +370,16 @@
   "professions": [
    "illustrator",
    "graphic_designer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 251,
+   "universities": 22,
+   "programs": 26,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1275",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "54.05.04",
@@ -406,7 +469,16 @@
   "professions": [
    "painter",
    "restorer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 10,
+   "universities": 1,
+   "programs": 1,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1277",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "54.02.01",

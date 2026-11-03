@@ -7,10 +7,10 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "chem"
    ],
    "oneOf": [
-    "chem",
+    "math",
     "phys",
     "inf"
    ]
@@ -48,7 +48,16 @@
    "process_engineer",
    "chemist_analyst",
    "quality_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 5534,
+   "universities": 107,
+   "programs": 181,
+   "avgPassPerSubject": 62.2,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1056",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "18.03.02",
@@ -58,10 +67,10 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "chem"
    ],
    "oneOf": [
-    "chem",
+    "math",
     "phys",
     "inf"
    ]
@@ -100,7 +109,16 @@
   "professions": [
    "process_engineer",
    "hse_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 907,
+   "universities": 34,
+   "programs": 43,
+   "avgPassPerSubject": 59,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1057",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "18.05.01",
@@ -110,10 +128,10 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "chem"
    ],
    "oneOf": [
-    "chem",
+    "math",
     "phys",
     "inf"
    ]
@@ -152,7 +170,16 @@
   "professions": [
    "process_engineer",
    "weapons_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 475,
+   "universities": 8,
+   "programs": 16,
+   "avgPassPerSubject": 58.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1206",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "18.05.02",
@@ -162,10 +189,10 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "chem"
    ],
    "oneOf": [
-    "chem",
+    "math",
     "phys",
     "inf"
    ]
@@ -203,7 +230,16 @@
    "process_engineer",
    "nuclear_engineer",
    "materials_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 358,
+   "universities": 10,
+   "programs": 12,
+   "avgPassPerSubject": 60.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1207",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "18.02.09",

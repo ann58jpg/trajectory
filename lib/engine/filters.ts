@@ -57,12 +57,15 @@ export function hardFilter(
 
   // Военная кафедра
   if (p.gender === "m" && p.vucImportant === "yes") {
-    if (!uni.vuc) reasons.push({ type: "vuc", text: EXCLUDE.noVuc });
+    // нет данных о военной кафедре — не обещаем её
+    if (uni.vuc === null) reasons.push({ type: "vuc", text: EXCLUDE.vucUnknown });
+    else if (!uni.vuc) reasons.push({ type: "vuc", text: EXCLUDE.noVuc });
     else if (!pr.forms.includes("full")) reasons.push({ type: "vuc", text: EXCLUDE.vucFullOnly });
   }
 
   // Общежитие
-  if (p.dorm === "yes" && !local && !online && !uni.dorm) reasons.push({ type: "dorm", text: EXCLUDE.noDorm });
+  if (p.dorm === "yes" && !local && !online && uni.dorm !== true)
+    reasons.push({ type: "dorm", text: uni.dorm === null ? EXCLUDE.dormUnknown : EXCLUDE.noDorm });
 
   // ЕГЭ. Базовая математика профильную не заменяет — об этом говорим отдельно.
   if (!uni.abroad && m.egeChosen) {

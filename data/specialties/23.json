@@ -10,9 +10,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -49,7 +49,16 @@
   "professions": [
    "logistics_manager",
    "transport_planner"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2630,
+   "universities": 94,
+   "programs": 141,
+   "avgPassPerSubject": 63.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1069",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "23.03.02",
@@ -62,9 +71,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -100,7 +109,16 @@
   "professions": [
    "mechanical_engineer",
    "maintenance_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 397,
+   "universities": 21,
+   "programs": 26,
+   "avgPassPerSubject": 58.4,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1070",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "23.03.03",
@@ -150,7 +168,16 @@
    "auto_mechanic",
    "maintenance_engineer",
    "logistics_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2700,
+   "universities": 118,
+   "programs": 140,
+   "avgPassPerSubject": 60.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1071",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "23.05.01",
@@ -163,9 +190,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -201,7 +228,16 @@
   "professions": [
    "mechanical_engineer",
    "auto_mechanic"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 4178,
+   "universities": 95,
+   "programs": 127,
+   "avgPassPerSubject": 60.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1215",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "23.05.02",
@@ -214,9 +250,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -253,7 +289,16 @@
   "professions": [
    "mechanical_engineer",
    "weapons_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 314,
+   "universities": 8,
+   "programs": 9,
+   "avgPassPerSubject": 67.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1216",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "23.05.03",
@@ -266,9 +311,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -304,7 +349,16 @@
   "professions": [
    "railway_engineer",
    "maintenance_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1694,
+   "universities": 16,
+   "programs": 56,
+   "avgPassPerSubject": 61.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1217",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "23.05.04",
@@ -317,9 +371,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -354,7 +408,16 @@
    "railway_engineer",
    "transport_planner",
    "logistics_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1605,
+   "universities": 22,
+   "programs": 49,
+   "avgPassPerSubject": 66.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1218",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "23.05.05",
@@ -367,9 +430,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -405,7 +468,16 @@
    "railway_engineer",
    "automation_engineer",
    "telecom_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1479,
+   "universities": 12,
+   "programs": 43,
+   "avgPassPerSubject": 58.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1219",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "23.05.06",
@@ -418,9 +490,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -456,7 +528,16 @@
    "road_engineer",
    "railway_engineer",
    "construction_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1843,
+   "universities": 17,
+   "programs": 48,
+   "avgPassPerSubject": 60.6,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1220",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "23.02.07",

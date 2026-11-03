@@ -10,9 +10,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -48,7 +48,16 @@
   "professions": [
    "garment_technologist",
    "fashion_designer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 291,
+   "universities": 11,
+   "programs": 15,
+   "avgPassPerSubject": 61,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1091",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "29.03.02",
@@ -61,9 +70,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -99,7 +108,16 @@
   "professions": [
    "garment_technologist",
    "fashion_designer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 209,
+   "universities": 7,
+   "programs": 11,
+   "avgPassPerSubject": 50.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1092",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "29.03.03",
@@ -112,9 +130,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -151,7 +169,16 @@
   "professions": [
    "print_technologist",
    "editor"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 291,
+   "universities": 10,
+   "programs": 13,
+   "avgPassPerSubject": 64.6,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1093",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "29.03.04",
@@ -202,7 +229,16 @@
   "professions": [
    "crafts_artist",
    "jeweler"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 794,
+   "universities": 32,
+   "programs": 37,
+   "avgPassPerSubject": 62.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1094",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "29.03.05",
@@ -215,9 +251,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -253,6 +289,15 @@
   "professions": [
    "fashion_designer",
    "garment_technologist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 522,
+   "universities": 21,
+   "programs": 23,
+   "avgPassPerSubject": 56,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1095",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

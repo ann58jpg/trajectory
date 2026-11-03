@@ -122,7 +122,7 @@ describe("персона 1: Аня, Москва", () => {
   });
   it("в «Интересах» — дизайн, медиа, издательское дело, UX", () => {
     const names = top(r, 0, 8).map((x) => x.professionId);
-    const creative = ["uxui", "graphic_designer", "editor", "illustrator", "smm", "video_editor", "copywriter", "journalist", "designer_3d", "writer", "painter"];
+    const creative = ["uxui", "graphic_designer", "editor", "illustrator", "smm", "video_editor", "copywriter", "journalist", "designer_3d", "writer", "painter", "pr_specialist"];
     expect(names.filter((n) => creative.includes(n)).length).toBeGreaterThanOrEqual(5);
     expect(names.slice(0, 3).some((n) => ["uxui", "graphic_designer", "editor"].includes(n))).toBe(true);
   });

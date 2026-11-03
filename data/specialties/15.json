@@ -10,9 +10,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -46,7 +46,16 @@
    "mechanical_engineer",
    "cnc_technologist",
    "quality_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2685,
+   "universities": 76,
+   "programs": 120,
+   "avgPassPerSubject": 67.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1046",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "15.03.02",
@@ -59,9 +68,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -94,7 +103,16 @@
   "professions": [
    "mechanical_engineer",
    "maintenance_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2945,
+   "universities": 102,
+   "programs": 148,
+   "avgPassPerSubject": 64.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1047",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "15.03.03",
@@ -107,9 +125,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -144,7 +162,16 @@
   "professions": [
    "calc_engineer",
    "mechanical_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 546,
+   "universities": 23,
+   "programs": 25,
+   "avgPassPerSubject": 71.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1048",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "15.03.04",
@@ -157,9 +184,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -196,7 +223,16 @@
   "professions": [
    "automation_engineer",
    "robotics_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 3489,
+   "universities": 119,
+   "programs": 152,
+   "avgPassPerSubject": 71,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1049",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "15.03.05",
@@ -209,9 +245,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -245,7 +281,16 @@
    "cnc_technologist",
    "mechanical_engineer",
    "quality_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 3312,
+   "universities": 111,
+   "programs": 147,
+   "avgPassPerSubject": 66.4,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1050",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "15.03.06",
@@ -258,9 +303,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -297,7 +342,16 @@
    "robotics_engineer",
    "automation_engineer",
    "electronics_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2303,
+   "universities": 88,
+   "programs": 102,
+   "avgPassPerSubject": 72.6,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1051",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "15.05.01",
@@ -310,9 +364,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -347,7 +401,16 @@
   "professions": [
    "mechanical_engineer",
    "calc_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 937,
+   "universities": 26,
+   "programs": 37,
+   "avgPassPerSubject": 69.2,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1201",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "15.02.16",
@@ -389,5 +452,57 @@
    "cnc_technologist",
    "mechanical_engineer"
   ]
+ },
+ {
+  "code": "15.05.02",
+  "name": "Робототехника военного и специального назначения",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "15.00.00",
+  "tags": [
+   "machine",
+   "engineering",
+   "manufacturing"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.83,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Машиностроение». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "mechanical_engineer",
+   "cnc_technologist",
+   "quality_engineer"
+  ],
+  "stats": {
+   "budgetRF": 65,
+   "universities": 2,
+   "programs": 3,
+   "avgPassPerSubject": 84,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1478",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

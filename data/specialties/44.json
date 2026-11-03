@@ -53,7 +53,16 @@
   "professions": [
    "teacher",
    "tutor_edtech"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 13756,
+   "universities": 169,
+   "programs": 759,
+   "avgPassPerSubject": 65.4,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1138",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "44.03.02",
@@ -101,7 +110,16 @@
    "school_psychologist",
    "teacher",
    "psychologist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 6794,
+   "universities": 148,
+   "programs": 275,
+   "avgPassPerSubject": 66.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1139",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "44.03.03",
@@ -150,7 +168,16 @@
   "professions": [
    "speech_therapist",
    "teacher"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 5222,
+   "universities": 107,
+   "programs": 209,
+   "avgPassPerSubject": 68.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1140",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "44.03.04",
@@ -255,7 +282,16 @@
   "professions": [
    "teacher",
    "tutor_edtech"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 29094,
+   "universities": 159,
+   "programs": 1305,
+   "avgPassPerSubject": 62.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1142",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "44.05.01",
@@ -265,11 +301,12 @@
   "ege": {
    "mandatory": [
     "rus",
-    "bio"
+    "soc"
    ],
    "oneOf": [
-    "soc",
-    "math"
+    "math",
+    "bio",
+    "hist"
    ]
   },
   "dvi": null,
@@ -303,7 +340,16 @@
   "professions": [
    "school_psychologist",
    "social_worker"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 718,
+   "universities": 25,
+   "programs": 26,
+   "avgPassPerSubject": 60.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1259",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "44.02.02",
@@ -344,5 +390,63 @@
   "professions": [
    "teacher"
   ]
+ },
+ {
+  "code": "44.05.04",
+  "name": "Профессиональное обучение (по отраслям)",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus"
+   ],
+   "oneOf": [
+    "math",
+    "soc",
+    "bio",
+    "chem",
+    "phys",
+    "inf",
+    "hist",
+    "lit",
+    "foreign",
+    "geo"
+   ]
+  },
+  "dvi": null,
+  "group": "44.00.00",
+  "tags": [
+   "education",
+   "people"
+  ],
+  "klimov": [
+   "P"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.78,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Образование и педагогические науки». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "teacher",
+   "tutor_edtech",
+   "school_psychologist"
+  ],
+  "stats": {
+   "budgetRF": 4057,
+   "universities": 80,
+   "programs": 197,
+   "avgPassPerSubject": 68.6,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1141",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

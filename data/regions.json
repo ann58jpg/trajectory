@@ -92,6 +92,26 @@
     "name": "Химки",
     "salaryCoef": 1.0,
     "hub": false
+   },
+   {
+    "name": "Фрязино",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Клин",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Павловский Посад",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Домодедово",
+    "salaryCoef": 1.0,
+    "hub": false
    }
   ],
   "salaryCoef": 1.2,
@@ -133,6 +153,11 @@
     "name": "Санкт-Петербург",
     "salaryCoef": 1,
     "hub": true
+   },
+   {
+    "name": "Сосновый Бор",
+    "salaryCoef": 1.0,
+    "hub": false
    }
   ],
   "salaryCoef": 1.3,
@@ -309,6 +334,21 @@
     "name": "Каменск-Уральский",
     "salaryCoef": 0.85,
     "hub": false
+   },
+   {
+    "name": "Нижнем Тагиле",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Нижняя Тура",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Невьянск",
+    "salaryCoef": 1.0,
+    "hub": false
    }
   ],
   "salaryCoef": 0.98,
@@ -467,6 +507,41 @@
     "name": "Сириус",
     "salaryCoef": 1.15,
     "hub": false
+   },
+   {
+    "name": "Славянске-на-Кубань",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Туапсе",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Геленджик",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Анапа",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Армавир",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Тихорецк",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Белореченск",
+    "salaryCoef": 1.0,
+    "hub": false
    }
   ],
   "salaryCoef": 0.85,
@@ -517,6 +592,31 @@
    {
     "name": "Новочеркасск",
     "salaryCoef": 0.88,
+    "hub": false
+   },
+   {
+    "name": "Шахты",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Зернограде",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Волгодонск",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Новошахтинск",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Азов",
+    "salaryCoef": 1.0,
     "hub": false
    }
   ],
@@ -682,6 +782,31 @@
     "name": "Стерлитамак",
     "salaryCoef": 0.9,
     "hub": false
+   },
+   {
+    "name": "Салавате",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Кумертау",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Белорецк",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Белебее Республики Башкортостан",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Ишимбае",
+    "salaryCoef": 1.0,
+    "hub": false
    }
   ],
   "salaryCoef": 0.86,
@@ -735,6 +860,11 @@
     "name": "Железногорск",
     "salaryCoef": 1.05,
     "hub": false
+   },
+   {
+    "name": "Лесосибирск",
+    "salaryCoef": 1.0,
+    "hub": false
    }
   ],
   "salaryCoef": 1.08,
@@ -786,6 +916,11 @@
    {
     "name": "Большой Камень",
     "salaryCoef": 1.1,
+    "hub": false
+   },
+   {
+    "name": "Уссурийск",
+    "salaryCoef": 1.0,
     "hub": false
    }
   ],
@@ -841,6 +976,11 @@
    {
     "name": "Тобольск",
     "salaryCoef": 1.05,
+    "hub": false
+   },
+   {
+    "name": "Нижневартовск",
+    "salaryCoef": 1.0,
     "hub": false
    }
   ],
@@ -933,6 +1073,11 @@
     "name": "Нововоронеж",
     "salaryCoef": 1.1,
     "hub": false
+   },
+   {
+    "name": "Борисоглебск",
+    "salaryCoef": 1.0,
+    "hub": false
    }
   ],
   "salaryCoef": 0.8,
@@ -984,6 +1129,11 @@
     "name": "Братск",
     "salaryCoef": 1.05,
     "hub": false
+   },
+   {
+    "name": "Усть-Илимск",
+    "salaryCoef": 1.0,
+    "hub": false
    }
   ],
   "salaryCoef": 0.98,
@@ -1034,6 +1184,16 @@
     "name": "Снежинск",
     "salaryCoef": 1.2,
     "hub": false
+   },
+   {
+    "name": "Златоусте",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Миассе",
+    "salaryCoef": 1.0,
+    "hub": false
    }
   ],
   "salaryCoef": 0.86,
@@ -1078,6 +1238,11 @@
    {
     "name": "Советск",
     "salaryCoef": 0.85,
+    "hub": false
+   },
+   {
+    "name": "Черняховск",
+    "salaryCoef": 1.0,
     "hub": false
    }
   ],
@@ -1133,6 +1298,16 @@
    {
     "name": "Хасавюрт",
     "salaryCoef": 0.85,
+    "hub": false
+   },
+   {
+    "name": "Кизляр",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Избербаше",
+    "salaryCoef": 1.0,
     "hub": false
    }
   ],
@@ -1859,6 +2034,21 @@
     "name": "Орёл",
     "salaryCoef": 1.05,
     "hub": true
+   },
+   {
+    "name": "Карачев",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Ливны",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Мценск",
+    "salaryCoef": 1.0,
+    "hub": false
    }
   ],
   "salaryCoef": 0.7,
@@ -1903,6 +2093,11 @@
    {
     "name": "Северодвинск",
     "salaryCoef": 1.15,
+    "hub": false
+   },
+   {
+    "name": "Коряжме",
+    "salaryCoef": 1.0,
     "hub": false
    }
   ],
@@ -2159,6 +2354,11 @@
     "name": "Ухта",
     "salaryCoef": 1.15,
     "hub": false
+   },
+   {
+    "name": "Усинск",
+    "salaryCoef": 1.0,
+    "hub": false
    }
   ],
   "salaryCoef": 1.05,
@@ -2203,6 +2403,11 @@
    {
     "name": "Волжский",
     "salaryCoef": 0.95,
+    "hub": false
+   },
+   {
+    "name": "Волжском",
+    "salaryCoef": 1.0,
     "hub": false
    }
   ],
@@ -2329,6 +2534,11 @@
    {
     "name": "Керчь",
     "salaryCoef": 0.9,
+    "hub": false
+   },
+   {
+    "name": "Феодосия",
+    "salaryCoef": 1.0,
     "hub": false
    }
   ],
@@ -2557,6 +2767,11 @@
    {
     "name": "Воткинск",
     "salaryCoef": 0.95,
+    "hub": false
+   },
+   {
+    "name": "Можг",
+    "salaryCoef": 1.0,
     "hub": false
    }
   ],
@@ -3022,6 +3237,11 @@
     "name": "Омск",
     "salaryCoef": 1.05,
     "hub": true
+   },
+   {
+    "name": "Тар",
+    "salaryCoef": 1.0,
+    "hub": false
    }
   ],
   "salaryCoef": 0.82,
@@ -3064,6 +3284,21 @@
    },
    {
     "name": "Новокузнецк",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Прокопьевск",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Междуреченск",
+    "salaryCoef": 1.0,
+    "hub": false
+   },
+   {
+    "name": "Белово",
     "salaryCoef": 1.0,
     "hub": false
    }
@@ -3112,6 +3347,11 @@
    {
     "name": "Бийск",
     "salaryCoef": 0.9,
+    "hub": false
+   },
+   {
+    "name": "Белокурихе",
+    "salaryCoef": 1.0,
     "hub": false
    }
   ],
@@ -3435,6 +3675,195 @@
   "meta": {
    "source": "Росстат: медиана РФ 73 871 ₽ (апрель 2025) × коэффициент региона (оценка); аренда — оценка",
    "updatedAt": "2025-09",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "tyva",
+  "name": "Республика Тыва",
+  "capital": "Кызыл",
+  "federalDistrict": "СФО",
+  "cities": [
+   {
+    "name": "Кызыл",
+    "salaryCoef": 1.0,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.9,
+  "medianSalary": 66500,
+  "rent": 19000,
+  "studentBudget": 22000,
+  "vacancyShare": 0.0112,
+  "industries": [],
+  "employers": [],
+  "neighbors": [],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Оценка: среднее по федеральному округу (своих данных Росстата по региону в каталоге нет)",
+   "updatedAt": "2026-11-03",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "ingushetia",
+  "name": "Республика Ингушетия",
+  "capital": "Магас",
+  "federalDistrict": "СКФО",
+  "cities": [
+   {
+    "name": "Магас",
+    "salaryCoef": 1.0,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.66,
+  "medianSalary": 49000,
+  "rent": 17000,
+  "studentBudget": 20000,
+  "vacancyShare": 0.0054,
+  "industries": [],
+  "employers": [],
+  "neighbors": [],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Оценка: среднее по федеральному округу (своих данных Росстата по региону в каталоге нет)",
+   "updatedAt": "2026-11-03",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "kchr",
+  "name": "Карачаево-Черкесская Республика",
+  "capital": "Черкесск",
+  "federalDistrict": "СКФО",
+  "cities": [
+   {
+    "name": "Черкесск",
+    "salaryCoef": 1.0,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.66,
+  "medianSalary": 49000,
+  "rent": 17000,
+  "studentBudget": 20000,
+  "vacancyShare": 0.0054,
+  "industries": [],
+  "employers": [],
+  "neighbors": [],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Оценка: среднее по федеральному округу (своих данных Росстата по региону в каталоге нет)",
+   "updatedAt": "2026-11-03",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "altai_rep",
+  "name": "Республика Алтай",
+  "capital": "Горно-Алтайск",
+  "federalDistrict": "СФО",
+  "cities": [
+   {
+    "name": "Горно-Алтайск",
+    "salaryCoef": 1.0,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 0.9,
+  "medianSalary": 66500,
+  "rent": 19000,
+  "studentBudget": 22000,
+  "vacancyShare": 0.0112,
+  "industries": [],
+  "employers": [],
+  "neighbors": [],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Оценка: среднее по федеральному округу (своих данных Росстата по региону в каталоге нет)",
+   "updatedAt": "2026-11-03",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "eao",
+  "name": "Еврейская автономная область",
+  "capital": "Биробиджан",
+  "federalDistrict": "ДФО",
+  "cities": [
+   {
+    "name": "Биробиджан",
+    "salaryCoef": 1.0,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 1.28,
+  "medianSalary": 94500,
+  "rent": 26000,
+  "studentBudget": 29000,
+  "vacancyShare": 0.0061,
+  "industries": [],
+  "employers": [],
+  "neighbors": [],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Оценка: среднее по федеральному округу (своих данных Росстата по региону в каталоге нет)",
+   "updatedAt": "2026-11-03",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "magadan",
+  "name": "Магаданская область",
+  "capital": "Магадан",
+  "federalDistrict": "ДФО",
+  "cities": [
+   {
+    "name": "Магадан",
+    "salaryCoef": 1.0,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 1.28,
+  "medianSalary": 94500,
+  "rent": 26000,
+  "studentBudget": 29000,
+  "vacancyShare": 0.0061,
+  "industries": [],
+  "employers": [],
+  "neighbors": [],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Оценка: среднее по федеральному округу (своих данных Росстата по региону в каталоге нет)",
+   "updatedAt": "2026-11-03",
+   "confidence": "estimate"
+  }
+ },
+ {
+  "id": "chukotka",
+  "name": "Чукотский автономный округ",
+  "capital": "Анадырь",
+  "federalDistrict": "ДФО",
+  "cities": [
+   {
+    "name": "Анадырь",
+    "salaryCoef": 1.0,
+    "hub": true
+   }
+  ],
+  "salaryCoef": 1.28,
+  "medianSalary": 94500,
+  "rent": 26000,
+  "studentBudget": 29000,
+  "vacancyShare": 0.0061,
+  "industries": [],
+  "employers": [],
+  "neighbors": [],
+  "hhAreaId": null,
+  "meta": {
+   "source": "Оценка: среднее по федеральному округу (своих данных Росстата по региону в каталоге нет)",
+   "updatedAt": "2026-11-03",
    "confidence": "estimate"
   }
  },

@@ -10,8 +10,8 @@
     "hist"
    ],
    "oneOf": [
-    "foreign",
     "soc",
+    "foreign",
     "geo"
    ]
   },
@@ -47,6 +47,15 @@
    "orientalist",
    "translator",
    "diplomat"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 605,
+   "universities": 26,
+   "programs": 64,
+   "avgPassPerSubject": 85.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1126",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

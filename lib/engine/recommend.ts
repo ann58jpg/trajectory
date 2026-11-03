@@ -5,6 +5,7 @@ import { computeAllPrograms, computeRecs, rankRecs } from "./scoring";
 import { computeTradeoffs } from "./tradeoffs";
 import { egeCheck } from "./filters";
 import { hasBudget } from "./exams";
+import { catalogIndex } from "./index";
 import { yearsWord } from "./ru";
 import type { UniEvent } from "@/lib/schemas";
 
@@ -44,7 +45,7 @@ function roiSeries(rec: Rec, p: StudentProfile, tuitionPerYear: number): { year:
 
 function sideFor(rec: Rec | undefined, p: StudentProfile, catalog: Catalog, sacrifices: string[]): ComparisonSide | null {
   if (!rec) return null;
-  const prof = catalog.professions.find((x) => x.id === rec.professionId)!;
+  const prof = catalogIndex(catalog).professions.get(rec.professionId)!;
   const best = rec.programs[0];
   const tuition = best && hasBudget(best) && best.chance !== "risky" && best.chance !== "low" ? 0 : best?.price ?? 0;
   const risks: string[] = [];
@@ -96,7 +97,15 @@ export function recommend(catalog: Catalog, profile: StudentProfile, mode: "ai" 
     if (profile.relocation === "no" && pm.online && !pm.local && model.region && pm.regionId !== model.region.id) continue;
     (specialtyPrograms[pm.specialtyCode] ??= []).push(pm);
   }
-  for (const k of Object.keys(specialtyPrograms)) specialtyPrograms[k] = specialtyPrograms[k].sort((a, b) => b.score - a.score).slice(0, 8);
+  // «Где учиться»: лучшие по совпадению + вузы, которые человек сам отметил в анкете, + до трёх вузов своего города
+  const chosen = new Set(profile.universities);
+  for (const k of Object.keys(specialtyPrograms)) {
+    const sorted = specialtyPrograms[k].sort((a, b) => b.score - a.score);
+    const keep = new Set(sorted.slice(0, 10).map((x) => x.programId));
+    for (const x of sorted.filter((x) => chosen.has(x.universityId))) keep.add(x.programId);
+    for (const x of sorted.filter((x) => x.local).slice(0, 3)) keep.add(x.programId);
+    specialtyPrograms[k] = sorted.filter((x) => keep.has(x.programId));
+  }
 
   // Подсказки по ЕГЭ («подберу предметы под цель»)
   const egeNames = new Map(catalog.egeSubjects.map((s) => [s.id, s.name]));

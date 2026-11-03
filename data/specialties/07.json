@@ -9,10 +9,7 @@
     "rus",
     "math"
    ],
-   "oneOf": [
-    "phys",
-    "inf"
-   ]
+   "oneOf": []
   },
   "dvi": "art",
   "group": "07.00.00",
@@ -47,7 +44,16 @@
    "architect",
    "urban_planner",
    "designer_3d"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1870,
+   "universities": 72,
+   "programs": 80,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1022",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "07.03.02",
@@ -59,10 +65,7 @@
     "rus",
     "math"
    ],
-   "oneOf": [
-    "phys",
-    "inf"
-   ]
+   "oneOf": []
   },
   "dvi": "art",
   "group": "07.00.00",
@@ -99,7 +102,16 @@
    "restoration_architect",
    "architect",
    "restorer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 255,
+   "universities": 13,
+   "programs": 14,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1023",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "07.03.03",
@@ -111,10 +123,7 @@
     "rus",
     "math"
    ],
-   "oneOf": [
-    "phys",
-    "inf"
-   ]
+   "oneOf": []
   },
   "dvi": "art",
   "group": "07.00.00",
@@ -149,7 +158,16 @@
    "environment_designer",
    "architect",
    "landscape_architect"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 420,
+   "universities": 28,
+   "programs": 29,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1024",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "07.03.04",
@@ -163,7 +181,9 @@
    ],
    "oneOf": [
     "phys",
-    "inf"
+    "inf",
+    "hist",
+    "geo"
    ]
   },
   "dvi": "art",
@@ -199,6 +219,15 @@
    "urban_planner",
    "architect",
    "gis_specialist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 386,
+   "universities": 24,
+   "programs": 28,
+   "avgPassPerSubject": 83.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1025",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

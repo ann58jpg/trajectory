@@ -10,9 +10,11 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
     "inf",
-    "chem"
+    "hist",
+    "geo"
    ]
   },
   "dvi": null,
@@ -51,7 +53,16 @@
    "oil_engineer",
    "geologist",
    "automation_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 3327,
+   "universities": 64,
+   "programs": 100,
+   "avgPassPerSubject": 66.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1064",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "21.03.02",
@@ -104,7 +115,16 @@
    "cadastral_engineer",
    "geodesist",
    "gis_specialist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 3313,
+   "universities": 110,
+   "programs": 135,
+   "avgPassPerSubject": 65,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1065",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "21.03.03",
@@ -117,9 +137,10 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
     "inf",
-    "chem"
+    "geo"
    ]
   },
   "dvi": null,
@@ -157,7 +178,16 @@
    "geodesist",
    "gis_specialist",
    "drone_operator"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 823,
+   "universities": 18,
+   "programs": 21,
+   "avgPassPerSubject": 68.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1066",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "21.05.01",
@@ -170,9 +200,10 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
     "inf",
-    "chem"
+    "geo"
    ]
   },
   "dvi": null,
@@ -210,7 +241,16 @@
   "professions": [
    "geodesist",
    "mine_surveyor"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 461,
+   "universities": 17,
+   "programs": 18,
+   "avgPassPerSubject": 74.2,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1209",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "21.05.02",
@@ -223,9 +263,10 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
     "inf",
-    "chem"
+    "geo"
    ]
   },
   "dvi": null,
@@ -262,7 +303,16 @@
   "professions": [
    "geologist",
    "oil_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1097,
+   "universities": 34,
+   "programs": 41,
+   "avgPassPerSubject": 64.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1210",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "21.05.03",
@@ -275,9 +325,10 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
     "inf",
-    "chem"
+    "geo"
    ]
   },
   "dvi": null,
@@ -314,7 +365,16 @@
   "professions": [
    "geologist",
    "oil_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 601,
+   "universities": 18,
+   "programs": 22,
+   "avgPassPerSubject": 69,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1211",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "21.05.04",
@@ -327,9 +387,10 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
     "inf",
-    "chem"
+    "geo"
    ]
   },
   "dvi": null,
@@ -365,7 +426,16 @@
    "mining_engineer",
    "mine_surveyor",
    "hse_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2668,
+   "universities": 44,
+   "programs": 89,
+   "avgPassPerSubject": 66.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1212",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "21.05.05",
@@ -378,9 +448,10 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
     "inf",
-    "chem"
+    "geo"
    ]
   },
   "dvi": null,
@@ -416,7 +487,16 @@
   "professions": [
    "mining_engineer",
    "oil_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 68,
+   "universities": 4,
+   "programs": 4,
+   "avgPassPerSubject": 70.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1213",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "21.05.06",
@@ -429,9 +509,10 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
     "inf",
-    "chem"
+    "geo"
    ]
   },
   "dvi": null,
@@ -469,6 +550,15 @@
   "professions": [
    "oil_engineer",
    "maintenance_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1133,
+   "universities": 21,
+   "programs": 35,
+   "avgPassPerSubject": 74.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1214",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

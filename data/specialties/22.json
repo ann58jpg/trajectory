@@ -10,9 +10,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -47,7 +47,16 @@
    "materials_engineer",
    "metallurgist",
    "quality_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1528,
+   "universities": 60,
+   "programs": 86,
+   "avgPassPerSubject": 65.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1067",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "22.03.02",
@@ -60,9 +69,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -97,6 +106,15 @@
    "metallurgist",
    "materials_engineer",
    "process_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1400,
+   "universities": 41,
+   "programs": 74,
+   "avgPassPerSubject": 64.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1068",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

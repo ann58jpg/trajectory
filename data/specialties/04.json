@@ -12,7 +12,8 @@
    "oneOf": [
     "math",
     "bio",
-    "phys"
+    "phys",
+    "inf"
    ]
   },
   "dvi": null,
@@ -46,7 +47,16 @@
    "chemist_analyst",
    "process_engineer",
    "pharmacist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 2538,
+   "universities": 79,
+   "programs": 87,
+   "avgPassPerSubject": 65.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1012",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "04.03.02",
@@ -61,7 +71,8 @@
    "oneOf": [
     "math",
     "bio",
-    "phys"
+    "phys",
+    "inf"
    ]
   },
   "dvi": null,
@@ -96,7 +107,16 @@
    "materials_engineer",
    "chemist_analyst",
    "nanotech_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 179,
+   "universities": 11,
+   "programs": 11,
+   "avgPassPerSubject": 67.6,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1013",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "04.05.01",
@@ -111,7 +131,8 @@
    "oneOf": [
     "math",
     "bio",
-    "phys"
+    "phys",
+    "inf"
    ]
   },
   "dvi": null,
@@ -145,6 +166,15 @@
    "chemist_analyst",
    "process_engineer",
    "biotechnologist"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1388,
+   "universities": 41,
+   "programs": 46,
+   "avgPassPerSubject": 68.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1186",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

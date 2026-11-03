@@ -7,12 +7,12 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "phys"
    ],
    "oneOf": [
-    "phys",
-    "inf",
-    "chem"
+    "math",
+    "chem",
+    "inf"
    ]
   },
   "dvi": null,
@@ -46,7 +46,16 @@
    "electronics_engineer",
    "metrologist",
    "medtech_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1223,
+   "universities": 53,
+   "programs": 54,
+   "avgPassPerSubject": 62.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1036",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "12.03.02",
@@ -95,7 +104,16 @@
   "professions": [
    "optics_engineer",
    "laser_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 152,
+   "universities": 7,
+   "programs": 7,
+   "avgPassPerSubject": 58.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1037",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "12.03.03",
@@ -144,7 +162,16 @@
    "optics_engineer",
    "telecom_engineer",
    "laser_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 258,
+   "universities": 13,
+   "programs": 14,
+   "avgPassPerSubject": 66.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1038",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "12.03.04",
@@ -195,7 +222,16 @@
   "professions": [
    "medtech_engineer",
    "electronics_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1465,
+   "universities": 48,
+   "programs": 55,
+   "avgPassPerSubject": 70.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1039",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "12.03.05",
@@ -244,7 +280,16 @@
   "professions": [
    "laser_engineer",
    "optics_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 445,
+   "universities": 16,
+   "programs": 16,
+   "avgPassPerSubject": 70.5,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1040",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "12.05.01",
@@ -254,12 +299,12 @@
   "ege": {
    "mandatory": [
     "rus",
-    "math"
+    "phys"
    ],
    "oneOf": [
-    "phys",
-    "inf",
-    "chem"
+    "math",
+    "chem",
+    "inf"
    ]
   },
   "dvi": null,
@@ -294,6 +339,15 @@
   "professions": [
    "optics_engineer",
    "electronics_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 162,
+   "universities": 6,
+   "programs": 6,
+   "avgPassPerSubject": 69.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1197",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

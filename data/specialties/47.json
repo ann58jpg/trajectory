@@ -45,7 +45,16 @@
    "philosopher",
    "teacher",
    "political_analyst"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 674,
+   "universities": 34,
+   "programs": 35,
+   "avgPassPerSubject": 72.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1150",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "47.03.02",
@@ -58,6 +67,7 @@
     "soc"
    ],
    "oneOf": [
+    "inf",
     "hist",
     "foreign"
    ]
@@ -98,7 +108,16 @@
   "professions": [
    "philosopher",
    "hr"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 30,
+   "universities": 1,
+   "programs": 1,
+   "avgPassPerSubject": 82,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1151",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "47.03.03",
@@ -108,11 +127,13 @@
   "ege": {
    "mandatory": [
     "rus",
-    "soc"
+    "hist"
    ],
    "oneOf": [
-    "hist",
-    "foreign"
+    "soc",
+    "lit",
+    "foreign",
+    "geo"
    ]
   },
   "dvi": null,
@@ -148,6 +169,15 @@
   "professions": [
    "religion_scholar",
    "historian"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 187,
+   "universities": 14,
+   "programs": 16,
+   "avgPassPerSubject": 69.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1152",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

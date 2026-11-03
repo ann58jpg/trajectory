@@ -10,9 +10,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -46,7 +46,16 @@
   "professions": [
    "aircraft_tech",
    "engine_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 534,
+   "universities": 15,
+   "programs": 22,
+   "avgPassPerSubject": 67.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1077",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "25.03.02",
@@ -60,8 +69,7 @@
    ],
    "oneOf": [
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -98,7 +106,16 @@
   "professions": [
    "aircraft_tech",
    "electronics_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 87,
+   "universities": 4,
+   "programs": 4,
+   "avgPassPerSubject": 55.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1078",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "25.03.03",
@@ -112,8 +129,7 @@
    ],
    "oneOf": [
     "phys",
-    "inf",
-    "foreign"
+    "inf"
    ]
   },
   "dvi": null,
@@ -146,7 +162,16 @@
   "professions": [
    "air_traffic_controller",
    "pilot"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 360,
+   "universities": 4,
+   "programs": 17,
+   "avgPassPerSubject": 72.2,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1079",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "25.03.04",
@@ -160,8 +185,7 @@
    ],
    "oneOf": [
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -198,7 +222,16 @@
   "professions": [
    "airport_manager",
    "logistics_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 195,
+   "universities": 2,
+   "programs": 12,
+   "avgPassPerSubject": 66.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1080",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "25.05.05",
@@ -212,8 +245,7 @@
    ],
    "oneOf": [
     "phys",
-    "inf",
-    "foreign"
+    "inf"
    ]
   },
   "dvi": "physical",
@@ -246,7 +278,16 @@
   "professions": [
    "pilot",
    "air_traffic_controller"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 838,
+   "universities": 4,
+   "programs": 16,
+   "avgPassPerSubject": 71.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1232",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "25.02.08",
@@ -292,5 +333,111 @@
    "drone_operator",
    "drone_engineer"
   ]
+ },
+ {
+  "code": "25.05.02",
+  "name": "Техническая эксплуатация и восстановление электросистем и пилотажно-навигационных комплексов боевых летательных аппаратов",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "25.00.00",
+  "tags": [
+   "aviation",
+   "transport",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Аэронавигация и эксплуатация авиационной и ракетно-космической техники». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "aircraft_tech",
+   "air_traffic_controller",
+   "pilot"
+  ],
+  "stats": {
+   "budgetRF": 20,
+   "universities": 1,
+   "programs": 1,
+   "avgPassPerSubject": 57.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1229",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "25.05.03",
+  "name": "Техническая эксплуатация транспортного радиооборудования",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "25.00.00",
+  "tags": [
+   "aviation",
+   "transport",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.85,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Аэронавигация и эксплуатация авиационной и ракетно-космической техники». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "aircraft_tech",
+   "air_traffic_controller",
+   "pilot"
+  ],
+  "stats": {
+   "budgetRF": 274,
+   "universities": 12,
+   "programs": 15,
+   "avgPassPerSubject": 56.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1230",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

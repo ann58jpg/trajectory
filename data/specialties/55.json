@@ -9,7 +9,11 @@
     "rus",
     "lit"
    ],
-   "oneOf": []
+   "oneOf": [
+    "soc",
+    "hist",
+    "foreign"
+   ]
   },
   "dvi": "contest",
   "group": "55.00.00",
@@ -43,7 +47,16 @@
    "film_director",
    "tv_producer",
    "game_designer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 173,
+   "universities": 12,
+   "programs": 24,
+   "avgPassPerSubject": 79.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1278",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "55.05.02",
@@ -90,7 +103,16 @@
   "professions": [
    "sound_engineer",
    "sound_producer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 38,
+   "universities": 3,
+   "programs": 3,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1279",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "55.05.03",
@@ -136,7 +158,16 @@
   "professions": [
    "cinematographer",
    "video_editor"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 41,
+   "universities": 5,
+   "programs": 5,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1280",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "55.05.04",
@@ -148,7 +179,10 @@
     "rus",
     "lit"
    ],
-   "oneOf": []
+   "oneOf": [
+    "inf",
+    "foreign"
+   ]
   },
   "dvi": "contest",
   "group": "55.00.00",
@@ -183,7 +217,16 @@
   "professions": [
    "film_producer",
    "tv_producer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 126,
+   "universities": 14,
+   "programs": 17,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1281",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "55.05.05",
@@ -230,6 +273,15 @@
   "professions": [
    "film_critic",
    "curator"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 17,
+   "universities": 2,
+   "programs": 2,
+   "avgPassPerSubject": null,
+   "year": null,
+   "url": "https://tabiturient.ru/np/1282",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

@@ -10,9 +10,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -48,7 +48,16 @@
   "professions": [
    "port_manager",
    "logistics_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 419,
+   "universities": 10,
+   "programs": 17,
+   "avgPassPerSubject": 59.2,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1081",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "26.03.02",
@@ -61,9 +70,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -98,7 +107,16 @@
   "professions": [
    "shipbuilder",
    "calc_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 827,
+   "universities": 17,
+   "programs": 33,
+   "avgPassPerSubject": 62,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1082",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "26.05.01",
@@ -111,9 +129,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -145,7 +163,16 @@
   "autoDescription": true,
   "professions": [
    "shipbuilder"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 350,
+   "universities": 7,
+   "programs": 11,
+   "avgPassPerSubject": 62.2,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1233",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "26.05.05",
@@ -158,9 +185,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "foreign"
+    "inf"
    ]
   },
   "dvi": "physical",
@@ -195,7 +222,16 @@
   "professions": [
    "ship_navigator",
    "port_manager"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 1174,
+   "universities": 20,
+   "programs": 24,
+   "avgPassPerSubject": 57.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1237",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "26.05.06",
@@ -208,9 +244,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -245,7 +281,16 @@
   "professions": [
    "ship_engineer",
    "maintenance_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 959,
+   "universities": 19,
+   "programs": 26,
+   "avgPassPerSubject": 54.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1238",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "26.05.07",
@@ -258,9 +303,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -295,6 +340,278 @@
   "professions": [
    "ship_engineer",
    "electrician"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 597,
+   "universities": 18,
+   "programs": 23,
+   "avgPassPerSubject": 50.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1239",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "26.03.03",
+  "name": "Водные пути, порты и гидротехнические сооружения",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "26.00.00",
+  "tags": [
+   "sea",
+   "transport",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.86,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Техника и технологии кораблестроения и водного транспорта». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "port_manager",
+   "shipbuilder",
+   "ship_engineer"
+  ],
+  "stats": {
+   "budgetRF": 105,
+   "universities": 6,
+   "programs": 7,
+   "avgPassPerSubject": 52.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1477",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "26.03.04",
+  "name": "Инженерно-экономическое обеспечение технологий и бизнес-процессов водного транспорта",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "26.00.00",
+  "tags": [
+   "sea",
+   "transport",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.86,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Техника и технологии кораблестроения и водного транспорта». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "port_manager",
+   "shipbuilder",
+   "ship_engineer"
+  ],
+  "stats": {
+   "budgetRF": 200,
+   "universities": 8,
+   "programs": 8,
+   "avgPassPerSubject": 59.1,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1481",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "26.05.02",
+  "name": "Проектирование, изготовление и ремонт энергетических установок и систем автоматизации кораблей и судов",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "26.00.00",
+  "tags": [
+   "sea",
+   "transport",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.86,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Техника и технологии кораблестроения и водного транспорта». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "port_manager",
+   "shipbuilder",
+   "ship_engineer"
+  ],
+  "stats": {
+   "budgetRF": 154,
+   "universities": 2,
+   "programs": 6,
+   "avgPassPerSubject": 67.9,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1234",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "26.05.03",
+  "name": "Строительство, ремонт и поисково-спасательное обеспечение надводных кораблей и подводных лодок",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "26.00.00",
+  "tags": [
+   "sea",
+   "transport",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.86,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Техника и технологии кораблестроения и водного транспорта». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "port_manager",
+   "shipbuilder",
+   "ship_engineer"
+  ],
+  "stats": {
+   "budgetRF": 24,
+   "universities": 1,
+   "programs": 1,
+   "avgPassPerSubject": 69.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1235",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "26.05.04",
+  "name": "Применение и эксплуатация технических систем надводных кораблей и подводных лодок",
+  "level": "specialist",
+  "years": 5,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "26.00.00",
+  "tags": [
+   "sea",
+   "transport",
+   "engineering"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.86,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Техника и технологии кораблестроения и водного транспорта». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "port_manager",
+   "shipbuilder",
+   "ship_engineer"
+  ],
+  "stats": {
+   "budgetRF": 10,
+   "universities": 1,
+   "programs": 1,
+   "avgPassPerSubject": 54.7,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1236",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

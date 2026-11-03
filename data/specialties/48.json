@@ -46,6 +46,15 @@
   "professions": [
    "theologian",
    "religion_scholar"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 297,
+   "universities": 23,
+   "programs": 31,
+   "avgPassPerSubject": 65,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1153",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

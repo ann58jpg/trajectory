@@ -10,9 +10,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -48,7 +48,16 @@
   "professions": [
    "weapons_engineer",
    "process_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 377,
+   "universities": 12,
+   "programs": 14,
+   "avgPassPerSubject": 60.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1203",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "17.05.02",
@@ -61,9 +70,9 @@
     "math"
    ],
    "oneOf": [
+    "chem",
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -97,7 +106,16 @@
   "professions": [
    "weapons_engineer",
    "mechanical_engineer"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 261,
+   "universities": 8,
+   "programs": 9,
+   "avgPassPerSubject": 64.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1204",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "17.05.03",
@@ -111,8 +129,7 @@
    ],
    "oneOf": [
     "phys",
-    "inf",
-    "chem"
+    "inf"
    ]
   },
   "dvi": null,
@@ -146,6 +163,68 @@
    "weapons_engineer",
    "electronics_engineer",
    "shipbuilder"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 80,
+   "universities": 1,
+   "programs": 2,
+   "avgPassPerSubject": 67.3,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1205",
+   "checkedAt": "2026-11-03"
+  }
+ },
+ {
+  "code": "17.03.01",
+  "name": "Корабельное вооружение",
+  "level": "bachelor",
+  "years": 4,
+  "ege": {
+   "mandatory": [
+    "rus",
+    "math"
+   ],
+   "oneOf": [
+    "chem",
+    "phys",
+    "inf"
+   ]
+  },
+  "dvi": null,
+  "group": "17.00.00",
+  "tags": [
+   "engineering",
+   "machine",
+   "safety"
+  ],
+  "klimov": [
+   "T"
+  ],
+  "disciplines": [],
+  "employment": {
+   "rate": 0.88,
+   "monthsToJob": 2,
+   "meta": {
+    "source": "Мониторинг трудоустройства выпускников (оценка по группе направлений)",
+    "updatedAt": "2026-11-03",
+    "confidence": "estimate"
+   }
+  },
+  "description": "Направление из группы «Оружие и системы вооружения». Описание и учебный план смотри на сайтах вузов.",
+  "autoDescription": true,
+  "professions": [
+   "weapons_engineer",
+   "process_engineer",
+   "mechanical_engineer"
+  ],
+  "stats": {
+   "budgetRF": 116,
+   "universities": 3,
+   "programs": 7,
+   "avgPassPerSubject": 65.8,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1055",
+   "checkedAt": "2026-11-03"
+  }
  }
 ]

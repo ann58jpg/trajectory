@@ -7,11 +7,10 @@
   "ege": {
    "mandatory": [
     "rus",
-    "bio"
-   ],
-   "oneOf": [
+    "bio",
     "chem"
-   ]
+   ],
+   "oneOf": []
   },
   "dvi": null,
   "group": "34.00.00",
@@ -44,7 +43,16 @@
   "professions": [
    "head_nurse",
    "nurse"
-  ]
+  ],
+  "stats": {
+   "budgetRF": 229,
+   "universities": 31,
+   "programs": 31,
+   "avgPassPerSubject": 66.4,
+   "year": 2025,
+   "url": "https://tabiturient.ru/np/1096",
+   "checkedAt": "2026-11-03"
+  }
  },
  {
   "code": "34.02.01",
