@@ -3,6 +3,7 @@ import type { Catalog } from "@/lib/data/validate";
 import { buildPortrait, buildUserModel } from "./profile";
 import { computeAllPrograms, computeRecs, rankRecs } from "./scoring";
 import { computeTradeoffs } from "./tradeoffs";
+import { computeReturnLoved, computeSafeChoice } from "./extras";
 import { egeCheck } from "./filters";
 import { hasBudget } from "./exams";
 import { catalogIndex } from "./index";
@@ -127,6 +128,8 @@ export function recommend(catalog: Catalog, profile: StudentProfile, mode: "ai" 
     specialties: catalog.specialties.map((s) => ({ code: s.code, name: s.name, level: s.level, years: s.years })),
     specialtyPrograms,
     tradeoffs,
+    safeChoice: computeSafeChoice(profile, model, catalog, programs),
+    returnLoved: computeReturnLoved(profile, model, catalog, programs),
     comparison: { interests: sideFor(iBest, profile, catalog, iSacr), money: sideFor(mBest, profile, catalog, mSacr) },
     portrait: buildPortrait(profile, model),
     confidence,

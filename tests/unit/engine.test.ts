@@ -157,7 +157,7 @@ describe("персона 2: Артём, Сызрань", () => {
     expect(reloc[0].gainAbs).toBeGreaterThan(0);
     expect(reloc[0].gainPct).toBeGreaterThanOrEqual(0.25);
     expect(reloc[0].sentence).toMatch(/₽/);
-    expect(reloc[0].sentence).toMatch(/^Если переедешь в /);
+    expect(reloc[0].sentence).toMatch(/^Один шаг до .+: будь готова? переехать в /);
     expect(reloc[0].sentence).toMatch(/примерно на \d+% выше/);
   });
 });

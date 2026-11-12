@@ -24,6 +24,7 @@ import { yearsWord } from "@/lib/engine/ru";
 import { COMPARE, RESULTS } from "@/lib/copy";
 import { track } from "@/lib/analytics";
 import { MyVibeCard } from "@/components/app/my-vibe-card";
+import { ReturnLovedBlock, SafeChoiceBlock } from "@/components/app/safe-choice";
 
 type State = { status: "idle" | "loading" | "error" | "ok"; data?: RecommendResponse; error?: string; hint?: string };
 type Mode = "interests" | "money";
@@ -173,6 +174,9 @@ export function Results() {
           </Button>
         )}
       </section>
+
+      {d.safeChoice && <SafeChoiceBlock s={d.safeChoice} />}
+      {d.returnLoved && <ReturnLovedBlock l={d.returnLoved} />}
 
       <UpcomingEvents events={d.upcomingEvents} shownUnis={shownUnis} unis={uniNames(d)} />
 

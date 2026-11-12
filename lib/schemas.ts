@@ -439,11 +439,29 @@ export const ComparisonSide = z.object({
 });
 export type ComparisonSide = z.infer<typeof ComparisonSide>;
 
+const SafeAltZ = z.object({ code: z.string(), name: z.string(), programs: z.number(), budget: z.number().nullable(), passMin: z.number().nullable() });
+export const SafeChoiceZ = z.object({
+  subjects: z.array(z.string()),
+  alternatives: z.array(SafeAltZ),
+  honest: z.array(SafeAltZ.extend({ needs: z.array(z.string()), salary: z.number().nullable(), salaryName: z.string().nullable() })),
+  dream: z.array(z.object({ sphere: z.string(), sphereName: z.string(), code: z.string(), name: z.string(), add: z.string().nullable(), addName: z.string().nullable(), professionName: z.string() })),
+});
+export const ReturnLovedZ = z.object({
+  interests: z.array(z.string()),
+  why: z.enum(["no_time", "not_serious"]),
+  specialties: z.array(z.object({ code: z.string(), name: z.string(), reachable: z.boolean(), needs: z.array(z.string()), programs: z.number() })),
+  courses: z.array(z.object({ title: z.string(), url: z.string() })),
+});
+
 export const RecommendResponse = z.object({
   recs: z.array(Rec), // все профессии с сырыми факторами — ползунок пересчитывает на клиенте
   specialties: z.array(z.object({ code: z.string(), name: z.string(), level: SpecialtyLevel, years: z.number() })),
   specialtyPrograms: z.record(z.string(), z.array(ProgramMatch)),
   tradeoffs: z.array(Tradeoff),
+  /** «Безопасный выбор» — если предметы выбраны «потому что проще» и т.п. */
+  safeChoice: SafeChoiceZ.nullable().default(null),
+  /** «Вернуть то, что ты любил». */
+  returnLoved: ReturnLovedZ.nullable().default(null),
   comparison: z.object({ interests: ComparisonSide.nullable(), money: ComparisonSide.nullable() }),
   portrait: z.string(),
   confidence: z.number(),

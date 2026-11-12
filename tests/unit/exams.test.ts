@@ -42,7 +42,7 @@ describe("ЕГЭ и доп. экзамены", () => {
     expect(examSetText(spec("54.03.01"))).toMatch(/Доп\. экзамен: творческий/);
   });
 
-  it("нет готовности к доп. экзамену — программа не пропадает, а уходит в «Если готов изменить»", () => {
+  it("нет готовности к доп. экзамену — программа не пропадает, а остаётся с причиной; «Один шаг до» — только одно изменение", () => {
     const p = StudentProfile.parse({
       consent: true, start: "interest", regionId: "moscow", city: "Москва", relocation: "no", finance: "paid", egeOrder: "chosen", dviReady: ["none"],
       ege: [{ subject: "rus", score: 85 }, { subject: "lit", score: 85 }, { subject: "soc", score: 80 }],
@@ -53,6 +53,6 @@ describe("ЕГЭ и доп. экзамены", () => {
     expect(design.length).toBeGreaterThan(0);
     expect(design.every((x) => x.excluded.some((e) => e.type === "dvi"))).toBe(true);
     const r = recommend(catalog, p);
-    expect(r.tradeoffs.some((t) => t.changes.some((c) => c.type === "dvi"))).toBe(true);
+    for (const t of r.tradeoffs) expect(t.changes.filter((c) => c.type !== "form")).toHaveLength(1);
   });
 });

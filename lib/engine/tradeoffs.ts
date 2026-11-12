@@ -7,6 +7,7 @@ import { egeCheck, fmtRub } from "./filters";
 import { effectiveDvi } from "./exams";
 import { catalogIndex } from "./index";
 import { DVI_TEXT } from "@/lib/copy";
+import neighborsData from "@/data/sphere_neighbors.json";
 import { accusativeCity, pointsWord, rubles, SUBJECT_ACC, SUBJECT_GEN, yearsWord } from "./ru";
 
 const RELOC_COST = { region: 1, nearest: 1.5, russia: 2.5, abroad: 3.5 } as const;
@@ -64,7 +65,7 @@ function changesFor(pm: ProgramMatch, p: StudentProfile, m: UserModel, catalog: 
         const replace = m.ege.size >= 3 && extra.length > 0 && need.length === 1;
         changes.push({
           type: replace ? "replace_ege" : "add_ege",
-          text: replace ? `замени ${SUBJECT_ACC[extra[0]] ?? extra[0]} на ${names[0]} в ЕГЭ` : `добавь к ЕГЭ ${names.join(" и ")}`,
+          text: replace ? `сдай ${names[0]} вместо ${SUBJECT_GEN[extra[0]] ?? extra[0]}` : `досдай ${names.join(" и ")}`,
           ifText: replace ? `сдашь ${names[0]} вместо ${SUBJECT_GEN[extra[0]] ?? extra[0]}` : `досдашь ${names.join(" и ")}`,
           cost: 1.5 * need.length,
         });
@@ -103,24 +104,47 @@ const joinIf = (list: string[]) => (list.length > 1 ? `${list.slice(0, -1).join(
 const egeSubjectsChanged = (changes: TradeoffChange[]) =>
   changes.filter((c) => c.type === "add_ege" || c.type === "replace_ege").reduce((s, c) => s + Math.round(c.cost / 1.5), 0);
 
+const NEIGHBORS = neighborsData.neighbors as Record<string, string[]>;
+/** Группы, близкие к уже подходящим: сами группы + их соседи из data/sphere_neighbors.json. */
+export function closeGroups(groups: Iterable<string>): Set<string> {
+  const out = new Set<string>();
+  for (const g of groups) {
+    out.add(g);
+    for (const n of NEIGHBORS[g] ?? []) out.add(n);
+  }
+  return out;
+}
+
 /**
- * «Если готов изменить» (пункт 10 правок): только смежные варианты —
- * та же группа направлений, что у подходящих тебе профессий, или ЕГЭ отличается не больше чем на один предмет,
- * или общие интересы (теги, понравившиеся задачи в игре). Не больше двух изменений, 3–5 вариантов по пользе.
+ * «Один шаг до…» (раздел 8 v3). Три строгих условия:
+ * 1) близость — та же группа направлений, что у подходящих тебе профессий, или соседняя по data/sphere_neighbors.json;
+ * 2) ровно одно изменение (один предмет ЕГЭ, переезд, доп. экзамен…);
+ * 3) заметная выгода — зарплата выше на 25% и больше, или вуз сильнее по рейтингу, или вакансий в 1,25 раза больше.
+ * Итог — 3–5 вариантов (меньше, если честных нет).
  */
 export function computeTradeoffs(recs: Rec[], p: StudentProfile, m: UserModel, catalog: Catalog, programs: Map<string, ProgramMatch>): Tradeoff[] {
   const ranked = rankRecs(recs, 0);
   const best = ranked[0];
   if (!best) return [];
   const topRecs = ranked.slice(0, 5);
+  const ix = catalogIndex(catalog);
   const profs = new Map(catalog.professions.map((x) => [x.id, x]));
   const specs = new Map(catalog.specialties.map((s) => [s.code, s]));
   const liked = new Set([...m.subjectWeights.entries()].filter(([, v]) => v.weight >= 0.6).map(([k]) => k));
   const homeName = m.city ?? m.region?.capital ?? "твоём городе";
-  // группы и теги того, что уже подходит
   const topSpecByGroup = new Map<string, string>();
   for (const r of topRecs) for (const pm of r.programs.slice(0, 3)) if (!topSpecByGroup.has(pm.specialtyCode.slice(0, 2))) topSpecByGroup.set(pm.specialtyCode.slice(0, 2), pm.specialtyCode);
+  // близость: группы лучшей профессии и их соседи + те же группы, что у остальных профессий из топ-3
+  const anchor = new Set(best.programs.slice(0, 1).map((pm) => pm.specialtyCode.slice(0, 2)));
+  const near = closeGroups(anchor);
+  for (const r of topRecs.slice(0, 3)) for (const pm of r.programs.slice(0, 1)) near.add(pm.specialtyCode.slice(0, 2));
+  const topTags = new Map<string, number>();
+  for (const r of topRecs.slice(0, 3)) for (const t of profs.get(r.professionId)?.tags ?? []) topTags.set(t, (topTags.get(t) ?? 0) + 1);
   const topIds = new Set(topRecs.map((r) => r.professionId));
+  const bestProf = profs.get(best.professionId)!;
+  // сильнейший вуз среди того, что уже доступно (меньше место RAEX — сильнее)
+  const raexOf = (uid: string) => ix.universities.get(uid)?.ratings.raex ?? null;
+  const nowRaex = Math.min(...topRecs.flatMap((r) => r.programs.slice(0, 5).map((pm) => raexOf(pm.universityId) ?? 999)), 999);
 
   const bySpec = new Map<string, ProgramMatch[]>();
   for (const pm of programs.values()) bySpec.set(pm.specialtyCode, [...(bySpec.get(pm.specialtyCode) ?? []), pm]);
@@ -128,29 +152,26 @@ export function computeTradeoffs(recs: Rec[], p: StudentProfile, m: UserModel, c
   for (const rec of recs) {
     if (rec.factors.match < ENGINE.moneyMatchThreshold) continue;
     const prof = profs.get(rec.professionId)!;
-    const kind: "unlock" | "relocate" = rec.available ? "relocate" : "unlock";
-    if (kind === "relocate" && rec.factors.match < best.factors.match - 0.15) continue;
+    const kind: "unlock" | "career" = rec.available ? "career" : "unlock";
+    if (kind === "career" && rec.factors.match < best.factors.match - 0.15) continue;
     if (kind === "unlock" && topIds.has(rec.professionId)) continue;
+    // та же «сфера» интересов: минимум два общих тега с профессиями из топ-3
+    if (kind === "unlock" && prof.tags.filter((t) => topTags.has(t)).length < 2) continue;
 
     let bestOpt: (Option & { closeTo: string }) | null = null;
     for (const pm of prof.specialties.flatMap((c) => bySpec.get(c) ?? [])) {
       const changes = changesFor(pm, p, m, catalog);
-      if (!changes || changes.length === 0) continue;
+      if (!changes) continue;
       const real = changes.filter((c) => c.type !== "form");
-      if (real.length > 2) continue;
-      if (kind === "relocate" && real.some((c) => c.type !== "relocate")) continue;
-      // смежность
+      // ровно одно изменение; ЕГЭ — не больше одного предмета
+      if (real.length !== 1 || egeSubjectsChanged(real) > 1) continue;
+      if (kind === "career" && real[0].type !== "relocate") continue;
       const g = pm.specialtyCode.slice(0, 2);
+      if (!near.has(g)) continue;
       const sameGroupCode = topSpecByGroup.get(g);
-      const egeOne = egeSubjectsChanged(real) <= 1;
-      const topTwin = topRecs.find((r) => profs.get(r.professionId)!.tags.filter((t) => prof.tags.includes(t)).length >= 2);
-      const fromGame = m.game.profs.has(prof.id) || (m.game.groups.get(g) ?? 0) > 0.3;
-      let closeTo = "";
-      if (kind === "relocate") closeTo = "твоим интересам";
-      else if (sameGroupCode && sameGroupCode !== pm.specialtyCode) closeTo = `направлению «${specs.get(sameGroupCode)!.name}», которое тебе уже подходит`;
-      else if (fromGame) closeTo = "задачам, которые тебе понравились в игре";
-      else if (topTwin) closeTo = `профессии «${topTwin.name}» из твоей подборки`;
-      if (!closeTo || !egeOne) continue;
+      const closeTo = kind === "career" ? "твоим интересам"
+        : sameGroupCode && sameGroupCode !== pm.specialtyCode ? `направлению «${specs.get(sameGroupCode)!.name}», которое тебе уже подходит`
+        : `направлениям из твоей подборки`;
       const salary = salaryAfter(pm, changes, rec, catalog, m);
       const cost = changes.reduce((s, c) => s + c.cost, 0);
       const better = !bestOpt || cost < bestOpt.cost - 0.01 || (Math.abs(cost - bestOpt.cost) < 0.01 && (salary > bestOpt.salary || pm.score > bestOpt.pm.score));
@@ -160,8 +181,15 @@ export function computeTradeoffs(recs: Rec[], p: StudentProfile, m: UserModel, c
 
     const ref = kind === "unlock" ? best.salary.middle : rec.salary.middle;
     const gainPct = (bestOpt.salary - ref) / ref;
-    // полезно, если заметно больше денег или так же интересно, как лучшее сейчас
-    if (gainPct < 0.1 && (kind === "relocate" || rec.factors.match < best.factors.match - 0.1)) continue;
+    const newRaex = raexOf(bestOpt.pm.universityId);
+    const strongerUni = newRaex !== null && newRaex + 10 <= nowRaex;
+    const demandX = prof.demand.vacanciesRF / Math.max(1, bestProf.demand.vacanciesRF);
+    const moreDemand = kind === "unlock" && demandX >= 1.25;
+    const moreMoney = gainPct >= ENGINE.tradeoffMinGain;
+    if (!moreMoney && !strongerUni && !moreDemand) continue;
+    // дальний переезд — только ради заметно более сильного вуза
+    const reloc = bestOpt.changes.find((c) => c.type === "relocate");
+    if (reloc && reloc.cost >= RELOC_COST.russia && !strongerUni) continue;
 
     const spec = specs.get(bestOpt.pm.specialtyCode)!;
     const sacrifices: string[] = [];
@@ -173,19 +201,21 @@ export function computeTradeoffs(recs: Rec[], p: StudentProfile, m: UserModel, c
     }
     if (spec.years > best.years) sacrifices.push(`дольше учиться: ${yearsWord(spec.years)} вместо ${yearsWord(best.years)}`);
     if (bestOpt.changes.some((c) => c.type === "relocate")) {
-      const r = catalogIndex(catalog).regions.get(bestOpt!.pm.regionId);
+      const r = ix.regions.get(bestOpt!.pm.regionId);
       sacrifices.push(`жизнь в другом городе: аренда ~${rubles(r?.rent ?? 30000)}/мес, если не дадут общежитие`);
     }
     if (prof.outlook.status !== "green") sacrifices.push(`перспектива «${prof.outlook.status === "red" ? "под риском" : "меняется"}»: ${prof.outlook.reason.split(";")[0].toLowerCase()}`);
     if (!sacrifices.length) sacrifices.push(spec.level === "spo" ? "колледж вместо вуза на старте" : `${yearsWord(spec.years)} очной учёбы`);
 
-    const cond = joinIf(bestOpt.changes.filter((c) => c.type !== "form").map((c) => c.ifText || c.text));
-    const money = gainPct >= 0.05
-      ? ` Зарплата через 5 лет примерно на ${Math.round(gainPct * 100)}% выше (~${rubles(bestOpt.salary)} в месяц).`
-      : gainPct <= -0.05 ? ` Зарплата через 5 лет примерно на ${Math.round(-gainPct * 100)}% ниже, зато это ближе к тебе.` : " По деньгам примерно так же.";
+    const change = bestOpt.changes.find((c) => c.type !== "form")!;
+    const gains: string[] = [];
+    if (moreMoney) gains.push(`зарплата через 5 лет примерно на ${Math.round(gainPct * 100)}% выше (~${rubles(bestOpt.salary)} в месяц)`);
+    if (strongerUni) gains.push(`${bestOpt.pm.universityShort} выше в рейтинге RAEX (около ${newRaex}-го места)`);
+    if (moreDemand) gains.push(`вакансий примерно в ${demandX.toFixed(1).replace(".", ",")} раза больше`);
+    const gainText = gains.length ? ` — ${joinIf(gains)}.` : ".";
     const sentence = kind === "unlock"
-      ? `Если ${cond}, сможешь поступить на «${spec.name}» в ${uniWhere(bestOpt.pm)} — это близко к ${bestOpt.closeTo}.${money}`
-      : `Если ${cond}, профессия «${prof.name}», которая тебе уже подходит, станет выгоднее, место учёбы — ${bestOpt.pm.universityShort}.${money}`;
+      ? `Один шаг до «${spec.name}» в ${uniWhere(bestOpt.pm)}: ${change.text}${gainText}`
+      : `Один шаг до профессии «${prof.name}» с учёбой в ${uniWhere(bestOpt.pm)}: ${change.text}${gainText}`;
 
     out.push({
       professionId: prof.id,
@@ -205,10 +235,10 @@ export function computeTradeoffs(recs: Rec[], p: StudentProfile, m: UserModel, c
       confidence: "estimate",
       match: rec.factors.match,
       closeTo: bestOpt.closeTo,
-      useful: 0.55 * rec.factors.match + 0.45 * clamp(gainPct, -0.2, 1) - 0.08 * bestOpt.cost,
+      useful: 0.55 * rec.factors.match + 0.45 * clamp(gainPct, -0.2, 1) + (strongerUni ? 0.1 : 0) + (moreDemand ? 0.05 : 0) - 0.08 * bestOpt.cost,
     });
   }
-  // по пользе; не больше двух вариантов с одним набором изменений и одной профессии из одного направления
+  // по пользе; не больше двух вариантов с одним изменением и по одному на направление
   const sorted = out.sort((a, b) => b.useful - a.useful);
   const seen = new Map<string, number>();
   const seenSpec = new Set<string>();

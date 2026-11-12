@@ -22,7 +22,7 @@ test("Артём (Сызрань): в подборке нет вузов вне 
   }
   const cards = page.getByTestId("tradeoff-card");
   await expect(cards.first()).toBeVisible();
-  const samara = cards.filter({ hasText: /Если переедешь в (Самару|Казань)/ });
+  const samara = cards.filter({ hasText: /Один шаг до .*переехать в (Самару|Казань)/ });
   await expect(samara.first()).toBeVisible();
   await expect(samara.first()).toContainText(/примерно на \d+% выше/);
   await expect(samara.first().getByTestId("tradeoff-gain")).toContainText("₽");
@@ -71,4 +71,32 @@ test("Соня (Ярославль): театр в подборке, Яросл�
   const card = page.locator(`[data-testid=specialty-group][data-code="${theatre}"]`);
   await card.getByTestId("specialty-where").click();
   await expect(card.getByTestId("specialty-programs")).toContainText(/ГИТИС|РГИСИ|Ярославский театральный/);
+});
+
+test("Катя (Самара): «Безопасный выбор», «Вернуть то, что ты любил» с дизайном, вопрос о мечте с напоминанием о 1 февраля", async ({ page }) => {
+  await fillPersona(page, "katya");
+  const safe = page.getByTestId("safe-choice");
+  await expect(safe).toBeVisible();
+  await expect(safe.getByTestId("safe-alt").first()).toBeVisible();
+  await expect(safe.getByTestId("safe-honest")).toContainText("Менеджмент");
+  await safe.getByTestId("dream-art").click();
+  await expect(safe.getByTestId("dream-result")).toContainText("1 февраля");
+  await expect(page.getByTestId("return-loved").getByTestId("loved-spec").filter({ hasText: "Дизайн" })).toHaveCount(1);
+});
+
+test("Дима (Москва): «Один шаг до» — только экономика и аналитика", async ({ page }) => {
+  await fillPersona(page, "dima");
+  await expect(page.getByTestId("safe-choice")).toHaveCount(0);
+  const sentences = await page.getByTestId("tradeoff-sentence").allInnerTexts();
+  for (const s of sentences) {
+    expect(s).toMatch(/^Один шаг до /);
+    expect(s).not.toMatch(/Дизайн|Музык|Актёр|Живопис|Информатика и вычислительная/);
+  }
+});
+
+test("Вера (Тверь, 9 класс): ранний старт в плане и год поступления 2028", async ({ page }) => {
+  await fillPersona(page, "vera");
+  await page.goto("/plan");
+  await expect(page.getByTestId("early-start")).toBeVisible();
+  await expect(page.getByTestId("year-select")).toHaveValue("2028");
 });
