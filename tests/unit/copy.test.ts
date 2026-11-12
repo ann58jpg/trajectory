@@ -40,7 +40,9 @@ describe("тексты интерфейса", () => {
   it("в коде интерфейса нет запрещённых слов", () => {
     const problems: string[] = [];
     for (const f of UI_FILES) {
-      const src = stripComments(fs.readFileSync(f, "utf8")).replace(/^export const BRAND = .*$/m, "");
+      // «// copy-allow: …» — термин, которого прямо требует макет (например, «СПО» в верхней панели)
+      const raw = fs.readFileSync(f, "utf8").replace(/^.*\/\/ copy-allow:.*$/gm, "");
+      const src = stripComments(raw).replace(/^export const BRAND = .*$/m, "");
       src.split("\n").forEach((line, i) => {
         const hit = findBanned(line);
         if (hit.length) problems.push(`${path.relative(ROOT, f)}:${i + 1} → ${hit.join(", ")}: ${line.trim().slice(0, 120)}`);

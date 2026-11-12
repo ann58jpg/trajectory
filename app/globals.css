@@ -3,46 +3,47 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: oklch(0.985 0.006 285);
-  --foreground: oklch(0.22 0.04 280);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.04 280);
-  --muted: oklch(0.96 0.012 285);
-  --muted-foreground: oklch(0.5 0.03 280);
-  --border: oklch(0.91 0.015 285);
-  --input: oklch(0.91 0.015 285);
-  --primary: oklch(0.52 0.22 285);
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.95 0.03 280);
-  --secondary-foreground: oklch(0.3 0.08 280);
-  --accent: oklch(0.6 0.17 255);
-  --accent-foreground: oklch(0.99 0 0);
-  --ring: oklch(0.6 0.2 285);
-  --green: oklch(0.62 0.15 155);
-  --yellow: oklch(0.75 0.15 80);
-  --red: oklch(0.6 0.2 25);
-  --radius: 0.9rem;
+  /* «как Госуслуги»: светлый фон, синий основной, белые карточки, спокойные границы */
+  --background: #f5f7fa;
+  --foreground: #0b1f33;
+  --card: #ffffff;
+  --card-foreground: #0b1f33;
+  --muted: #eef2f7;
+  --muted-foreground: #5c6b80;
+  --border: #e1e6ef;
+  --input: #c9d3e0;
+  --primary: #0d4cd3;
+  --primary-foreground: #ffffff;
+  --secondary: #e8effc;
+  --secondary-foreground: #0d4cd3;
+  --accent: #1d7af2;
+  --accent-foreground: #ffffff;
+  --ring: #0d4cd3;
+  --green: #1a9f5b;
+  --yellow: #e5a000;
+  --red: #e12f2f;
+  --radius: 0.75rem;
 }
 
 .dark {
-  --background: oklch(0.17 0.03 280);
-  --foreground: oklch(0.96 0.01 285);
-  --card: oklch(0.22 0.035 280);
-  --card-foreground: oklch(0.96 0.01 285);
-  --muted: oklch(0.27 0.035 280);
-  --muted-foreground: oklch(0.72 0.03 280);
-  --border: oklch(0.32 0.04 280);
-  --input: oklch(0.32 0.04 280);
-  --primary: oklch(0.68 0.19 285);
-  --primary-foreground: oklch(0.15 0.03 280);
-  --secondary: oklch(0.3 0.05 280);
-  --secondary-foreground: oklch(0.92 0.02 285);
-  --accent: oklch(0.7 0.14 255);
-  --accent-foreground: oklch(0.15 0.03 280);
-  --ring: oklch(0.7 0.18 285);
-  --green: oklch(0.72 0.15 155);
-  --yellow: oklch(0.8 0.14 80);
-  --red: oklch(0.7 0.18 25);
+  --background: #0f1724;
+  --foreground: #eef2f7;
+  --card: #172234;
+  --card-foreground: #eef2f7;
+  --muted: #1e2b40;
+  --muted-foreground: #a3b1c6;
+  --border: #283850;
+  --input: #34486a;
+  --primary: #5b8cf5;
+  --primary-foreground: #0b1220;
+  --secondary: #1f2f4d;
+  --secondary-foreground: #c7d7fb;
+  --accent: #6ea6ff;
+  --accent-foreground: #0b1220;
+  --ring: #5b8cf5;
+  --green: #38c27f;
+  --yellow: #f2bd36;
+  --red: #f06464;
 }
 
 @theme inline {
@@ -92,9 +93,7 @@ body {
 }
 
 .hero-bg {
-  background:
-    radial-gradient(60% 60% at 15% 10%, color-mix(in oklch, var(--primary) 18%, transparent), transparent 70%),
-    radial-gradient(50% 50% at 90% 20%, color-mix(in oklch, var(--accent) 18%, transparent), transparent 70%);
+  background: linear-gradient(180deg, var(--secondary), var(--card));
 }
 
 :focus-visible {

@@ -109,7 +109,7 @@ test("каждая профессия имеет статус перспекти
   await expect(page.getByTestId("outlook-card")).toContainText(COMMON.source);
 });
 
-test("«Мой план»: добавление, чек-лист, версия для родителей", async ({ page }) => {
+test("избранное: добавление в план и чек-лист", async ({ page }) => {
   await fillPersona(page, "kamila");
   await page.getByTestId("plan-professions-doctor").first().click();
   await page.goto("/university/dgmu");
@@ -120,9 +120,7 @@ test("«Мой план»: добавление, чек-лист, версия �
   await expect(page.getByTestId("plan")).toContainText(PLAN.events);
   await expect(page.getByTestId("plan")).toContainText(PLAN.stagesTitle);
   await expect(page.getByTestId("plan")).toContainText(PLAN.egeOk);
-  await page.getByTestId("parents").click();
-  await expect(page.getByTestId("parents-view")).toContainText("Зарплата");
-  await expect(page.getByTestId("parents-tasks").first().locator("li")).not.toHaveCount(0);
+  await expect(page.getByTestId("parents")).toHaveCount(0);
 });
 
 test("API: ошибки в формате {error, hint}", async ({ request }) => {

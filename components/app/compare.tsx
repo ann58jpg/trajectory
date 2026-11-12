@@ -36,7 +36,7 @@ export function CompareTray() {
   const [items, setItems, ready] = useCompare();
   if (!ready || items.length === 0) return null;
   return (
-    <div className="no-print fixed inset-x-0 bottom-0 z-40 border-t bg-background/95 backdrop-blur" data-testid="compare-tray">
+    <div className="no-print fixed inset-x-0 bottom-[3.75rem] z-40 border-t bg-card/95 backdrop-blur md:bottom-0 md:left-56" data-testid="compare-tray">
       <div className="mx-auto flex max-w-6xl items-center gap-2 px-4 py-2.5">
         <Button asChild size="sm">
           <Link href="/compare" data-testid="compare-open">

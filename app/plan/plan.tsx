@@ -26,7 +26,6 @@ export function Plan({ professions, universities, programs, specialties, subject
   const [profile, , pReady] = useProfile();
   const [recs, setRecs] = useState<Map<string, Rec>>(new Map());
   const [portrait, setPortrait] = useState<string>("");
-  const [parents, setParents] = useState(false);
 
   useEffect(() => {
     if (!pReady || !profile.consent) return;
@@ -72,57 +71,9 @@ export function Plan({ professions, universities, programs, specialties, subject
   const toggleEvent = (id: string) => setPlan((p) => ({ ...p, events: p.events.map((e) => (e.id === id ? { ...e, done: !e.done } : e)) }));
   const remove = (kind: "professions" | "universities" | "programs", id: string) => setPlan((p) => ({ ...p, [kind]: p[kind].filter((x) => x !== id) }));
   const print = () => {
-    track("report_download", { view: parents ? "parents" : "plan" });
+    track("report_download", { view: "plan" });
     window.print();
   };
-
-  if (parents) {
-    return (
-      <div className="mx-auto max-w-3xl space-y-6 pt-6" data-testid="parents-view">
-        <div className="no-print flex flex-wrap gap-2">
-          <Button variant="outline" onClick={() => setParents(false)}><X /> {COMMON.close}</Button>
-          <Button onClick={print}><Printer /> {PLAN.print}</Button>
-        </div>
-        <h1 className="text-2xl font-bold">{PLAN.parentsTitle}</h1>
-        {portrait && <p className="text-muted-foreground">{portrait}</p>}
-        <section className="space-y-3">
-          <h2 className="text-lg font-semibold">{PLAN.parentsProfessions}</h2>
-          {myProfs.map((p) => {
-            const r = recs.get(p.id);
-            return (
-              <div key={p.id} className="rounded-lg border p-4 text-sm" data-testid="parents-profession">
-                <p className="font-semibold">{p.name} <OutlookBadge status={p.outlook} /></p>
-                {r && (
-                  <ul className="mt-1 list-inside list-disc text-muted-foreground">
-                    <li>{PLAN.parentsSalary(rubK(r.salary.junior), rubK(r.salary.middle), rubK(r.salary.senior), r.salary.regionName)}</li>
-                    <li>{PLAN.parentsDemand(r.vacancies.toLocaleString("ru-RU"), `${r.vacanciesTrend >= 0 ? "+" : ""}${Math.round(r.vacanciesTrend * 100)}%`)}</li>
-                    <li>{PLAN.parentsOutlook(`${OUTLOOK_TEXT[p.outlook]}. ${p.outlookReason}`)}</li>
-                    {r.earlyEntryCourse !== null && <li>{PLAN.parentsEarly(r.earlyEntryCourse)}</li>}
-                  </ul>
-                )}
-                <p className="mt-2 font-medium">{PLAN.parentsTasks}</p>
-                <ul className="list-inside list-disc text-muted-foreground" data-testid="parents-tasks">{p.tasks.slice(0, 5).map((t) => <li key={t}>{t}</li>)}</ul>
-              </div>
-            );
-          })}
-        </section>
-        <section className="space-y-2">
-          <h2 className="text-lg font-semibold">{PLAN.parentsUnis}</h2>
-          <ul className="list-inside list-disc text-sm">
-            {myPrograms.map((p) => (
-              <li key={p.id}>
-                {uniName(p.universityId)} — {p.name}
-                {p.passMin !== null && `: ${PLAN.passApprox(`${p.passMin}–${p.passMax ?? p.passMin}`)} (${COMMON.estimate})`}, {PLAN.budgetPlaces(p.budget)}
-                {p.price ? `, ${rubK(p.price)} ${COMMON.perYear}` : ""}
-              </li>
-            ))}
-            {myUnis.filter((u) => !myPrograms.some((p) => p.universityId === u.id)).map((u) => <li key={u.id}>{u.short} ({u.city})</li>)}
-          </ul>
-        </section>
-        <p className="text-xs text-muted-foreground">{PLAN.parentsNote}</p>
-      </div>
-    );
-  }
 
   return (
     <div className="space-y-8 pt-6" data-testid="plan">
@@ -130,16 +81,6 @@ export function Plan({ professions, universities, programs, specialties, subject
         <h1 className="flex items-center gap-2 text-2xl font-bold"><Star className="h-6 w-6 text-warn" /> {PLAN.title}</h1>
         <div className="no-print flex flex-wrap gap-2">
           <Button variant="outline" onClick={print} data-testid="print"><Printer /> {PLAN.print}</Button>
-          <Button
-            onClick={() => {
-              setParents(true);
-              track("report_share", { view: "parents" });
-            }}
-            disabled={empty}
-            data-testid="parents"
-          >
-            <Users /> {PLAN.parents}
-          </Button>
         </div>
       </div>
 

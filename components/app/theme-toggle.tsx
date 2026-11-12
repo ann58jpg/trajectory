@@ -25,5 +25,5 @@ export function ThemeToggle() {
   );
 }
 
-/** Ставит тему до отрисовки, чтобы не было вспышки. */
-export const themeScript = `try{var t=localStorage.getItem("${KEYS.theme}");if(t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}`;
+/** Ставит тему до отрисовки, чтобы не было вспышки. Тёмная — только если её включили переключателем. */
+export const themeScript = `try{var t=localStorage.getItem("${KEYS.theme}");if(t==="dark")document.documentElement.classList.add("dark")}catch(e){}`;
