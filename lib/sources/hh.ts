@@ -63,3 +63,64 @@ export async function fetchMarket(query: string, area: number | null): Promise<M
     return null;
   }
 }
+
+/* ───────── Стажировки и вакансии без опыта ───────── */
+
+import type { HhVacancy } from "./hh-types";
+export type { HhVacancy };
+
+let tokenCache: { token: string; until: number } | null = null;
+
+/**
+ * Токен приложения hh.ru (client_credentials). Поиск вакансий /vacancies без токена с серверов отвечает 403,
+ * поэтому нужно зарегистрировать приложение на dev.hh.ru (см. README → «Стажировки с hh.ru»).
+ */
+async function appToken(): Promise<string | null> {
+  if (tokenCache && tokenCache.until > Date.now()) return tokenCache.token;
+  const id = process.env.HH_CLIENT_ID;
+  const secret = process.env.HH_CLIENT_SECRET;
+  if (!id || !secret) return null;
+  try {
+    const res = await fetch("https://api.hh.ru/token", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded", "HH-User-Agent": process.env.HH_USER_AGENT ?? "Trajectory/0.3" },
+      body: new URLSearchParams({ grant_type: "client_credentials", client_id: id, client_secret: secret }),
+      cache: "no-store",
+    });
+    if (!res.ok) return null;
+    const j = (await res.json()) as { access_token: string; expires_in?: number };
+    tokenCache = { token: j.access_token, until: Date.now() + ((j.expires_in ?? 14 * 86400) - 600) * 1000 };
+    return j.access_token;
+  } catch {
+    return null;
+  }
+}
+
+/** Стажировки на hh.ru: без опыта, по словам «стажёр / стажировка / студент», с фильтром по региону и запросу специальности. */
+export async function fetchInternships(query: string | null, area: number | null): Promise<HhVacancy[] | null> {
+  const key = `hh-intern:${query ?? ""}:${area ?? "rf"}`;
+  const cached = cacheGet<HhVacancy[]>(key, 6 * 3600_000);
+  if (cached) return cached;
+  const ua = process.env.HH_USER_AGENT;
+  const token = await appToken();
+  if (!ua || !token) return null;
+  const words = "(стажер OR стажёр OR стажировка OR студент)";
+  const params = new URLSearchParams({ text: query ? `${words} AND (${query})` : words, experience: "noExperience", per_page: "20", order_by: "publication_time" });
+  if (area) params.set("area", String(area));
+  try {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 6000);
+    const res = await fetch(`https://api.hh.ru/vacancies?${params}`, { headers: { "HH-User-Agent": ua, Authorization: `Bearer ${token}` }, signal: ctrl.signal, cache: "no-store" });
+    clearTimeout(timer);
+    if (!res.ok) return null;
+    const json = (await res.json()) as { items: { id: string; name: string; alternate_url: string; published_at: string; area: { name: string }; employer: { name: string }; salary: { from: number | null; to: number | null; currency: string } | null }[] };
+    const out = json.items.map((v) => ({
+      id: v.id, name: v.name, employer: v.employer?.name ?? "", area: v.area?.name ?? "", url: v.alternate_url, publishedAt: v.published_at,
+      salary: v.salary && v.salary.currency === "RUR" ? [v.salary.from, v.salary.to].filter(Boolean).map((x) => `${Math.round(x! / 1000)} тыс.`).join("–") : null,
+    }));
+    cacheSet(key, out);
+    return out;
+  } catch {
+    return null;
+  }
+}

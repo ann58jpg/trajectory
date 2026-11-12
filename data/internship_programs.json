@@ -1,0 +1,284 @@
+{
+ "meta": {
+  "source": "Официальные карьерные страницы компаний. confirmed: true — страница открылась при проверке 12.11.2026; false — сайт не открылся из песочницы (часть российских сайтов не отвечает зарубежным серверам), ссылка ведёт на главную карьерного раздела, проверь сам.",
+  "checkedAt": "2026-11-12"
+ },
+ "programs": [
+  {
+   "id": "yandex",
+   "company": "Яндекс",
+   "direction": [
+    "it",
+    "data",
+    "design",
+    "management"
+   ],
+   "spheres": [
+    "art",
+    "biz",
+    "it",
+    "science"
+   ],
+   "fromCourse": 2,
+   "selection": "Набор идёт в течение года по направлениям — сроки на странице программы",
+   "url": "https://yandex.ru/yaintern",
+   "source": "yandex.ru/yaintern",
+   "confirmed": true
+  },
+  {
+   "id": "vk",
+   "company": "VK",
+   "direction": [
+    "it",
+    "data",
+    "design",
+    "marketing"
+   ],
+   "spheres": [
+    "art",
+    "biz",
+    "it",
+    "words"
+   ],
+   "fromCourse": 2,
+   "selection": null,
+   "url": "https://internship.vk.company/",
+   "source": "internship.vk.company",
+   "confirmed": true
+  },
+  {
+   "id": "ozon",
+   "company": "Ozon",
+   "direction": [
+    "it",
+    "data",
+    "logistics",
+    "business"
+   ],
+   "spheres": [
+    "biz",
+    "it"
+   ],
+   "fromCourse": 3,
+   "selection": null,
+   "url": "https://career.ozon.ru/",
+   "source": "career.ozon.ru",
+   "confirmed": true
+  },
+  {
+   "id": "sber",
+   "company": "Сбер",
+   "direction": [
+    "it",
+    "data",
+    "finance"
+   ],
+   "spheres": [
+    "biz",
+    "it"
+   ],
+   "fromCourse": 3,
+   "selection": null,
+   "url": "https://sberseasons.ru/",
+   "source": "sberseasons.ru (SberSeasons)",
+   "confirmed": false
+  },
+  {
+   "id": "tbank",
+   "company": "Т-Банк",
+   "direction": [
+    "it",
+    "data",
+    "finance"
+   ],
+   "spheres": [
+    "biz",
+    "it"
+   ],
+   "fromCourse": 2,
+   "selection": null,
+   "url": "https://www.tbank.ru/career/",
+   "source": "tbank.ru/career",
+   "confirmed": false
+  },
+  {
+   "id": "alfa",
+   "company": "Альфа-Банк",
+   "direction": [
+    "it",
+    "data",
+    "finance"
+   ],
+   "spheres": [
+    "biz",
+    "it"
+   ],
+   "fromCourse": 3,
+   "selection": null,
+   "url": "https://alfabank.ru/hr/",
+   "source": "alfabank.ru/hr",
+   "confirmed": false
+  },
+  {
+   "id": "rosatom",
+   "company": "Росатом",
+   "direction": [
+    "engineering",
+    "science",
+    "it"
+   ],
+   "spheres": [
+    "eng",
+    "it",
+    "science"
+   ],
+   "fromCourse": 3,
+   "selection": null,
+   "url": "https://rosatom.ru/career/",
+   "source": "rosatom.ru/career",
+   "confirmed": false
+  },
+  {
+   "id": "rzd",
+   "company": "РЖД",
+   "direction": [
+    "engineering",
+    "logistics",
+    "it"
+   ],
+   "spheres": [
+    "eng",
+    "it",
+    "transport"
+   ],
+   "fromCourse": 3,
+   "selection": null,
+   "url": "https://team.rzd.ru/",
+   "source": "team.rzd.ru",
+   "confirmed": false
+  },
+  {
+   "id": "gpn",
+   "company": "Газпром нефть",
+   "direction": [
+    "engineering",
+    "it",
+    "data"
+   ],
+   "spheres": [
+    "eng",
+    "it",
+    "science"
+   ],
+   "fromCourse": 3,
+   "selection": null,
+   "url": "https://www.gazprom-neft.ru/careers/",
+   "source": "gazprom-neft.ru/careers",
+   "confirmed": false
+  },
+  {
+   "id": "tedo",
+   "company": "Технологии Доверия (бывшая PwC в России)",
+   "direction": [
+    "audit",
+    "consulting",
+    "finance"
+   ],
+   "spheres": [
+    "biz",
+    "law"
+   ],
+   "fromCourse": 3,
+   "selection": null,
+   "url": "https://tedo.ru/",
+   "source": "tedo.ru",
+   "confirmed": true
+  },
+  {
+   "id": "kept",
+   "company": "Kept (бывшая KPMG в России)",
+   "direction": [
+    "audit",
+    "consulting",
+    "finance"
+   ],
+   "spheres": [
+    "biz"
+   ],
+   "fromCourse": 3,
+   "selection": null,
+   "url": "https://kept.ru/",
+   "source": "kept.ru",
+   "confirmed": true
+  },
+  {
+   "id": "b1",
+   "company": "Б1 (бывшая EY в России)",
+   "direction": [
+    "audit",
+    "consulting",
+    "finance"
+   ],
+   "spheres": [
+    "biz"
+   ],
+   "fromCourse": 3,
+   "selection": null,
+   "url": "https://b1.ru/",
+   "source": "b1.ru",
+   "confirmed": false
+  },
+  {
+   "id": "drt",
+   "company": "ДРТ (бывшая Deloitte в России)",
+   "direction": [
+    "audit",
+    "consulting",
+    "law"
+   ],
+   "spheres": [
+    "biz",
+    "law"
+   ],
+   "fromCourse": 3,
+   "selection": null,
+   "url": "https://delret.ru/",
+   "source": "delret.ru",
+   "confirmed": true
+  },
+  {
+   "id": "gov",
+   "company": "Госстажировки: «Россия — страна возможностей»",
+   "direction": [
+    "government",
+    "management"
+   ],
+   "spheres": [
+    "biz",
+    "law",
+    "people"
+   ],
+   "fromCourse": 2,
+   "selection": null,
+   "url": "https://rsv.ru/",
+   "source": "rsv.ru",
+   "confirmed": true
+  },
+  {
+   "id": "habr",
+   "company": "Хабр Карьера: вакансии для стажёров в ИТ",
+   "direction": [
+    "it"
+   ],
+   "spheres": [
+    "art",
+    "it"
+   ],
+   "fromCourse": 1,
+   "selection": "Вакансии обновляются каждый день",
+   "url": "https://career.habr.com/vacancies?qid=1&type=all",
+   "source": "career.habr.com",
+   "confirmed": true
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "meta": {"source": "Официальные сайты программ, ссылки проверены 12.11.2026 (confirmed: false — сайт не открылся из песочницы)", "checkedAt": "2026-11-12"},
+ "rungs": [
+  {"id": "c1", "course": "1 курс", "title": "Попробовать и найти своих", "what": "Научное студенческое общество (НСО) своего факультета, волонтёрство, студенческие клубы. Первые строчки в резюме и друзья по интересам.",
+   "examples": [
+    {"title": "Добро.рф — волонтёрские проекты рядом с тобой", "url": "https://dobro.ru/", "confirmed": true},
+    {"title": "Росмолодёжь.События — форумы и гранты для студентов", "url": "https://events.myrosmol.ru/", "confirmed": true},
+    {"title": "НСО и клубы — в разделе «Студенческая жизнь» твоего вуза", "url": null, "confirmed": true}
+   ]},
+  {"id": "c2", "course": "2 курс", "title": "Проверить себя в деле", "what": "Кейс-чемпионаты, хакатоны, летние школы, подработка по специальности. Здесь становится понятно, что получается лучше всего.",
+   "examples": [
+    {"title": "«Твой ход» — всероссийский студенческий конкурс", "url": "https://tvoyhod.online/", "confirmed": true},
+    {"title": "Changellenge Cup — кейс-чемпионаты по бизнесу", "url": "https://changellenge.com/", "confirmed": false},
+    {"title": "ICPC — студенческие соревнования по программированию", "url": "https://icpc.global/", "confirmed": true},
+    {"title": "Школа анализа данных Яндекса", "url": "https://shad.yandex.ru/", "confirmed": true}
+   ]},
+  {"id": "c3", "course": "3–4 курс", "title": "Первая стажировка", "what": "Оплачиваемые стажировки в компаниях и госорганах. Часто после неё зовут на работу.",
+   "examples": [
+    {"title": "Стажировки Яндекса", "url": "https://yandex.ru/yaintern", "confirmed": true},
+    {"title": "Стажировки VK", "url": "https://internship.vk.company/", "confirmed": true},
+    {"title": "Вакансии для студентов без опыта на hh.ru", "url": "https://hh.ru/search/vacancy?text=%D1%81%D1%82%D0%B0%D0%B6%D0%B5%D1%80&experience=noExperience", "confirmed": true},
+    {"title": "«Россия — страна возможностей»", "url": "https://rsv.ru/", "confirmed": true}
+   ]},
+  {"id": "c5", "course": "После выпуска", "title": "Первая работа", "what": "Программы для выпускников, магистратура или работа в компании, где была стажировка.",
+   "examples": [
+    {"title": "Вакансии для выпускников на hh.ru", "url": "https://hh.ru/search/vacancy?text=%D0%B2%D1%8B%D0%BF%D1%83%D1%81%D0%BA%D0%BD%D0%B8%D0%BA&experience=noExperience", "confirmed": true},
+    {"title": "Хабр Карьера: младшие специалисты в ИТ", "url": "https://career.habr.com/vacancies?qid=3&type=all", "confirmed": true}
+   ]}
+ ]
+}

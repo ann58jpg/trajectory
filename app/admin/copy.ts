@@ -40,3 +40,20 @@ export const FUNNEL = {
   empty: "За выбранный период событий нет.",
   series: { landing_view: "Главная", quiz_start: "Начали анкету", quiz_complete: "Закончили", results_view: "Подборка" },
 };
+
+export const STORIES_ADMIN = {
+  title: "Истории выпускников — модерация",
+  noPassword: "Страница закрыта: задайте переменную окружения ADMIN_PASSWORD и перезапустите приложение.",
+  password: "Пароль",
+  enter: "Войти",
+  pending: "Ждут проверки",
+  approved: "Опубликованы",
+  rejected: "Отклонены",
+  approve: "Опубликовать",
+  reject: "Отклонить",
+  remove: "Удалить",
+  empty: "Пусто.",
+  salary: "Зарплата",
+  advice: "Совет",
+  grad: "Выпуск",
+};

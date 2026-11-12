@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Building2, CalendarHeart, ExternalLink, Home, MapPin, Shield, Star } from "lucide-react";
+import { Briefcase, Building2, CalendarHeart, ExternalLink, GraduationCap, Home, MapPin, PartyPopper, Shield, Sparkles, Star } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { getCatalog } from "@/lib/db/catalog";
@@ -12,7 +12,13 @@ import { EventsBlock } from "@/components/app/events-block";
 import { CompareToggle } from "@/components/app/compare";
 import { Term } from "@/components/app/term";
 import { TrackView } from "@/components/app/track-view";
-import { COMMON, FORM_TEXT, NOT_FOUND, PROFILE_PROGRAMS, PROGRAM, UNIVERSITY, VIBE } from "@/lib/copy";
+import { CAREER, COMMON, CRUMBS, FORM_TEXT, NOT_FOUND, PROFILE_PROGRAMS, PROGRAM, UNI_PAGE, UNIVERSITY, VIBE } from "@/lib/copy";
+import { Breadcrumbs } from "@/components/app/breadcrumbs";
+import { UniMatch } from "@/components/app/uni-match";
+import { StudentLife } from "@/components/app/student-life";
+import { AlumniBlock } from "@/components/app/alumni-block";
+import { StoriesList } from "@/components/app/stories-list";
+import { INTERNSHIPS } from "@/lib/life";
 import { VibeBlock } from "@/components/app/vibe-block";
 import { examSetText } from "@/lib/engine/exams";
 import { rubK } from "@/lib/utils";
@@ -40,7 +46,7 @@ export default async function UniversityPage({ params }: { params: Promise<{ id:
   return (
     <div className="space-y-8 pt-6" data-testid="university-page">
       <TrackView event="university_open" props={{ universityId: uni.id }} />
-      <Link href="/results" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="h-4 w-4" /> {COMMON.toResults}</Link>
+      <Breadcrumbs items={[{ label: CRUMBS.route, href: "/" }, { label: CRUMBS.unis, href: "/universities" }, { label: uni.short }]} />
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
           <h1 className="text-2xl font-bold sm:text-3xl">{uni.short}</h1>
@@ -53,6 +59,7 @@ export default async function UniversityPage({ params }: { params: Promise<{ id:
             <Badge variant={uni.vuc ? "green" : "outline"}><Shield className="h-3 w-3" /> <Term k="vuc">{uni.vuc === null ? UNIVERSITY.vuc.unknown : uni.vuc ? UNIVERSITY.vuc.yes : UNIVERSITY.vuc.no}</Term></Badge>
             {uni.features.includes("branch") && <Badge variant="secondary">{UNIVERSITY.branch}</Badge>}
           </div>
+          <div className="mt-3"><UniMatch universityId={uni.id} /></div>
         </div>
         <div className="flex gap-2">
           <CompareToggle kind="university" id={uni.id} />
@@ -65,13 +72,66 @@ export default async function UniversityPage({ params }: { params: Promise<{ id:
         <VibeBlock universityId={uni.id} />
       </section>
 
-      <section className="space-y-3" aria-labelledby="vibe">
-        <h2 id="vibe" className="flex items-center gap-2 text-lg font-semibold"><CalendarHeart className="h-5 w-5 text-primary" /> {UNIVERSITY.vibeTitle}</h2>
+      <section className="space-y-3" aria-labelledby="uni-programs" data-testid="section-programs">
+        <h2 id="uni-programs" className="flex items-center gap-2 text-lg font-semibold"><GraduationCap className="h-5 w-5 text-primary" /> {UNI_PAGE.programsTitle}</h2>
+      <ProfilePrograms universityId={uni.id} title={PROFILE_PROGRAMS.uniTitle} />
+  
+        <Card>
+          <CardHeader><CardTitle className="text-base">{UNIVERSITY.programs(programs.length)}</CardTitle></CardHeader>
+          <CardContent className="grid gap-3 md:grid-cols-2">
+            {programs.map((p) => {
+              const s = spec.get(p.specialtyCode);
+              return (
+                <div key={p.id} className="space-y-1 rounded-lg border p-3 text-sm" data-testid="uni-program">
+                  <Link href={`/specialty/${p.specialtyCode}`} className="font-medium hover:underline">{p.specialtyCode} {p.name}</Link>
+                  <p className="text-xs text-muted-foreground">
+                    {p.forms.map((f) => FORM_TEXT[f]).join(", ")} · {UNIVERSITY.scheduleLabel}: {UNIVERSITY.schedule[p.schedule]} · {yearsWord(s?.years ?? 4)}
+                  </p>
+                  {s && <p className="text-xs" data-testid="exam-set">{PROGRAM.exams}: {examSetText(s, p)}</p>}
+                  <p className="text-xs">{UNIVERSITY.keySubjects}: {p.keySubjects.join(", ")}</p>
+                  {p.profiles && p.profiles.length > 0 && <p className="text-xs text-muted-foreground" data-testid="program-profiles">{PROGRAM.profiles(p.profiles.slice(0, 6).join("; "))}</p>}
+                  <p><PassValue official={officialScore(p)} min={p.passScore.min} max={p.passScore.max} confidence={p.passScore.meta.confidence} /></p>
+                  <p className="text-xs text-muted-foreground">
+                    <BudgetValue places={p.budgetPlaces} />
+                    {(p.targetPlaces ?? 0) > 0 && <> · <Term k="target">+{p.targetPlaces}</Term></>} · {p.price === null ? (uni.sponsored ? PROGRAM.sponsored : <DataGap what={PROGRAM.priceGapWhat} where={PROGRAM.priceGapWhere} compact />) : p.price === 0 ? PROGRAM.free : PROGRAM.paid(rubK(p.price))}{" "}
+                    <SourceMark source={p.meta.source} confidence={p.meta.confidence} />
+                  </p>
+                  {p.partners.length > 0 && <p className="text-xs">{UNIVERSITY.partners}: {p.partners.join(", ")}{p.dual && <> · <Term k="dual" /></>}</p>}
+                </div>
+              );
+            })}
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="space-y-3 rounded-xl border bg-card p-4" aria-labelledby="uni-life" data-testid="section-life">
+        <h2 id="uni-life" className="flex items-center gap-2 text-lg font-semibold"><PartyPopper className="h-5 w-5 text-primary" /> {UNI_PAGE.lifeTitle}</h2>
+        <StudentLife universityId={uni.id} site={uni.site} name={uni.short} />
+      </section>
+
+      <section className="space-y-3" aria-labelledby="uni-alumni" data-testid="section-alumni">
+        <h2 id="uni-alumni" className="flex items-center gap-2 text-lg font-semibold"><Sparkles className="h-5 w-5 text-primary" /> {UNI_PAGE.alumniTitle}</h2>
+        <AlumniBlock universityId={uni.id} />
+      </section>
+
+      <section className="space-y-3 rounded-xl border bg-card p-4" aria-labelledby="uni-where" data-testid="section-where">
+        <h2 id="uni-where" className="flex items-center gap-2 text-lg font-semibold"><Briefcase className="h-5 w-5 text-primary" /> {UNI_PAGE.whereTitle}</h2>
+        <StoriesList universityId={uni.id} uniNames={{ [uni.id]: uni.short }} />
+        <h3 className="pt-2 font-semibold">{UNI_PAGE.whereInternships}</h3>
+        <ul className="flex flex-wrap gap-2 text-sm">
+          {INTERNSHIPS.slice(0, 8).map((p) => <li key={p.id}><a href={p.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 rounded-full border px-3 py-1 hover:bg-muted">{p.company} <ExternalLink className="h-3 w-3" /></a></li>)}
+          <li><Link href="/career" className="inline-flex rounded-full border px-3 py-1 font-medium text-primary hover:bg-muted">{CAREER.title}</Link></li>
+        </ul>
+      </section>
+
+      <section className="space-y-3" aria-labelledby="uni-events" data-testid="section-events">
+        <h2 id="uni-events" className="flex items-center gap-2 text-lg font-semibold"><CalendarHeart className="h-5 w-5 text-primary" /> {UNI_PAGE.eventsTitle}</h2>
         <div className="grid gap-4 lg:grid-cols-2">
           <EventsBlock universityId={uni.id} />
           <ExplainBlock entityType="university" entityId={uni.id} variant="university" />
         </div>
       </section>
+
 
       <div className="grid gap-4 lg:grid-cols-3">
         <Card className="lg:col-span-2">
@@ -103,34 +163,6 @@ export default async function UniversityPage({ params }: { params: Promise<{ id:
 
       <HowToGet city={uni.city} howToGet={uni.howToGet} />
 
-      <ProfilePrograms universityId={uni.id} title={PROFILE_PROGRAMS.uniTitle} />
-
-      <Card>
-        <CardHeader><CardTitle className="text-base">{UNIVERSITY.programs(programs.length)}</CardTitle></CardHeader>
-        <CardContent className="grid gap-3 md:grid-cols-2">
-          {programs.map((p) => {
-            const s = spec.get(p.specialtyCode);
-            return (
-              <div key={p.id} className="space-y-1 rounded-lg border p-3 text-sm" data-testid="uni-program">
-                <Link href={`/specialty/${p.specialtyCode}`} className="font-medium hover:underline">{p.specialtyCode} {p.name}</Link>
-                <p className="text-xs text-muted-foreground">
-                  {p.forms.map((f) => FORM_TEXT[f]).join(", ")} · {UNIVERSITY.scheduleLabel}: {UNIVERSITY.schedule[p.schedule]} · {yearsWord(s?.years ?? 4)}
-                </p>
-                {s && <p className="text-xs" data-testid="exam-set">{PROGRAM.exams}: {examSetText(s, p)}</p>}
-                <p className="text-xs">{UNIVERSITY.keySubjects}: {p.keySubjects.join(", ")}</p>
-                {p.profiles && p.profiles.length > 0 && <p className="text-xs text-muted-foreground" data-testid="program-profiles">{PROGRAM.profiles(p.profiles.slice(0, 6).join("; "))}</p>}
-                <p><PassValue official={officialScore(p)} min={p.passScore.min} max={p.passScore.max} confidence={p.passScore.meta.confidence} /></p>
-                <p className="text-xs text-muted-foreground">
-                  <BudgetValue places={p.budgetPlaces} />
-                  {(p.targetPlaces ?? 0) > 0 && <> · <Term k="target">+{p.targetPlaces}</Term></>} · {p.price === null ? (uni.sponsored ? PROGRAM.sponsored : <DataGap what={PROGRAM.priceGapWhat} where={PROGRAM.priceGapWhere} compact />) : p.price === 0 ? PROGRAM.free : PROGRAM.paid(rubK(p.price))}{" "}
-                  <SourceMark source={p.meta.source} confidence={p.meta.confidence} />
-                </p>
-                {p.partners.length > 0 && <p className="text-xs">{UNIVERSITY.partners}: {p.partners.join(", ")}{p.dual && <> · <Term k="dual" /></>}</p>}
-              </div>
-            );
-          })}
-        </CardContent>
-      </Card>
     </div>
   );
 }

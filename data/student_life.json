@@ -1,0 +1,518 @@
+{
+ "meta": {
+  "source": "Сообщества — Wikidata (свойства P3185 VK и P3789 Telegram), события — data/events_verified.json (официальные сайты вузов). Обычные ежегодные события вуза добавятся из VK, когда будет ключ VK_SERVICE_TOKEN.",
+  "checkedAt": "2026-11-12",
+  "note": "Даты не придумываем: у ежегодных событий пишем только месяц, и только если он есть в источнике."
+ },
+ "universities": {
+  "msu": {
+   "wikidata": "Q13164",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/msu_official",
+     "source": "https://www.wikidata.org/wiki/Q13164"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/naukamsu",
+     "source": "https://www.wikidata.org/wiki/Q13164"
+    }
+   ],
+   "typical": [
+    {
+     "month": 9,
+     "title": "Посвящение в студенты: у факультетов свои традиции, на ВМК — эстафета, квест и театральный конкурс",
+     "source": "https://vm.ru/society/825042-kak-v-mgu-otmetili-den-pervokursnika/amp"
+    }
+   ]
+  },
+  "spbu": {
+   "wikidata": "Q27621",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/spb1724",
+     "source": "https://www.wikidata.org/wiki/Q27621"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/spbuniversity1724",
+     "source": "https://www.wikidata.org/wiki/Q27621"
+    }
+   ],
+   "typical": []
+  },
+  "hse": {
+   "wikidata": "Q1959511",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/hse_university",
+     "source": "https://www.wikidata.org/wiki/Q1959511"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/hse_live",
+     "source": "https://www.wikidata.org/wiki/Q1959511"
+    }
+   ],
+   "typical": []
+  },
+  "mipt": {
+   "wikidata": "Q1367256",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/miptru",
+     "source": "https://www.wikidata.org/wiki/Q1367256"
+    }
+   ],
+   "typical": []
+  },
+  "bmstu": {
+   "wikidata": "Q1472245",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/bmstu1830",
+     "source": "https://www.wikidata.org/wiki/Q1472245"
+    }
+   ],
+   "typical": []
+  },
+  "itmo": {
+   "wikidata": "Q1342013",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/itmoru",
+     "source": "https://www.wikidata.org/wiki/Q1342013"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/itmoru",
+     "source": "https://www.wikidata.org/wiki/Q1342013"
+    }
+   ],
+   "typical": []
+  },
+  "mephi": {
+   "wikidata": "Q56837",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/mephi_official",
+     "source": "https://www.wikidata.org/wiki/Q56837"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/mephi_of",
+     "source": "https://www.wikidata.org/wiki/Q56837"
+    }
+   ],
+   "typical": []
+  },
+  "kfu": {
+   "wikidata": "Q113788",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/kazan_federal_university",
+     "source": "https://www.wikidata.org/wiki/Q113788"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/kznuniversity",
+     "source": "https://www.wikidata.org/wiki/Q113788"
+    }
+   ],
+   "typical": []
+  },
+  "urfu": {
+   "wikidata": "Q1506552",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/public22941070",
+     "source": "https://www.wikidata.org/wiki/Q1506552"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/urfu_ru",
+     "source": "https://www.wikidata.org/wiki/Q1506552"
+    }
+   ],
+   "typical": []
+  },
+  "nsu": {
+   "wikidata": "Q1637997",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/nsu24",
+     "source": "https://www.wikidata.org/wiki/Q1637997"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/nsuniversity",
+     "source": "https://www.wikidata.org/wiki/Q1637997"
+    }
+   ],
+   "typical": []
+  },
+  "tpu": {
+   "wikidata": "Q1466666",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/tpunews",
+     "source": "https://www.wikidata.org/wiki/Q1466666"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/news_TPU",
+     "source": "https://www.wikidata.org/wiki/Q1466666"
+    }
+   ],
+   "typical": []
+  },
+  "tsu": {
+   "wikidata": "Q742494",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/tomskuniversity",
+     "source": "https://www.wikidata.org/wiki/Q742494"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/tomskuniversity",
+     "source": "https://www.wikidata.org/wiki/Q742494"
+    }
+   ],
+   "typical": []
+  },
+  "sfu": {
+   "wikidata": "Q2382644",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/internationalsibfu",
+     "source": "https://www.wikidata.org/wiki/Q2382644"
+    },
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/siberianfederal",
+     "source": "https://www.wikidata.org/wiki/Q2382644"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/SibFUofficial",
+     "source": "https://www.wikidata.org/wiki/Q2382644"
+    }
+   ],
+   "typical": []
+  },
+  "dvfu": {
+   "wikidata": "Q702303",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/dvfuru",
+     "source": "https://www.wikidata.org/wiki/Q702303"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/fefudvfu",
+     "source": "https://www.wikidata.org/wiki/Q702303"
+    }
+   ],
+   "typical": []
+  },
+  "sfedu": {
+   "wikidata": "Q2065921",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/sfedu_official",
+     "source": "https://www.wikidata.org/wiki/Q2065921"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/sfedu_study",
+     "source": "https://www.wikidata.org/wiki/Q2065921"
+    }
+   ],
+   "typical": []
+  },
+  "kantiana": {
+   "wikidata": "Q805777",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/ikbfu",
+     "source": "https://www.wikidata.org/wiki/Q805777"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/Ikbfu",
+     "source": "https://www.wikidata.org/wiki/Q805777"
+    }
+   ],
+   "typical": []
+  },
+  "unn": {
+   "wikidata": "Q492766",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/lobachevsky_university",
+     "source": "https://www.wikidata.org/wiki/Q492766"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/law_unn",
+     "source": "https://www.wikidata.org/wiki/Q492766"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/lobachevsky_university",
+     "source": "https://www.wikidata.org/wiki/Q492766"
+    }
+   ],
+   "typical": []
+  },
+  "ssau": {
+   "wikidata": "Q21574120",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/samara_university",
+     "source": "https://www.wikidata.org/wiki/Q21574120"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/samarauniversity",
+     "source": "https://www.wikidata.org/wiki/Q21574120"
+    }
+   ],
+   "typical": []
+  },
+  "susu": {
+   "wikidata": "Q1777988",
+   "communities": [],
+   "typical": []
+  },
+  "pstu": {
+   "wikidata": "Q689800",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/politehperm",
+     "source": "https://www.wikidata.org/wiki/Q689800"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/politehperm",
+     "source": "https://www.wikidata.org/wiki/Q689800"
+    }
+   ],
+   "typical": []
+  },
+  "vsu": {
+   "wikidata": "Q1807470",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/vsumain",
+     "source": "https://www.wikidata.org/wiki/Q1807470"
+    }
+   ],
+   "typical": []
+  },
+  "ranepa": {
+   "wikidata": "Q2822458",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/theacademy",
+     "source": "https://www.wikidata.org/wiki/Q2822458"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/mainranepa",
+     "source": "https://www.wikidata.org/wiki/Q2822458"
+    }
+   ],
+   "typical": []
+  },
+  "mgimo": {
+   "wikidata": "Q322964",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/mgimo",
+     "source": "https://www.wikidata.org/wiki/Q322964"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/mgimo_university",
+     "source": "https://www.wikidata.org/wiki/Q322964"
+    }
+   ],
+   "typical": []
+  },
+  "rudn": {
+   "wikidata": "Q839669",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/rudn_university",
+     "source": "https://www.wikidata.org/wiki/Q839669"
+    }
+   ],
+   "typical": []
+  },
+  "fa": {
+   "wikidata": "Q1416632",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/finuniversity",
+     "source": "https://www.wikidata.org/wiki/Q1416632"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/finuniverchan",
+     "source": "https://www.wikidata.org/wiki/Q1416632"
+    }
+   ],
+   "typical": []
+  },
+  "rea": {
+   "wikidata": "Q2004114",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/reu",
+     "source": "https://www.wikidata.org/wiki/Q2004114"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/PlekhanovUniverse",
+     "source": "https://www.wikidata.org/wiki/Q2004114"
+    }
+   ],
+   "typical": []
+  },
+  "sechenov": {
+   "wikidata": "Q1962613",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/sechenov_ru",
+     "source": "https://www.wikidata.org/wiki/Q1962613"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/sechenov_ru",
+     "source": "https://www.wikidata.org/wiki/Q1962613"
+    }
+   ],
+   "typical": []
+  },
+  "spbpu": {
+   "wikidata": "Q1379834",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/pgpuspb",
+     "source": "https://www.wikidata.org/wiki/Q1379834"
+    },
+    {
+     "kind": "telegram",
+     "title": "Telegram-канал",
+     "url": "https://t.me/polytech_petra",
+     "source": "https://www.wikidata.org/wiki/Q1379834"
+    }
+   ],
+   "typical": []
+  },
+  "gitis": {
+   "wikidata": "Q2177054",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/public145886776",
+     "source": "https://www.wikidata.org/wiki/Q2177054"
+    }
+   ],
+   "typical": []
+  },
+  "kubsu": {
+   "wikidata": "Q4243514",
+   "communities": [
+    {
+     "kind": "vk",
+     "title": "Официальное сообщество ВКонтакте",
+     "url": "https://vk.com/kubsu_official",
+     "source": "https://www.wikidata.org/wiki/Q4243514"
+    }
+   ],
+   "typical": []
+  }
+ }
+}

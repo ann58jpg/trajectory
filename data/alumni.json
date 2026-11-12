@@ -1,0 +1,1650 @@
+{
+ "meta": {
+  "source": "Wikidata: свойство P69 «учился в» (query.wikidata.org), отбор по числу статей в Википедиях",
+  "checkedAt": "2026-11-12",
+  "note": "Без фото. Политики и госслужащие не показываются, только родившиеся с 1900 года — чтобы примеры были про профессии. Должность — описание из Wikidata. Годы учёбы — если указаны в Wikidata."
+ },
+ "alumni": {
+  "msu": {
+   "wikidata": "https://www.wikidata.org/wiki/Q13164",
+   "people": [
+    {
+     "name": "Виталий Лазаревич Гинзбург",
+     "role": "советский и российский физик-теоретик",
+     "born": 1916,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q104668"
+    },
+    {
+     "name": "Арам Хачатурян",
+     "role": "советский композитор, дирижёр",
+     "born": 1903,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q152293"
+    },
+    {
+     "name": "Андрей Николаевич Колмогоров",
+     "role": "советский математик",
+     "born": 1903,
+     "years": "1920–1925",
+     "source": "https://www.wikidata.org/wiki/Q153224"
+    },
+    {
+     "name": "Франк, Илья Михайлович",
+     "role": "советский физик",
+     "born": 1908,
+     "years": "1930",
+     "source": "https://www.wikidata.org/wiki/Q192703"
+    },
+    {
+     "name": "Владимир Игоревич Арнольд",
+     "role": "советский и российский математик",
+     "born": 1937,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q157642"
+    },
+    {
+     "name": "Земфира",
+     "role": "российская певица, поэт и композитор",
+     "born": 1976,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q242454"
+    },
+    {
+     "name": "Имре Лакатос",
+     "role": "английский математик и философ науки венгерского происхождения",
+     "born": 1922,
+     "years": "1949",
+     "source": "https://www.wikidata.org/wiki/Q296249"
+    },
+    {
+     "name": "Варлам Тихонович Шаламов",
+     "role": "русский прозаик и поэт, автор рассказов о жизни заключённых ГУЛага",
+     "born": 1907,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q220816"
+    }
+   ]
+  },
+  "spbu": {
+   "wikidata": "https://www.wikidata.org/wiki/Q27621",
+   "people": [
+    {
+     "name": "Айн Рэнд",
+     "role": "американская и русская писательница и философ",
+     "born": 1905,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q132524"
+    },
+    {
+     "name": "Анатолий Евгеньевич Карпов",
+     "role": "12-й чемпион мира по шахматам (1975—1985), международный гроссмейстер",
+     "born": 1951,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q131674"
+    },
+    {
+     "name": "Григорий Яковлевич Перельман",
+     "role": "российский математик, доказавший гипотезу Пуанкаре",
+     "born": 1966,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q117346"
+    },
+    {
+     "name": "Александр Михайлович Прохоров",
+     "role": "советский и российский физик (1916—2002)",
+     "born": 1916,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q83552"
+    },
+    {
+     "name": "Леонид Витальевич Канторович",
+     "role": "советский математик и экономист",
+     "born": 1912,
+     "years": "1926–1930",
+     "source": "https://www.wikidata.org/wiki/Q107441"
+    },
+    {
+     "name": "Василий Леонтьев",
+     "role": "американский экономист российского происхождения, создатель теории межотраслевого анализа",
+     "born": 1906,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q44061"
+    },
+    {
+     "name": "Георгий Антонович Гамов",
+     "role": "советский и американский физик-теоретик, астрофизик и популяризатор науки",
+     "born": 1904,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q59478"
+    },
+    {
+     "name": "Лев Гумилёв",
+     "role": "русский историк-этнолог, археолог, востоковед, писатель, переводчик",
+     "born": 1912,
+     "years": "1987",
+     "source": "https://www.wikidata.org/wiki/Q135481"
+    }
+   ]
+  },
+  "hse": {
+   "wikidata": "https://www.wikidata.org/wiki/Q1959511",
+   "people": [
+    {
+     "name": "Рябова, Анастасия Витальевна",
+     "role": "современная художница",
+     "born": 1985,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4402424"
+    },
+    {
+     "name": "Константин Юрьевич Носков",
+     "role": "российский экономист",
+     "born": 1978,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q53843880"
+    },
+    {
+     "name": "Митрошина Александра Александровна",
+     "role": "российский блогер",
+     "born": 1994,
+     "years": "2015–2017",
+     "source": "https://www.wikidata.org/wiki/Q66459001"
+    },
+    {
+     "name": "Григорий Борисович Юдин",
+     "role": "российский социолог и философ",
+     "born": 1983,
+     "years": "2006",
+     "source": "https://www.wikidata.org/wiki/Q111015393"
+    },
+    {
+     "name": "Майкл Наки",
+     "role": "российский блогер и радиоведущий",
+     "born": 1993,
+     "years": "2016",
+     "source": "https://www.wikidata.org/wiki/Q101512400"
+    },
+    {
+     "name": "Герман Сергеевич Клименко",
+     "role": "российский предприниматель",
+     "born": 1966,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4223645"
+    },
+    {
+     "name": "Владимир Кириенко",
+     "role": "российский бизнесмен и медиаменеджер, генеральный директор технологической корпорации VK",
+     "born": 1983,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q5680808"
+    },
+    {
+     "name": "Виктор Вахштайн",
+     "role": "российско-израильский социолог",
+     "born": 1981,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q102738459"
+    }
+   ]
+  },
+  "mipt": {
+   "wikidata": "https://www.wikidata.org/wiki/Q1367256",
+   "people": [
+    {
+     "name": "Андрей Константинович Гейм",
+     "role": "голландско-британский учёный российского происхождения",
+     "born": 1958,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q104104"
+    },
+    {
+     "name": "Константин Сергеевич Новосёлов",
+     "role": "российско-британский физик",
+     "born": 1974,
+     "years": "1991–1997",
+     "source": "https://www.wikidata.org/wiki/Q106494"
+    },
+    {
+     "name": "Александр Александрович Серебров",
+     "role": "советский и российский космонавт",
+     "born": 1944,
+     "years": "1967",
+     "source": "https://www.wikidata.org/wiki/Q362819"
+    },
+    {
+     "name": "Калери, Александр Юрьевич",
+     "role": "российский космонавт",
+     "born": 1956,
+     "years": "1979",
+     "source": "https://www.wikidata.org/wiki/Q345288"
+    },
+    {
+     "name": "Алексей Станиславович Елисеев",
+     "role": "советский космонавт",
+     "born": 1934,
+     "years": "1962",
+     "source": "https://www.wikidata.org/wiki/Q381541"
+    },
+    {
+     "name": "Татьяна Сорокко",
+     "role": "манекенщица, коллекционер одежды",
+     "born": 1971,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4429273"
+    },
+    {
+     "name": "Вадим Юсупович Абдрашитов",
+     "role": "советский и российский кинорежиссёр",
+     "born": 1945,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q1703488"
+    },
+    {
+     "name": "Лебедев, Сергей Алексеевич",
+     "role": "советский учёный-информатик",
+     "born": 1902,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q1396305"
+    }
+   ]
+  },
+  "bmstu": {
+   "wikidata": "https://www.wikidata.org/wiki/Q1472245",
+   "people": [
+    {
+     "name": "Сергей Павлович Королёв",
+     "role": "советский учёный (1907—1966)",
+     "born": 1907,
+     "years": "1926",
+     "source": "https://www.wikidata.org/wiki/Q170842"
+    },
+    {
+     "name": "Константин Петрович Феоктистов",
+     "role": "советский космонавт",
+     "born": 1926,
+     "years": "1949",
+     "source": "https://www.wikidata.org/wiki/Q320068"
+    },
+    {
+     "name": "Ольга Николаевна Рубцова",
+     "role": "советская шахматистка",
+     "born": 1909,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q254159"
+    },
+    {
+     "name": "Елена Владимировна Кондакова",
+     "role": "российский космонавт",
+     "born": 1957,
+     "years": "1980",
+     "source": "https://www.wikidata.org/wiki/Q255764"
+    },
+    {
+     "name": "Олег Григорьевич Макаров",
+     "role": "советский космонавт",
+     "born": 1933,
+     "years": "1957",
+     "source": "https://www.wikidata.org/wiki/Q467623"
+    },
+    {
+     "name": "Александр Павлович Александров",
+     "role": "советский космонавт",
+     "born": 1943,
+     "years": "1969",
+     "source": "https://www.wikidata.org/wiki/Q466483"
+    },
+    {
+     "name": "Алексей Станиславович Елисеев",
+     "role": "советский космонавт",
+     "born": 1934,
+     "years": "1951–1957",
+     "source": "https://www.wikidata.org/wiki/Q381541"
+    },
+    {
+     "name": "Владимир Алексеевич Соловьёв",
+     "role": "советский космонавт",
+     "born": 1946,
+     "years": "1964",
+     "source": "https://www.wikidata.org/wiki/Q535172"
+    }
+   ]
+  },
+  "itmo": {
+   "wikidata": "https://www.wikidata.org/wiki/Q1342013",
+   "people": [
+    {
+     "name": "Геннадий Владимирович Короткевич",
+     "role": "многократный победитель международных и всероссийских чемпионатов и турниров по спортивному программированию",
+     "born": 1994,
+     "years": "2012",
+     "source": "https://www.wikidata.org/wiki/Q5533363"
+    },
+    {
+     "name": "Лукомский, Борис Семёнович",
+     "role": "советский фехтовальщик и тренер",
+     "born": 1951,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q3642614"
+    },
+    {
+     "name": "Юрий Николаевич Денисюк",
+     "role": "советский физик, один из основоположников оптической голографии",
+     "born": 1927,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q1379670"
+    },
+    {
+     "name": "Зверев, Сергей Алексеевич",
+     "role": "советский инженер",
+     "born": 1912,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q7268486"
+    },
+    {
+     "name": "Исаак Радашкович",
+     "role": "израильский шахматист",
+     "born": 1947,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q15820515"
+    },
+    {
+     "name": "Николай Кононихин",
+     "role": "историк искусства",
+     "born": 1959,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q117459382"
+    },
+    {
+     "name": "Владимир Сергеевич Барсуков",
+     "role": "криминальный авторитет",
+     "born": 1956,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q283006"
+    },
+    {
+     "name": "Владимир Николаевич Кошляков",
+     "role": "советский и украинский математик, механик и физик",
+     "born": 1922,
+     "years": "1948",
+     "source": "https://www.wikidata.org/wiki/Q106696241"
+    }
+   ]
+  },
+  "mephi": {
+   "wikidata": "https://www.wikidata.org/wiki/Q56837",
+   "people": [
+    {
+     "name": "Николай Геннадиевич Басов",
+     "role": "советский физик",
+     "born": 1922,
+     "years": "1950",
+     "source": "https://www.wikidata.org/wiki/Q83557"
+    },
+    {
+     "name": "Юрий Оганесян",
+     "role": "советский и российский учёный, специалист в области экспериментальной ядерной физики",
+     "born": 1933,
+     "years": "1956",
+     "source": "https://www.wikidata.org/wiki/Q1144326"
+    },
+    {
+     "name": "Анатолий Степанович Дятлов",
+     "role": "экс-заместитель главного инженера по эксплуатации Чернобыльской АЭС на момент аварии 26 апреля 1986 года",
+     "born": 1931,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q488020"
+    },
+    {
+     "name": "Николай Рукавишников",
+     "role": "советский космонавт",
+     "born": 1932,
+     "years": "1951–1957",
+     "source": "https://www.wikidata.org/wiki/Q266359"
+    },
+    {
+     "name": "Сергей Васильевич Авдеев",
+     "role": "российский космонавт",
+     "born": 1956,
+     "years": "1979",
+     "source": "https://www.wikidata.org/wiki/Q453764"
+    },
+    {
+     "name": "Анатолий Петрович Бугорский",
+     "role": "советский и российский учёный в области физики элементарных частиц",
+     "born": 1942,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q2027476"
+    },
+    {
+     "name": "Лев Борисович Окунь",
+     "role": "советский и российский учёный-физик",
+     "born": 1929,
+     "years": "1953",
+     "source": "https://www.wikidata.org/wiki/Q1469536"
+    },
+    {
+     "name": "Денис Константинович Бояринцев",
+     "role": "российский футболист",
+     "born": 1978,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q945319"
+    }
+   ]
+  },
+  "kfu": {
+   "wikidata": "https://www.wikidata.org/wiki/Q113788",
+   "people": [
+    {
+     "name": "Станислав Сергеевич Говорухин",
+     "role": "советский и российский кинорежиссёр, сценарист, актёр (1936-2018)",
+     "born": 1936,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q1377159"
+    },
+    {
+     "name": "Евгения Соломоновна Гинзбург",
+     "role": "русская писательница еврейского происхождения",
+     "born": 1904,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q242834"
+    },
+    {
+     "name": "Михаил Алексеевич Лаврентьев",
+     "role": "советский математик",
+     "born": 1900,
+     "years": "1918–1921",
+     "source": "https://www.wikidata.org/wiki/Q707137"
+    },
+    {
+     "name": "Юлия Михайловна Зарипова",
+     "role": "российская легкоатлетка, бегунья на средние дистанции",
+     "born": 1986,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q6017"
+    },
+    {
+     "name": "Алексей Александрович Обмочаев",
+     "role": "российский волейболист",
+     "born": 1989,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q2119603"
+    },
+    {
+     "name": "Завойский, Евгений Константинович",
+     "role": "физик",
+     "born": 1907,
+     "years": "1931",
+     "source": "https://www.wikidata.org/wiki/Q964110"
+    },
+    {
+     "name": "Александр Александрович Вишневский",
+     "role": "советский хирург, учёный, доктор медицинских наук, профессор, главный хирург Министерства обороны СССР",
+     "born": 1906,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4112717"
+    },
+    {
+     "name": "Дубяго, Александр Дмитриевич",
+     "role": "Советский астроном",
+     "born": 1903,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q665658"
+    }
+   ]
+  },
+  "urfu": {
+   "wikidata": "https://www.wikidata.org/wiki/Q1506552",
+   "people": [
+    {
+     "name": "Константин Цзю",
+     "role": "российский и австралийский боксёр",
+     "born": 1969,
+     "years": "2012",
+     "source": "https://www.wikidata.org/wiki/Q1377617"
+    },
+    {
+     "name": "Любовь Владимировна Галкина",
+     "role": "олимпийская чемпионка 2004 года в стрельбе из винтовки из трёх положений",
+     "born": 1973,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q292235"
+    },
+    {
+     "name": "Мышкин, Анатолий Дмитриевич",
+     "role": "советский баскетболист и российский баскетбольный тренер",
+     "born": 1954,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q2453602"
+    },
+    {
+     "name": "Дольский, Александр Александрович",
+     "role": "русский советский и российский поэт, гитарист-виртуоз, автор-исполнитель, актёр",
+     "born": 1938,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4165142"
+    },
+    {
+     "name": "Нурлан Сабуров",
+     "role": "казахстанский и российский комик, юморист и киноактёр",
+     "born": 1991,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q97608134"
+    }
+   ]
+  },
+  "nsu": {
+   "wikidata": "https://www.wikidata.org/wiki/Q1637997",
+   "people": [
+    {
+     "name": "Ефим Зельманов",
+     "role": "математик",
+     "born": 1955,
+     "years": "1972–1977",
+     "source": "https://www.wikidata.org/wiki/Q334054"
+    },
+    {
+     "name": "Тихонов, Александр Иванович",
+     "role": "советский биатлонист",
+     "born": 1947,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q504748"
+    },
+    {
+     "name": "Анатолий Вольфович Вайсер",
+     "role": "французский шахматист",
+     "born": 1949,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q488112"
+    },
+    {
+     "name": "Владимир Евгеньевич Захаров",
+     "role": "советский и российский физик-теоретик и поэт, академик РАН",
+     "born": 1939,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q381592"
+    },
+    {
+     "name": "Делоне, Вадим Николаевич",
+     "role": "русский поэт, писатель, педагог, диссидент, участник демонстрации 25 августа 1968 года на Красной площади в Москве",
+     "born": 1947,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q2388098"
+    },
+    {
+     "name": "Русиньш Мартыньш Фрейвалдс",
+     "role": "советский и латвийский математик",
+     "born": 1942,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q16351713"
+    },
+    {
+     "name": "Берг, Раиса Львовна",
+     "role": "русский генетик",
+     "born": 1913,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q19866719"
+    }
+   ]
+  },
+  "tpu": {
+   "wikidata": "https://www.wikidata.org/wiki/Q1466666",
+   "people": [
+    {
+     "name": "Миль, Михаил Леонтьевич",
+     "role": "советский конструктор вертолётов и учёный",
+     "born": 1909,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q455753"
+    },
+    {
+     "name": "Камов, Николай Ильич",
+     "role": "советский авиационный инженер, конструктор вертолётов",
+     "born": 1902,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q512560"
+    },
+    {
+     "name": "Казанцев, Александр Петрович",
+     "role": "советский фантаст",
+     "born": 1906,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q1263957"
+    },
+    {
+     "name": "Николай Никитин",
+     "role": "советский архитектор и учёный в области строительных конструкций, главный конструктор Останкинской телебашни",
+     "born": 1907,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q1372731"
+    },
+    {
+     "name": "Пирожкова, Антонина Николаевна",
+     "role": "вдова писателя Исаака Бабеля",
+     "born": 1909,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q3619025"
+    },
+    {
+     "name": "Геннадий Андреевич Месяц",
+     "role": "советский и российский физик, академик АН СССР и РАН",
+     "born": 1936,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4291469"
+    }
+   ]
+  },
+  "tsu": {
+   "wikidata": "https://www.wikidata.org/wiki/Q742494",
+   "people": [
+    {
+     "name": "Эдисон Васильевич Денисов",
+     "role": "советский и российский композитор",
+     "born": 1929,
+     "years": "1946–1951",
+     "source": "https://www.wikidata.org/wiki/Q275659"
+    },
+    {
+     "name": "Небольсина, Вера Валерьевна",
+     "role": "шахматист",
+     "born": 1989,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q450542"
+    },
+    {
+     "name": "Виктор Евгеньевич Панин",
+     "role": "советский и российский учёный-физик",
+     "born": 1930,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4344003"
+    },
+    {
+     "name": "Анатолий Александрович Смородинцев",
+     "role": "вирусолог",
+     "born": 1901,
+     "years": "1923",
+     "source": "https://www.wikidata.org/wiki/Q4425237"
+    },
+    {
+     "name": "Андрей Владимирович Бурковский",
+     "role": "Российский актёр театра и кино",
+     "born": 1983,
+     "years": "2005",
+     "source": "https://www.wikidata.org/wiki/Q4099649"
+    },
+    {
+     "name": "Юрий Леонидович Ершов",
+     "role": "советский и российский математик и логик",
+     "born": 1940,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q381315"
+    },
+    {
+     "name": "Штефан Липке",
+     "role": "Немецкий римско-католический священник",
+     "born": 1975,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q113807902"
+    },
+    {
+     "name": "Алексей Николаевич Рудой",
+     "role": "советский и российский геоморфолог, гляциолог, географ",
+     "born": 1952,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4399723"
+    }
+   ]
+  },
+  "sfu": {
+   "wikidata": "https://www.wikidata.org/wiki/Q2382644",
+   "people": [
+    {
+     "name": "Ольга Валерьевна Медведцева",
+     "role": "российская биатлонистка и лыжница",
+     "born": 1975,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q236635"
+    },
+    {
+     "name": "Алёна Викторовна Сидько",
+     "role": "российская лыжница",
+     "born": 1979,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q115511"
+    },
+    {
+     "name": "Бугаев, Алексей Сергеевич",
+     "role": "российский горнолыжник, трёхкратный чемпион, трёхкратный серебряный призёр и трёхкратный бронзовый призёр Паралимпийских игр",
+     "born": 1997,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q15925169"
+    },
+    {
+     "name": "Никита Васильевич Мельников",
+     "role": "Чемпион чемпионатов Российской Федераций",
+     "born": 1987,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q16213179"
+    },
+    {
+     "name": "Андрей Сергеевич Болдыков",
+     "role": "российский сноубордист",
+     "born": 1983,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q2788941"
+    },
+    {
+     "name": "Круглов, Сергей Геннадьевич",
+     "role": "Русский Поэт",
+     "born": 1966,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q2025451"
+    },
+    {
+     "name": "Мальчикова, Полина Сергеевна",
+     "role": "заслуженный мастер спорта по спортивному ориентированию на лыжах",
+     "born": 1986,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4279603"
+    },
+    {
+     "name": "Елена Николаевна Мироненко",
+     "role": "российский культуролог, менеджер в сфере культуры",
+     "born": 1981,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q110266339"
+    }
+   ]
+  },
+  "dvfu": {
+   "wikidata": "https://www.wikidata.org/wiki/Q702303",
+   "people": [
+    {
+     "name": "Юрий Александрович Газинский",
+     "role": "российский футболист",
+     "born": 1989,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q8061503"
+    },
+    {
+     "name": "Илья Игоревич Лагутенко",
+     "role": "российский рок-музыкант",
+     "born": 1968,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q1658597"
+    },
+    {
+     "name": "Мин, Александр Павлович",
+     "role": "Герой Советского Союза",
+     "born": 1915,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4293926"
+    },
+    {
+     "name": "Марк Шульжцкий",
+     "role": "российский автогонщик, участник гонок на выносливость",
+     "born": 1989,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q15410633"
+    },
+    {
+     "name": "Абаев, Николай Вячеславович",
+     "role": "советский и российский востоковед-буддолог",
+     "born": 1949,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q62712374"
+    },
+    {
+     "name": "Елена Войнова",
+     "role": "российская легкоатлетка",
+     "born": 1985,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q11724071"
+    },
+    {
+     "name": "Харин, Владимир Емельянович",
+     "role": "российский зоолог, ихтиолог, герпетолог",
+     "born": 1957,
+     "years": "1981",
+     "source": "https://www.wikidata.org/wiki/Q47222899"
+    },
+    {
+     "name": "Сергей Александрович Белокобыльский",
+     "role": "российский энтомолог",
+     "born": 1958,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q18649215"
+    }
+   ]
+  },
+  "sfedu": {
+   "wikidata": "https://www.wikidata.org/wiki/Q2065921",
+   "people": [
+    {
+     "name": "Виктор Михайлович Глушков",
+     "role": "советский математик",
+     "born": 1923,
+     "years": "1948",
+     "source": "https://www.wikidata.org/wiki/Q93031"
+    },
+    {
+     "name": "Дубинин Николай Геннадьевич",
+     "role": "российский прелат и францисканец.",
+     "born": 1973,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q97924434"
+    },
+    {
+     "name": "Владимир Подов",
+     "role": "советский и украинский историк",
+     "born": 1924,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q16711927"
+    }
+   ]
+  },
+  "kantiana": {
+   "wikidata": "https://www.wikidata.org/wiki/Q805777",
+   "people": [
+    {
+     "name": "Наталья Сергеевна Ищенко",
+     "role": "российская синхронистка",
+     "born": 1986,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q1800208"
+    },
+    {
+     "name": "Станислав Спартакович Шаров",
+     "role": "российский баскетболист",
+     "born": 1995,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q107638978"
+    },
+    {
+     "name": "Романов, Евгений Анатольевич",
+     "role": "российский шахматист",
+     "born": 1988,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4397154"
+    },
+    {
+     "name": "Вадим Зеланд",
+     "role": "создатель учения Трансерфинг реальности",
+     "born": 1963,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q3997497"
+    },
+    {
+     "name": "Андрей Иванович Халаим",
+     "role": "Российский/мексиканский энтомолог",
+     "born": 1977,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q21339404"
+    },
+    {
+     "name": "Светлана Геннадьевна Сивкова",
+     "role": "Генеральный директор ФГБУК «Музей Мирового океана»",
+     "born": 1957,
+     "years": "1979",
+     "source": "https://www.wikidata.org/wiki/Q50255718"
+    },
+    {
+     "name": "Ерашов, Валентин Петрович",
+     "role": "русский советский писатель",
+     "born": 1927,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4176146"
+    }
+   ]
+  },
+  "unn": {
+   "wikidata": "https://www.wikidata.org/wiki/Q492766",
+   "people": [
+    {
+     "name": "Журавлёва, Людмила Васильевна",
+     "role": "советский и украинский астроном",
+     "born": 1946,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q58709"
+    },
+    {
+     "name": "Владимир Антонович Дыбо",
+     "role": "советский и российский лингвист, академик",
+     "born": 1931,
+     "years": "1954",
+     "source": "https://www.wikidata.org/wiki/Q130117"
+    },
+    {
+     "name": "Ольга Александровна Садовская",
+     "role": "российский юрист и правозащитник",
+     "born": 1980,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q123512953"
+    },
+    {
+     "name": "Глеб Арсентьевич Абакумов",
+     "role": "российский химик-органик, академик РАН (1937-2019)",
+     "born": 1937,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4054277"
+    },
+    {
+     "name": "Александр Викторович Абросимов",
+     "role": "советский и российский математик",
+     "born": 1948,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4055079"
+    },
+    {
+     "name": "Игорь Виленович Эйдман",
+     "role": "российский социолог, публицист и писатель",
+     "born": 1968,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4530004"
+    },
+    {
+     "name": "Савельев, Дмитрий Владимирович",
+     "role": "российский политический деятель",
+     "born": 1968,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q19818061"
+    },
+    {
+     "name": "Александр Князев",
+     "role": "российский химик",
+     "born": 1976,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q22084947"
+    }
+   ]
+  },
+  "ssau": {
+   "wikidata": "https://www.wikidata.org/wiki/Q21574120",
+   "people": [
+    {
+     "name": "Малецкий, Юрий Иосифович",
+     "role": "русский писатель",
+     "born": 1952,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q48955885"
+    }
+   ]
+  },
+  "susu": {
+   "wikidata": "https://www.wikidata.org/wiki/Q1777988",
+   "people": [
+    {
+     "name": "Мария Сергеевна Савинова",
+     "role": "российская легкоатлетка",
+     "born": 1985,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q5820"
+    },
+    {
+     "name": "Евгений Рошал",
+     "role": "советский и российский программист",
+     "born": 1972,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q961412"
+    },
+    {
+     "name": "Денисов, Кирилл Георгиевич",
+     "role": "российский дзюдоист",
+     "born": 1988,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q2261724"
+    },
+    {
+     "name": "Анна Александровна Нечаевская",
+     "role": "российская лыжница",
+     "born": 1991,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q22236509"
+    },
+    {
+     "name": "Ольга Владимировна Гольц",
+     "role": "русский математик",
+     "born": 1973,
+     "years": "1995",
+     "source": "https://www.wikidata.org/wiki/Q1699677"
+    },
+    {
+     "name": "Дмитрий Александрович Петелин",
+     "role": "российский космонавт-испытатель",
+     "born": 1983,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q50379760"
+    },
+    {
+     "name": "Валерий Карлович Гартунг",
+     "role": "российский политический деятель",
+     "born": 1960,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4133962"
+    }
+   ]
+  },
+  "pstu": {
+   "wikidata": "https://www.wikidata.org/wiki/Q689800",
+   "people": [
+    {
+     "name": "Людмила Александровна Калинина",
+     "role": "российский тренер по фигурному катанию",
+     "born": 1957,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4209520"
+    },
+    {
+     "name": "Владимир Николаевич Махлай",
+     "role": "российский инженер, экономист, предприниматель",
+     "born": 1937,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4285724"
+    },
+    {
+     "name": "Александр Александрович Иноземцев",
+     "role": "советский и российский конструктор авиационных двигателей",
+     "born": 1951,
+     "years": "1973",
+     "source": "https://www.wikidata.org/wiki/Q47453276"
+    },
+    {
+     "name": "Ирина Гуляева",
+     "role": "российская биатлонистка",
+     "born": 1984,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q50426111"
+    },
+    {
+     "name": "Гавр Гордеев",
+     "role": "российский медиаменеджер, в прошлом юморист",
+     "born": 1982,
+     "years": "2006",
+     "source": "https://www.wikidata.org/wiki/Q4143810"
+    },
+    {
+     "name": "Владимир Соломонович Томсинский",
+     "role": "советский и российский металлург, доктор технических наук",
+     "born": 1936,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q137712519"
+    },
+    {
+     "name": "Анатолий Александрович Ташкинов",
+     "role": "ректор Пермского национального исследовательского политехнического университета, д. ф.-м. н., профессор",
+     "born": 1955,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4453010"
+    },
+    {
+     "name": "Пётр Валентинович Трусов",
+     "role": "российский учёный в области математического моделирования, профессор",
+     "born": 1948,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4464540"
+    }
+   ]
+  },
+  "vsu": {
+   "wikidata": "https://www.wikidata.org/wiki/Q1807470",
+   "people": [
+    {
+     "name": "Павел Алексеевич Черенков",
+     "role": "советский физик",
+     "born": 1904,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q76970"
+    },
+    {
+     "name": "Замотайлова, Тамара Алексеевна",
+     "role": "русская советская гимнастка, двукратная олимпийская чемпионка",
+     "born": 1939,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q3774385"
+    },
+    {
+     "name": "Загоровский, Владимир Павлович",
+     "role": "советский шахматист",
+     "born": 1925,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q1475414"
+    },
+    {
+     "name": "Фанайлова, Елена Николаевна",
+     "role": "русский поэт и переводчик",
+     "born": 1962,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q648577"
+    },
+    {
+     "name": "Краснер, Наум Яковлевич",
+     "role": "математик, экономист",
+     "born": 1924,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q3710050"
+    },
+    {
+     "name": "Миллер, Дмитрий Артурович",
+     "role": "российский актёр театра и кино",
+     "born": 1972,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4293487"
+    },
+    {
+     "name": "Игорь Анатольевич Пальмин",
+     "role": "советский и российский фотограф",
+     "born": 1933,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4342825"
+    },
+    {
+     "name": "Галина Юрьевна Арапова",
+     "role": "российский медиаюрист",
+     "born": 1972,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q100319448"
+    }
+   ]
+  },
+  "ranepa": {
+   "wikidata": "https://www.wikidata.org/wiki/Q2822458",
+   "people": [
+    {
+     "name": "Токарев, Валерий Иванович",
+     "role": "российский космонавт",
+     "born": 1952,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q448872"
+    },
+    {
+     "name": "Анна Юрьевна Кузнецова",
+     "role": "политический деятель",
+     "born": 1982,
+     "years": "2021",
+     "source": "https://www.wikidata.org/wiki/Q26836164"
+    },
+    {
+     "name": "Игонин, Алексей Андреевич",
+     "role": "российский футболист",
+     "born": 1976,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q2413230"
+    },
+    {
+     "name": "Анатолий Николаевич Квочур",
+     "role": "советский и российский лётчик-испытатель, Герой Российской Федерации",
+     "born": 1952,
+     "years": "1999",
+     "source": "https://www.wikidata.org/wiki/Q754209"
+    },
+    {
+     "name": "Андрей Александрович Травников",
+     "role": "российский политический деятель",
+     "born": 1971,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q41657764"
+    },
+    {
+     "name": "Аждаров Тахмасиб Гусейн оглы",
+     "role": "азербайджанский и украинский ученый; доктор экономических наук (2002)",
+     "born": 1964,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q64607858"
+    }
+   ]
+  },
+  "mgimo": {
+   "wikidata": "https://www.wikidata.org/wiki/Q322964",
+   "people": [
+    {
+     "name": "Алишер Бурханович Усманов",
+     "role": "российский миллиардер",
+     "born": 1953,
+     "years": "1970–1976",
+     "source": "https://www.wikidata.org/wiki/Q503147"
+    },
+    {
+     "name": "Владимир Потанин",
+     "role": "российский миллиардер",
+     "born": 1961,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q739315"
+    },
+    {
+     "name": "Олег Антонович Гордиевский",
+     "role": "офицер российской разведки и перебежчик",
+     "born": 1938,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q562371"
+    },
+    {
+     "name": "Александр Александрович Волков",
+     "role": "российский волейболист",
+     "born": 1985,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q929329"
+    },
+    {
+     "name": "Зубов Андрей Борисович",
+     "role": "российский историк",
+     "born": 1952,
+     "years": "1973",
+     "source": "https://www.wikidata.org/wiki/Q4194362"
+    },
+    {
+     "name": "Надежда Никитична Михалкова",
+     "role": "российская актриса, продюсер",
+     "born": 1986,
+     "years": "2008",
+     "source": "https://www.wikidata.org/wiki/Q1994919"
+    },
+    {
+     "name": "Леонов, Николай Сергеевич",
+     "role": "генерал-лейтенант КГБ в отставке; доктор исторических наук",
+     "born": 1928,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q2025648"
+    },
+    {
+     "name": "Шебаршин, Леонид Владимирович",
+     "role": "деятель советской разведки, генерал-лейтенант, начальник внешней разведки СССР",
+     "born": 1935,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q1188616"
+    }
+   ]
+  },
+  "rudn": {
+   "wikidata": "https://www.wikidata.org/wiki/Q839669",
+   "people": [
+    {
+     "name": "Галина Воскобоева",
+     "role": "казахстанская теннисистка",
+     "born": 1984,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q234831"
+    },
+    {
+     "name": "Николай Глушков",
+     "role": "советский и российский топ-менеджер",
+     "born": 1949,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q3400152"
+    },
+    {
+     "name": "Хилари Обалокер Онек",
+     "role": "угандийский инженер",
+     "born": 1948,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q5761037"
+    },
+    {
+     "name": "Юлия Паршута",
+     "role": "российская поп-певица",
+     "born": 1988,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q15078987"
+    },
+    {
+     "name": "Сюзан Колимба",
+     "role": "учёный и политический деятель",
+     "born": 1964,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q27734883"
+    }
+   ]
+  },
+  "fa": {
+   "wikidata": "https://www.wikidata.org/wiki/Q1416632",
+   "people": [
+    {
+     "name": "Алишер Бурханович Усманов",
+     "role": "российский миллиардер",
+     "born": 1953,
+     "years": "1997",
+     "source": "https://www.wikidata.org/wiki/Q503147"
+    },
+    {
+     "name": "Светлана Евгеньевна Феофанова",
+     "role": "российская легкоатлетка, прыгунья с шестом",
+     "born": 1980,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q231571"
+    },
+    {
+     "name": "Натали Пешала",
+     "role": "танцовщица на льду",
+     "born": 1983,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q258451"
+    },
+    {
+     "name": "Михаил Сафарбекович Гуцериев",
+     "role": "российский предприниматель, меценат и поэт",
+     "born": 1958,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q1346607"
+    },
+    {
+     "name": "Владимир Семёнович Стельмах",
+     "role": "украинский банкир и экономист, председатель Национального банка Украины (2000-2002, 2004-2010)",
+     "born": 1939,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q2987224"
+    },
+    {
+     "name": "Зверев, Арсений Григорьевич",
+     "role": "советский экономист",
+     "born": 1900,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4189548"
+    }
+   ]
+  },
+  "rea": {
+   "wikidata": "https://www.wikidata.org/wiki/Q2004114",
+   "people": [
+    {
+     "name": "Хабиб Абдулманапович Нурмагомедов",
+     "role": "российский боец смешанных боевых искусств",
+     "born": 1988,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q3526023"
+    },
+    {
+     "name": "Олег Дерипаска",
+     "role": "российский предприниматель, миллиардер",
+     "born": 1968,
+     "years": "1996",
+     "source": "https://www.wikidata.org/wiki/Q315514"
+    },
+    {
+     "name": "Александр Птушко",
+     "role": "советский кинорежиссёр, художник, сценарист, мультипликатор (1900-1973)",
+     "born": 1900,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q465640"
+    },
+    {
+     "name": "Магнитский, Сергей Леонидович",
+     "role": "российский юрист, погибший в следственном изоляторе",
+     "born": 1972,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q247917"
+    },
+    {
+     "name": "Леонид Иванович Абалкин",
+     "role": "советский и российский экономист (1930-2011)",
+     "born": 1930,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q523682"
+    },
+    {
+     "name": "Андрей Игоревич Мельниченко",
+     "role": "российский бизнесмен",
+     "born": 1972,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q502071"
+    },
+    {
+     "name": "Абел Аганбегян",
+     "role": "советский и российский экономист",
+     "born": 1932,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q318430"
+    },
+    {
+     "name": "Марк Кондратюк",
+     "role": "российский фигурист",
+     "born": 2003,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q57498678"
+    }
+   ]
+  },
+  "sechenov": {
+   "wikidata": "https://www.wikidata.org/wiki/Q1962613",
+   "people": [
+    {
+     "name": "Валерий Владимирович Поляков",
+     "role": "советский и российский космонавт",
+     "born": 1942,
+     "years": "1965",
+     "source": "https://www.wikidata.org/wiki/Q317792"
+    },
+    {
+     "name": "Александр Лурия",
+     "role": "советский психолог и врач-невропатолог",
+     "born": 1902,
+     "years": "1937",
+     "source": "https://www.wikidata.org/wiki/Q350778"
+    },
+    {
+     "name": "Борис Борисович Егоров",
+     "role": "советский космонавт",
+     "born": 1937,
+     "years": "1961",
+     "source": "https://www.wikidata.org/wiki/Q352137"
+    },
+    {
+     "name": "Олег Юрьевич Атьков",
+     "role": "советский и российский врач и космонавт",
+     "born": 1949,
+     "years": "1973",
+     "source": "https://www.wikidata.org/wiki/Q708484"
+    },
+    {
+     "name": "Адамян, Лейла Вагоевна",
+     "role": "акушер-гинеколог",
+     "born": 1949,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4057379"
+    },
+    {
+     "name": "Григорий Горин",
+     "role": "советский и российский драматург, прозаик, писатель-сатирик, сценарист",
+     "born": 1940,
+     "years": "1963",
+     "source": "https://www.wikidata.org/wiki/Q1960014"
+    },
+    {
+     "name": "Аркадий Михайлович Арканов",
+     "role": "советский и российский писатель-сатирик, драматург",
+     "born": 1933,
+     "years": "1957",
+     "source": "https://www.wikidata.org/wiki/Q2861548"
+    },
+    {
+     "name": "Анатолий Исаевич Кудрявицкий",
+     "role": "российский и ирландский поэт, писатель, переводчик и редактор",
+     "born": 1954,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q487760"
+    }
+   ]
+  },
+  "spbpu": {
+   "wikidata": "https://www.wikidata.org/wiki/Q1379834",
+   "people": [
+    {
+     "name": "Михаил Моисеевич Ботвинник",
+     "role": "советский шахматист, шестой чемпион мира по шахматам",
+     "born": 1911,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q178865"
+    },
+    {
+     "name": "Игорь Васильевич Курчатов",
+     "role": "советский физик, «отец» советской атомной бомбы",
+     "born": 1903,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q185110"
+    },
+    {
+     "name": "Яков Борисович Зельдович",
+     "role": "советский физик и физикохимик",
+     "born": 1914,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q366471"
+    },
+    {
+     "name": "Давид Ионович Бронштейн",
+     "role": "советский и российский шахматист, гроссмейстер",
+     "born": 1924,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q312908"
+    },
+    {
+     "name": "Олег Константинович Антонов",
+     "role": "советский авиаконструктор",
+     "born": 1906,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q312969"
+    },
+    {
+     "name": "Георгий Николаевич Флёров",
+     "role": "советский физик и изобретатель",
+     "born": 1913,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q723033"
+    },
+    {
+     "name": "Анатолий Петрович Александров",
+     "role": "советский физик",
+     "born": 1903,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q487983"
+    },
+    {
+     "name": "Юлий Борисович Харитон",
+     "role": "советский и российский физик",
+     "born": 1904,
+     "years": "1920–1925",
+     "source": "https://www.wikidata.org/wiki/Q561752"
+    }
+   ]
+  },
+  "gitis": {
+   "wikidata": "https://www.wikidata.org/wiki/Q2177054",
+   "people": [
+    {
+     "name": "Алла Пугачёва",
+     "role": "советская и российская певица и композитор",
+     "born": 1949,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q80510"
+    },
+    {
+     "name": "Дима Билан",
+     "role": "российский певец, автор песен, актёр кино и дубляжа",
+     "born": 1981,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q42904"
+    },
+    {
+     "name": "Андрей Звягинцев",
+     "role": "российский кинорежиссёр, актёр, сценарист",
+     "born": 1964,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q122425"
+    },
+    {
+     "name": "Любовь Орлова",
+     "role": "советская актриса, певица и танцовщица (1902—1975)",
+     "born": 1902,
+     "years": "1925",
+     "source": "https://www.wikidata.org/wiki/Q236229"
+    },
+    {
+     "name": "Чулпан Наилевна Хаматова",
+     "role": "российская актриса театра и кино",
+     "born": 1975,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q236132"
+    },
+    {
+     "name": "Виктор Иванович Сухоруков",
+     "role": "советский и российский актёр театра и кино",
+     "born": 1951,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q2368352"
+    },
+    {
+     "name": "Анатолий Дмитриевич Папанов",
+     "role": "cоветский актёр театра и кино",
+     "born": 1922,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q469557"
+    },
+    {
+     "name": "Юлия Сергеевна Пересильд",
+     "role": "российская актриса театра и кино",
+     "born": 1984,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4350906"
+    }
+   ]
+  },
+  "kubsu": {
+   "wikidata": "https://www.wikidata.org/wiki/Q4243514",
+   "people": [
+    {
+     "name": "Цвайгенбаум, Исраил Иосифович",
+     "role": "советский, российский и американский художник",
+     "born": 1961,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q211437"
+    },
+    {
+     "name": "Газарян, Сурен Владимирович",
+     "role": "российский зоолог, лауреат Премии Голдманов в области охраны окружающей среды",
+     "born": 1974,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q15065189"
+    },
+    {
+     "name": "Сергей Николаевич Галицкий",
+     "role": "российский предприниматель",
+     "born": 1967,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q1654684"
+    },
+    {
+     "name": "Василий Барка",
+     "role": "Украинский поэт, прозаик",
+     "born": 1908,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q2473065"
+    },
+    {
+     "name": "Лихоносов, Виктор Иванович",
+     "role": "российский писатель",
+     "born": 1936,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4264242"
+    },
+    {
+     "name": "Татьяна Зайцева",
+     "role": "российская футболистка",
+     "born": 1978,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q7688123"
+    },
+    {
+     "name": "Наталия Мещанинова",
+     "role": "российский кинорежиссёр и сценарист",
+     "born": 1982,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q55340966"
+    },
+    {
+     "name": "Самюэль Дидье Бианг",
+     "role": "камерунский футболист",
+     "born": 1974,
+     "years": null,
+     "source": "https://www.wikidata.org/wiki/Q4086186"
+    }
+   ]
+  }
+ }
+}
