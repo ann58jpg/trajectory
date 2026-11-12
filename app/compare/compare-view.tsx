@@ -1,4 +1,6 @@
 "use client";
+import { Breadcrumbs } from "@/components/app/breadcrumbs";
+import { CRUMBS } from "@/lib/copy";
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
@@ -66,8 +68,8 @@ export function CompareView() {
   const remove = (id: string) => setItems((list) => list.filter((x) => x.id !== id));
 
   return (
-    <div className="space-y-5 pt-6" data-testid="compare-page">
-      <Link href="/results" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="h-4 w-4" /> {COMMON.toResults}</Link>
+    <div className="space-y-5" data-testid="compare-page">
+      <Breadcrumbs items={[{ label: CRUMBS.route, href: "/" }, { label: CRUMBS.match, href: "/results" }, { label: COMPARE.title }]} />
       <div>
         <h1 className="text-2xl font-bold">{COMPARE.title}</h1>
         <p className="mt-1 text-sm text-muted-foreground">{kind === "university" || picked ? COMPARE.pickedIntro : COMPARE.defaultIntro}</p>

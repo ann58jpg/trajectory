@@ -7,7 +7,7 @@ export const FUNNEL_STEPS = [
   { id: "quiz_complete", label: "Закончили анкету" },
   { id: "results_view", label: "Увидели подборку" },
   { id: "engaged", label: "Открыли профессию, вуз или событие" },
-  { id: "plan_add", label: "Добавили в план" },
+  { id: "plan_add", label: "Добавили в избранное" },
   { id: "report_download", label: "Скачали или отправили отчёт" },
 ] as const;
 
@@ -19,7 +19,7 @@ export const CONVERSIONS = [
   { id: "complete", label: "Закончили анкету / начали", num: "quiz_complete", den: "quiz_start" },
   { id: "results", label: "Увидели подборку / закончили анкету", num: "results_view", den: "quiz_complete" },
   { id: "engaged", label: "Открыли профессию, вуз или событие / увидели подборку", num: "engaged", den: "results_view" },
-  { id: "plan", label: "Добавили в план / увидели подборку", num: "plan_add", den: "results_view" },
+  { id: "plan", label: "Добавили в избранное / увидели подборку", num: "plan_add", den: "results_view" },
   { id: "report", label: "Скачали отчёт / увидели подборку", num: "report_download", den: "results_view" },
 ] as const;
 
@@ -38,7 +38,7 @@ export function computeFunnel(rows: FunnelRow[], opts: { mode?: "interests" | "m
     quiz_complete: sessions((r) => r.event === "quiz_complete"),
     results_view: sessions((r) => r.event === "results_view"),
     engaged: sessions((r) => ["profession_open", "university_open", "event_click", "compare_open"].includes(r.event)),
-    plan_add: sessions((r) => r.event === "plan_add"),
+    plan_add: sessions((r) => r.event === "plan_add" || r.event === "favorite_add"),
     report_download: sessions((r) => r.event === "report_download" || r.event === "report_share"),
   };
   const conversions = CONVERSIONS.map((c) => ({ ...c, value: counts[c.den] ? counts[c.num] / counts[c.den] : null }));
@@ -63,4 +63,20 @@ export function computeFunnel(rows: FunnelRow[], opts: { mode?: "interests" | "m
     feedback: { count: ratings.length, avg: ratings.length ? ratings.reduce((a, b) => a + b, 0) / ratings.length : null },
     daily,
   };
+}
+
+/** Вторая воронка — студенты (тест вайба вуза): открыли /vibe → начали → закончили → поделились карточкой. */
+export const STUDENT_STEPS = [
+  { id: "vibe_open", label: "Открыли /vibe" },
+  { id: "vibe_test_start", label: "Начали тест" },
+  { id: "vibe_test_complete", label: "Закончили тест" },
+  { id: "vibe_card_share", label: "Поделились карточкой" },
+] as const;
+
+export function computeStudentFunnel(rows: FunnelRow[]) {
+  const sessions = (pred: (r: FunnelRow) => boolean) => new Set(rows.filter(pred).map((r) => r.session)).size;
+  return STUDENT_STEPS.map((s) => ({
+    ...s,
+    sessions: sessions((r) => r.event === s.id && (s.id !== "vibe_card_share" || r.props.kind === "university")),
+  }));
 }

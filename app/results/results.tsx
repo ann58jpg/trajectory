@@ -46,7 +46,8 @@ export function Results() {
       if (!parsed.success) return setState({ status: "error", error: RESULTS.errorBadAnswer, hint: RESULTS.errorBadAnswerHint });
       setState({ status: "ok", data: parsed.data });
       // стартовый режим — по первому ответу анкеты, дальше — как переключил сам человек
-      setModeState(readLS(KEYS.mode, z.enum(["interests", "money"]), parsed.data.startT >= 0.75 ? "money" : "interests"));
+      const fromUrl = new URLSearchParams(window.location.search).get("mode");
+      setModeState(fromUrl === "money" || fromUrl === "interests" ? fromUrl : readLS(KEYS.mode, z.enum(["interests", "money"]), parsed.data.startT >= 0.75 ? "money" : "interests"));
       track("results_view", { mode: parsed.data.startT >= 0.75 ? "money" : "interests", confidence: parsed.data.confidence });
     } catch {
       setState({ status: "error", error: RESULTS.errorNetwork, hint: RESULTS.errorNetworkHint });
@@ -63,6 +64,10 @@ export function Results() {
     if (v === m) return;
     setModeState(v);
     writeLS(KEYS.mode, v);
+    // режим — в адресе: «Назад» из профессии или вуза вернёт ту же вкладку
+    const url = new URL(window.location.href);
+    url.searchParams.set("mode", v);
+    window.history.replaceState(window.history.state, "", url);
     track("mode_switch", { to: v });
   };
 

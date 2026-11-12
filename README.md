@@ -98,6 +98,43 @@ ANTHROPIC_MODEL=claude-sonnet-5-5   # по умолчанию
 
 **hh.ru**: модуль `lib/sources/hh.ts` берёт число вакансий и медиану зарплат из публичного API (`api.hh.ru/vacancies`, заголовок `HH-User-Agent` из `HH_USER_AGENT`), кэширует в SQLite на 24 ч и при любой ошибке (403, таймаут, нет сети) молча отдаёт seed-оценку. Используется на карточке профессии.
 
+## Внешние источники и ключи (v3)
+
+Всё работает и без ключей — вместо живых данных показываются ручные списки и рамки «нет данных».
+
+| Переменная | Зачем | Без неё |
+|---|---|---|
+| `DATABASE_URL` (+ `DATABASE_AUTH_TOKEN` для Turso) | ответы о вайбе, истории выпускников, аналитика | локальный SQLite `data/local-store.db` (на Vercel — `/tmp`, данные пропадают) |
+| `ADMIN_PASSWORD` | /admin/funnel и модерация /admin/stories | страницы закрыты |
+| `VK_SERVICE_TOKEN` | свежие посты о событиях из сообществ VK | только `data/student_life.json` |
+| `HH_CLIENT_ID`, `HH_CLIENT_SECRET`, `HH_USER_AGENT` | живой список стажировок с hh.ru | DataGap + ссылки на hh.ru и Хабр Карьеру |
+
+### Стажировки с hh.ru
+
+Без токена приложения API hh.ru на поиск `/vacancies` отвечает `403 forbidden`. Как получить доступ:
+
+1. На https://dev.hh.ru → «Зарегистрировать приложение»: название, сайт, redirect URI. Модерация занимает несколько дней.
+2. Client ID и Client Secret положить в `HH_CLIENT_ID` и `HH_CLIENT_SECRET`.
+3. В `HH_USER_AGENT` записать название приложения и контакт команды — hh.ru этого требует.
+
+Токен (`client_credentials`) запрашивается и кэшируется автоматически (`lib/sources/hh.ts`).
+
+### VK
+
+vk.com/apps?act=manage → приложение → «Сервисный ключ доступа» → `VK_SERVICE_TOKEN`. Используется только `wall.get` открытых сообществ (`lib/sources/vk.ts`).
+
+### Домены для сервера
+
+`api.vk.com`, `vk.com`, `api.hh.ru`, `hh.ru`, `career.habr.com`, `www.wikidata.org`, `query.wikidata.org`, `tabiturient.ru`.
+
+### Данные v3
+
+- `data/admission_calendar.json` — шаги поступления (`date`, `isCritical`, `source`, `confirmed`).
+- `data/student_life.json` — сообщества и события 30 вузов.
+- `data/alumni.json` — выпускники из Wikidata (P69).
+- `data/internship_programs.json`, `data/career_ladder.json` — стажировки и лестница по курсам.
+- `data/sphere_neighbors.json` — соседство групп направлений для «Один шаг до…».
+
 ## Архитектура
 
 ```

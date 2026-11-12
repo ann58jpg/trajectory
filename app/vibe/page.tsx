@@ -2,6 +2,7 @@ import { getCatalog } from "@/lib/db/catalog";
 import { Breadcrumbs } from "@/components/app/breadcrumbs";
 import { CRUMBS, VIBE_TEST } from "@/lib/copy";
 import { VibeTest } from "./vibe-test";
+import { TrackView } from "@/components/app/track-view";
 
 export const metadata = { title: VIBE_TEST.title };
 
@@ -10,6 +11,7 @@ export default async function VibePage({ searchParams }: { searchParams: Promise
   const unis = getCatalog().universities.filter((x) => !x.abroad).map((x) => ({ id: x.id, short: x.short, name: x.name, city: x.city }));
   return (
     <>
+      <TrackView event="vibe_open" />
       <Breadcrumbs items={[{ label: CRUMBS.route, href: "/" }, { label: VIBE_TEST.title }]} />
       <VibeTest universities={unis} initialUni={u ?? null} />
     </>

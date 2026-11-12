@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { getTrackStore } from "@/lib/server/track-store";
-import { computeFunnel, QUIZ_BLOCKS } from "@/lib/funnel";
+import { computeFunnel, computeStudentFunnel, QUIZ_BLOCKS } from "@/lib/funnel";
 import { FunnelChart } from "./funnel-chart";
 import { FUNNEL } from "../copy";
 
@@ -45,6 +45,7 @@ export default async function FunnelPage({ searchParams }: { searchParams: Promi
   const store = await getTrackStore();
   const rows = await store.list(`${from}T00:00:00.000Z`, `${to}T23:59:59.999Z`);
   const f = computeFunnel(rows, { mode });
+  const students = computeStudentFunnel(rows);
   const pct = (x: number | null) => (x === null ? "—" : `${Math.round(x * 100)}%`);
   const start = f.steps.find((s) => s.id === "quiz_start")!.sessions;
 
@@ -113,6 +114,18 @@ export default async function FunnelPage({ searchParams }: { searchParams: Promi
           </CardContent>
         </Card>
       </div>
+      <Card data-testid="student-funnel">
+        <CardHeader><CardTitle className="text-base">{FUNNEL.students}</CardTitle><p className="text-sm text-muted-foreground">{FUNNEL.studentsHint}</p></CardHeader>
+        <CardContent className="space-y-2 text-sm">
+          {students.map((s, i) => (
+            <div key={s.id} className="flex items-center gap-2" data-testid="student-step">
+              <span className="w-56 shrink-0">{s.label}</span>
+              <div className="h-3 flex-1 rounded bg-muted"><div className="h-3 rounded bg-primary" style={{ width: `${students[0].sessions ? (s.sessions / students[0].sessions) * 100 : 0}%` }} /></div>
+              <span className="w-24 text-right tabular-nums">{s.sessions}{i > 0 && ` · ${pct(students[i - 1].sessions ? s.sessions / students[i - 1].sessions : null)}`}</span>
+            </div>
+          ))}
+        </CardContent>
+      </Card>
       <Card>
         <CardHeader><CardTitle className="text-base">{FUNNEL.byDay}</CardTitle></CardHeader>
         <CardContent><FunnelChart data={f.daily} /></CardContent>

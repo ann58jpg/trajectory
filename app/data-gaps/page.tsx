@@ -1,3 +1,5 @@
+import { Breadcrumbs } from "@/components/app/breadcrumbs";
+import { CRUMBS } from "@/lib/copy";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,8 +15,8 @@ export default function DataGapsPage() {
   const total = gaps.reduce((s, g) => s + g.count, 0);
   const byOwner = (Object.keys(OWNERS) as OwnerId[]).map((o) => ({ id: o, gaps: gaps.filter((g) => g.owners.includes(o)) }));
   return (
-    <div className="space-y-6 pt-6" data-testid="data-gaps-page">
-      <Link href="/" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="h-4 w-4" /> {NOT_FOUND.home}</Link>
+    <div className="space-y-6" data-testid="data-gaps-page">
+      <Breadcrumbs items={[{ label: CRUMBS.route, href: "/" }, { label: DATA_GAP.pageTitle }]} />
       <div>
         <h1 className="text-2xl font-bold sm:text-3xl">{DATA_GAP.pageTitle}</h1>
         <p className="mt-2 max-w-3xl text-muted-foreground">{DATA_GAP.pageIntro}</p>

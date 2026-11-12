@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { CalendarDays, Check, Clock, ExternalLink, Plus } from "lucide-react";
+import { CalendarDays, Clock, ExternalLink, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/misc";
@@ -17,7 +17,7 @@ type Resp = { events: UniEvent[]; regular: UniEvent[]; source: "ai" | "seed"; ev
 
 const fmtDate = (d: string) => new Date(`${d}T12:00:00`).toLocaleDateString("ru-RU", { day: "numeric", month: "long", weekday: "short" });
 
-/** Одно мероприятие: дата и время, формат, ссылка, совет «зачем идти», кнопка «В мой план». */
+/** Одно мероприятие: дата и время, формат, ссылка, совет «зачем идти», кнопка «В избранное ★». */
 export function EventItem({ e, uniName }: { e: UniEvent; uniName?: string }) {
   const [plan, setPlan, ready] = usePlan();
   const inPlan = ready && plan.events.some((x) => x.id === e.id);
@@ -43,7 +43,7 @@ export function EventItem({ e, uniName }: { e: UniEvent; uniName?: string }) {
           </div>
         </div>
         <Button size="sm" variant={inPlan ? "secondary" : "outline"} onClick={add} aria-pressed={inPlan} data-testid="event-plan">
-          {inPlan ? <Check /> : <Plus />} {inPlan ? EVENTS.added : EVENTS.add}
+          <Star className={inPlan ? "fill-current text-warn" : ""} /> {inPlan ? EVENTS.added : EVENTS.add}
         </Button>
       </div>
       <p className="mt-2 text-muted-foreground">{e.why}</p>

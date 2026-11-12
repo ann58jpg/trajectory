@@ -1,3 +1,6 @@
+import { Breadcrumbs } from "@/components/app/breadcrumbs";
+import { CRUMBS } from "@/lib/copy";
+import { FavButton } from "@/components/app/fav-button";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, BookOpen, GraduationCap } from "lucide-react";
@@ -28,11 +31,11 @@ export default async function SpecialtyPage({ params }: { params: Promise<{ code
   const levelKey = spec.level === "spo" ? "spo" : spec.level === "specialist" ? "specialist" : "bachelor";
 
   return (
-    <div className="space-y-6 pt-6" data-testid="specialty-page">
-      <Link href="/results" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="h-4 w-4" /> {COMMON.toResults}</Link>
+    <div className="space-y-6" data-testid="specialty-page">
+      <Breadcrumbs items={[{ label: CRUMBS.route, href: "/" }, { label: CRUMBS.match, href: "/results" }, { label: spec.name }]} />
       <div>
         <p className="text-sm text-muted-foreground">{SPECIALTY.code(spec.code)}</p>
-        <h1 className="text-2xl font-bold sm:text-3xl">{spec.name}</h1>
+        <div className="flex flex-wrap items-start justify-between gap-2"><h1 className="text-2xl font-bold sm:text-3xl">{spec.name}</h1><FavButton kind="specialties" id={spec.code} /></div>
         <div className="mt-2 flex flex-wrap gap-2">
           <Badge><Term k={levelKey} /></Badge>
           <Badge variant="secondary">{yearsWord(spec.years)}{spec.level === "spo" && ` ${SPECIALTY.afterSchool}`}</Badge>
