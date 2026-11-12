@@ -8,10 +8,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Chip, Input, Progress, Textarea } from "@/components/ui/misc";
 import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
-import { KEYS, readLS, removeLS, useProfile, writeLS } from "@/lib/client/storage";
+import { KEYS, readLS, removeLS, useHistory, useProfile, writeLS } from "@/lib/storage";
 import { emptyProfile, type LikeReason, type StudentProfile } from "@/lib/schemas";
 import { ACHIEVEMENTS, BENEFITS, GUIDES, HOBBIES, LIKE_REASONS, UNI_CRITERIA, WORK_FORMATS } from "@/lib/engine/vocab";
-import { GAME_ROUNDS } from "@/lib/engine/game";
+import { GAME_ROUNDS, gameSummary } from "@/lib/engine/game";
 import { GameStep } from "./steps/game-step";
 import { QUIZ } from "@/lib/copy";
 import { DviStep, EgeStep, withRus } from "./steps/ege-step";
@@ -42,6 +42,7 @@ const toggle = <T,>(arr: T[], v: T, max?: number) =>
 export function Quiz({ regions, universities, subjects }: Props) {
   const router = useRouter();
   const [p, setP, ready] = useProfile();
+  const [, setHistory] = useHistory();
   const [i, setI] = useState(0);
   const [regionQuery, setRegionQuery] = useState("");
   const [uniQuery, setUniQuery] = useState("");
@@ -573,6 +574,8 @@ export function Quiz({ regions, universities, subjects }: Props) {
   const finish = () => {
     track("quiz_complete", { completeness });
     removeLS(KEYS.mode);
+    const summary = gameSummary(p.game);
+    setHistory((h) => [{ at: new Date().toISOString(), vibeType: null, spheres: summary.spheres, portrait: "" }, ...h].slice(0, 20));
     router.push("/results");
   };
   const reset = () => {

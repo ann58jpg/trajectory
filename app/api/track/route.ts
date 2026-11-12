@@ -2,13 +2,11 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { apiError, zodHint } from "@/lib/api";
 import { getTrackStore } from "@/lib/server/track-store";
+import { TRACK_EVENTS } from "@/lib/track-events";
 
 export const dynamic = "force-dynamic";
 
-const EVENTS = [
-  "landing_view", "quiz_start", "quiz_block_done", "quiz_complete", "results_view", "mode_switch", "profession_open",
-  "university_open", "event_click", "plan_add", "compare_open", "report_download", "report_share", "feedback",
-] as const;
+const EVENTS = TRACK_EVENTS;
 
 // Только короткие значения: id, режимы, блоки, оценки. Длинные строки обрезаем — личные данные сюда не попадают.
 const Body = z.object({

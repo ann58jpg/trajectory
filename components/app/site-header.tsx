@@ -9,7 +9,7 @@ export function SiteHeader() {
   const mode = aiMode();
   return (
     <header className="no-print sticky top-0 z-40 border-b bg-card">
-      <div className="flex h-14 items-center gap-2 px-3 md:px-5">
+      <div className="flex h-14 items-center gap-1.5 px-2 sm:gap-2 sm:px-3 md:px-5">
         <Link href="/" className="flex shrink-0 items-center gap-2 font-semibold" data-testid="brand">
           <span className="grid h-8 w-8 place-items-center rounded-lg bg-primary text-primary-foreground">
             <Compass className="h-5 w-5" />

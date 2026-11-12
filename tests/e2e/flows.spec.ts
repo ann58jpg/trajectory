@@ -1,4 +1,4 @@
-import { COMMON, COMPARE, EVENTS, OUTLOOK_TEXT, PLAN } from "../../lib/copy";
+import { COMMON, COMPARE, OUTLOOK_TEXT } from "../../lib/copy";
 import { expect, test } from "@playwright/test";
 import { fillPersona, recIds } from "./helpers";
 
@@ -109,17 +109,30 @@ test("каждая профессия имеет статус перспекти
   await expect(page.getByTestId("outlook-card")).toContainText(COMMON.source);
 });
 
-test("избранное: добавление в план и чек-лист", async ({ page }) => {
+test("«Маршрут»: следующий шаг, 5 глав; план поступления с шагами, сроками и календарём", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.getByTestId("slogan")).toContainText("Вузопедия помогает поступить");
+  await expect(page.getByTestId("chapter")).toHaveCount(5);
+  await expect(page.getByTestId("next-step")).toContainText("Пройди тест");
   await fillPersona(page, "kamila");
-  await page.getByTestId("plan-professions-doctor").first().click();
+  await page.getByTestId("fav-professions-doctor").first().click();
   await page.goto("/university/dgmu");
-  await page.getByTestId("plan-universities-dgmu").click();
-  await page.getByTestId("events-block").getByRole("button", { name: EVENTS.add }).first().click();
+  await page.getByTestId("fav-universities-dgmu").click();
+  await expect(page.getByTestId("saved-count")).toHaveText("2");
+  await page.goto("/");
+  await expect(page.getByTestId("chapter").first()).toHaveAttribute("data-status", "done");
   await page.goto("/plan");
-  await expect(page.getByTestId("plan-profession")).toContainText("Врач");
-  await expect(page.getByTestId("plan")).toContainText(PLAN.events);
-  await expect(page.getByTestId("plan")).toContainText(PLAN.stagesTitle);
-  await expect(page.getByTestId("plan")).toContainText(PLAN.egeOk);
+  await expect(page.getByTestId("plan-step")).toHaveCount(10);
+  await expect(page.locator("[data-step=consent] [data-testid=critical-badge]")).toBeVisible();
+  await page.locator("[data-step=sphere] [data-testid=plan-step-done]").click();
+  await expect(page.getByTestId("plan-progress")).toHaveText("1 из 10 шагов готово");
+  await expect(page.getByTestId("plan-critical")).toContainText("До ближайшей критической даты");
+  const download = page.waitForEvent("download");
+  await page.getByTestId("plan-ics").click();
+  expect((await download).suggestedFilename()).toMatch(/\.ics$/);
+  // 2028 — ожидаемые даты
+  await page.getByTestId("year-select").selectOption("2028");
+  await expect(page.getByTestId("expected-date").first()).toBeVisible();
   await expect(page.getByTestId("parents")).toHaveCount(0);
 });
 

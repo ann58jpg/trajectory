@@ -131,6 +131,8 @@ export const SettingsSchema = z.object({
   level: z.enum(["vo", "spo", "mag"]).default("vo"),
   /** null — подставить по классу из теста. */
   year: z.union([z.literal(2027), z.literal(2028)]).nullable().default(null),
+  /** Какие главы «Маршрута» открывал (для статуса «в процессе»). */
+  visited: z.array(z.string()).default([]),
 });
 export type Settings = z.infer<typeof SettingsSchema>;
 export const useSettings = () => useStored(KEYS.settings, SettingsSchema, () => SettingsSchema.parse({}));

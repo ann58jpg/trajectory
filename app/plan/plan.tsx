@@ -1,202 +1,140 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
-import { CalendarClock, CheckSquare, Printer, Square, Star, Trash2, Users, X } from "lucide-react";
+import { useState } from "react";
+import { AlertTriangle, ArrowRight, CalendarPlus, Check, ChevronDown, ExternalLink, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { OutlookBadge } from "@/components/app/outlook-badge";
-import { usePlan, useProfile } from "@/lib/client/storage";
-import { ADMISSION_STAGES, COMMON, EXAMS, OUTLOOK_TEXT, PLAN } from "@/lib/copy";
+import { Card, CardContent } from "@/components/ui/card";
+import { Progress } from "@/components/ui/misc";
+import { Chip } from "@/components/ui/misc";
+import { useMarkChapter, useRouteInput } from "@/components/app/use-route";
+import { TestFirstHint } from "@/components/app/test-first-hint";
+import { CALENDAR_SOURCES, EARLY_START, PATHS, downloadIcs, nextCritical, toIcs, type PathId, type PlanStep } from "@/lib/admission";
+import { PLAN } from "@/lib/copy";
 import { track } from "@/lib/analytics";
-import type { Outlook, Rec, RecommendResponse } from "@/lib/schemas";
-import { rubK, cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
-type Props = {
-  professions: { id: string; name: string; specialties: string[]; outlook: Outlook; outlookReason: string; tasks: string[] }[];
-  universities: { id: string; short: string; city: string; admissionUrl: string; eventsUrl: string }[];
-  programs: { id: string; universityId: string; specialtyCode: string; name: string; passMin: number | null; passMax: number | null; budget: number | null; price: number | null }[];
-  specialties: { code: string; name: string; level: string; mandatory: string[]; oneOf: string[] }[];
-  subjects: Record<string, string>;
-};
+const fmt = (d: string) => new Date(`${d}T12:00:00`).toLocaleDateString("ru-RU", { day: "numeric", month: "long", year: "numeric" });
 
-export function Plan({ professions, universities, programs, specialties, subjects }: Props) {
-  const [plan, setPlan, ready] = usePlan();
-  const [profile, , pReady] = useProfile();
-  const [recs, setRecs] = useState<Map<string, Rec>>(new Map());
-  const [portrait, setPortrait] = useState<string>("");
-
-  useEffect(() => {
-    if (!pReady || !profile.consent) return;
-    fetch("/api/recommend", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(profile) })
-      .then((r) => (r.ok ? r.json() : Promise.reject()))
-      .then((d: RecommendResponse) => {
-        setRecs(new Map(d.recs.map((r) => [r.professionId, r])));
-        setPortrait(d.portrait);
-      })
-      .catch(() => {});
-  }, [pReady, profile]);
-
-  const myProfs = professions.filter((p) => plan.professions.includes(p.id));
-  const myUnis = universities.filter((u) => plan.universities.includes(u.id) || programs.some((p) => plan.programs.includes(p.id) && p.universityId === u.id));
-  const myPrograms = programs.filter((p) => plan.programs.includes(p.id));
-  const userSubjects = new Set(profile.ege.map((e) => e.subject));
-  const uniName = (id: string) => universities.find((u) => u.id === id)?.short ?? id;
-
-  // ЕГЭ под цель: что нужно и чего не хватает
-  const egeNeeds = useMemo(() => {
-    const out: { target: string; need: string[]; missing: string[] }[] = [];
-    const specOf = (code: string) => specialties.find((s) => s.code === code);
-    const targets = [
-      ...myProfs.map((p) => ({ label: p.name, codes: p.specialties })),
-      ...myPrograms.map((p) => ({ label: `${uniName(p.universityId)}: ${p.name}`, codes: [p.specialtyCode] })),
-    ];
-    for (const t of targets) {
-      const spec = t.codes.map(specOf).find((s) => s && s.level !== "spo");
-      if (!spec) continue;
-      const need = [...spec.mandatory.map((s) => subjects[s] ?? s), ...(spec.oneOf.length ? [spec.oneOf.map((s) => subjects[s] ?? s).join(" / ")] : [])];
-      const missing = [
-        ...spec.mandatory.filter((s) => !userSubjects.has(s)).map((s) => subjects[s] ?? s),
-        ...(spec.oneOf.length && !spec.oneOf.some((s) => userSubjects.has(s)) ? [spec.oneOf.map((s) => subjects[s] ?? s).join(EXAMS.or)] : []),
-      ];
-      out.push({ target: `${t.label} (${spec.code})`, need, missing });
-    }
-    return out;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [plan, profile, specialties]);
-
+export function Plan() {
+  useMarkChapter(3);
+  const { ready, year, steps, profile, admission, setAdmission } = useRouteInput();
   if (!ready) return null;
-  const empty = !myProfs.length && !myUnis.length && !plan.events.length;
-  const toggleEvent = (id: string) => setPlan((p) => ({ ...p, events: p.events.map((e) => (e.id === id ? { ...e, done: !e.done } : e)) }));
-  const remove = (kind: "professions" | "universities" | "programs", id: string) => setPlan((p) => ({ ...p, [kind]: p[kind].filter((x) => x !== id) }));
-  const print = () => {
-    track("report_download", { view: "plan" });
-    window.print();
+  const done = steps.filter((s) => admission.done.includes(s.id)).length;
+  const crit = nextCritical(steps, admission.done);
+  const toggle = (id: string) => {
+    const on = !admission.done.includes(id);
+    if (on) track("plan_step_done", { step: id });
+    setAdmission((a) => ({ ...a, done: on ? [...a.done, id] : a.done.filter((x) => x !== id) }));
+  };
+  const togglePath = (id: PathId) =>
+    setAdmission((a) => ({ ...a, paths: a.paths.includes(id) ? a.paths.filter((x) => x !== id) : [...a.paths, id] }));
+  const ics = () => {
+    downloadIcs(toIcs(steps.map((s) => ({ id: s.id, title: `${s.isCritical ? "! " : ""}${s.title}`, date: s.date, text: s.text })), PLAN.icsName), `plan-${year}.ics`);
   };
 
   return (
-    <div className="space-y-8 pt-6" data-testid="plan">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <h1 className="flex items-center gap-2 text-2xl font-bold"><Star className="h-6 w-6 text-warn" /> {PLAN.title}</h1>
-        <div className="no-print flex flex-wrap gap-2">
-          <Button variant="outline" onClick={print} data-testid="print"><Printer /> {PLAN.print}</Button>
-        </div>
+    <div className="mx-auto max-w-3xl space-y-6 pt-6" data-testid="plan">
+      {!profile.consent && <TestFirstHint />}
+      <div>
+        <h1 className="text-2xl font-bold sm:text-3xl">{PLAN.title}</h1>
+        <p className="mt-1 text-muted-foreground">{PLAN.year(year)}. {PLAN.lead}</p>
       </div>
 
-      {empty && (
-        <div className="rounded-lg border border-dashed p-8 text-center text-sm text-muted-foreground">
-          {PLAN.empty}
-          <div className="mt-4"><Button asChild><Link href="/results">{COMMON.toResults}</Link></Button></div>
-        </div>
-      )}
-
-      {myProfs.length > 0 && (
-        <Card>
-          <CardHeader><CardTitle className="text-base">{PLAN.professions}</CardTitle></CardHeader>
-          <CardContent className="grid gap-3 sm:grid-cols-2">
-            {myProfs.map((p) => {
-              const r = recs.get(p.id);
-              return (
-                <div key={p.id} className="space-y-2 rounded-lg border p-3 text-sm" data-testid="plan-profession">
-                  <div className="flex items-start justify-between gap-2">
-                    <div>
-                      <Link href={`/profession/${p.id}`} className="font-medium hover:underline">{p.name}</Link>
-                      <div className="mt-1 flex flex-wrap items-center gap-1.5"><OutlookBadge status={p.outlook} />{r && <span className="text-xs text-muted-foreground">{rubK(r.salary.middle)} {COMMON.perMonth}</span>}</div>
-                    </div>
-                    <Button variant="ghost" size="icon" className="no-print h-8 w-8" aria-label={COMMON.remove} onClick={() => remove("professions", p.id)}><Trash2 /></Button>
+      {profile.grade === "9" && (
+        <Card className="border-primary/40" data-testid="early-start">
+          <CardContent className="space-y-3 pt-5">
+            <h2 className="flex items-center gap-2 text-lg font-semibold"><Rocket className="h-5 w-5 text-primary" /> {PLAN.earlyTitle}</h2>
+            <p className="text-sm text-muted-foreground">{PLAN.earlyLead}</p>
+            <ol className="space-y-2">
+              {EARLY_START.map((s, i) => (
+                <li key={s.id} className="flex items-start gap-3 rounded-lg border p-3" data-testid="early-step">
+                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-primary/10 text-sm font-bold text-primary">{i + 1}</span>
+                  <div className="min-w-0 flex-1">
+                    <p className="font-medium">{s.title}</p>
+                    <p className="text-sm text-muted-foreground">{s.text}</p>
+                    {s.href.startsWith("/") ? (
+                      <Link href={s.href} className="mt-1 inline-flex items-center gap-1 text-sm text-primary hover:underline">{s.action} <ArrowRight className="h-3.5 w-3.5" /></Link>
+                    ) : (
+                      <a href={s.href} target="_blank" rel="noreferrer" className="mt-1 inline-flex items-center gap-1 text-sm text-primary hover:underline">{s.action} <ExternalLink className="h-3.5 w-3.5" /></a>
+                    )}
                   </div>
-                  <ul className="list-inside list-disc text-xs text-muted-foreground">{p.tasks.slice(0, 5).map((t) => <li key={t}>{t}</li>)}</ul>
-                </div>
-              );
-            })}
+                </li>
+              ))}
+            </ol>
           </CardContent>
         </Card>
       )}
 
-      {(myUnis.length > 0 || myPrograms.length > 0) && (
-        <Card>
-          <CardHeader><CardTitle className="text-base">{PLAN.unis}</CardTitle></CardHeader>
-          <CardContent className="space-y-2 text-sm">
-            {myPrograms.map((p) => (
-              <div key={p.id} className="flex items-start justify-between gap-2 rounded-lg border p-3">
-                <div>
-                  <Link href={`/university/${p.universityId}`} className="font-medium hover:underline">{uniName(p.universityId)}</Link> — {p.name}
-                  <p className="text-xs text-muted-foreground">
-                    {p.passMin !== null && `${PLAN.passApprox(`${p.passMin}–${p.passMax ?? p.passMin}`)} (${COMMON.estimate}) · `}{PLAN.budgetPlaces(p.budget)}
-                  </p>
-                </div>
-                <Button variant="ghost" size="icon" className="no-print h-8 w-8" aria-label={COMMON.remove} onClick={() => remove("programs", p.id)}><Trash2 /></Button>
-              </div>
-            ))}
-            {myUnis.filter((u) => plan.universities.includes(u.id)).map((u) => (
-              <div key={u.id} className="flex items-start justify-between gap-2 rounded-lg border p-3">
-                <div>
-                  <Link href={`/university/${u.id}`} className="font-medium hover:underline">{u.short}</Link> <span className="text-muted-foreground">· {u.city}</span>
-                  <p className="text-xs"><a href={u.admissionUrl} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{PLAN.admission}</a></p>
-                </div>
-                <Button variant="ghost" size="icon" className="no-print h-8 w-8" aria-label={COMMON.remove} onClick={() => remove("universities", u.id)}><Trash2 /></Button>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-      )}
-
-      {egeNeeds.length > 0 && (
-        <Card>
-          <CardHeader><CardTitle className="text-base">{PLAN.ege}</CardTitle></CardHeader>
-          <CardContent className="space-y-2 text-sm">
-            {egeNeeds.map((e) => (
-              <div key={e.target} className="rounded-lg border p-3">
-                <p className="font-medium">{e.target}</p>
-                <p className="text-muted-foreground">{PLAN.egeNeed(e.need.join(", "))}</p>
-                {e.missing.length > 0 ? <p className="text-bad">{PLAN.egeMissing(e.missing.join(", "))}</p> : <p className="text-ok">{PLAN.egeOk}</p>}
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-      )}
-
-      {plan.events.length > 0 && (
-        <Card>
-          <CardHeader><CardTitle className="text-base">{PLAN.events}</CardTitle></CardHeader>
-          <CardContent className="space-y-2">
-            {plan.events.map((e) => (
-              <div key={e.id} className="flex items-start gap-3 rounded-lg border p-3 text-sm">
-                <button type="button" onClick={() => toggleEvent(e.id)} aria-label={e.done ? PLAN.markUndone : PLAN.markDone} className="mt-0.5 cursor-pointer">
-                  {e.done ? <CheckSquare className="h-5 w-5 text-ok" /> : <Square className="h-5 w-5" />}
-                </button>
-                <div className={cn("flex-1", e.done && "line-through opacity-60")}>
-                  <p className="font-medium">{e.title}</p>
-                  <p className="text-xs text-muted-foreground">
-                    {uniName(e.universityId)} · {e.date ? new Date(e.date).toLocaleDateString("ru-RU") : PLAN.dateOnSite} ·{" "}
-                    <a href={e.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{PLAN.link}</a>
-                  </p>
-                </div>
-                <Button variant="ghost" size="icon" className="no-print h-8 w-8" aria-label={COMMON.remove} onClick={() => setPlan((p) => ({ ...p, events: p.events.filter((x) => x.id !== e.id) }))}><Trash2 /></Button>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-      )}
-
-      <Card className="print-break">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-base"><CalendarClock className="h-4 w-4" /> {PLAN.stagesTitle}</CardTitle>
-          <p className="text-xs text-muted-foreground">{PLAN.stagesHint}</p>
-        </CardHeader>
-        <CardContent>
-          <ol className="relative space-y-3 border-l pl-5 text-sm">
-            {ADMISSION_STAGES.filter((s) => s.for !== "11" || profile.grade !== "9").map((s) => (
-              <li key={s.what}>
-                <span className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full bg-primary" />
-                <Badge variant="secondary">{s.when}</Badge>
-                <p className="mt-1">{s.what}</p>
-              </li>
-            ))}
-          </ol>
+      <Card>
+        <CardContent className="space-y-3 pt-5">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <p className="font-semibold" data-testid="plan-progress">{PLAN.progress(done, steps.length)}</p>
+            <Button variant="outline" size="sm" onClick={ics} data-testid="plan-ics"><CalendarPlus /> {PLAN.ics}</Button>
+          </div>
+          <Progress value={(done / steps.length) * 100} label={PLAN.progress(done, steps.length)} />
+          <p className={cn("flex items-center gap-1.5 text-sm", crit ? "text-bad" : "text-muted-foreground")} data-testid="plan-critical">
+            {crit && <AlertTriangle className="h-4 w-4" />} {crit ? PLAN.critical(crit.days, crit.step.title) : PLAN.noCritical}
+          </p>
         </CardContent>
       </Card>
+
+      <section className="space-y-2">
+        <h2 className="font-semibold">{PLAN.pathsTitle}</h2>
+        <p className="text-sm text-muted-foreground">{PLAN.pathsHint}</p>
+        <div className="flex flex-wrap gap-2" data-testid="plan-paths">
+          {PATHS.map((p) => (
+            <Chip key={p.id} selected={admission.paths.includes(p.id)} onClick={() => togglePath(p.id)}>{p.label}</Chip>
+          ))}
+        </div>
+      </section>
+
+      {profile.grade === "9" && <h2 className="pt-2 text-lg font-semibold">{PLAN.earlyFull}</h2>}
+      <ol className="space-y-3">
+        {steps.map((s, i) => <StepCard key={s.id} n={i + 1} s={s} done={admission.done.includes(s.id)} onToggle={() => toggle(s.id)} />)}
+      </ol>
     </div>
+  );
+}
+
+function StepCard({ n, s, done, onToggle }: { n: number; s: PlanStep; done: boolean; onToggle: () => void }) {
+  const [open, setOpen] = useState(false);
+  const when = s.from ? PLAN.range(fmt(s.from), fmt(s.date)) : PLAN.untilDate(fmt(s.date)) + (s.time ? PLAN.mskTime(s.time) : "");
+  return (
+    <li id={s.id} className={cn("scroll-mt-20 rounded-xl border bg-card p-4", done && "opacity-70")} data-testid="plan-step" data-step={s.id} data-critical={s.isCritical || undefined}>
+      <div className="flex items-start gap-3">
+        <button type="button" onClick={onToggle} aria-pressed={done} aria-label={PLAN.done}
+          className={cn("mt-0.5 grid h-6 w-6 shrink-0 cursor-pointer place-items-center rounded-md border-2", done ? "border-primary bg-primary text-primary-foreground" : "border-input")} data-testid="plan-step-done">
+          {done && <Check className="h-4 w-4" />}
+        </button>
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-sm text-muted-foreground">{n}.</span>
+            <h3 className={cn("font-semibold", done && "line-through")}>{s.title}</h3>
+            {s.isCritical && <span className="inline-flex items-center gap-0.5 rounded-full bg-bad/12 px-2 py-0.5 text-xs font-bold text-bad" title={PLAN.criticalBadge} data-testid="critical-badge">! {PLAN.criticalBadge}</span>}
+          </div>
+          <p className="mt-0.5 text-sm font-medium">{when}</p>
+          {!s.confirmed && <p className="text-xs text-warn" data-testid="expected-date">{PLAN.expected}</p>}
+          <p className="mt-1 text-sm text-muted-foreground">{s.text}</p>
+          {s.sub.length > 0 && <ul className="mt-2 list-inside list-disc text-sm" data-testid="plan-sub">{s.sub.map((x) => <li key={x}>{x}</li>)}</ul>}
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            {s.href && (s.href.startsWith("/") ? (
+              <Button asChild size="sm"><Link href={s.href}>{s.action ?? PLAN.go} <ArrowRight /></Link></Button>
+            ) : (
+              <Button asChild size="sm"><a href={s.href} target="_blank" rel="noreferrer">{s.action ?? PLAN.go}</a></Button>
+            ))}
+            <Button variant="ghost" size="sm" onClick={() => setOpen(!open)} aria-expanded={open}>
+              {open ? PLAN.less : PLAN.more} <ChevronDown className={cn("transition-transform", open && "rotate-180")} />
+            </Button>
+          </div>
+          {open && (
+            <div className="mt-2 rounded-lg bg-muted/50 p-3 text-sm">
+              <ul className="list-inside list-disc space-y-1">{s.details.map((d) => <li key={d}>{d}</li>)}</ul>
+              <p className="mt-2 text-xs text-muted-foreground">{PLAN.source}: {CALENDAR_SOURCES[s.source] ?? s.source}</p>
+            </div>
+          )}
+        </div>
+      </div>
+    </li>
   );
 }

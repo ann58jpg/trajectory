@@ -5,11 +5,8 @@ import { KEYS } from "@/lib/client/storage";
  * Обезличенная аналитика воронки: Яндекс Метрика (reachGoal) + POST /api/track.
  * Никаких личных данных: только анонимный id сессии, название события и короткие параметры.
  */
-export const TRACK_EVENTS = [
-  "landing_view", "quiz_start", "quiz_block_done", "quiz_complete", "results_view", "mode_switch", "profession_open",
-  "university_open", "event_click", "plan_add", "compare_open", "report_download", "report_share", "feedback",
-] as const;
-export type TrackEvent = (typeof TRACK_EVENTS)[number];
+export { TRACK_EVENTS, type TrackEvent } from "@/lib/track-events";
+import type { TrackEvent } from "@/lib/track-events";
 type Props = Record<string, string | number | boolean | null>;
 
 declare global {
