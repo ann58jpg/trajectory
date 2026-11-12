@@ -36,8 +36,8 @@ Textarea.displayName = "Textarea";
 
 /** Кнопка-«чип» для вариантов ответа (одиночный и множественный выбор). */
 export function Chip({
-  selected, onClick, children, className, disabled, role = "checkbox",
-}: { selected: boolean; onClick: () => void; children: React.ReactNode; className?: string; disabled?: boolean; role?: "checkbox" | "radio" }) {
+  selected, onClick, children, className, disabled, role = "checkbox", "data-testid": testId,
+}: { selected: boolean; onClick: () => void; children: React.ReactNode; className?: string; disabled?: boolean; role?: "checkbox" | "radio"; "data-testid"?: string }) {
   return (
     <button
       type="button"
@@ -45,6 +45,7 @@ export function Chip({
       aria-checked={selected}
       disabled={disabled}
       onClick={onClick}
+      data-testid={testId}
       className={cn(
         "min-h-11 rounded-lg border px-3.5 py-2 text-left text-sm transition-colors cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed",
         selected ? "border-primary bg-primary/10 text-foreground ring-1 ring-primary" : "bg-card hover:bg-muted",

@@ -13,7 +13,9 @@ import { emptyProfile, type LikeReason, type StudentProfile } from "@/lib/schema
 import { ACHIEVEMENTS, BENEFITS, GUIDES, HOBBIES, LIKE_REASONS, UNI_CRITERIA, WORK_FORMATS } from "@/lib/engine/vocab";
 import { GAME_ROUNDS, gameSummary } from "@/lib/engine/game";
 import { GameStep } from "./steps/game-step";
-import { QUIZ } from "@/lib/copy";
+import { VibeStep } from "./steps/vibe-step";
+import { hasVibe, vibeType, type ApplicantVibe } from "@/lib/vibe";
+import { QUIZ, VIBE_APPLICANT } from "@/lib/copy";
 import { DviStep, EgeStep, withRus } from "./steps/ege-step";
 import { PERSONAS, type PersonaId } from "@/lib/personas";
 import { z } from "zod";
@@ -315,9 +317,24 @@ export function Quiz({ regions, universities, subjects }: Props) {
         render: () => <DviStep p={p} up={up} />,
       },
       {
+        id: "egeWhy",
+        block: QUIZ.blocks.C,
+        title: QUIZ.egeWhy.title,
+        hint: QUIZ.egeWhy.hint,
+        answered: (p) => p.egeWhy.length > 0,
+        render: () => (
+          <div className="flex flex-wrap gap-2" data-testid="ege-why">
+            {(Object.entries(QUIZ.egeWhy.options) as [StudentProfile["egeWhy"][number], string][]).map(([v, l]) => (
+              <Chip key={v} selected={p.egeWhy.includes(v)} onClick={() => up({ egeWhy: toggle(p.egeWhy, v) })}>{l}</Chip>
+            ))}
+          </div>
+        ),
+      },
+      {
         id: "grade",
         block: QUIZ.blocks.C,
         title: QUIZ.grade.title,
+        hint: QUIZ.grade.yearNote,
         answered: (p) => p.grade !== null,
         render: () => (
           <div className="space-y-4">
@@ -431,6 +448,33 @@ export function Quiz({ regions, universities, subjects }: Props) {
         ),
       },
       {
+        id: "forgotten",
+        block: QUIZ.blocks.D,
+        title: QUIZ.forgotten.title,
+        hint: QUIZ.forgotten.hint,
+        answered: (p) => p.forgotten.length > 0 || p.forgottenOther.trim().length > 0,
+        render: () => (
+          <div className="space-y-4" data-testid="forgotten">
+            <div className="flex flex-wrap gap-2">
+              {Object.entries(QUIZ.forgotten.options).map(([v, l]) => (
+                <Chip key={v} selected={p.forgotten.includes(v)} onClick={() => up({ forgotten: toggle(p.forgotten, v) })}>{l}</Chip>
+              ))}
+            </div>
+            <Input placeholder={QUIZ.forgotten.other} value={p.forgottenOther} maxLength={200} onChange={(e) => up({ forgottenOther: e.target.value })} aria-label={QUIZ.forgotten.other} />
+            {(p.forgotten.length > 0 || p.forgottenOther.trim()) && (
+              <div className="space-y-2">
+                <p className="text-sm font-medium">{QUIZ.forgotten.whyTitle}</p>
+                <div className="flex flex-wrap gap-2">
+                  {(Object.entries(QUIZ.forgotten.why) as [NonNullable<StudentProfile["forgottenWhy"]>, string][]).map(([v, l]) => (
+                    <Chip key={v} role="radio" selected={p.forgottenWhy === v} onClick={() => up({ forgottenWhy: v })}>{l}</Chip>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        ),
+      },
+      {
         id: "game",
         block: QUIZ.blocks.D,
         title: QUIZ.game.title,
@@ -451,6 +495,14 @@ export function Quiz({ regions, universities, subjects }: Props) {
             ))}
           </div>
         ),
+      },
+      {
+        id: "vibe",
+        block: QUIZ.blocks.D,
+        title: VIBE_APPLICANT.title,
+        hint: VIBE_APPLICANT.hint,
+        answered: (p) => Object.keys(p.vibe.ordinal).length >= 4,
+        render: () => <VibeStep value={p.vibe} onChange={(vibe) => up({ vibe })} />,
       },
       {
         id: "dream",
@@ -575,7 +627,8 @@ export function Quiz({ regions, universities, subjects }: Props) {
     track("quiz_complete", { completeness });
     removeLS(KEYS.mode);
     const summary = gameSummary(p.game);
-    setHistory((h) => [{ at: new Date().toISOString(), vibeType: null, spheres: summary.spheres, portrait: "" }, ...h].slice(0, 20));
+    const v = p.vibe as ApplicantVibe;
+    setHistory((h) => [{ at: new Date().toISOString(), vibeType: hasVibe(v) ? vibeType(v).title : null, spheres: summary.spheres, portrait: "" }, ...h].slice(0, 20));
     router.push("/results");
   };
   const reset = () => {

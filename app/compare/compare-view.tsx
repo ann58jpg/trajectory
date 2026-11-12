@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Skeleton } from "@/components/ui/misc";
 import { OutlookBadge } from "@/components/app/outlook-badge";
 import { useCompare, useProfile } from "@/lib/client/storage";
+import { recommendUrl } from "@/lib/storage";
 import { RecommendResponse as RecommendResponseSchema, type Rec, type RecommendResponse } from "@/lib/schemas";
 import { hasBudget } from "@/lib/engine/exams";
 import { yearsWord } from "@/lib/engine/ru";
@@ -42,7 +43,7 @@ export function CompareView() {
       return;
     }
     if (!profile.consent) return;
-    fetch("/api/recommend", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(profile) })
+    fetch(recommendUrl(), { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(profile) })
       .then((r) => r.json())
       .then((j) => {
         const parsed = RecommendResponseSchema.safeParse(j);

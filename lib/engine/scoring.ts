@@ -9,6 +9,7 @@ import { catalogIndex } from "./index";
 import type { UserModel } from "./profile";
 import { HANDS_FORMATS, HOBBIES, WORK_FORMATS } from "./vocab";
 import { REASONS } from "@/lib/copy";
+import { hasVibe, vibeMatch, type ApplicantVibe, type UniVibe } from "@/lib/vibe";
 
 const clamp = (x: number, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 
@@ -254,6 +255,7 @@ export function scoreProgram(
     sponsored: uni.sponsored,
     budgetPlaces: pr.budgetPlaces,
     score: Math.round(score * 1000) / 1000,
+    vibeMatch: null,
     criteriaHits: hits,
     online,
     local,
@@ -267,6 +269,9 @@ export type ScoredContext = {
   catalog: Catalog;
   profile: StudentProfile;
   model: UserModel;
+  /** Вайб вузов (от 10 ответов студентов) и его вес в подборе. */
+  vibes?: Map<string, UniVibe>;
+  vibeWeight?: number;
 };
 
 export function computeAllPrograms(ctx: ScoredContext): Map<string, ProgramMatch> {
@@ -274,9 +279,19 @@ export function computeAllPrograms(ctx: ScoredContext): Map<string, ProgramMatch
   const uni = new Map(catalog.universities.map((u) => [u.id, u]));
   const spec = new Map(catalog.specialties.map((s) => [s.code, s]));
   const egeNames = new Map(catalog.egeSubjects.map((s) => [s.id, s.name]));
+  const applicant = hasVibe(profile.vibe as ApplicantVibe) ? (profile.vibe as ApplicantVibe) : null;
   const out = new Map<string, ProgramMatch>();
   for (const pr of catalog.programs) {
-    out.set(pr.id, scoreProgram(pr, uni.get(pr.universityId)!, spec.get(pr.specialtyCode)!, profile, model, catalog.regions, egeNames));
+    const pm = scoreProgram(pr, uni.get(pr.universityId)!, spec.get(pr.specialtyCode)!, profile, model, catalog.regions, egeNames);
+    // вайб — отдельный фактор: смешиваем со счётом программы, если есть и твой вайб, и вайб вуза
+    const uv = ctx.vibes?.get(pr.universityId);
+    if (uv && applicant) {
+      const vm = vibeMatch(applicant, uv);
+      const w = ctx.vibeWeight ?? ENGINE.vibeWeight;
+      pm.vibeMatch = Math.round(vm * 100) / 100;
+      pm.score = Math.round(((1 - w) * pm.score + w * vm) * 1000) / 1000;
+    }
+    out.set(pr.id, pm);
   }
   return out;
 }

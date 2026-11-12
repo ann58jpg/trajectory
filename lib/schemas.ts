@@ -283,6 +283,18 @@ export const StudentProfile = z.object({
   /** Старый вопрос с парами задач (до v2) — больше не задаётся, оставлен для совместимости сохранённых ответов. */
   taskPairs: z.record(z.string(), PairAnswer).default({}),
   game: z.array(GameRound).max(20).default([]),
+  /** Забытые интересы (3.2): что любил раньше и почему бросил. */
+  forgotten: z.array(z.string()).default([]),
+  forgottenOther: z.string().max(200).default(""),
+  forgottenWhy: z.enum(["no_time", "not_serious", "failed", "lost_interest"]).nullable().default(null),
+  /** Почему эти предметы ЕГЭ (3.3). */
+  egeWhy: z.array(z.enum(["profession", "like", "easiest", "advised", "unsure", "not_chosen"])).default([]),
+  /** Какой вайб нужен (3.4): индекс варианта по шкале, досуг, дух вуза. */
+  vibe: z.object({
+    ordinal: z.record(z.string(), z.number().int().min(0).max(2)).default({}),
+    leisure: z.array(z.string()).default([]),
+    spirit: z.array(z.string()).max(2).default([]),
+  }).default({}),
   workFormats: z.array(z.string()).default([]),
   dream: z.string().max(2000).default(""),
   // E
@@ -337,6 +349,8 @@ export const ProgramMatch = z.object({
   price: z.number().nullable(),
   budgetPlaces: z.number().nullable(),
   sponsored: z.boolean().default(false),
+  /** Совпадение по вайбу 0..1 (если есть вайб вуза и твой). */
+  vibeMatch: z.number().nullable().default(null),
   score: z.number(),
   criteriaHits: z.array(z.string()),
   online: z.boolean(),

@@ -1,4 +1,4 @@
-import { QUIZ } from "../../lib/copy";
+import { QUIZ, VIBE_APPLICANT } from "../../lib/copy";
 import { expect, test } from "@playwright/test";
 
 test("анкету можно пройти целиком на 375px, ответы не теряются при обновлении", async ({ page }) => {
@@ -61,6 +61,11 @@ test("анкету можно пройти целиком на 375px, ответ
   await expect(page.getByTestId("quiz-title")).toHaveText(QUIZ.dvi.title);
   await page.getByRole("checkbox", { name: QUIZ.dvi.none }).click();
   await page.getByTestId("quiz-next").click();
+  // почему эти предметы
+  await expect(page.getByTestId("quiz-title")).toHaveText(QUIZ.egeWhy.title);
+  await page.getByRole("checkbox", { name: QUIZ.egeWhy.options.profession }).click();
+  await page.getByTestId("quiz-next").click();
+  await expect(page.getByTestId("quiz-title")).toHaveText(QUIZ.grade.title);
   await page.getByRole("radio", { name: "11 класс" }).click();
   await page.getByTestId("quiz-next").click();
   await page.getByRole("checkbox", { name: "интересно само по себе" }).nth(2).click();
@@ -71,6 +76,11 @@ test("анкету можно пройти целиком на 375px, ответ
   // D: хобби, игра, как хочешь работать, мечта
   await page.getByRole("checkbox", { name: "Программирование и игры" }).click();
   await page.getByRole("checkbox", { name: "Техника, роботы, дроны" }).click();
+  await page.getByTestId("quiz-next").click();
+  // забытые интересы
+  await expect(page.getByTestId("quiz-title")).toHaveText(QUIZ.forgotten.title);
+  await page.getByRole("checkbox", { name: QUIZ.forgotten.options.draw, exact: true }).click();
+  await page.getByRole("radio", { name: QUIZ.forgotten.why.not_serious }).click();
   await page.getByTestId("quiz-next").click();
   await expect(page.getByTestId("quiz-title")).toHaveText(QUIZ.game.title);
   for (let r = 1; r <= 12; r++) {
@@ -88,6 +98,14 @@ test("анкету можно пройти целиком на 375px, ответ
   await expect(page.getByTestId("quiz-title")).toHaveText(QUIZ.formats.title);
   await page.getByRole("checkbox", { name: QUIZ.formats.options.remote }).click();
   await page.getByRole("checkbox", { name: QUIZ.formats.options.flexible }).click();
+  await page.getByTestId("quiz-next").click();
+  // какой вайб нужен
+  await expect(page.getByTestId("quiz-title")).toHaveText(VIBE_APPLICANT.title);
+  for (const s of ["discipline", "load", "extra", "work", "atmosphere", "campus"] as const) {
+    await page.getByRole("radio", { name: VIBE_APPLICANT.questions[s].options[2], exact: true }).click();
+  }
+  await page.getByRole("checkbox", { name: "НСО" }).click();
+  await page.getByRole("checkbox", { name: "наука", exact: true }).click();
   await page.getByTestId("quiz-next").click();
   await page.getByLabel("Кем хочешь стать").fill("Хочу делать роботов и программировать их, и чтобы хорошо платили");
   await page.getByTestId("quiz-next").click();

@@ -3,7 +3,7 @@ import { MapPin, Wifi } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import type { ProgramMatch } from "@/lib/schemas";
 import { UNI_CRITERIA } from "@/lib/engine/vocab";
-import { CHANCE_TEXT, FORM_TEXT, PROGRAM } from "@/lib/copy";
+import { CHANCE_TEXT, FORM_TEXT, PROGRAM, VIBE } from "@/lib/copy";
 import { rubK } from "@/lib/utils";
 import { BudgetValue, PassValue } from "./pass-score";
 import { DataGap } from "./data-gap";
@@ -37,6 +37,7 @@ export function ProgramRow({ pm, showExcluded = false }: { pm: ProgramMatch; sho
           <Badge key={f} variant="secondary">{f === "online" && <Wifi className="h-3 w-3" />}<Term k={FORM_TERM[f]}>{FORM_TEXT[f]}</Term></Badge>
         ))}
         <Badge variant={CHANCE_VARIANT[pm.chance]}>{PROGRAM.chance(CHANCE_TEXT[pm.chance])}</Badge>
+        {pm.vibeMatch !== null && <Badge variant="outline" data-testid="program-vibe">{VIBE.match(Math.round(pm.vibeMatch * 100))}</Badge>}
         <PassValue official={pm.passOfficial} min={pm.passMin} max={pm.passMax} confidence={pm.passConfidence} userSum={pm.userSum} />
       </div>
       <p className="mt-1 text-xs text-muted-foreground">

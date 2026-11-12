@@ -21,7 +21,8 @@ export default defineConfig({
   webServer: {
     command: "npm run dev",
     // пароль для /admin/funnel в тестах; в проде задаётся в переменных окружения
-    env: { ADMIN_PASSWORD: process.env.ADMIN_PASSWORD ?? "e2e-secret" },
+    // своё хранилище ответов и историй на каждый прогон — тесты не мешают друг другу
+    env: { ADMIN_PASSWORD: process.env.ADMIN_PASSWORD ?? "e2e-secret", LOCAL_STORE_PATH: `test-results/e2e-store-${Date.now()}.db` },
     url: "http://localhost:3000",
     reuseExistingServer: true,
     timeout: 120_000,

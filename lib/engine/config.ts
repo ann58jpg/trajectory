@@ -16,6 +16,8 @@ export const WEIGHT_ANCHORS: { interests: Weights; base: Weights; money: Weights
 export const ENGINE = {
   /** Порог минимальной совместимости в режиме «Деньги». */
   moneyMatchThreshold: 0.4,
+  /** Вес совпадения по вайбу в счёте программы (меняется в /admin/weights). */
+  vibeWeight: 0.15,
   /** Минимальный выигрыш для карточки «Если готов изменить…». */
   tradeoffMinGain: 0.25,
   /** Бонусы горизонта денег (добавляются к итоговому скору). */

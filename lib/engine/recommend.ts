@@ -6,6 +6,7 @@ import { computeTradeoffs } from "./tradeoffs";
 import { egeCheck } from "./filters";
 import { hasBudget } from "./exams";
 import { catalogIndex } from "./index";
+import type { UniVibe } from "@/lib/vibe";
 import { yearsWord } from "./ru";
 import type { UniEvent } from "@/lib/schemas";
 
@@ -70,9 +71,9 @@ function sideFor(rec: Rec | undefined, p: StudentProfile, catalog: Catalog, sacr
   };
 }
 
-export function recommend(catalog: Catalog, profile: StudentProfile, mode: "ai" | "demo" = "demo"): RecommendResponse {
+export function recommend(catalog: Catalog, profile: StudentProfile, mode: "ai" | "demo" = "demo", opts: { vibes?: Map<string, UniVibe>; vibeWeight?: number } = {}): RecommendResponse {
   const model = buildUserModel(profile, catalog.egeSubjects, catalog.regions);
-  const ctx = { catalog, profile, model };
+  const ctx = { catalog, profile, model, vibes: opts.vibes, vibeWeight: opts.vibeWeight };
   const programs = computeAllPrograms(ctx);
   const recs = computeRecs(ctx, programs);
   const tradeoffs = computeTradeoffs(recs, profile, model, catalog, programs);

@@ -13,6 +13,7 @@ import { PlanButton } from "@/components/app/plan-button";
 import { EventItem } from "@/components/app/events-block";
 import { Feedback } from "@/components/app/feedback";
 import { KEYS, readLS, useProfile, useWeights, writeLS } from "@/lib/client/storage";
+import { recommendUrl } from "@/lib/storage";
 import { rankRecs } from "@/lib/engine/scoring";
 import { buildDirections, type Direction } from "@/lib/engine/directions";
 import type { Rec, RecommendResponse, Tradeoff, UniEvent } from "@/lib/schemas";
@@ -22,6 +23,7 @@ import { z } from "zod";
 import { yearsWord } from "@/lib/engine/ru";
 import { COMPARE, RESULTS } from "@/lib/copy";
 import { track } from "@/lib/analytics";
+import { MyVibeCard } from "@/components/app/my-vibe-card";
 
 type State = { status: "idle" | "loading" | "error" | "ok"; data?: RecommendResponse; error?: string; hint?: string };
 type Mode = "interests" | "money";
@@ -36,7 +38,7 @@ export function Results() {
   const load = async () => {
     setState({ status: "loading" });
     try {
-      const res = await fetch("/api/recommend", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(profile) });
+      const res = await fetch(recommendUrl(), { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(profile) });
       const json = await res.json();
       if (!res.ok) return setState({ status: "error", error: json.error ?? RESULTS.errorTitle, hint: json.hint });
       const parsed = RecommendResponseSchema.safeParse(json);
@@ -152,6 +154,8 @@ export function Results() {
           <CardContent><ul className="list-inside list-disc space-y-1 text-sm">{d.egeAdvice.map((a) => <li key={a}>{a}</li>)}</ul></CardContent>
         </Card>
       )}
+
+      <MyVibeCard fallback={dirs.top.map((x) => specName.get(x.code)?.name ?? "").filter(Boolean)} />
 
       {/* Направления */}
       <section className="space-y-4" data-testid="directions" data-mode={m}>

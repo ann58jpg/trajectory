@@ -5,8 +5,8 @@ import { RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
-import { useWeights } from "@/lib/client/storage";
-import { FACTOR_LABEL, WEIGHT_ANCHORS, type Weights } from "@/lib/engine/config";
+import { useVibeWeight, useWeights } from "@/lib/storage";
+import { ENGINE, FACTOR_LABEL, WEIGHT_ANCHORS, type Weights } from "@/lib/engine/config";
 import type { FactorKey } from "@/lib/schemas";
 
 const PROFILES = [
@@ -18,6 +18,7 @@ const PROFILES = [
 /** Скрытая страница для демонстрации на защите: «если государству нужно усилить отрасль — меняются веса». */
 export default function WeightsAdmin() {
   const [anchors, setAnchors, ready] = useWeights();
+  const [vibeWeight, setVibeWeight] = useVibeWeight();
   if (!ready) return null;
   const set = (profile: keyof typeof WEIGHT_ANCHORS, key: FactorKey, v: number) => {
     setAnchors((a) => {
@@ -54,7 +55,15 @@ export default function WeightsAdmin() {
           </Card>
         ))}
       </div>
-      <Button variant="outline" onClick={() => setAnchors(WEIGHT_ANCHORS)}><RotateCcw /> Сбросить к значениям ТЗ</Button>
+      <Card>
+        <CardHeader><CardTitle className="text-base">Вайб вуза</CardTitle></CardHeader>
+        <CardContent className="space-y-2">
+          <p className="text-sm text-muted-foreground">Доля совпадения по вайбу в счёте программы: score = (1 − w) × счёт + w × вайб. Работает, когда у вуза ≥ 10 ответов студентов и у школьника заполнен вайб.</p>
+          <div className="flex justify-between text-sm"><span>w</span><b className="tabular-nums" data-testid="vibe-weight">{vibeWeight.toFixed(2)}</b></div>
+          <Slider value={[Math.round(vibeWeight * 100)]} min={0} max={50} step={1} onValueChange={([v]) => setVibeWeight(v / 100)} thumbLabel="Вес вайба" />
+        </CardContent>
+      </Card>
+      <Button variant="outline" onClick={() => { setAnchors(WEIGHT_ANCHORS); setVibeWeight(ENGINE.vibeWeight); }}><RotateCcw /> Сбросить к значениям ТЗ</Button>
     </div>
   );
 }

@@ -184,3 +184,15 @@ export function deviceId(): string {
 export function savedCount(p: Plan): number {
   return p.professions.length + p.specialties.length + p.universities.length + p.programs.length + p.events.length + p.internships.length;
 }
+
+/** «Демо-вайб» (/admin): сгенерированные ответы для 30 крупных вузов. По умолчанию выключен. */
+export const useDemoVibe = () => useStored(KEYS.demoVibe, z.boolean(), () => false);
+/** Вес вайба в подборе (/admin/weights). */
+export const useVibeWeight = () => useStored(KEYS.vibeWeight, z.number().min(0).max(0.5), () => 0.15);
+
+/** Адрес /api/recommend с переключателем «Демо-вайб» и весом вайба из /admin. */
+export function recommendUrl(): string {
+  const demo = readLS(KEYS.demoVibe, z.boolean(), false);
+  const w = readLS(KEYS.vibeWeight, z.number().min(0).max(0.5), 0.15);
+  return `/api/recommend?vibeWeight=${w}${demo ? "&demo=1" : ""}`;
+}

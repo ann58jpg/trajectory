@@ -12,7 +12,8 @@ import { EventsBlock } from "@/components/app/events-block";
 import { CompareToggle } from "@/components/app/compare";
 import { Term } from "@/components/app/term";
 import { TrackView } from "@/components/app/track-view";
-import { COMMON, FORM_TEXT, NOT_FOUND, PROFILE_PROGRAMS, PROGRAM, UNIVERSITY } from "@/lib/copy";
+import { COMMON, FORM_TEXT, NOT_FOUND, PROFILE_PROGRAMS, PROGRAM, UNIVERSITY, VIBE } from "@/lib/copy";
+import { VibeBlock } from "@/components/app/vibe-block";
 import { examSetText } from "@/lib/engine/exams";
 import { rubK } from "@/lib/utils";
 import { yearsWord } from "@/lib/engine/ru";
@@ -58,6 +59,11 @@ export default async function UniversityPage({ params }: { params: Promise<{ id:
           <PlanButton kind="universities" id={uni.id} size="default" />
         </div>
       </div>
+
+      <section className="space-y-3 rounded-xl border bg-card p-4" aria-labelledby="uni-vibe" data-testid="section-vibe">
+        <h2 id="uni-vibe" className="text-lg font-semibold">{VIBE.title}</h2>
+        <VibeBlock universityId={uni.id} />
+      </section>
 
       <section className="space-y-3" aria-labelledby="vibe">
         <h2 id="vibe" className="flex items-center gap-2 text-lg font-semibold"><CalendarHeart className="h-5 w-5 text-primary" /> {UNIVERSITY.vibeTitle}</h2>

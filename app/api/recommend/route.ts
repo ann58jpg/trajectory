@@ -5,6 +5,7 @@ import { recommend } from "@/lib/engine/recommend";
 import { parseDream } from "@/lib/llm/features";
 import { aiMode } from "@/lib/llm";
 import { apiError, zodHint } from "@/lib/api";
+import { allVibes } from "@/lib/server/vibes";
 
 export const dynamic = "force-dynamic";
 
@@ -25,7 +26,10 @@ export async function POST(req: Request) {
       const d = await parseDream(profile.dream);
       if (d.source === "ai") profile.aiTags = d.result.tags;
     }
-    const result = recommend(getCatalog(), profile, mode);
+    const sp = new URL(req.url).searchParams;
+    const w = Number(sp.get("vibeWeight"));
+    const vibes = await allVibes(sp.get("demo") === "1").catch(() => new Map());
+    const result = recommend(getCatalog(), profile, mode, { vibes, vibeWeight: Number.isFinite(w) && w >= 0 && w <= 0.5 && sp.has("vibeWeight") ? w : undefined });
     const check = RecommendResponse.safeParse(result);
     if (!check.success) console.error("[recommend] ответ не прошёл схему:", zodHint(check.error));
     return NextResponse.json(result, { headers: { "Cache-Control": "no-store" } });
